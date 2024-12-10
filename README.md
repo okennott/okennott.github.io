@@ -1,4 +1,4 @@
-# [Onditi, KO \| Kenneth Otieno Onditi \| Kenneth Onditi.](kennott.github.io)
+<!-- # [Onditi, KO \| Kenneth Otieno Onditi \| Kenneth Onditi.](kennott.github.io) -->
 
 This website showcases my academic profile, research interests, and professional activities.
 It is designed to facilitate collaboration and to share insights into my work.
