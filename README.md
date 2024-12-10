@@ -24,7 +24,7 @@ I am a molecular ecologist and evolutionary biologist, focusing on: - Small mamm
 
 ## Contact
 
-Feel free to reach out for collaborations or inquiries: - **Email**: [okennott\@gmail.com](mailto:okennott@gmail.com) - **Phone**: +254 722 620075
+Feel free to reach out for collaborations or inquiries: - **Email**: [okennott@gmail.com](mailto:okennott@gmail.com) - **Phone**: +254 722 620075
 
 ## Fun Fact
 
