@@ -32,14 +32,6 @@ I’m fascinated by species' adaptability to not die!
 
 ------------------------------------------------------------------------
 
-### How to Contribute
-
-This website is built using GitHub Pages and Markdown.
-Contributions and suggestions are welcome!
-If you spot an issue or want to propose a feature, feel free to open a pull request or issue in this repository.
-
-------------------------------------------------------------------------
-
 Stay tuned for updates !.
 🌟
 
