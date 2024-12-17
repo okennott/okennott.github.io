@@ -1,0 +1,153 @@
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left-sidebar, .right-sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-sidebar .profile img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.left-sidebar h3, .right-sidebar h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.sidebar-nav ul, .social-links ul, .recent-updates ul, .featured-publications ul, .upcoming-events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li, .social-links ul li, .recent-updates ul li, .featured-publications ul li, .upcoming-events ul li {
+    margin: 10px 0;
+}
+
+.sidebar-nav ul li a, .social-links ul li a, .recent-updates ul li a, .featured-publications ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links ul li a:hover, .recent-updates ul li a:hover, .featured-publications ul li a:hover {
+    color: #007BFF;
+}
+
+.content-area {
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hero .button {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero .button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .left-sidebar, .right-sidebar, .content-area {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
