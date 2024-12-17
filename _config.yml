@@ -5,14 +5,14 @@ url: "https://kennott.github.io"
 baseurl: ""
 
 # Author information
-author: "Kenneth Otieno Onditi"
+author:
   name: "Onditi, KO."
   email: "okennott@gmail.com"
 
 # Theme settings
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme  # add this line to the plugins list if you already have one
 
 # Navigation settings (Optional)
 nav:
@@ -25,7 +25,6 @@ social_links:
   scholar: "https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en"
   github: "https://github.com/okennott"
   twitter: "https://x.com/kennott"
-
 
 # Permalinks settings (Optional)
 permalink: /:year/:month/:day/:title/
