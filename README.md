@@ -1,13 +1,12 @@
 <!-- # [Onditi, KO \| Kenneth Otieno Onditi \| Kenneth Onditi.](kennott.github.io) -->
 
-This website showcases my academic profile, research interests, and professional activities.
-It is designed to facilitate collaboration and to share insights into my work.
-
-## About Me
-
+# This is a personal website that showcases my academic profile, research interests, and professional activities. It aims to facilitate collaboration and to share insights from my work.
+------------------------------------------------------------------------
 I am a molecular ecologist and evolutionary biologist, focusing on: - Small mammals (particularly rodents and shrews).
 - Phylogenetics and species taxonomy.
 - Biodiversity and the impacts of climate and anthropic gradients.
+- ### I’m fascinated by species' adaptability to not die!
+------------------------------------------------------------------------
 
 ## What You’ll Find Here
 
@@ -18,20 +17,11 @@ I am a molecular ecologist and evolutionary biologist, focusing on: - Small mamm
 
 ## Professional Highlights
 
--   🏆 Recipient of some awards and grants.
--   🧬 Published several peer-reviewed articles.
--   🌱 Skilled in field, lab, and computer techniques related to my previous research.
+-   🏆 Awards and grants.
+-   🧬 Peer-reviewed articles.
+-   🌱 Skills.
 
 ## Contact
-
 Feel free to reach out for collaborations or inquiries: - **Email**: [okennott@gmail.com](mailto:okennott@gmail.com) - **Phone**: +254 722 620075
-
-## Fun Fact
-
-I’m fascinated by species' adaptability to not die!
-
 ------------------------------------------------------------------------
-
-Stay tuned for updates !.
-🌟
-
+Stay tuned for updates!🌟
