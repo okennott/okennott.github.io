@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #444;
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-info li {
+            padding: 8px 0;
+            font-size: 18px;
+        }
+        .contact-info a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .hidden-info {
+            display: none;
+        }
+        .checkbox-container {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+        .captcha-container {
+            margin: 20px 0;
+        }
+        .captcha-container input {
+            font-size: 18px;
+            padding: 5px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Me</h1>
+</header>
+
+<section>
+    <div class="checkbox-container">
+        <label>
+            <input type="checkbox" id="confirm-human"> Confirm you are human to reveal contact details.
+        </label>
+    </div>
+
+    <!-- Math CAPTCHA -->
+    <div class="captcha-container" id="captcha-container" style="display: none;">
+        <label for="captcha-answer">Solve the following math problem:</label>
+        <br>
+        <span id="captcha-question"></span>
+        <br><br>
+        <input type="number" id="captcha-answer" placeholder="Enter answer" required>
+    </div>
+
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Email:</strong> <span id="email" class="hidden-info">kenotieno@hotmail.com</span>, <span id="email2" class="hidden-info">okennott@gmail.com</span></li>
+            <li><strong>Phone:</strong> <span id="phone" class="hidden-info">+254 722 620075</span></li>
+            <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-4034-6818" target="_blank">https://orcid.org/0000-0003-4034-6818</a></li>
+            <li><strong>ResearcherID:</strong> <a href="https://www.webofscience.com/wos/author/record/S-7827-2018" target="_blank">https://www.webofscience.com/wos/author/record/S-7827-2018</a></li>
+            <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank">https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/okennott" target="_blank">https://github.com/okennott</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Kenneth Otieno Onditi</p>
+    </div>
+</section>
+
+<script>
+    // JavaScript to toggle visibility of hidden information and handle CAPTCHA
+    document.getElementById("confirm-human").addEventListener("change", function() {
+        const hiddenInfo = document.querySelectorAll(".hidden-info");
+        const captchaContainer = document.getElementById("captcha-container");
+
+        hiddenInfo.forEach(function(info) {
+            info.style.display = document.getElementById("confirm-human").checked ? "inline" : "none";
+        });
+
+        // Show CAPTCHA if checkbox is checked
+        if (document.getElementById("confirm-human").checked) {
+            captchaContainer.style.display = "block";
+            generateCaptcha();
+        } else {
+            captchaContainer.style.display = "none";
+        }
+    });
+
+    // Function to generate a random math problem for CAPTCHA
+    function generateCaptcha() {
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        const question = `${num1} + ${num2}`;
+        const answer = num1 + num2;
+
+        document.getElementById("captcha-question").textContent = question;
+
+        // Store the answer for validation
+        document.getElementById("captcha-answer").addEventListener("input", function() {
+            if (parseInt(this.value) === answer) {
+                document.getElementById("captcha-answer").style.borderColor = "green";
+            } else {
+                document.getElementById("captcha-answer").style.borderColor = "red";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
