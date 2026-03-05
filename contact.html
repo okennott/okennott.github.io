@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Kenneth Otieno Onditi</title>
+<meta name="description" content="Contact Kenneth Otieno Onditi — mammal ecologist open to research collaborations and graduate mentorship.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&family=Bitter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shared.css">
+<style>
+/* ─── CONTACT PAGE — BLUE-GREEN ACCENT ─── */
+:root {
+  --banner-gradient: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(74,122,155,0.08) 0%, transparent 65%);
+}
+
+.accent-rule { background: var(--blue); }
+
+/* Contact grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 60px 0;
+  align-items: start;
+}
+
+/* Contact blocks */
+.contact-block { margin-bottom: 36px; }
+.contact-block h3 {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.contact-block p,
+.contact-block a {
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.75;
+  transition: color 0.2s;
+  display: block;
+}
+.contact-block a:hover { color: var(--gold2); }
+
+/* Social link cards */
+.social-links { display: flex; flex-direction: column; gap: 8px; }
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.3s, background 0.3s, transform 0.2s;
+  font-size: 15px;
+}
+.social-link:hover {
+  border-color: var(--blue);
+  background: rgba(74,122,155,0.04);
+  transform: translateX(4px);
+}
+.social-link-icon { font-size: 18px; flex-shrink: 0; }
+.social-link-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-top: 2px;
+  display: block;
+}
+.social-link-name { color: var(--cream); }
+
+/* Collab box */
+.collab-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  padding: 36px;
+  margin-bottom: 40px;
+}
+.collab-box h3 {
+  font-family: 'Bitter', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 14px;
+}
+.collab-box p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+.collab-box p:last-child { margin-bottom: 0; }
+
+/* Interest chips */
+.interest-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+.interest-chip {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border: 1px solid rgba(74,122,155,0.3);
+  color: var(--blue);
+  cursor: default;
+}
+
+/* Collaborator list */
+.collaborator-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+.collaborator {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 16px;
+  border: 1px solid var(--faint);
+  transition: border-color 0.2s;
+}
+.collaborator:hover { border-color: rgba(74,122,155,0.3); }
+.collaborator-name { color: var(--text); font-style: italic; font-size: 15px; }
+.collaborator-inst { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.5px; margin-top:2px; }
+.collaborator-email {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.collaborator-email:hover { color: var(--gold2); }
+
+/* Institution section */
+.institution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 32px;
+}
+.institution-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.institution-card:hover { border-color: var(--blue); }
+.institution-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.institution-name { font-size: 15px; color: var(--cream); }
+.institution-sub { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 4px; }
+
+@media (max-width: 780px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .institution-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="assets/icons/logo-mark.svg" class="nav-logo-mark" alt="K.O. Onditi">
+    <span class="nav-logo-text">K.O. Onditi</span>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html"        id="nav-home">Home</a></li>
+    <li><a href="research.html"     id="nav-research">Research</a></li>
+    <li><a href="publications.html" id="nav-pubs">Publications</a></li>
+    <li><a href="fieldwork.html"    id="nav-field">Fieldwork</a></li>
+    <li><a href="cv.html"           id="nav-cv">CV</a></li>
+    <li><a href="contact.html"      id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-body">
+
+<!-- ─── BANNER ─── -->
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">Get in Touch</span>
+    <h1 class="serif-display">Contact &amp;<br><em style="font-weight:400;color:var(--gold2);">Collaborations</em></h1>
+    <div class="accent-rule" style="background:var(--blue);"></div>
+    <p style="color:var(--muted);font-size:16px;line-height:1.7;max-width:500px;margin-top:14px;">
+      I welcome research collaborations, co-supervision opportunities, and invitations to review or present. Response time is typically within 3–5 working days.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="contact-grid">
+
+    <!-- LEFT: Contact info -->
+    <div>
+      <div class="contact-block">
+        <h3>Email</h3>
+        <a href="mailto:kenotieno@hotmail.com">kenotieno@hotmail.com</a>
+        <a href="mailto:kenotieno08@gmail.com" style="font-size:14px;color:var(--muted);">kenotieno08@gmail.com</a>
+      </div>
+
+      <div class="contact-block">
+        <h3>Phone</h3>
+        <p>+254 722 620075</p>
+      </div>
+
+      <div class="contact-block">
+        <h3>Address</h3>
+        <p>18436 – 00100 GPO<br>Nairobi, Kenya</p>
+      </div>
+
+      <div class="contact-block">
+        <h3>Academic Profiles</h3>
+        <div class="social-links">
+          <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">📚</span>
+            <div>
+              <div class="social-link-name">Google Scholar</div>
+              <span class="social-link-label">200+ citations · 32 publications</span>
+            </div>
+          </a>
+          <a href="https://www.researchgate.net/profile/Kenneth-Onditi" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">🔬</span>
+            <div>
+              <div class="social-link-name">ResearchGate</div>
+              <span class="social-link-label">Kenneth-Onditi</span>
+            </div>
+          </a>
+          <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">🆔</span>
+            <div>
+              <div class="social-link-name">ORCID</div>
+              <span class="social-link-label">0000-0003-4034-6818</span>
+            </div>
+          </a>
+          <a href="https://github.com/okennott" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">💻</span>
+            <div>
+              <div class="social-link-name">GitHub</div>
+              <span class="social-link-label">@okennott</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-block" style="margin-top:32px;">
+        <h3>Current Institutions</h3>
+        <div class="institution-grid">
+          <a href="https://english.kiz.cas.cn/" target="_blank" rel="noopener" class="institution-card">
+            <div class="institution-eyebrow">CAS · China</div>
+            <div class="institution-name">Kunming Institute of Zoology</div>
+            <div class="institution-sub">Kunming, Yunnan</div>
+          </a>
+          <a href="https://www.museums.or.ke/" target="_blank" rel="noopener" class="institution-card">
+            <div class="institution-eyebrow">NMK · Kenya</div>
+            <div class="institution-name">National Museums of Kenya</div>
+            <div class="institution-sub">Nairobi, Kenya</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Collaboration info -->
+    <div>
+      <div class="collab-box">
+        <h3>Open to Collaboration</h3>
+        <p>I welcome research collaborations, graduate student co-supervision opportunities, and partnerships with institutions working on African biodiversity, evolutionary genetics, or conservation planning.</p>
+        <p>Areas of particular interest for new collaborations include biogeographic analyses of East African mammals, eDNA metabarcoding for biodiversity monitoring, and genomic approaches to conservation.</p>
+        <div class="interest-chips">
+          <span class="interest-chip">African systematics</span>
+          <span class="interest-chip">UCE phylogenomics</span>
+          <span class="interest-chip">Macroecology</span>
+          <span class="interest-chip">Conservation genomics</span>
+          <span class="interest-chip">Elevational diversity</span>
+          <span class="interest-chip">eDNA metabarcoding</span>
+          <span class="interest-chip">Protected area evaluation</span>
+          <span class="interest-chip">East Africa fieldwork</span>
+        </div>
+      </div>
+
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);">Key Collaborators</div>
+      <div class="collaborator-list">
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Prof. Jiang Xuelong</div>
+            <div class="collaborator-inst">Kunming Institute of Zoology, CAS · China</div>
+          </div>
+          <a href="mailto:jiangxl@mail.kiz.ac.cn" class="collaborator-email">Email ↗</a>
+        </div>
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Dr. Simon Musila</div>
+            <div class="collaborator-inst">National Museums of Kenya</div>
+          </div>
+          <a href="mailto:smusila@museums.or.ke" class="collaborator-email">Email ↗</a>
+        </div>
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Dr. Esther Kioko</div>
+            <div class="collaborator-inst">National Museums of Kenya</div>
+          </div>
+          <a href="mailto:ekioko@museums.or.ke" class="collaborator-email">Email ↗</a>
+        </div>
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Dr. Julian Kerbis Peterhans</div>
+            <div class="collaborator-inst">Field Museum of Natural History &amp; Roosevelt University, Chicago</div>
+          </div>
+          <a href="mailto:jkerbis@fieldmuseum.org" class="collaborator-email">Email ↗</a>
+        </div>
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Dr. Noé de la Sancha</div>
+            <div class="collaborator-inst">DePaul University, Chicago</div>
+          </div>
+        </div>
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Prof. Josef Bryja</div>
+            <div class="collaborator-inst">Institute of Vertebrate Biology, CAS · Czech Republic</div>
+          </div>
+        </div>
+        <div class="collaborator">
+          <div>
+            <div class="collaborator-name">Dr. Timothy Demos</div>
+            <div class="collaborator-inst">Field Museum of Natural History, Chicago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /container -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Kenneth Otieno Onditi</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="fieldwork.html">Fieldwork</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Kenneth Otieno Onditi &mdash; <a href="mailto:kenotieno@hotmail.com">kenotieno@hotmail.com</a> &mdash; Nairobi, Kenya</p>
+  </div>
+</footer>
+
+</div><!-- /page-body -->
+
+<button id="back-top" style="position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--panel);border:1px solid var(--border);color:var(--gold);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;" title="Back to top">↑</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Kenneth Otieno Onditi</title>
+<meta name="description" content="Research programme of Kenneth Otieno Onditi — systematics, macroecology, and conservation biology of African mammals.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&family=Bitter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shared.css">
+<style>
+/* ─── RESEARCH PAGE — GREEN ACCENT THEME ─── */
+:root {
+  --banner-gradient: radial-gradient(ellipse 70% 90% at 95% 50%, rgba(90,140,106,0.10) 0%, transparent 65%);
+  --page-accent: var(--green);
+}
+
+.accent-rule { background: var(--green); }
+
+/* ─── Scrolling progress indicator ─── */
+.read-progress {
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  height: 2px;
+  background: var(--green);
+  z-index: 900;
+  transition: width 0.1s linear;
+  width: 0%;
+}
+
+/* ─── Research theme layout ─── */
+.research-theme {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 60px;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.research-theme:last-child { border-bottom: none; }
+
+.theme-label {
+  position: sticky;
+  top: 90px;
+}
+
+.theme-num {
+  font-family: 'EB Garamond', serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--faint);
+  margin-bottom: 14px;
+  display: block;
+  letter-spacing: -4px;
+  transition: color 0.3s;
+}
+
+.research-theme:hover .theme-num { color: rgba(90,140,106,0.3); }
+
+.theme-title {
+  font-family: 'Bitter', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.theme-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.theme-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green);
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid rgba(90,140,106,0.2);
+  width: fit-content;
+}
+
+/* Theme content */
+.theme-content p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #9a8e76;
+  margin-bottom: 22px;
+}
+.theme-content p:first-child { color: var(--text); }
+
+.key-taxa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+  margin-bottom: 22px;
+}
+.taxon-chip {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 5px 13px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-style: italic;
+  cursor: default;
+  transition: border-color 0.2s, color 0.2s;
+}
+.taxon-chip:hover { border-color: var(--green); color: var(--green); }
+
+/* Selected pub links within theme */
+.theme-pubs {
+  margin-top: 24px;
+  border-top: 1px solid var(--faint);
+  padding-top: 20px;
+}
+.theme-pubs-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.theme-pub-link {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid var(--faint);
+  text-decoration: none;
+  color: var(--muted);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  transition: all 0.2s;
+}
+.theme-pub-link:hover {
+  border-color: var(--green);
+  color: var(--cream);
+  background: rgba(90,140,106,0.04);
+}
+.theme-pub-link span {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-style: normal;
+  color: var(--green);
+  margin-right: 8px;
+}
+
+/* Funding block */
+.funding-block {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  padding: 32px 36px;
+  margin-top: 24px;
+}
+.funding-block h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+.funding-block p { font-size:15px; color:var(--muted); line-height:1.8; margin-bottom:10px; }
+.funding-block p:last-child { margin-bottom:0; }
+.funding-block strong { color:var(--cream); }
+
+/* Collaborator network */
+.collaborator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2px;
+  margin-top: 32px;
+}
+.collab-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.collab-card:hover { border-color: rgba(90,140,106,0.3); }
+.collab-name {
+  font-family: 'Bitter', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+.collab-inst {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.collab-country {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+@media (max-width: 800px) {
+  .research-theme { grid-template-columns: 1fr; gap: 28px; }
+  .theme-label { position: static; }
+  .theme-num { font-size: 64px; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="read-progress" id="read-progress"></div>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="assets/icons/logo-mark.svg" class="nav-logo-mark" alt="K.O. Onditi">
+    <span class="nav-logo-text">K.O. Onditi</span>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html"        id="nav-home">Home</a></li>
+    <li><a href="research.html"     id="nav-research">Research</a></li>
+    <li><a href="publications.html" id="nav-pubs">Publications</a></li>
+    <li><a href="fieldwork.html"    id="nav-field">Fieldwork</a></li>
+    <li><a href="cv.html"           id="nav-cv">CV</a></li>
+    <li><a href="contact.html"      id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-body">
+
+<!-- ─── BANNER ─── -->
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">Academic Research</span>
+    <h1 class="serif-display">Research<br><em style="font-weight:400;color:var(--gold2);">Programme</em></h1>
+    <div class="accent-rule" style="background:var(--green);"></div>
+    <p style="max-width:640px;font-size:17px;color:var(--muted);line-height:1.85;margin-top:14px;">
+      My research bridges molecular ecology, evolutionary biology, and conservation science —
+      using Africa's small mammals as a window into biodiversity processes, historical
+      biogeography, and the drivers of community assembly.
+    </p>
+    <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="#systematics" class="btn-ghost btn-sm">01 Systematics</a>
+      <a href="#macroecology" class="btn-ghost btn-sm">02 Macroecology</a>
+      <a href="#conservation" class="btn-ghost btn-sm">03 Conservation</a>
+      <a href="#funding" class="btn-ghost btn-sm">04 Funding</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div>
+
+    <!-- ─── THEME 1: SYSTEMATICS ─── -->
+    <div class="research-theme reveal" id="systematics">
+      <div class="theme-label">
+        <span class="theme-num">01</span>
+        <h3 class="theme-title">Systematics &amp; Integrative Taxonomy</h3>
+        <div class="theme-tags">
+          <span class="theme-tag">Phylogenomics</span>
+          <span class="theme-tag">UCE</span>
+          <span class="theme-tag">Morphometrics</span>
+        </div>
+      </div>
+      <div class="theme-content">
+        <p>I use multi-locus molecular data, morphometrics, and ultraconserved elements (UCEs) to resolve species boundaries, reconstruct phylogenies, and describe cryptic diversity within African small mammal groups — particularly murid rodents and insectivores.</p>
+        <p>A major focus has been the genus <em>Lophuromys</em> (brush-furred rats) across equatorial Africa, where integrative approaches have revealed several previously unrecognised lineages with important biogeographic and conservation implications. Recent UCE-based work on African dormice (<em>Graphiurus</em>) adds a deeper temporal dimension to understanding diversification across sub-Saharan Africa.</p>
+        <p>Collaborative work has extended to Asian shrews (<em>Chodsigoa</em>, <em>Anourosorex</em>), moles (Talpidae), and hedgehogs (<em>Mesechinus</em>) within the Kunming Institute of Zoology group, developing expertise in integrative taxonomy across taxonomic groups and continents.</p>
+        <div class="key-taxa">
+          <span class="taxon-chip">Lophuromys</span>
+          <span class="taxon-chip">Graphiurus</span>
+          <span class="taxon-chip">Lemniscomys</span>
+          <span class="taxon-chip">Crocidura</span>
+          <span class="taxon-chip">Micromys</span>
+          <span class="taxon-chip">Chodsigoa</span>
+          <span class="taxon-chip">Mesechinus</span>
+          <span class="taxon-chip">Neodon</span>
+        </div>
+        <div class="theme-pubs">
+          <div class="theme-pubs-label">Key publications</div>
+          <a href="publications.html#pub-32" class="theme-pub-link">
+            <span>2026</span>Diversification and biogeographic history of African dormice (<em>Graphiurus</em>) revealed by UCEs and mitochondrial data
+          </a>
+          <a href="publications.html#pub-7" class="theme-pub-link">
+            <span>2021</span>Historical biogeography, systematics, and integrative taxonomy of the <em>Lophuromys flavopunctatus</em> group
+          </a>
+          <a href="publications.html#pub-4" class="theme-pub-link">
+            <span>2020</span>Morphological and genetic characterization of Mount Kenya brush-furred rats
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── THEME 2: MACROECOLOGY ─── -->
+    <div class="research-theme reveal" id="macroecology">
+      <div class="theme-label">
+        <span class="theme-num">02</span>
+        <h3 class="theme-title">Macroecology &amp; Diversity Patterns</h3>
+        <div class="theme-tags">
+          <span class="theme-tag">Biogeography</span>
+          <span class="theme-tag">Spatial ecology</span>
+          <span class="theme-tag">Functional diversity</span>
+        </div>
+      </div>
+      <div class="theme-content">
+        <p>A parallel thread of my research asks how species richness, functional diversity, and phylogenetic diversity vary across environmental gradients — and why. I examine how spatial scale mediates the patterns and processes structuring small mammal communities.</p>
+        <p>Using datasets from transects across Kenya's montane ecosystems (Mt. Kenya, Mt. Elgon, Cherang'any Hills), I analyse how climate, topography, and land use interact at multiple spatial grains to produce the diversity patterns we observe. This work has practical relevance for understanding which factors to target in conservation prioritisation.</p>
+        <p>A key finding from this programme is that the relationship between diversity and environment is strongly scale-dependent: predictors that explain macroecological patterns at coarse grains often lose explanatory power at finer resolutions, and vice versa. This has fundamental implications for how we generalise from field data to broad conservation inferences.</p>
+        <div class="key-taxa">
+          <span class="taxon-chip">Elevational gradients</span>
+          <span class="taxon-chip">Beta-diversity</span>
+          <span class="taxon-chip">Functional traits</span>
+          <span class="taxon-chip">Niche theory</span>
+          <span class="taxon-chip">Spatial scale</span>
+          <span class="taxon-chip">Community assembly</span>
+        </div>
+        <div class="theme-pubs">
+          <div class="theme-pubs-label">Key publications</div>
+          <a href="publications.html#pub-26" class="theme-pub-link">
+            <span>2025</span>Multiscale Spatial Dependency of Small Mammal Diversity Patterns and their Determinants
+          </a>
+          <a href="publications.html#pub-23" class="theme-pub-link">
+            <span>2024</span>Unravelling spatial scale effects on elevational diversity gradients in Kenya
+          </a>
+          <a href="publications.html#pub-12" class="theme-pub-link">
+            <span>2022</span>Patterns and Predictors of Small Mammal Phylogenetic and Functional Diversity in Contrasting Elevational Gradients
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── THEME 3: CONSERVATION ─── -->
+    <div class="research-theme reveal" id="conservation">
+      <div class="theme-label">
+        <span class="theme-num">03</span>
+        <h3 class="theme-title">Conservation Biology</h3>
+        <div class="theme-tags">
+          <span class="theme-tag">Applied ecology</span>
+          <span class="theme-tag">Protected areas</span>
+          <span class="theme-tag">Genomics</span>
+        </div>
+      </div>
+      <div class="theme-content">
+        <p>I evaluate the management effectiveness of Kenya's protected area network using mammal diversity indices as proxies for ecosystem health, identifying spatial mismatches between biodiversity hotspots and conservation designations.</p>
+        <p>My current NSFC-funded project focuses on conservation genomics of the <em>Lophuromys flavopunctatus</em> species group — examining how population structure, gene flow, and adaptive variation can inform management of this rodent complex, which also has relevance to human welfare through zoonotic disease risk.</p>
+        <p>I also engage with broader conservation questions around human–wildlife coexistence, functional homogenization outside protected areas, and the spatiotemporal distribution of mammal communities in biodiversity hotspots. My fieldwork in Kenya provides empirical grounding for modelling and policy-relevant outputs.</p>
+        <div class="key-taxa">
+          <span class="taxon-chip">Protected areas</span>
+          <span class="taxon-chip">Conservation genomics</span>
+          <span class="taxon-chip">Zoonotic risk</span>
+          <span class="taxon-chip">Climate vulnerability</span>
+          <span class="taxon-chip">Human–wildlife coexistence</span>
+        </div>
+        <div class="theme-pubs">
+          <div class="theme-pubs-label">Key publications</div>
+          <a href="publications.html#pub-6" class="theme-pub-link">
+            <span>2021</span>The management effectiveness of protected areas in Kenya
+          </a>
+          <a href="publications.html#pub-19" class="theme-pub-link">
+            <span>2023</span>Untangling key abiotic predictors of terrestrial mammal diversity across ecoregions in Kenya
+          </a>
+          <a href="publications.html#pub-31" class="theme-pub-link">
+            <span>2026</span>Functional homogenization of terrestrial mammals outside protected areas in the Hengduan Mountains
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── THEME 4: FUNDING ─── -->
+    <div class="research-theme reveal" id="funding">
+      <div class="theme-label">
+        <span class="theme-num">04</span>
+        <h3 class="theme-title">Current Funding</h3>
+        <div class="theme-tags">
+          <span class="theme-tag">NSFC 2024</span>
+        </div>
+      </div>
+      <div class="theme-content">
+        <div class="funding-block">
+          <h4>Active Research Grant</h4>
+          <p>
+            <strong>National Natural Science Foundation of China (NSFC)</strong><br>
+            Grant No. 32350410430 · Jan–Dec 2024 · ~$33,300 USD
+          </p>
+          <p>
+            <em style="color:var(--text);">Genomic analysis of the Lophuromys flavopunctatus species group: relevancy of conservation genomics to enhancing biodiversity management and human welfare in East Africa.</em>
+          </p>
+          <p>
+            This project integrates population-level genomics with landscape ecology to understand how habitat fragmentation and land-use change shape genetic diversity across protected and unprotected areas in Kenya. The work has applied implications for managing the zoonotic risks associated with this rodent group, which is implicated in the transmission of haemorrhagic fever viruses across East Africa.
+          </p>
+        </div>
+
+        <div style="margin-top:32px;">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;border-bottom:1px solid var(--border);padding-bottom:10px;">Previous Support</div>
+          <p style="font-size:15px;color:var(--muted);line-height:1.8;"><strong style="color:var(--cream);">IDEA WILD Grant (2019)</strong> — Field equipment for small mammal surveys in Kenya.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-top:10px;"><strong style="color:var(--cream);">CAS-TWAS President's Fellowship (2018–2021)</strong> — Full PhD fellowship, Chinese Academy of Sciences / The World Academy of Sciences.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-top:10px;"><strong style="color:var(--cream);">UCAS Full Scholarship (2015–2018)</strong> — Full Master's scholarship, University of Chinese Academy of Sciences.</p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-top:10px;"><strong style="color:var(--cream);">Council on Africa Award, Field Museum (2017)</strong> — Scholarly visit, Field Museum of Natural History, Chicago.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /themes -->
+
+  <!-- ─── COLLABORATOR NETWORK ─── -->
+  <section class="section">
+    <span class="eyebrow">Research Network</span>
+    <h2 class="section-title">Key Collaborators</h2>
+    <div class="collaborator-grid reveal-stagger">
+      <div class="collab-card">
+        <div class="collab-name">Prof. Jiang Xuelong</div>
+        <div class="collab-inst">Kunming Institute of Zoology, CAS</div>
+        <div class="collab-country">🇨🇳 China</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Dr. Simon Musila</div>
+        <div class="collab-inst">National Museums of Kenya</div>
+        <div class="collab-country">🇰🇪 Kenya</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Dr. Esther Kioko</div>
+        <div class="collab-inst">National Museums of Kenya</div>
+        <div class="collab-country">🇰🇪 Kenya</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Dr. Julian Kerbis Peterhans</div>
+        <div class="collab-inst">Field Museum of Natural History &amp; Roosevelt University</div>
+        <div class="collab-country">🇺🇸 USA</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Dr. Noé de la Sancha</div>
+        <div class="collab-inst">DePaul University, Chicago</div>
+        <div class="collab-country">🇺🇸 USA</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Prof. Josef Bryja</div>
+        <div class="collab-inst">Institute of Vertebrate Biology, CAS</div>
+        <div class="collab-country">🇨🇿 Czech Republic</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Dr. Timothy Demos</div>
+        <div class="collab-inst">Field Museum of Natural History</div>
+        <div class="collab-country">🇺🇸 USA</div>
+      </div>
+      <div class="collab-card">
+        <div class="collab-name">Dr. Vincent Nicolas</div>
+        <div class="collab-inst">Muséum National d'Histoire Naturelle</div>
+        <div class="collab-country">🇫🇷 France</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Kenneth Otieno Onditi</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="fieldwork.html">Fieldwork</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Kenneth Otieno Onditi &mdash; <a href="mailto:kenotieno@hotmail.com">kenotieno@hotmail.com</a></p>
+  </div>
+</footer>
+
+</div><!-- /page-body -->
+
+<button id="back-top" style="position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--panel);border:1px solid var(--border);color:var(--gold);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;" title="Back to top">↑</button>
+
+<script src="assets/js/main.js"></script>
+<script>
+/* Read progress bar */
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('read-progress');
+  if (!el) return;
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  el.style.width = (window.scrollY / docH * 100) + '%';
+});
+
+/* Smooth scroll to anchor without hash in URL */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>

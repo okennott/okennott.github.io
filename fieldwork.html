@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fieldwork — Kenneth Otieno Onditi</title>
+<meta name="description" content="Six field campaigns across Kenya's montane forests, savannas and wetlands — over 5,900 small mammal specimens collected.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&family=Bitter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shared.css">
+<style>
+/* ─── FIELDWORK PAGE — TERRA ACCENT THEME ─── */
+:root {
+  --banner-gradient: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(184,92,56,0.09) 0%, transparent 65%),
+                     radial-gradient(ellipse 40% 40% at 20% 70%, rgba(200,148,58,0.05) 0%, transparent 50%);
+}
+
+.accent-rule { background: var(--terra); }
+
+/* Stats grid */
+.field-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin: 40px 0 60px;
+}
+.field-stat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.field-stat::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--terra);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.field-stat:hover::before { transform: scaleX(1); }
+.field-stat-num {
+  font-family: 'EB Garamond', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--gold2);
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+.field-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Map + intro */
+.field-intro {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+
+/* Kenya SVG map */
+.kenya-map-wrap {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 24px;
+  position: relative;
+}
+.kenya-map-wrap::before {
+  content: 'KENYA';
+  position: absolute;
+  top: 16px; left: 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--faint);
+}
+
+/* Expedition location markers */
+.map-marker {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.map-marker circle {
+  transition: r 0.2s, opacity 0.2s;
+}
+.map-marker:hover circle { r: 7; }
+.map-marker.active circle { fill: var(--gold2); r: 7; }
+.map-tooltip {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.map-marker:hover .map-tooltip,
+.map-marker.active .map-tooltip { opacity: 1; }
+
+/* Timeline */
+.expedition-timeline {
+  position: relative;
+  padding-left: 36px;
+  margin-top: 8px;
+}
+.expedition-timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px; top: 8px; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--terra), transparent);
+}
+
+.expedition {
+  position: relative;
+  margin-bottom: 52px;
+}
+.expedition::before {
+  content: '';
+  position: absolute;
+  left: -27px; top: 8px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--terra);
+  border: 2px solid var(--bg);
+  transition: transform 0.2s, background 0.2s;
+}
+.expedition:hover::before {
+  transform: scale(1.4);
+  background: var(--gold2);
+}
+
+.expedition-header {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.expedition-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--terra);
+  letter-spacing: 1px;
+  line-height: 1.7;
+  padding-top: 5px;
+}
+
+.expedition-location {
+  font-family: 'Bitter', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.expedition-desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 12px;
+  grid-column: 2;
+}
+
+.expedition-count {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--green);
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 1px solid rgba(90,140,106,0.3);
+}
+
+.expedition-taxa {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  grid-column: 2;
+}
+.exp-taxon {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  border: 1px solid var(--faint);
+  padding: 3px 8px;
+  font-style: italic;
+}
+
+/* Methods block */
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 40px;
+}
+.method-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 28px 24px;
+}
+.method-icon {
+  font-size: 24px;
+  margin-bottom: 14px;
+  display: block;
+}
+.method-title {
+  font-family: 'Bitter', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.method-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .field-intro { grid-template-columns: 1fr; }
+  .field-stats { grid-template-columns: 1fr 1fr; }
+  .methods-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .expedition-header { grid-template-columns: 1fr; gap: 4px; }
+  .expedition-desc, .expedition-taxa { grid-column: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="assets/icons/logo-mark.svg" class="nav-logo-mark" alt="K.O. Onditi">
+    <span class="nav-logo-text">K.O. Onditi</span>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html"        id="nav-home">Home</a></li>
+    <li><a href="research.html"     id="nav-research">Research</a></li>
+    <li><a href="publications.html" id="nav-pubs">Publications</a></li>
+    <li><a href="fieldwork.html"    id="nav-field">Fieldwork</a></li>
+    <li><a href="cv.html"           id="nav-cv">CV</a></li>
+    <li><a href="contact.html"      id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-body">
+
+<!-- ─── BANNER ─── -->
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">Empirical Foundation</span>
+    <h1 class="serif-display">Fieldwork &amp;<br><em style="font-weight:400;color:var(--gold2);">Expeditions</em></h1>
+    <div class="accent-rule" style="background:var(--terra);"></div>
+    <p style="max-width:580px;font-size:17px;color:var(--muted);line-height:1.85;margin-top:14px;">
+      Six major field campaigns across Kenya's montane forests, savanna mosaics,
+      wetlands, and national parks — spanning over 5,900 small mammal specimens
+      collected in collaboration with the National Museums of Kenya and the
+      Kunming Institute of Zoology.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Stats -->
+  <div class="field-stats reveal-stagger">
+    <div class="field-stat">
+      <span class="field-stat-num">5,974</span>
+      <span class="field-stat-label">Total specimens</span>
+    </div>
+    <div class="field-stat">
+      <span class="field-stat-num">6</span>
+      <span class="field-stat-label">Field campaigns</span>
+    </div>
+    <div class="field-stat">
+      <span class="field-stat-num">12+</span>
+      <span class="field-stat-label">Ecosystems sampled</span>
+    </div>
+    <div class="field-stat">
+      <span class="field-stat-num">10+</span>
+      <span class="field-stat-label">Years of fieldwork</span>
+    </div>
+  </div>
+
+  <!-- Map + intro text -->
+  <div class="field-intro">
+    <div>
+      <p style="font-size:17px;color:var(--muted);line-height:1.85;margin-bottom:20px;">
+        All field surveys are conducted as joint collaborations between the
+        <strong style="color:var(--cream);">National Museums of Kenya</strong> and the
+        <strong style="color:var(--cream);">Kunming Institute of Zoology, Chinese Academy of Sciences</strong>
+        — a Sino-African partnership that combines local ecological expertise with
+        genomic and systematic research capacity.
+      </p>
+      <p style="font-size:17px;color:var(--muted);line-height:1.85;">
+        Sampling employs live-trapping with Sherman and pitfall traps, habitat suitability
+        analysis, and strategic transect design across elevational gradients and ecoregional
+        contrasts. Morphological measurements, tissue extraction, and voucher specimen
+        preparation are conducted <em>in situ</em>. Specimens are accessioned into the
+        National Museums of Kenya mammal collection.
+      </p>
+      <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://www.museums.or.ke/" target="_blank" rel="noopener" class="btn-ghost btn-sm">National Museums of Kenya ↗</a>
+        <a href="https://english.kiz.cas.cn/" target="_blank" rel="noopener" class="btn-ghost btn-sm">KIZ, CAS ↗</a>
+      </div>
+    </div>
+
+    <!-- SVG Kenya Map -->
+    <div class="kenya-map-wrap">
+      <svg id="kenya-svg" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <defs>
+          <style>
+            .country-bg { fill: #1a1610; stroke: #3a3020; stroke-width: 1.2; }
+            .site-ring { fill: none; stroke: var(--terra); stroke-width: 1; animation: pulse-ring 2s ease-in-out infinite; }
+            @keyframes pulse-ring { 0%,100%{r:10;opacity:0.3} 50%{r:14;opacity:0} }
+          </style>
+        </defs>
+
+        <!-- Kenya outline (simplified) -->
+        <path class="country-bg" d="
+          M 150 18
+          L 175 22 L 200 20 L 220 28 L 240 38 L 255 55 L 262 75
+          L 258 95 L 268 110 L 278 125 L 280 145 L 272 165
+          L 265 178 L 268 195 L 260 215 L 248 230 L 238 250
+          L 220 265 L 205 278 L 188 285 L 170 280 L 155 285
+          L 140 282 L 122 275 L 108 265 L 95 255 L 82 240
+          L 72 225 L 65 208 L 58 192 L 52 175 L 48 158
+          L 42 140 L 38 122 L 35 105 L 40 88 L 48 72
+          L 60 58 L 72 44 L 88 34 L 105 24 L 125 18
+          Z
+        "/>
+
+        <!-- Lake Victoria (simplified) -->
+        <ellipse cx="68" cy="190" rx="28" ry="22" fill="#0d1820" stroke="#2e2618" stroke-width="0.8"/>
+        <text x="55" y="196" font-family="monospace" font-size="7" fill="#3a5060" letter-spacing="0.5">L. Victoria</text>
+
+        <!-- Rift Valley marker line -->
+        <line x1="148" y1="40" x2="128" y2="270" stroke="#2e2618" stroke-width="0.5" stroke-dasharray="4,3"/>
+        <text x="132" y="155" font-family="monospace" font-size="7" fill="#3a3020" transform="rotate(-8,132,155)" letter-spacing="0.5">Rift Valley</text>
+
+        <!-- ── Expedition site markers ── -->
+        <!-- 1. Mount Kenya (~centre-right) -->
+        <g class="map-marker" data-site="mt-kenya">
+          <circle cx="185" cy="148" r="5" fill="var(--terra)" opacity="0.85"/>
+          <circle class="site-ring" cx="185" cy="148" r="10"/>
+          <text x="192" y="152" font-family="monospace" font-size="8" fill="var(--cream)" opacity="0.8">Mt. Kenya</text>
+        </g>
+
+        <!-- 2. Mt Elgon (upper-left) -->
+        <g class="map-marker" data-site="mt-elgon">
+          <circle cx="92" cy="105" r="5" fill="var(--gold)" opacity="0.85"/>
+          <text x="98" y="109" font-family="monospace" font-size="8" fill="var(--cream)" opacity="0.8">Mt. Elgon</text>
+        </g>
+
+        <!-- 3. Cherang'any Hills -->
+        <g class="map-marker" data-site="cheranganys">
+          <circle cx="118" cy="115" r="4" fill="var(--gold)" opacity="0.8"/>
+          <text x="124" y="119" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Cherang'any</text>
+        </g>
+
+        <!-- 4. Mathews Range (north) -->
+        <g class="map-marker" data-site="mathews">
+          <circle cx="200" cy="80" r="4" fill="var(--gold)" opacity="0.8"/>
+          <text x="206" y="84" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Mathews Rng</text>
+        </g>
+
+        <!-- 5. Kakamega (west) -->
+        <g class="map-marker" data-site="kakamega">
+          <circle cx="82" cy="145" r="4" fill="var(--green)" opacity="0.85"/>
+          <text x="48" y="141" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Kakamega</text>
+        </g>
+
+        <!-- 6. Mau Forest -->
+        <g class="map-marker" data-site="mau">
+          <circle cx="115" cy="165" r="4" fill="var(--green)" opacity="0.8"/>
+          <text x="88" y="161" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Mau</text>
+        </g>
+
+        <!-- 7. Yala Swamp -->
+        <g class="map-marker" data-site="yala">
+          <circle cx="82" cy="168" r="3.5" fill="var(--blue)" opacity="0.8"/>
+        </g>
+
+        <!-- 8. Loita Hills (south) -->
+        <g class="map-marker" data-site="loita">
+          <circle cx="142" cy="215" r="4" fill="var(--terra)" opacity="0.8"/>
+          <text x="148" y="219" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Loita Hills</text>
+        </g>
+
+        <!-- 9. Chyulu Hills -->
+        <g class="map-marker" data-site="chyulu">
+          <circle cx="195" cy="228" r="4" fill="var(--terra)" opacity="0.8"/>
+          <text x="201" y="232" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Chyulu</text>
+        </g>
+
+        <!-- 10. Tsavo (south-east) -->
+        <g class="map-marker" data-site="tsavo">
+          <circle cx="218" cy="248" r="4.5" fill="var(--terra)" opacity="0.8"/>
+          <text x="224" y="252" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Tsavo NPs</text>
+        </g>
+
+        <!-- 11. Shimba Hills / Gongoni (coast) -->
+        <g class="map-marker" data-site="shimba">
+          <circle cx="248" cy="255" r="3.5" fill="var(--green)" opacity="0.75"/>
+          <text x="254" y="252" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Shimba</text>
+        </g>
+
+        <!-- Legend -->
+        <g transform="translate(22, 290)">
+          <circle cx="6" cy="6" r="4" fill="var(--terra)"/>
+          <text x="14" y="10" font-family="monospace" font-size="7" fill="var(--muted)">Highland/dryland</text>
+          <circle cx="6" cy="20" r="4" fill="var(--green)"/>
+          <text x="14" y="24" font-family="monospace" font-size="7" fill="var(--muted)">Forest</text>
+          <circle cx="6" cy="34" r="4" fill="var(--gold)"/>
+          <text x="14" y="38" font-family="monospace" font-size="7" fill="var(--muted)">Multi-site 2019</text>
+          <circle cx="80" cy="6" r="4" fill="var(--blue)"/>
+          <text x="88" y="10" font-family="monospace" font-size="7" fill="var(--muted)">Wetland</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <h2 class="section-title">Expedition Timeline</h2>
+
+  <div class="expedition-timeline">
+
+    <div class="expedition reveal">
+      <div class="expedition-header">
+        <div class="expedition-date">Sept 28 –<br>Nov 14<br>2019</div>
+        <div>
+          <h3 class="expedition-location">Cherang'any Hills, Mt. Elgon &amp; Mathews Range</h3>
+        </div>
+      </div>
+      <p class="expedition-desc">Montane survey across three geographically distinct highlands in western and northern Kenya, targeting rodent and shrew communities across elevational gradients. Yielded important comparative data on diversity patterns across isolated massifs, informing multi-mountain analyses of beta-diversity.</p>
+      <div class="expedition-taxa">
+        <span class="exp-taxon">Rodentia</span>
+        <span class="exp-taxon">Soricidae</span>
+        <span class="exp-taxon">Montane forest</span>
+        <span class="exp-taxon">Elevational transects</span>
+      </div>
+      <span class="expedition-count" style="margin-top:14px;display:inline-block;">854 rodents &amp; shrews</span>
+    </div>
+
+    <div class="expedition reveal">
+      <div class="expedition-header">
+        <div class="expedition-date">Aug 12 –<br>Sept 14<br>2018</div>
+        <div>
+          <h3 class="expedition-location">Mau Forests, Kakamega Forest &amp; Yala Swamp</h3>
+        </div>
+      </div>
+      <p class="expedition-desc">Survey of Kenya's most extensive remaining montane forest (Mau), the species-rich Kakamega rainforest — East Africa's largest remnant of Guineo-Congolian forest — and the Yala Swamp wetland complex. This campaign captured a gradient from highland forest through lowland rainforest to wetland, yielding exceptional taxonomic richness.</p>
+      <div class="expedition-taxa">
+        <span class="exp-taxon">Rainforest</span>
+        <span class="exp-taxon">Wetland</span>
+        <span class="exp-taxon">Lophuromys</span>
+        <span class="exp-taxon">Crocidura</span>
+        <span class="exp-taxon">Lemniscomys</span>
+      </div>
+      <span class="expedition-count" style="margin-top:14px;display:inline-block;">1,450 specimens</span>
+    </div>
+
+    <div class="expedition reveal">
+      <div class="expedition-header">
+        <div class="expedition-date">Jan 9 –<br>Feb 5<br>2018</div>
+        <div>
+          <h3 class="expedition-location">Loita Hills Forest Ecosystem</h3>
+        </div>
+      </div>
+      <p class="expedition-desc">Survey of the Loita Hills — a dry montane forest ecosystem in southern Kenya's Maasai region that harbours distinct small mammal communities due to its isolation from other highland forests. Provided key data for comparative phylogeographic analyses of forest-specialist rodents.</p>
+      <div class="expedition-taxa">
+        <span class="exp-taxon">Dry montane forest</span>
+        <span class="exp-taxon">Forest specialists</span>
+        <span class="exp-taxon">Isolation</span>
+      </div>
+      <span class="expedition-count" style="margin-top:14px;display:inline-block;">877 specimens</span>
+    </div>
+
+    <div class="expedition reveal">
+      <div class="expedition-header">
+        <div class="expedition-date">Aug 19 –<br>Sept 22<br>2016</div>
+        <div>
+          <h3 class="expedition-location">Chyulu Hills, Tsavo NPs, Shimba Hills &amp; Gongoni Forest</h3>
+        </div>
+      </div>
+      <p class="expedition-desc">Multi-site survey spanning the Chyulu Hills volcanic landscape, the vast Tsavo ecosystem (East and West), Shimba Hills coastal forest, and Gongoni forest — capturing an east–west diversity transect from coastal to interior Kenya. First comprehensive small mammal survey for several of these sites. Specimens from this campaign underpinned comparative analyses of coastal vs. highland communities.</p>
+      <div class="expedition-taxa">
+        <span class="exp-taxon">Savanna</span>
+        <span class="exp-taxon">Coastal forest</span>
+        <span class="exp-taxon">Volcanic substrate</span>
+        <span class="exp-taxon">Chiroptera</span>
+      </div>
+      <span class="expedition-count" style="margin-top:14px;display:inline-block;">861 rodents, shrews &amp; bats</span>
+    </div>
+
+    <div class="expedition reveal">
+      <div class="expedition-header">
+        <div class="expedition-date">Sept 6 –<br>Oct 13<br>2015</div>
+        <div>
+          <h3 class="expedition-location">Mount Kenya — Chogoria &amp; Sirimon Transects</h3>
+        </div>
+      </div>
+      <p class="expedition-desc">Elevational survey of East Africa's second-highest peak, conducted along two transects (Chogoria on the south-east slope and Sirimon on the north-west). Sampling covered habitats from montane forest through bamboo zone, moorland, to alpine heath — generating the dataset underpinning several key publications on elevational diversity gradients. This remains the largest single-site small mammal dataset collected from Kenya.</p>
+      <div class="expedition-taxa">
+        <span class="exp-taxon">Afroalpine</span>
+        <span class="exp-taxon">Bamboo zone</span>
+        <span class="exp-taxon">Moorland</span>
+        <span class="exp-taxon">Montane forest</span>
+        <span class="exp-taxon">Elevational gradient</span>
+      </div>
+      <span class="expedition-count" style="margin-top:14px;display:inline-block;">1,932 specimens — largest single survey</span>
+    </div>
+
+    <div class="expedition reveal">
+      <div class="expedition-header">
+        <div class="expedition-date">Jul – Aug<br>2015</div>
+        <div>
+          <h3 class="expedition-location">Loita Forest &amp; Kakamega Forest National Reserve</h3>
+        </div>
+      </div>
+      <p class="expedition-desc">Collaborative survey with a team led by Prof. Julian Kerbis Peterhans (Field Museum of Natural History &amp; Roosevelt University). Survey targeted forest-dependent small mammal communities in two geographically and ecologically contrasting forest types in Kenya. Established the Sino-African collaboration that has underpinned all subsequent field campaigns.</p>
+      <div class="expedition-taxa">
+        <span class="exp-taxon">Forest</span>
+        <span class="exp-taxon">Field Museum collaboration</span>
+        <span class="exp-taxon">Inaugural campaign</span>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+  <!-- Methods -->
+  <section class="section" style="border-top:1px solid var(--border);margin-top:40px;">
+    <span class="eyebrow">Field Methods</span>
+    <h2 class="section-title">Sampling Protocols</h2>
+    <div class="methods-grid reveal-stagger">
+      <div class="method-card">
+        <span class="method-icon">🪤</span>
+        <div class="method-title">Live Trapping</div>
+        <p class="method-desc">Sherman live-traps and pitfall-with-drift-fence arrays deployed along elevational transects at standardised spacing. Traps set at dusk and checked at dawn over 3–5 consecutive nights per site.</p>
+      </div>
+      <div class="method-card">
+        <span class="method-icon">📐</span>
+        <div class="method-title">Morphometrics</div>
+        <p class="method-desc">Standardised external measurements (head-body, tail, ear, hindfoot) and cranial measurements taken in situ. Photographs and tissue samples (ear biopsy in 95% ethanol) taken from all individuals.</p>
+      </div>
+      <div class="method-card">
+        <span class="method-icon">🧬</span>
+        <div class="method-title">Tissue &amp; Voucher Preparation</div>
+        <p class="method-desc">Voucher specimens prepared as dry skins with skulls and accessioned into the National Museums of Kenya mammal collection (NMK). Tissue samples archived at NMK and KIZ, CAS for subsequent genomic analyses.</p>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Kenneth Otieno Onditi</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="fieldwork.html">Fieldwork</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Kenneth Otieno Onditi &mdash; <a href="mailto:kenotieno@hotmail.com">kenotieno@hotmail.com</a></p>
+  </div>
+</footer>
+
+</div><!-- /page-body -->
+
+<button id="back-top" style="position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--panel);border:1px solid var(--border);color:var(--gold);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;" title="Back to top">↑</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

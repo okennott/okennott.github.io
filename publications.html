@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Kenneth Otieno Onditi</title>
+<meta name="description" content="Full list of peer-reviewed publications by Kenneth Otieno Onditi — 32 papers in mammal ecology, systematics, and conservation biology.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&family=Bitter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shared.css">
+<style>
+/* ─── PUBLICATIONS PAGE ─── */
+:root {
+  --banner-gradient: radial-gradient(ellipse 60% 80% at 92% 50%, rgba(90,140,106,0.09) 0%, transparent 70%);
+}
+
+/* Stats bar */
+.pub-stats-bar {
+  display: flex;
+  gap: 2px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+.pub-stat-box {
+  flex: 1;
+  min-width: 140px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.pub-stat-box .num {
+  font-family: 'EB Garamond', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--gold2);
+  line-height: 1;
+}
+.pub-stat-box .lbl {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.pub-stat-box .lbl a {
+  color: var(--green);
+  text-decoration: none;
+}
+.pub-stat-box .lbl a:hover { color: var(--gold2); }
+
+/* Filters */
+.pub-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.pub-filter-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pub-filter-btn:hover,
+.pub-filter-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(200,148,58,0.06);
+}
+
+/* Year heading */
+.pub-year-group { margin-bottom: 64px; }
+.pub-year-heading {
+  font-family: 'EB Garamond', serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--faint);
+  line-height: 1;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  letter-spacing: -2px;
+}
+
+/* Publication card */
+.pub-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+  position: relative;
+}
+.pub-card:hover { border-color: rgba(200,148,58,0.2); }
+.pub-card.hidden { display: none; }
+
+.pub-card-header {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  gap: 20px;
+  padding: 22px 24px;
+  align-items: start;
+  cursor: pointer;
+}
+
+.pub-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.pub-body {}
+.pub-authors {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+.pub-authors strong {
+  color: var(--gold2);
+  font-weight: 500;
+}
+.pub-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 9px;
+  line-height: 1.45;
+}
+.pub-venue-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pub-venue {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: #6a8870;
+  letter-spacing: 0.4px;
+}
+.pub-venue a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.pub-venue a:hover { color: var(--gold2); text-decoration: underline; }
+
+/* Badges */
+.badge { cursor: default; }
+.pub-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+/* Abstract toggle button */
+.abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--faint);
+  padding: 5px 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.abstract-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.abstract-toggle[aria-expanded="true"] {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(200,148,58,0.05);
+}
+
+/* Abstract body */
+.pub-abstract-body {
+  display: none;
+  border-top: 1px solid var(--faint);
+  padding: 24px 24px 24px 88px;
+  animation: fadeIn 0.25s ease;
+}
+.pub-abstract-body.open { display: block; }
+
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(-6px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+.pub-abstract-text {
+  font-size: 15px;
+  color: #9a8e76;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 720px;
+}
+.pub-abstract-text p { margin-bottom: 12px; }
+.pub-abstract-text p:last-child { margin-bottom: 0; }
+.pub-abstract-loading {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--faint);
+  letter-spacing: 1px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}
+
+.pub-links-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--muted);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.pub-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.pub-link.pdf { border-color: rgba(90,140,106,0.3); color: var(--green); }
+.pub-link.pdf:hover { border-color: var(--green); background: rgba(90,140,106,0.06); }
+.pub-link.scholar { border-color: rgba(74,122,155,0.3); color: #7ab0cc; }
+.pub-link.scholar:hover { border-color: #7ab0cc; }
+
+/* Open access indicator on card side */
+.pub-card.oa {
+  border-left: 2px solid rgba(90,140,106,0.4);
+}
+.pub-card.restricted {
+  border-left: 2px solid rgba(184,92,56,0.3);
+}
+
+/* Total citations live badge */
+#total-citations-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .pub-card-header { grid-template-columns: 36px 1fr; }
+  .pub-card-actions { display: none; }
+  .pub-abstract-body { padding-left: 24px; }
+  .pub-year-heading { font-size: 44px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="assets/icons/logo-mark.svg" class="nav-logo-mark" alt="K.O. Onditi">
+    <span class="nav-logo-text">K.O. Onditi</span>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html"        id="nav-home">Home</a></li>
+    <li><a href="research.html"     id="nav-research">Research</a></li>
+    <li><a href="publications.html" id="nav-pubs">Publications</a></li>
+    <li><a href="fieldwork.html"    id="nav-field">Fieldwork</a></li>
+    <li><a href="cv.html"           id="nav-cv">CV</a></li>
+    <li><a href="contact.html"      id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-body">
+
+<!-- ─── BANNER ─── -->
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">Peer-Reviewed Work</span>
+    <h1 class="serif-display">Publications</h1>
+    <div class="accent-rule" style="background:var(--green);"></div>
+    <p style="color:var(--muted);font-size:16px;max-width:600px;line-height:1.7;">
+      32 peer-reviewed articles across mammal systematics, macroecology, and conservation biology.
+      Citations tracked live via
+      <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener"
+         style="color:var(--green);text-decoration:none;">Google Scholar ↗</a> ·
+      <a href="https://www.researchgate.net/profile/Kenneth-Onditi" target="_blank" rel="noopener"
+         style="color:var(--green);text-decoration:none;">ResearchGate ↗</a> ·
+      <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener"
+         style="color:var(--green);text-decoration:none;">ORCID ↗</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Stats bar -->
+  <div class="pub-stats-bar">
+    <div class="pub-stat-box">
+      <span class="num">32</span>
+      <span class="lbl">Total publications</span>
+    </div>
+    <div class="pub-stat-box">
+      <span class="num" id="total-citations-badge">200+</span>
+      <span class="lbl">Citations · <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></span>
+    </div>
+    <div class="pub-stat-box">
+      <span class="num">6</span>
+      <span class="lbl">Years 2019–2026</span>
+    </div>
+    <div class="pub-stat-box">
+      <span class="num">18</span>
+      <span class="lbl">Open-access papers <span style="color:var(--green);">🔓</span></span>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px;align-items:center;">
+    <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;">Key:</span>
+    <span class="badge badge-oa">🔓 Open Access</span>
+    <span class="badge badge-restricted">🔒 Subscription · author copy available</span>
+    <span class="badge badge-citations">★ Citation count (Semantic Scholar)</span>
+  </div>
+
+  <!-- Filters -->
+  <div class="pub-filters">
+    <button class="pub-filter-btn active" data-filter="all">All (32)</button>
+    <button class="pub-filter-btn" data-filter="first">First-author</button>
+    <button class="pub-filter-btn" data-filter="systematics">Systematics</button>
+    <button class="pub-filter-btn" data-filter="macroecology">Macroecology</button>
+    <button class="pub-filter-btn" data-filter="conservation">Conservation</button>
+    <button class="pub-filter-btn" data-filter="oa">Open Access</button>
+  </div>
+
+  <div id="pubs-list">
+
+  <!-- ════ 2026 ════ -->
+  <div class="pub-year-group" id="year-2026">
+    <div class="pub-year-heading">2026</div>
+
+    <!-- #32 -->
+    <div class="pub-card oa" id="pub-32" data-tags="first systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(32)">
+        <span class="pub-num">32</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Demos, T. C., Kerbis Peterhans, J. C., Nicolas, V., Mikula, O., Bryjová, A., Hounmavo, A., Monadjem, A., &amp; Bryja, J.</div>
+          <div class="pub-title">Diversification and biogeographic history of African dormice (genus <em>Graphiurus</em>) revealed by ultraconserved elements and mitochondrial data</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Molecular Phylogenetics and Evolution, 217, 108549 ·
+              <a href="https://doi.org/10.1016/j.ympev.2026.108549" target="_blank" rel="noopener">doi:10.1016/j.ympev.2026.108549</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-32" data-doi="10.1016/j.ympev.2026.108549" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(32)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-32">
+        <div class="pub-abstract-text" id="abs-text-32" data-doi="10.1016/j.ympev.2026.108549" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1016/j.ympev.2026.108549" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Diversification+biogeographic+Graphiurus+ultraconserved" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2026_Graphiurus_UCE.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #31 -->
+    <div class="pub-card oa" id="pub-31" data-tags="macroecology conservation oa">
+      <div class="pub-card-header" onclick="toggleAbstract(31)">
+        <span class="pub-num">31</span>
+        <div class="pub-body">
+          <div class="pub-authors">Li, X., Hu, W., <strong>Onditi, K. O.</strong>, Li, Q., Hu, Z., Bai, R., Liu, Y., Wang, H., &amp; Jiang, X.</div>
+          <div class="pub-title">Functional homogenization of terrestrial mammals outside protected areas in the Hengduan Mountains, China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Conservation Biology, e70214 ·
+              <a href="https://doi.org/10.1111/cobi.70214" target="_blank" rel="noopener">doi:10.1111/cobi.70214</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-31" data-doi="10.1111/cobi.70214" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(31)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-31">
+        <div class="pub-abstract-text" id="abs-text-31" data-doi="10.1111/cobi.70214" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1111/cobi.70214" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Functional+homogenization+terrestrial+mammals+Hengduan" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Li_2026_FunctionalHomogenization_Hengduan.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2025 ════ -->
+  <div class="pub-year-group" id="year-2025">
+    <div class="pub-year-heading">2025</div>
+
+    <!-- #30 -->
+    <div class="pub-card oa" id="pub-30" data-tags="systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(30)">
+        <span class="pub-num">30</span>
+        <div class="pub-body">
+          <div class="pub-authors">Sambaya, B. A., Ouru, S. M., He, S.-W., Musila, S., Li, Q., Chen, Z.-Z., Song, W.-Y., Li, X.-Y., <strong>Onditi, K. O.</strong>, &amp; Jiang, X.-L.</div>
+          <div class="pub-title">Integrative Phylogeography of African Striped Grass Mice (<em>Lemniscomys</em>): Cryptic Diversity and Habitat Resilience</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Zoological Research: Diversity and Conservation</span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-30" data-doi="" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(30)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-30">
+        <div class="pub-abstract-text" id="abs-text-30">
+          <p>Integrative phylogeographic study of <em>Lemniscomys</em> striped grass mice across sub-Saharan Africa, combining molecular markers with morphological and ecological data to uncover cryptic diversity, historical population structure, and patterns of habitat resilience across savanna and forest-edge environments.</p>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://scholar.google.com/scholar?q=Integrative+Phylogeography+Lemniscomys+Cryptic+Diversity" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Sambaya_2025_Lemniscomys.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #29 -->
+    <div class="pub-card oa" id="pub-29" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(29)">
+        <span class="pub-num">29</span>
+        <div class="pub-body">
+          <div class="pub-authors">Bai, R., Ji, Y., Hu, W., Hu, Z., He, S., <strong>Onditi, K. O.</strong>, Wang, H., Xiong, Y., Zhang, J., Jiang, X., &amp; Li, X.</div>
+          <div class="pub-title">Seasonal differences and downstream transport of terrestrial vertebrate eDNA: Insights from integrated camera-trap survey and water eDNA metabarcoding</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Global Ecology and Conservation, 62, e03854 ·
+              <a href="https://doi.org/10.1016/j.gecco.2025.e03854" target="_blank" rel="noopener">doi:10.1016/j.gecco.2025.e03854</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-29" data-doi="10.1016/j.gecco.2025.e03854" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(29)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-29">
+        <div class="pub-abstract-text" id="abs-text-29" data-doi="10.1016/j.gecco.2025.e03854" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1016/j.gecco.2025.e03854" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Seasonal+differences+downstream+transport+eDNA+vertebrate" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Bai_2025_eDNA_seasonal.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #28 -->
+    <div class="pub-card restricted" id="pub-28" data-tags="systematics">
+      <div class="pub-card-header" onclick="toggleAbstract(28)">
+        <span class="pub-num">28</span>
+        <div class="pub-body">
+          <div class="pub-authors">Li, Y.-X., Chen, Z.-Z., Li, Q., Zhang, T., Cheng, F., Song, W.-Y., Li, X.-Y., He, S.-W., Wang, H.-J., <strong>Onditi, K. O.</strong>, &amp; Jiang, X.-L.</div>
+          <div class="pub-title">Species Diversification in the Sky Islands of Southwestern China Revealed by Genomic, Introgression and Demographic Analyses of Asian Shrew Moles</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Systematic Biology ·
+              <a href="https://doi.org/10.1093/sysbio/syaf052" target="_blank" rel="noopener">doi:10.1093/sysbio/syaf052</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-28" data-doi="10.1093/sysbio/syaf052" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(28)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-28">
+        <div class="pub-abstract-text" id="abs-text-28" data-doi="10.1093/sysbio/syaf052" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1093/sysbio/syaf052" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Species+Diversification+Sky+Islands+Southwestern+China+Shrew+Moles" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Li_2025_ShrewMoles_SkyIslands.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #27 -->
+    <div class="pub-card oa" id="pub-27" data-tags="conservation oa">
+      <div class="pub-card-header" onclick="toggleAbstract(27)">
+        <span class="pub-num">27</span>
+        <div class="pub-body">
+          <div class="pub-authors">Koju N. P., Anish K. C., Dodhari K., Giri P., Lee M., Pokhrel S., Ghimire A., Nyaichyai L., <strong>Onditi K. O.</strong>, Jiang X.-L., Kyes R. C.</div>
+          <div class="pub-title">Spatiotemporal patterns and environmental determinants of wildlife-vehicle collisions in Banke National Park, Nepal</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Scientific Reports, 15:19478 ·
+              <a href="https://doi.org/10.1038/s41598-025-04609-w" target="_blank" rel="noopener">doi:10.1038/s41598-025-04609-w</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-27" data-doi="10.1038/s41598-025-04609-w" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(27)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-27">
+        <div class="pub-abstract-text" id="abs-text-27" data-doi="10.1038/s41598-025-04609-w" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1038/s41598-025-04609-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Spatiotemporal+wildlife+vehicle+collisions+Banke+National+Park+Nepal" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Koju_2025_Wildlife_vehicle_Nepal.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #26 -->
+    <div class="pub-card oa" id="pub-26" data-tags="first macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(26)">
+        <span class="pub-num">26</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Song, W., Chen, Z., Li, Xueyou, Li, Q., Musila, S., de la Sancha, N. U., Jiang, X-L.</div>
+          <div class="pub-title">Multiscale Spatial Dependency of Small Mammal Diversity Patterns and their Determinants</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Ecosphere 16(2): e70179 ·
+              <a href="https://doi.org/10.1002/ecs2.70179" target="_blank" rel="noopener">doi:10.1002/ecs2.70179</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-26" data-doi="10.1002/ecs2.70179" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(26)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-26">
+        <div class="pub-abstract-text" id="abs-text-26" data-doi="10.1002/ecs2.70179" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1002/ecs2.70179" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Multiscale+Spatial+Dependency+Small+Mammal+Diversity+Determinants" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2025_Multiscale_Diversity.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #25 -->
+    <div class="pub-card restricted" id="pub-25" data-tags="conservation">
+      <div class="pub-card-header" onclick="toggleAbstract(25)">
+        <span class="pub-num">25</span>
+        <div class="pub-body">
+          <div class="pub-authors">Huang, C., Y. Chen, L.-L. Li, A. Campos-Arceiz, Y. Wang, <strong>Onditi, K. O.</strong>, Z. Li, L. Feng, Y. Liu, and T. M. Lee.</div>
+          <div class="pub-title">Human–wildlife coexistence needs more evidence-based interventions to reduce the losses of crops, livestock and fishery catches</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Journal of Applied Ecology 62, 527–544 ·
+              <a href="https://doi.org/10.1111/1365-2664.14857" target="_blank" rel="noopener">doi:10.1111/1365-2664.14857</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-25" data-doi="10.1111/1365-2664.14857" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(25)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-25">
+        <div class="pub-abstract-text" id="abs-text-25" data-doi="10.1111/1365-2664.14857" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1111/1365-2664.14857" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Human+wildlife+coexistence+evidence+based+interventions+crops+livestock" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Huang_2025_Human_Wildlife_Coexistence.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #24 -->
+    <div class="pub-card restricted" id="pub-24" data-tags="macroecology conservation">
+      <div class="pub-card-header" onclick="toggleAbstract(24)">
+        <span class="pub-num">24</span>
+        <div class="pub-body">
+          <div class="pub-authors">Hu, W., Li, X., <strong>Onditi, K. O.</strong>, Wang, H., Song, W., Hu, Z., Pu, C., Pu, M., Xiong, Y., Yang, S., Zhu, L., Yin, J., He, L., Song, H., Li, Y., Gao, G., Bleisch, W. V., &amp; Jiang, X.</div>
+          <div class="pub-title">Spatiotemporal distribution patterns of large and medium-sized mammals in a biodiversity hotspot: Implications for conservation</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Biological Conservation, 301, 110863 ·
+              <a href="https://doi.org/10.1016/j.biocon.2024.110863" target="_blank" rel="noopener">doi:10.1016/j.biocon.2024.110863</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-24" data-doi="10.1016/j.biocon.2024.110863" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(24)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-24">
+        <div class="pub-abstract-text" id="abs-text-24" data-doi="10.1016/j.biocon.2024.110863" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1016/j.biocon.2024.110863" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Spatiotemporal+distribution+large+medium+mammals+biodiversity+hotspot" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Hu_2025_Spatiotemporal_mammals_Hengduan.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2024 ════ -->
+  <div class="pub-year-group" id="year-2024">
+    <div class="pub-year-heading">2024</div>
+
+    <!-- #23 -->
+    <div class="pub-card oa" id="pub-23" data-tags="first macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(23)">
+        <span class="pub-num">23</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, de la Sancha, N. U., Musila, S., Kioko, E., &amp; Jiang, X.</div>
+          <div class="pub-title">Unravelling spatial scale effects on elevational diversity gradients: insights from montane small mammals in Kenya</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">BMC Ecology and Evolution, 24(1), 139 ·
+              <a href="https://doi.org/10.1186/s12862-024-02328-w" target="_blank" rel="noopener">doi:10.1186/s12862-024-02328-w</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-23" data-doi="10.1186/s12862-024-02328-w" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(23)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-23">
+        <div class="pub-abstract-text" id="abs-text-23" data-doi="10.1186/s12862-024-02328-w" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1186/s12862-024-02328-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=spatial+scale+effects+elevational+diversity+gradients+small+mammals+Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2024_ElevationalDiversity_Kenya.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #22 -->
+    <div class="pub-card oa" id="pub-22" data-tags="systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(22)">
+        <span class="pub-num">22</span>
+        <div class="pub-body">
+          <div class="pub-authors">Mweu, A. W., <strong>Onditi, K. O.</strong>, Khanal, L., Musila, S., Kioko, E., &amp; Jiang, X.</div>
+          <div class="pub-title">Comparative Phylogeography of Two Specialist Rodents in Forest Fragments in Kenya</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Life, 14(11) ·
+              <a href="https://doi.org/10.3390/life14111469" target="_blank" rel="noopener">doi:10.3390/life14111469</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-22" data-doi="10.3390/life14111469" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(22)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-22">
+        <div class="pub-abstract-text" id="abs-text-22" data-doi="10.3390/life14111469" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3390/life14111469" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Comparative+Phylogeography+Specialist+Rodents+Forest+Fragments+Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Mweu_2024_Phylogeography_Kenya_rodents.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #21 -->
+    <div class="pub-card oa" id="pub-21" data-tags="macroecology conservation oa">
+      <div class="pub-card-header" onclick="toggleAbstract(21)">
+        <span class="pub-num">21</span>
+        <div class="pub-body">
+          <div class="pub-authors">Li, Q., Li, X.-Y., Hu, W.-Q., Song, W.-Y., He, S.-W., Wang, H.-J., Hu, Z.-C., Li, M.-C., <strong>Onditi, K. O.</strong>, Chen, Z.-Z., Pu, C.-Z., Xiong, Y., Rao, C.-H., Zhang, F.-Y., Zuo, C.-S., &amp; Jiang, X.-L.</div>
+          <div class="pub-title">The mammals of Gaoligong Mountain in China: diversity, distribution, and conservation</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Zoological Research Diversity and Conservation, 1(1): 3-19 ·
+              <a href="https://doi.org/10.24272/j.issn.2097-3772.2023.005" target="_blank" rel="noopener">doi:10.24272/j.issn.2097-3772.2023.005</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-21" data-doi="10.24272/j.issn.2097-3772.2023.005" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(21)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-21">
+        <div class="pub-abstract-text" id="abs-text-21" data-doi="10.24272/j.issn.2097-3772.2023.005" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.24272/j.issn.2097-3772.2023.005" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=mammals+Gaoligong+Mountain+diversity+distribution+conservation" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Li_2024_Gaoligong_mammals.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #20 -->
+    <div class="pub-card oa" id="pub-20" data-tags="systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(20)">
+        <span class="pub-num">20</span>
+        <div class="pub-body">
+          <div class="pub-authors">Wang, S.-Y., Li, Y.-X., Li, Q., Song, W.-Y., Wang, H.-J., He, S.-W., <strong>Onditi, K. O.</strong>, Khanal, L., Li, X.-Y., Chen, Z.-Z., &amp; Jiang, X.-L.</div>
+          <div class="pub-title">A new species of mountain vole (Rodentia, Cricetidae, <em>Neodon</em>) from south Xizang, China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Zoological Research: Diversity and Conservation, 1(4), 282-289 ·
+              <a href="https://doi.org/10.24272/j.issn.2097-3772.2024.011" target="_blank" rel="noopener">doi:10.24272/j.issn.2097-3772.2024.011</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-20" data-doi="10.24272/j.issn.2097-3772.2024.011" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(20)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-20">
+        <div class="pub-abstract-text" id="abs-text-20" data-doi="10.24272/j.issn.2097-3772.2024.011" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.24272/j.issn.2097-3772.2024.011" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=new+species+mountain+vole+Neodon+Xizang+China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Wang_2024_Neodon_new_species.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2023 ════ -->
+  <div class="pub-year-group" id="year-2023">
+    <div class="pub-year-heading">2023</div>
+
+    <!-- #19 -->
+    <div class="pub-card restricted" id="pub-19" data-tags="first macroecology">
+      <div class="pub-card-header" onclick="toggleAbstract(19)">
+        <span class="pub-num">19</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Song, W. Y., Li, X. Y., Musila, S., Chen, Z. Z., Li, Q., Mathenge, J., Kioko, E., &amp; Jiang, X. L.</div>
+          <div class="pub-title">Untangling key abiotic predictors of terrestrial mammal diversity patterns across ecoregions and species groups in Kenya</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Ecological Indicators, 154, 110595 ·
+              <a href="https://doi.org/10.1016/j.ecolind.2023.110595" target="_blank" rel="noopener">doi:10.1016/j.ecolind.2023.110595</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-19" data-doi="10.1016/j.ecolind.2023.110595" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(19)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-19">
+        <div class="pub-abstract-text" id="abs-text-19" data-doi="10.1016/j.ecolind.2023.110595" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1016/j.ecolind.2023.110595" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=abiotic+predictors+mammal+diversity+ecoregions+Kenya+Onditi" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2023_Mammal_Diversity_Kenya.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #18 -->
+    <div class="pub-card restricted" id="pub-18" data-tags="conservation macroecology">
+      <div class="pub-card-header" onclick="toggleAbstract(18)">
+        <span class="pub-num">18</span>
+        <div class="pub-body">
+          <div class="pub-authors">Yu, Q., Hu, Z., Huang, C., Xu, T., <strong>Onditi, K. O.</strong>, Li, X., &amp; Jiang, X.</div>
+          <div class="pub-title">Suitable habitats shifting toward human-dominated landscapes of Asian elephants in China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Biodiversity and Conservation, 33(2), 685-704 ·
+              <a href="https://doi.org/10.1007/s10531-023-02766-w" target="_blank" rel="noopener">doi:10.1007/s10531-023-02766-w</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-18" data-doi="10.1007/s10531-023-02766-w" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(18)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-18">
+        <div class="pub-abstract-text" id="abs-text-18" data-doi="10.1007/s10531-023-02766-w" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1007/s10531-023-02766-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Suitable+habitats+shifting+human+dominated+Asian+elephants+China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Yu_2023_Asian_elephants_habitat.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #17 -->
+    <div class="pub-card restricted" id="pub-17" data-tags="systematics">
+      <div class="pub-card-header" onclick="toggleAbstract(17)">
+        <span class="pub-num">17</span>
+        <div class="pub-body">
+          <div class="pub-authors">Chen, Z., Pei, X., Song, J., Song, W., Shi, Z., <strong>Onditi, K. O.</strong>, Li, Q., &amp; Jiang, X.</div>
+          <div class="pub-title">Systematics and evolutionary history of the genus <em>Micromys</em> (Mammalia: Rodentia: Muridae)</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Mammalian Biology, 103(4), 389-403 ·
+              <a href="https://doi.org/10.1007/s42991-023-00360-9" target="_blank" rel="noopener">doi:10.1007/s42991-023-00360-9</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-17" data-doi="10.1007/s42991-023-00360-9" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(17)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-17">
+        <div class="pub-abstract-text" id="abs-text-17" data-doi="10.1007/s42991-023-00360-9" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1007/s42991-023-00360-9" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Systematics+evolutionary+history+Micromys+Mammalia+Rodentia" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Chen_2023_Micromys_systematics.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #16 -->
+    <div class="pub-card restricted" id="pub-16" data-tags="systematics">
+      <div class="pub-card-header" onclick="toggleAbstract(16)">
+        <span class="pub-num">16</span>
+        <div class="pub-body">
+          <div class="pub-authors">Chen, Z., Hu, J., He, K., Zhang, B., Zhang, Y., Chu, J., Zhao, K., <strong>Onditi, K. O.</strong>, &amp; Jiang, X.</div>
+          <div class="pub-title">Molecular and morphological evidence support a new species of Asiatic short-tailed shrew (Eulipotyphla: Soricidae)</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Journal of Mammalogy, 104(6), 1455–1467 ·
+              <a href="https://doi.org/10.1093/jmammal/gyad087" target="_blank" rel="noopener">doi:10.1093/jmammal/gyad087</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-16" data-doi="10.1093/jmammal/gyad087" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(16)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-16">
+        <div class="pub-abstract-text" id="abs-text-16" data-doi="10.1093/jmammal/gyad087" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1093/jmammal/gyad087" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=new+species+Asiatic+short+tailed+shrew+Soricidae+Chen" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Chen_2023_new_shrew_species.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #15 -->
+    <div class="pub-card oa" id="pub-15" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(15)">
+        <span class="pub-num">15</span>
+        <div class="pub-body">
+          <div class="pub-authors">Oyebanji, O. O., <strong>Onditi, K. O.</strong>, Azevedo, J. A. R., Rahaingoson, F. R., Nneji, L. M., Adeleye, M. A., Stull, G. W., Zhang, R., &amp; Yi, T.-S.</div>
+          <div class="pub-title">Biogeographic patterns and environmental drivers of species richness in the globally distributed Millettioid/Phaseoloid clade (Fabaceae, subfamily Papilionoideae)</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Frontiers in Ecology and Evolution, 11 ·
+              <a href="https://doi.org/10.3389/fevo.2023.1231553" target="_blank" rel="noopener">doi:10.3389/fevo.2023.1231553</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-15" data-doi="10.3389/fevo.2023.1231553" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(15)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-15">
+        <div class="pub-abstract-text" id="abs-text-15" data-doi="10.3389/fevo.2023.1231553" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3389/fevo.2023.1231553" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Biogeographic+patterns+species+richness+Millettioid+Fabaceae" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Oyebanji_2023_Fabaceae_biogeography.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #14 -->
+    <div class="pub-card oa" id="pub-14" data-tags="systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(14)">
+        <span class="pub-num">14</span>
+        <div class="pub-body">
+          <div class="pub-authors">Shi, Z., Yao, H., He, K., Bai, W., Zhou, J., Fan, J., Su, W., Nie, W., Yang, S., <strong>Onditi, K. O.</strong>, Jiang, X., &amp; Chen, Z.</div>
+          <div class="pub-title">A new species of forest hedgehog (<em>Mesechinus</em>, Erinaceidae, Eulipotyphla, Mammalia) from eastern China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">ZooKeys, 1185, 143-161 ·
+              <a href="https://doi.org/10.3897/zookeys.1185.111615" target="_blank" rel="noopener">doi:10.3897/zookeys.1185.111615</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-14" data-doi="10.3897/zookeys.1185.111615" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(14)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-14">
+        <div class="pub-abstract-text" id="abs-text-14" data-doi="10.3897/zookeys.1185.111615" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3897/zookeys.1185.111615" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=new+species+forest+hedgehog+Mesechinus+Erinaceidae+eastern+China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Shi_2023_Mesechinus_new_species.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #13 -->
+    <div class="pub-card oa" id="pub-13" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(13)">
+        <span class="pub-num">13</span>
+        <div class="pub-body">
+          <div class="pub-authors">Song, W.-Y., <strong>Onditi, K. O.</strong>, Li, X.-Y., Chen, Z.-Z., He, S.-W., Li, Q., &amp; Jiang, X.-L.</div>
+          <div class="pub-title">Decomposing niche components reveals simultaneous effects of opposite deterministic processes structuring alpine small mammal assembly</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Frontiers in Ecology and Evolution, 10 ·
+              <a href="https://doi.org/10.3389/fevo.2022.999573" target="_blank" rel="noopener">doi:10.3389/fevo.2022.999573</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-13" data-doi="10.3389/fevo.2022.999573" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(13)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-13">
+        <div class="pub-abstract-text" id="abs-text-13" data-doi="10.3389/fevo.2022.999573" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3389/fevo.2022.999573" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=niche+components+deterministic+processes+alpine+small+mammal" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Song_2023_Niche_alpine_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2022 ════ -->
+  <div class="pub-year-group" id="year-2022">
+    <div class="pub-year-heading">2022</div>
+
+    <!-- #12 -->
+    <div class="pub-card oa" id="pub-12" data-tags="first macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(12)">
+        <span class="pub-num">12</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Song, W. Y., Li, X. Y., Chen, Z. Z., Li, Q., He, S. W., Musila, S., Kioko, E., &amp; Jiang, X. L.</div>
+          <div class="pub-title">Patterns and Predictors of Small Mammal Phylogenetic and Functional Diversity in Contrasting Elevational Gradients in Kenya</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Frontiers in Ecology and Evolution, 9(964), 742524 ·
+              <a href="https://doi.org/10.3389/fevo.2021.742524" target="_blank" rel="noopener">doi:10.3389/fevo.2021.742524</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-12" data-doi="10.3389/fevo.2021.742524" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(12)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-12">
+        <div class="pub-abstract-text" id="abs-text-12" data-doi="10.3389/fevo.2021.742524" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3389/fevo.2021.742524" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Patterns+Predictors+Small+Mammal+Phylogenetic+Functional+Diversity+Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2022_Phylogenetic_Functional_Diversity_Kenya.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #11, #10, #9, #8 condensed -->
+    <div class="pub-card oa" id="pub-11" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(11)">
+        <span class="pub-num">11</span>
+        <div class="pub-body">
+          <div class="pub-authors">Song, W-Y., Li, X-Y., <strong>Onditi, K. O.</strong>, &amp; Jiang, X.</div>
+          <div class="pub-title">Methodological advances in explaining community assembly with niche-based theory</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Acta Theriologica Sinica, 42(3), 312-324 ·
+              <a href="https://doi.org/10.16829/j.slxb.150613" target="_blank" rel="noopener">doi:10.16829/j.slxb.150613</a>
+            </span>
+            <span class="badge badge-citations cite-badge" id="cit-11" data-doi="10.16829/j.slxb.150613" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(11)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-11">
+        <div class="pub-abstract-text" id="abs-text-11">
+          <p>A methodological review examining advances in applying niche-based theoretical frameworks to understand community assembly processes in terrestrial mammal communities, focusing on the integration of phylogenetic, functional, and taxonomic diversity metrics.</p>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.16829/j.slxb.150613" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="pdfs/Song_2022_Niche_theory_review.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card oa" id="pub-10" data-tags="systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(10)">
+        <span class="pub-num">10</span>
+        <div class="pub-body">
+          <div class="pub-authors">Chen, Z.-Z., Hu, T.-L., Pei, X.-X., Yang, G.-D., Yong, F., Xu, Z., Qu, W.-Y., <strong>Onditi, K. O.</strong>, &amp; Zhang, B.-W.</div>
+          <div class="pub-title">A new species of Asiatic shrew of the genus <em>Chodsigoa</em> (Soricidae, Eulipotyphla, Mammalia) from the Dabie Mountains</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">ZooKeys, 1083, 129-146 ·
+              <a href="https://doi.org/10.3897/zookeys.1083.78233" target="_blank" rel="noopener">doi:10.3897/zookeys.1083.78233</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-10" data-doi="10.3897/zookeys.1083.78233" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(10)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-10">
+        <div class="pub-abstract-text" id="abs-text-10" data-doi="10.3897/zookeys.1083.78233" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3897/zookeys.1083.78233" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=new+species+Chodsigoa+Soricidae+Dabie+Mountains" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Chen_2022_Chodsigoa_new_species.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card oa" id="pub-9" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(9)">
+        <span class="pub-num">9</span>
+        <div class="pub-body">
+          <div class="pub-authors">Hu, W.-H., <strong>Onditi, K. O.</strong>, Jiang, X.-L., Wu, H.-L., &amp; Chen, Z.-Z.</div>
+          <div class="pub-title">Modeling the Potential Distribution of Two Species of Shrews (<em>Chodsigoa hypsibia</em> and <em>Anourosorex squamipes</em>) under Climate Change in China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Diversity, 14(2), 87 ·
+              <a href="https://doi.org/10.3390/d14020087" target="_blank" rel="noopener">doi:10.3390/d14020087</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-9" data-doi="10.3390/d14020087" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(9)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-9">
+        <div class="pub-abstract-text" id="abs-text-9" data-doi="10.3390/d14020087" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3390/d14020087" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Potential+Distribution+Chodsigoa+Anourosorex+Climate+Change+China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Hu_2022_Chodsigoa_distribution.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card oa" id="pub-8" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(8)">
+        <span class="pub-num">8</span>
+        <div class="pub-body">
+          <div class="pub-authors">Pei, X., Ren, X., Hu, J., <strong>Onditi, K. O.</strong>, Xu, Y., Zhang, M., Chang, W., &amp; Chen, Z.</div>
+          <div class="pub-title">Human Disturbance and Geometric Constraints Drive Small Mammal Diversity and Community Structure along an Elevational Gradient in Eastern China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Animals, 12(15) ·
+              <a href="https://doi.org/10.3390/ani12151915" target="_blank" rel="noopener">doi:10.3390/ani12151915</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-8" data-doi="10.3390/ani12151915" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(8)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-8">
+        <div class="pub-abstract-text" id="abs-text-8" data-doi="10.3390/ani12151915" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.3390/ani12151915" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Human+Disturbance+Geometric+Constraints+Small+Mammal+Diversity+Elevational" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Pei_2022_Human_disturbance_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2021 ════ -->
+  <div class="pub-year-group" id="year-2021">
+    <div class="pub-year-heading">2021</div>
+
+    <div class="pub-card oa" id="pub-7" data-tags="first systematics oa">
+      <div class="pub-card-header" onclick="toggleAbstract(7)">
+        <span class="pub-num">7</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Demos, T. C., Kerbis Peterhans, J., Chen, Z. Z., Bryja, J., Lavrenchenko, L. A., Musila, S., Verheyen, E., Van de Perre, F., Akaibe, B. D., de la Sancha, N. U., &amp; Jiang, X. L.</div>
+          <div class="pub-title">Historical biogeography, systematics, and integrative taxonomy of the non-Ethiopian speckled pelage brush-furred rats (<em>Lophuromys flavopunctatus</em> group)</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">BMC Ecology and Evolution, 21(1), 89 ·
+              <a href="https://doi.org/10.1186/s12862-021-01813-w" target="_blank" rel="noopener">doi:10.1186/s12862-021-01813-w</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-7" data-doi="10.1186/s12862-021-01813-w" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(7)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-7">
+        <div class="pub-abstract-text" id="abs-text-7" data-doi="10.1186/s12862-021-01813-w" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1186/s12862-021-01813-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Historical+biogeography+systematics+Lophuromys+flavopunctatus" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2021_Lophuromys_biogeography.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card restricted" id="pub-6" data-tags="first conservation">
+      <div class="pub-card-header" onclick="toggleAbstract(6)">
+        <span class="pub-num">6</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Li, X. Y., Song, W. Y., Li, Q., Musila, S., Mathenge, J., Kioko, E., &amp; Jiang, X. L.</div>
+          <div class="pub-title">The management effectiveness of protected areas in Kenya</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Biodiversity and Conservation, 30(13), 3813-3836 ·
+              <a href="https://doi.org/10.1007/s10531-021-02276-7" target="_blank" rel="noopener">doi:10.1007/s10531-021-02276-7</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-6" data-doi="10.1007/s10531-021-02276-7" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(6)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-6">
+        <div class="pub-abstract-text" id="abs-text-6" data-doi="10.1007/s10531-021-02276-7" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1007/s10531-021-02276-7" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=management+effectiveness+protected+areas+Kenya+mammals" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2021_Protected_areas_Kenya.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card restricted" id="pub-5" data-tags="systematics">
+      <div class="pub-card-header" onclick="toggleAbstract(5)">
+        <span class="pub-num">5</span>
+        <div class="pub-body">
+          <div class="pub-authors">Chen, Z.-Z., He, S.-W., Hu, W.-H., Song, W.-Y., <strong>Onditi, K. O.</strong>, Li, X.-Y., &amp; Jiang, X.-L.</div>
+          <div class="pub-title">Morphology and phylogeny of scalopine moles (Eulipotyphla: Talpidae: Scalopini) from the eastern Himalayas, with descriptions of a new genus and species</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Zoological Journal of the Linnean Society, 193(2), 432-444 ·
+              <a href="https://doi.org/10.1093/zoolinnean/zlaa172" target="_blank" rel="noopener">doi:10.1093/zoolinnean/zlaa172</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-5" data-doi="10.1093/zoolinnean/zlaa172" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(5)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-5">
+        <div class="pub-abstract-text" id="abs-text-5" data-doi="10.1093/zoolinnean/zlaa172" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1093/zoolinnean/zlaa172" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=scalopine+moles+Talpidae+eastern+Himalayas+new+genus" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Chen_2021_Scalopine_moles_Himalayas.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2020 ════ -->
+  <div class="pub-year-group" id="year-2020">
+    <div class="pub-year-heading">2020</div>
+
+    <div class="pub-card restricted" id="pub-4" data-tags="first systematics">
+      <div class="pub-card-header" onclick="toggleAbstract(4)">
+        <span class="pub-num">4</span>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>Onditi, K. O.</strong>, Peterhans, J. K., Demos, T. C., Musila, S., Chen, Z. Z., &amp; Jiang, X. L.</div>
+          <div class="pub-title">Morphological and genetic characterization of Mount Kenya brush-furred rats (Peters 1874); relevance to taxonomy and ecology</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Mammal Research, 65(2), 387-400 ·
+              <a href="https://doi.org/10.1007/s13364-019-00470-1" target="_blank" rel="noopener">doi:10.1007/s13364-019-00470-1</a>
+            </span>
+            <span class="badge badge-restricted">🔒 Subscription</span>
+            <span class="badge badge-citations cite-badge" id="cit-4" data-doi="10.1007/s13364-019-00470-1" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(4)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-4">
+        <div class="pub-abstract-text" id="abs-text-4" data-doi="10.1007/s13364-019-00470-1" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1007/s13364-019-00470-1" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Morphological+genetic+characterization+Mount+Kenya+brush+furred+rats" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Onditi_2020_MountKenya_Lophuromys.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card oa" id="pub-3" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(3)">
+        <span class="pub-num">3</span>
+        <div class="pub-body">
+          <div class="pub-authors">Chen, Z.-Z., Khanal, L., Li, X.-Y., Song, W.-Y., Li, Q., <strong>Onditi, K. O.</strong>, &amp; Jiang, X.-L.</div>
+          <div class="pub-title">Small mammal species richness and turnover along elevational gradient in Yulong Mountain, Yunnan, Southwest China</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Ecology and Evolution, 10(5), 2545-2558 ·
+              <a href="https://doi.org/10.1002/ece3.6083" target="_blank" rel="noopener">doi:10.1002/ece3.6083</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-3" data-doi="10.1002/ece3.6083" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(3)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-3">
+        <div class="pub-abstract-text" id="abs-text-3" data-doi="10.1002/ece3.6083" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.1002/ece3.6083" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Small+mammal+species+richness+turnover+elevational+gradient+Yulong" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Chen_2020_Yulong_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card oa" id="pub-2" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(2)">
+        <span class="pub-num">2</span>
+        <div class="pub-body">
+          <div class="pub-authors">Song, W.-Y., Li, X.-Y., Chen, Z.-Z., Li, Q., <strong>Onditi, K. O.</strong>, He, S.-W., &amp; Jiang, X.-L.</div>
+          <div class="pub-title">Isolated alpine habitats reveal disparate ecological drivers of taxonomic and functional beta-diversity of small mammal assemblages</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Zoological Research, 41(6), 670-683 ·
+              <a href="https://doi.org/10.24272/j.issn.2095-8137.2020.085" target="_blank" rel="noopener">doi:10.24272/j.issn.2095-8137.2020.085</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-2" data-doi="10.24272/j.issn.2095-8137.2020.085" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(2)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-2">
+        <div class="pub-abstract-text" id="abs-text-2" data-doi="10.24272/j.issn.2095-8137.2020.085" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.24272/j.issn.2095-8137.2020.085" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Isolated+alpine+habitats+beta+diversity+small+mammal+assemblages" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Song_2020_Alpine_beta_diversity.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 2019 ════ -->
+  <div class="pub-year-group" id="year-2019">
+    <div class="pub-year-heading">2019</div>
+
+    <div class="pub-card oa" id="pub-1" data-tags="macroecology oa">
+      <div class="pub-card-header" onclick="toggleAbstract(1)">
+        <span class="pub-num">1</span>
+        <div class="pub-body">
+          <div class="pub-authors">Musila, S., Chen, Z. Z., Li, Q., Yego, R., Zhang, B., <strong>Onditi, K.O.</strong>, Muthoni, I., He, S. W., Omondi, S., Mathenge, J., Kioko, E. N., &amp; Jiang, X. L.</div>
+          <div class="pub-title">Diversity and distribution patterns of non-volant small mammals along different elevation gradients on Mt. Kenya, Kenya</div>
+          <div class="pub-venue-row">
+            <span class="pub-venue">Zoological Research, 40(1), 53-60 ·
+              <a href="https://doi.org/10.24272/j.issn.2095-8137.2019.004" target="_blank" rel="noopener">doi:10.24272/j.issn.2095-8137.2019.004</a>
+            </span>
+            <span class="badge badge-oa">🔓 OA</span>
+            <span class="badge badge-citations cite-badge" id="cit-1" data-doi="10.24272/j.issn.2095-8137.2019.004" style="display:none;"></span>
+          </div>
+        </div>
+        <div class="pub-card-actions">
+          <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(1)">
+            <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="pub-abstract-body" id="abs-1">
+        <div class="pub-abstract-text" id="abs-text-1" data-doi="10.24272/j.issn.2095-8137.2019.004" data-fetch="1">
+          <span class="pub-abstract-loading">Loading abstract…</span>
+        </div>
+        <div class="pub-links-row">
+          <a href="https://doi.org/10.24272/j.issn.2095-8137.2019.004" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Diversity+distribution+non+volant+small+mammals+Mt+Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
+          <a href="pdfs/Musila_2019_Mt_Kenya_small_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /pubs-list -->
+
+  <div style="margin: 48px 0 80px; padding: 28px; background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--gold);">
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;">
+      <strong style="color:var(--cream);">Author Copies:</strong> PDF links marked "Author Copy" are provided for scholarly, non-commercial use in accordance with author rights. For the publisher's version of record, please use the DOI link. Citation counts are fetched live from
+      <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">Semantic Scholar</a> and may differ from Google Scholar totals.
+      View all metrics at <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">Google Scholar ↗</a>.
+    </p>
+  </div>
+
+</div><!-- /container -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Kenneth Otieno Onditi</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="fieldwork.html">Fieldwork</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Kenneth Otieno Onditi &mdash; <a href="mailto:kenotieno@hotmail.com">kenotieno@hotmail.com</a></p>
+  </div>
+</footer>
+
+</div><!-- /page-body -->
+
+<button id="back-top" style="position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--panel);border:1px solid var(--border);color:var(--gold);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;" title="Back to top">↑</button>
+
+<script src="assets/js/main.js"></script>
+<script>
+/* ─── Filter logic ─── */
+document.querySelectorAll('.pub-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.pub-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.pub-card').forEach(card => {
+      if (f === 'all') {
+        card.classList.remove('hidden');
+      } else if (f === 'oa') {
+        card.classList.toggle('hidden', !card.classList.contains('oa'));
+      } else {
+        const tags = (card.dataset.tags || '').split(' ');
+        card.classList.toggle('hidden', !tags.includes(f));
+      }
+    });
+    // Show/hide year headings with no visible cards
+    document.querySelectorAll('.pub-year-group').forEach(group => {
+      const visible = group.querySelectorAll('.pub-card:not(.hidden)').length;
+      group.style.display = visible ? '' : 'none';
+    });
+  });
+});
+
+/* ─── Toggle abstract ─── */
+function toggleAbstract(n) {
+  const body = document.getElementById('abs-' + n);
+  const btn  = document.querySelector(`#pub-${n} .abstract-toggle`);
+  if (!body) return;
+  const open = body.classList.toggle('open');
+  if (btn) {
+    btn.setAttribute('aria-expanded', open);
+    btn.querySelector('.toggle-label').textContent = open ? 'Hide' : 'Abstract';
+    btn.querySelector('.toggle-icon').textContent  = open ? '▴' : '▾';
+  }
+  // Fetch abstract on first open
+  if (open) {
+    const textEl = document.getElementById('abs-text-' + n);
+    if (textEl && textEl.dataset.fetch) {
+      fetchAbstractInline(textEl.dataset.doi, textEl);
+    }
+  }
+}
+
+async function fetchAbstractInline(doi, el) {
+  if (!doi) { el.innerHTML = '<p style="color:var(--faint);font-style:italic;">Abstract not available. Please visit the journal page.</p>'; return; }
+  try {
+    const res = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    const abstract = data.message?.abstract;
+    if (abstract) {
+      const clean = abstract.replace(/<[^>]+>/g, '').trim();
+      if (clean.length > 40) {
+        el.innerHTML = `<p>${clean}</p>`;
+        el.removeAttribute('data-fetch');
+        return;
+      }
+    }
+    // Try Semantic Scholar as fallback
+    const s2res = await fetch(`https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(doi)}?fields=abstract`, { signal: AbortSignal.timeout(8000) });
+    if (s2res.ok) {
+      const s2data = await s2res.json();
+      if (s2data.abstract && s2data.abstract.length > 40) {
+        el.innerHTML = `<p>${s2data.abstract}</p>`;
+        el.removeAttribute('data-fetch');
+        return;
+      }
+    }
+    el.innerHTML = '<p style="color:var(--faint);font-style:italic;">Abstract not returned by API. Please visit the journal page using the DOI link below.</p>';
+  } catch(e) {
+    el.innerHTML = '<p style="color:var(--faint);font-style:italic;">Could not load abstract. Please visit the journal page.</p>';
+  }
+}
+</script>
+</body>
+</html>
