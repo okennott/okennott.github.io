@@ -45,70 +45,14 @@ kennott.github.io/
 ├── pdfs/
 │   ├── README.txt                                          # Naming guide & full inventory
 │   │
-│   │   ── 2026 ──────────────────────────────────────────
-│   ├── Onditi_2026_Graphiurus_UCE.pdf
-│   ├── Li_2026_FunctionalHomogenization_Hengduan.pdf
-│   │
-│   │   ── 2025 ──────────────────────────────────────────
-│   ├── Sambaya_2025_Lemniscomys.pdf                        # published (ZRDC)
-│   ├── Sambaya_2025_Lemniscomys_manuscript.pdf             # peer-review manuscript
-│   ├── Bai_2025_eDNA_seasonal.pdf
-│   ├── Li_2025_ShrewMoles_SkyIslands.pdf
-│   ├── Koju_2025_Wildlife_vehicle_Nepal.pdf
-│   ├── Onditi_2025_Multiscale_Diversity.pdf
-│   ├── Huang_2025_Human_Wildlife_Coexistence.pdf
-│   ├── Hu_2025_Spatiotemporal_mammals_Hengduan.pdf
-│   │
-│   │   ── 2024 ──────────────────────────────────────────
-│   ├── Onditi_2024_ElevationalDiversity_Kenya.pdf
-│   ├── Mweu_2024_Phylogeography_Kenya_rodents.pdf
-│   ├── Li_2024_Gaoligong_mammals.pdf
-│   ├── Wang_2024_Neodon_new_species.pdf
-│   │
-│   │   ── 2023 ──────────────────────────────────────────
-│   ├── Onditi_2023_Mammal_Diversity_Kenya.pdf
-│   ├── Yu_2023_Asian_elephants_habitat.pdf                 # published (Biodivers. Conserv.)
-│   ├── Yu_2023_Asian_elephants_habitat_accepted.pdf        # accepted manuscript
-│   ├── Yu_2023_Asian_elephants_habitat_preprint.pdf        # Research Square preprint
-│   ├── Chen_2023_Micromys_systematics.pdf
-│   ├── Chen_2023_new_shrew_species.pdf
-│   ├── Oyebanji_2023_Fabaceae_biogeography.pdf
-│   ├── Shi_2023_Mesechinus_new_species.pdf
-│   ├── Song_2023_Niche_alpine_mammals.pdf
-│   │
-│   │   ── 2022 ──────────────────────────────────────────
-│   ├── Onditi_2022_Phylogenetic_Functional_Diversity_Kenya.pdf
-│   ├── Chen_2022_Chodsigoa_new_species.pdf
-│   ├── Hu_2022_Chodsigoa_distribution.pdf
-│   ├── Pei_2022_Human_disturbance_mammals.pdf
-│   │   (Song_2022_Niche_theory_review.pdf — not available; Chinese-language journal)
-│   │
-│   │   ── 2021 ──────────────────────────────────────────
-│   ├── Onditi_2021_Lophuromys_biogeography.pdf             # published BMC (high-res)
-│   ├── Onditi_2021_Lophuromys_biogeography_v2.pdf          # published BMC (alt resolution)
-│   ├── Onditi_2021_Lophuromys_biogeography_preprint.pdf    # Research Square preprint
-│   ├── Onditi_2021_Protected_areas_Kenya.pdf
-│   ├── Chen_2021_Scalopine_moles_Himalayas.pdf
-│   │
-│   │   ── 2020 ──────────────────────────────────────────
-│   ├── Onditi_2020_MountKenya_Lophuromys.pdf               # original paper
-│   ├── Onditi_2020_MountKenya_Lophuromys_correction.pdf    # published correction/erratum
-│   ├── Chen_2020_Yulong_mammals.pdf
-│   ├── Chen_2020_Yulong_mammals_duplicate.pdf              # exact duplicate of above
-│   ├── Song_2020_Alpine_beta_diversity.pdf
-│   │
-│   │   ── 2019 ──────────────────────────────────────────
-│   ├── Musila_2019_Mt_Kenya_small_mammals.pdf
-│   │
-│   │   ── Other ──────────────────────────────────────────
-│   └── Onditi_2018_MSc_thesis_Lophuromys_aquilus.pdf       # MSc thesis, UCAS (154 pp.)
-│
+│   │   ── Individual PDF files ─────────────────────
+│   ├── Author copies for non-open access publications
+│   ├── 
 ├── publications/               # Original link files (legacy)
 │   ├── github_link.txt
 │   ├── googlescholar_link.txt
 │   └── orcid_link.txt
 │
-├── GITHUB_PAGES_SETUP.md       # Step-by-step URL fix instructions
 └── README.md                   # This file
 ```
 
