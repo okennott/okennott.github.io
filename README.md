@@ -1,25 +1,23 @@
 # kennott.github.io
 
-Personal academic website of **Kenneth Otieno Onditi** — mammal ecologist and evolutionary biologist specialising in the systematics, phylogeography, and conservation biology of African small mammals.
+Personal academic website of **Kenneth Otieno Onditi** — mammal ecologist and evolutionary biologist specialising in the systematics, phylogeography, and conservation biology of small mammals.
 
-🌐 **Live site:** [kennott.github.io](https://kennott.github.io)
+🌐 **Live site:** [okennott.github.io](https://okennott.github.io).
 
 ---
 
-## About
+## Site Overview
 
-This is a single-file static website (`index.html`) built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no dependencies beyond Google Fonts. It is designed to be lightweight, fast, and deployable directly via GitHub Pages.
+A fully static, multi-page academic website built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no dependencies beyond Google Fonts and two public APIs for live data.
 
-The site covers six sections:
-
-| Page | Contents |
-|---|---|
-| **Home** | Research overview, key metrics, selected publications |
-| **Research** | Thematic research programmes with context and key taxa |
-| **Publications** | All peer-reviewed works with live DOI links |
-| **Fieldwork** | Field expedition records with specimen counts and site descriptions |
-| **CV** | Curriculum vitae — education, appointments, grants, awards, mentorship |
-| **Contact** | Email, institutional affiliations, collaborator directory |
+| Page | File | Accent colour | Key features |
+|---|---|---|---|
+| **Home** | `index.html` | Gold | Live news ticker, animated stats card, SVG research icons, selected publications with live citation badges |
+| **Research** | `research.html` | Green | Reading-progress bar, sticky numbered themes, collaborator network grid |
+| **Publications** | `publications.html` | Green | Filter by topic/OA, expandable abstracts (live API), per-paper citation counts (live API), author-copy PDF links |
+| **Fieldwork** | `fieldwork.html` | Terra/earth | Custom SVG Kenya map with expedition markers, vertical timeline, field methods panel |
+| **CV** | `cv.html` | Gold | Animated skill bars, print/save-PDF button, print-clean CSS |
+| **Contact** | `contact.html` | Blue | Social link cards, collaboration interest chips, collaborator directory |
 
 ---
 
@@ -27,97 +25,293 @@ The site covers six sections:
 
 ```
 kennott.github.io/
-└── index.html       # Entire site — all pages, styles, and scripts in one file
-└── README.md        # This file
+│
+├── index.html                  # Home page
+├── research.html               # Research programme
+├── publications.html           # Full publications list
+├── fieldwork.html              # Fieldwork & expeditions
+├── cv.html                     # Curriculum vitae
+├── contact.html                # Contact & collaborations
+├── 404.html                    # Custom 404 page
+│
+├── assets/
+│   ├── css/
+│   │   └── shared.css          # All shared variables, nav, footer, utilities
+│   ├── js/
+│   │   └── main.js             # Nav active state, scroll reveals, citation & abstract fetchers
+│   └── icons/
+│       └── logo-mark.svg       # Rodent-skull / DNA nav logo mark
+│
+├── pdfs/
+│   ├── README.txt                                          # Naming guide & full inventory
+│   │
+│   │   ── 2026 ──────────────────────────────────────────
+│   ├── Onditi_2026_Graphiurus_UCE.pdf
+│   ├── Li_2026_FunctionalHomogenization_Hengduan.pdf
+│   │
+│   │   ── 2025 ──────────────────────────────────────────
+│   ├── Sambaya_2025_Lemniscomys.pdf                        # published (ZRDC)
+│   ├── Sambaya_2025_Lemniscomys_manuscript.pdf             # peer-review manuscript
+│   ├── Bai_2025_eDNA_seasonal.pdf
+│   ├── Li_2025_ShrewMoles_SkyIslands.pdf
+│   ├── Koju_2025_Wildlife_vehicle_Nepal.pdf
+│   ├── Onditi_2025_Multiscale_Diversity.pdf
+│   ├── Huang_2025_Human_Wildlife_Coexistence.pdf
+│   ├── Hu_2025_Spatiotemporal_mammals_Hengduan.pdf
+│   │
+│   │   ── 2024 ──────────────────────────────────────────
+│   ├── Onditi_2024_ElevationalDiversity_Kenya.pdf
+│   ├── Mweu_2024_Phylogeography_Kenya_rodents.pdf
+│   ├── Li_2024_Gaoligong_mammals.pdf
+│   ├── Wang_2024_Neodon_new_species.pdf
+│   │
+│   │   ── 2023 ──────────────────────────────────────────
+│   ├── Onditi_2023_Mammal_Diversity_Kenya.pdf
+│   ├── Yu_2023_Asian_elephants_habitat.pdf                 # published (Biodivers. Conserv.)
+│   ├── Yu_2023_Asian_elephants_habitat_accepted.pdf        # accepted manuscript
+│   ├── Yu_2023_Asian_elephants_habitat_preprint.pdf        # Research Square preprint
+│   ├── Chen_2023_Micromys_systematics.pdf
+│   ├── Chen_2023_new_shrew_species.pdf
+│   ├── Oyebanji_2023_Fabaceae_biogeography.pdf
+│   ├── Shi_2023_Mesechinus_new_species.pdf
+│   ├── Song_2023_Niche_alpine_mammals.pdf
+│   │
+│   │   ── 2022 ──────────────────────────────────────────
+│   ├── Onditi_2022_Phylogenetic_Functional_Diversity_Kenya.pdf
+│   ├── Chen_2022_Chodsigoa_new_species.pdf
+│   ├── Hu_2022_Chodsigoa_distribution.pdf
+│   ├── Pei_2022_Human_disturbance_mammals.pdf
+│   │   (Song_2022_Niche_theory_review.pdf — not available; Chinese-language journal)
+│   │
+│   │   ── 2021 ──────────────────────────────────────────
+│   ├── Onditi_2021_Lophuromys_biogeography.pdf             # published BMC (high-res)
+│   ├── Onditi_2021_Lophuromys_biogeography_v2.pdf          # published BMC (alt resolution)
+│   ├── Onditi_2021_Lophuromys_biogeography_preprint.pdf    # Research Square preprint
+│   ├── Onditi_2021_Protected_areas_Kenya.pdf
+│   ├── Chen_2021_Scalopine_moles_Himalayas.pdf
+│   │
+│   │   ── 2020 ──────────────────────────────────────────
+│   ├── Onditi_2020_MountKenya_Lophuromys.pdf               # original paper
+│   ├── Onditi_2020_MountKenya_Lophuromys_correction.pdf    # published correction/erratum
+│   ├── Chen_2020_Yulong_mammals.pdf
+│   ├── Chen_2020_Yulong_mammals_duplicate.pdf              # exact duplicate of above
+│   ├── Song_2020_Alpine_beta_diversity.pdf
+│   │
+│   │   ── 2019 ──────────────────────────────────────────
+│   ├── Musila_2019_Mt_Kenya_small_mammals.pdf
+│   │
+│   │   ── Other ──────────────────────────────────────────
+│   └── Onditi_2018_MSc_thesis_Lophuromys_aquilus.pdf       # MSc thesis, UCAS (154 pp.)
+│
+├── publications/               # Original link files (legacy)
+│   ├── github_link.txt
+│   ├── googlescholar_link.txt
+│   └── orcid_link.txt
+│
+├── GITHUB_PAGES_SETUP.md       # Step-by-step URL fix instructions
+└── README.md                   # This file
 ```
 
 ---
 
-## Deployment
+## Live Data Features
 
-The site is deployed automatically via **GitHub Pages** from the `main` branch root.
+### Citation counts
+Per-paper citation badges on the Publications page are fetched live from the [Semantic Scholar API](https://www.semanticscholar.org/product/api) using each paper's DOI. No API key required. Counts load asynchronously and display as gold badges next to each entry. The same badges appear on the Home page for the four highlighted papers.
 
-To update the site, edit `index.html` and push to `main`:
+### Paper abstracts
+Clicking "Abstract ▾" on any publication card fetches the abstract live from the [CrossRef API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/), with [Semantic Scholar](https://api.semanticscholar.org/) as a fallback. Abstracts are fetched lazily on first open, so page load is not affected. If neither API returns content, a graceful message directs the reader to the DOI link.
 
-```bash
-git add index.html
-git commit -m "Update [section] — [brief description]"
-git push origin main
-```
-
-Changes are typically live within 1–2 minutes.
-
----
-
-## Tech Stack
-
-- **HTML5 / CSS3 / vanilla JS** — no frameworks
-- **Fonts:** EB Garamond, DM Mono, Bitter (Google Fonts)
-- **Navigation:** client-side single-page app with CSS `animation` transitions
-- **Scroll reveals:** `IntersectionObserver` API
-- **Hosting:** GitHub Pages (static, free tier)
-
----
-
-## Content Updates
-
-### Adding a new publication
-
-Find the relevant year block in the `Publications` page section of `index.html` and prepend a new `.pub-entry` div, incrementing the number:
+### Updating the total citation count
+The hero card on `index.html` shows a static "200+" figure. Update it manually when the Google Scholar total passes a new milestone:
 
 ```html
-<div class="pub-entry">
-  <span class="pub-num">33</span>
-  <div>
-    <div class="pub-authors"><strong>Onditi, K. O.</strong>, Co-author, A. B., ...</div>
-    <div class="pub-title">Title of the paper</div>
-    <div class="pub-venue">Journal Name, Volume(Issue), pages · 
-      <a href="https://doi.org/10.xxxx/xxxxx" target="_blank">doi:10.xxxx/xxxxx</a>
+<!-- index.html, inside .hero-stats -->
+<span class="stat-num">350<sup style="font-size:18px">+</sup></span>
+```
+
+---
+
+## Adding a New Publication
+
+1. Open `publications.html` and locate the correct year group (or create a new `<div class="pub-year-group" id="year-YYYY">` block at the top of `#pubs-list`).
+
+2. Copy a `.pub-card` block and fill in the new entry. Use `oa` class for open-access papers, `restricted` for subscription journals:
+
+```html
+<div class="pub-card oa" id="pub-33" data-tags="first systematics oa">
+  <div class="pub-card-header" onclick="toggleAbstract(33)">
+    <span class="pub-num">33</span>
+    <div class="pub-body">
+      <div class="pub-authors"><strong>Onditi, K. O.</strong>, Co-author, A. B. ...</div>
+      <div class="pub-title">Title of the paper</div>
+      <div class="pub-venue-row">
+        <span class="pub-venue">Journal Name, Vol(Issue), pages ·
+          <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">doi:10.xxxx/xxxxx</a>
+        </span>
+        <span class="badge badge-oa">🔓 OA</span>
+        <span class="badge badge-citations cite-badge" id="cit-33"
+              data-doi="10.xxxx/xxxxx" style="display:none;"></span>
+      </div>
+    </div>
+    <div class="pub-card-actions">
+      <button class="abstract-toggle" aria-expanded="false"
+              onclick="event.stopPropagation();toggleAbstract(33)">
+        <span class="toggle-label">Abstract</span>
+        <span class="toggle-icon">▾</span>
+      </button>
+    </div>
+  </div>
+  <div class="pub-abstract-body" id="abs-33">
+    <div class="pub-abstract-text" id="abs-text-33"
+         data-doi="10.xxxx/xxxxx" data-fetch="1">
+      <span class="pub-abstract-loading">Loading abstract…</span>
+    </div>
+    <div class="pub-links-row">
+      <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener"
+         class="pub-link">📄 View at Journal ↗</a>
+      <a href="pdfs/Onditi_YYYY_ShortTitle.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
     </div>
   </div>
 </div>
 ```
 
-Also update the publication count in the hero stats on the Home page:
+3. Add the `data-tags` values relevant to the paper from: `first`, `systematics`, `macroecology`, `conservation`, `oa`.
 
-```html
-<span class="stat-num">33</span>  <!-- was 32 -->
+4. Update the publication count in three places:
+   - `index.html` hero stats: `<span class="stat-num">33</span>`
+   - `index.html` "View all" button: `View all 33 publications →`
+   - `publications.html` stats bar: `<span class="num">33</span>`
+
+5. Place the author-copy PDF in `pdfs/` following the naming convention in `pdfs/README.txt`.
+
+6. Add a brief entry to the news ticker in `index.html` for visibility.
+
+---
+
+## PDF Inventory & Naming Convention
+
+All 39 PDFs have been renamed from opaque numeric identifiers to human-readable names using the scheme `Lastname_YYYY_ShortTitle[_qualifier].pdf`. The qualifiers used are:
+
+| Qualifier | Meaning |
+|---|---|
+| *(none)* | Single file for this paper, or primary published version |
+| `_v2` | Second copy of the published version (different resolution/layout) |
+| `_manuscript` | Peer-review manuscript submitted to the journal |
+| `_accepted` | Accepted manuscript (post-peer-review, pre-copyedit) |
+| `_preprint` | Posted preprint (Research Square or equivalent) |
+| `_correction` | Published erratum / correction notice |
+| `_duplicate` | Byte-for-byte duplicate of another file in this folder |
+
+**Papers with multiple files (6 papers, 13 files across them):**
+
+| Paper | Files |
+|---|---|
+| Sambaya et al. 2025 (*Lemniscomys*) | `Sambaya_2025_Lemniscomys.pdf` + `_manuscript.pdf` |
+| Yu et al. 2023 (Asian elephants) | `Yu_2023_Asian_elephants_habitat.pdf` + `_accepted.pdf` + `_preprint.pdf` |
+| Onditi et al. 2021 (*Lophuromys* BMC) | `Onditi_2021_Lophuromys_biogeography.pdf` + `_v2.pdf` + `_preprint.pdf` |
+| Onditi et al. 2020 (Mount Kenya *Lophuromys*) | `Onditi_2020_MountKenya_Lophuromys.pdf` + `_correction.pdf` |
+| Chen et al. 2020 (Yulong Mountain) | `Chen_2020_Yulong_mammals.pdf` + `_duplicate.pdf` (identical files) |
+
+**Note:** `Song_2022_Niche_theory_review.pdf` (pub #22 — Acta Theriologica Sinica Chinese-language review) has no PDF available. The download button is hidden for that entry.
+
+**Note:** `Onditi_2018_MSc_thesis_Lophuromys_aquilus.pdf` is Kenneth's MSc thesis (154 pp., University of Chinese Academy of Sciences) on the *Lophuromys aquilus* species complex. It is not linked from the publications page as it is not a peer-reviewed journal article.
+
+### Adding a new PDF
+
+1. Export the paper PDF from your reference manager (or use the publisher's accepted-manuscript version).
+2. Rename it: `Lastname_YYYY_ShortTitle.pdf` (add a qualifier suffix if a second copy is warranted).
+3. Drop it into `pdfs/`.
+4. Commit and push — the download button on the publications page activates immediately.
+
+Open-access papers (BMC, Frontiers, MDPI, Scientific Reports, ZooKeys, Zoological Research, Ecosphere) are freely available at the publisher DOI and do not strictly require an author copy, though including one keeps everything in one place.
+
+---
+
+## Deployment
+
+The site is fully static — push to `main` and GitHub Pages deploys automatically (typically within 1–2 minutes).
+
+```bash
+git add .
+git commit -m "Add pub #33: Onditi et al. YYYY — Journal Name"
+git push origin main
 ```
 
-### Updating citation count
+Make sure GitHub Pages is configured to deploy from:
+**Settings → Pages → Source → Deploy from a branch → `main` / root**
 
-In the Home page hero section, update:
+---
 
-```html
-<span class="stat-num">200<sup ...>+</sup></span>
-```
+## GitHub Pages URL
+
+The current live path is `https://okennott.github.io/kennott.github.io/` because the GitHub username (`okennott`) does not match the repository name (`kennott.github.io`). See **[`GITHUB_PAGES_SETUP.md`](GITHUB_PAGES_SETUP.md)** for three options to resolve this:
+
+| Option | Result URL | Effort |
+|---|---|---|
+| Rename GitHub username to `kennott` | `https://kennott.github.io/` ✅ | Low — one settings change |
+| Rename repo to `okennott.github.io` | `https://okennott.github.io/` ✅ | Low — one settings change |
+| Custom domain (e.g. `kennetonditi.com`) | `https://kennetonditi.com/` ✅ | Medium — DNS + CNAME file |
+
+All relative links (`href="research.html"` etc.) work correctly regardless of which option is chosen, because no absolute base path is hardcoded.
 
 ---
 
 ## Local Preview
 
-No build step required. Open the file directly in any browser:
+No build step required. Serve locally to avoid CORS issues with the citation/abstract APIs:
 
 ```bash
-open index.html        # macOS
-xdg-open index.html    # Linux
-start index.html       # Windows
+# Python 3
+python3 -m http.server 8000
+# then open http://localhost:8000
+
+# Node (if installed)
+npx serve .
 ```
 
-Or serve locally with Python:
+Opening `index.html` directly as a `file://` URL will work for layout review but the live citation and abstract fetches will be blocked by CORS in most browsers.
 
-```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Markup | HTML5 (semantic) |
+| Styling | CSS3 — custom properties, Grid, Flexbox; no framework |
+| Scripts | Vanilla ES2020 JavaScript; no bundler |
+| Fonts | EB Garamond, DM Mono, Bitter (Google Fonts CDN) |
+| Live citations | [Semantic Scholar Graph API](https://api.semanticscholar.org/graph/v1/) |
+| Live abstracts | [CrossRef REST API](https://api.crossref.org/works/) + Semantic Scholar fallback |
+| Hosting | GitHub Pages (static, free tier) |
+
+---
+
+## Colour Palette
+
+```
+--bg:       #0f0c07   Background
+--surface:  #171209   Elevated surface
+--panel:    #1e1710   Card / panel
+--border:   #2e2618   Dividers
+--text:     #e8dfc8   Body text
+--muted:    #8a7d62   Secondary text
+--gold:     #c8943a   Primary accent (home, CV)
+--gold2:    #e8b860   Highlight gold
+--green:    #5a8c6a   Research / publications accent
+--terra:    #b85c38   Fieldwork accent
+--blue:     #4a7a9b   Contact accent
+--cream:    #f2e8d0   Headings
 ```
 
 ---
 
 ## Contact
 
-**Kenneth Otieno Onditi**  
-kenotieno@hotmail.com  
-+254 722 620075  
+**Kenneth Otieno Onditi**
+kenotieno@hotmail.com · kenotieno08@gmail.com
++254 722 620075
 Nairobi, Kenya
 
-[Google Scholar](https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en) · [ResearchGate](https://www.researchgate.net/profile/Kenneth-Onditi)
+[Google Scholar](https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en) · [ResearchGate](https://www.researchgate.net/profile/Kenneth-Onditi) · [ORCID 0000-0003-4034-6818](https://orcid.org/0000-0003-4034-6818) · [GitHub @okennott](https://github.com/okennott)
