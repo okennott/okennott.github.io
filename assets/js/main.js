@@ -113,15 +113,40 @@ async function fetchAbstract(doi, elementId) {
   } catch(e) { /* fail silently */ }
 }
 
+/* ─── AUTHOR-LEVEL STATS (Semantic Scholar) ─── */
+// Fetches total citations and h-index for the author profile.
+// Updates any element with class "author-total-cit" or "author-hindex".
+async function fetchAuthorStats() {
+  try {
+    const res = await fetch(
+      'https://api.semanticscholar.org/graph/v1/author/1445352659?fields=citationCount,hIndex,paperCount',
+      { signal: AbortSignal.timeout(8000) }
+    );
+    if (!res.ok) return;
+    const data = await res.json();
+    if (typeof data.citationCount === 'number') {
+      document.querySelectorAll('.author-total-cit').forEach(el => {
+        el.textContent = data.citationCount + '+';
+      });
+    }
+    if (typeof data.hIndex === 'number') {
+      document.querySelectorAll('.author-hindex').forEach(el => {
+        el.textContent = data.hIndex;
+      });
+    }
+  } catch(e) { /* fail silently */ }
+}
+
 /* Batch load citations for all .cite-badge elements on page */
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.cite-badge[data-doi]').forEach(el => {
     const doi = el.dataset.doi;
-    fetchCitationCount(doi, el.id);
+    if (doi) fetchCitationCount(doi, el.id);
   });
   document.querySelectorAll('.pub-abstract-text[data-fetch][data-doi]').forEach(el => {
     fetchAbstract(el.dataset.doi, el.id);
   });
+  fetchAuthorStats();
 });
 
 /* ─── ABSTRACT TOGGLE ─── */
