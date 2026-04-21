@@ -67,7 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initReveal();
 });
 
-/* ─── CITATION FETCHER (Semantic Scholar) ─── */
+/* ─── CITATION FETCHER (Semantic Scholar — per-paper only) ─── */
 async function fetchCitationCount(doi, elementId) {
   if (!doi || !elementId) return;
   const el = document.getElementById(elementId);
@@ -113,53 +113,71 @@ async function fetchAbstract(doi, elementId) {
   } catch(e) { /* fail silently */ }
 }
 
-/* ─── AUTHOR-LEVEL STATS (Semantic Scholar) ─── */
-// Fetches total citations and h-index for the author profile.
-// Updates any element with class "author-total-cit" or "author-hindex".
-async function fetchAuthorStats() {
-  try {
-    const res = await fetch(
-      'https://api.semanticscholar.org/graph/v1/author/1445352659?fields=citationCount,hIndex,paperCount',
-      { signal: AbortSignal.timeout(8000) }
-    );
-    if (!res.ok) return;
-    const data = await res.json();
-    if (typeof data.citationCount === 'number') {
-      document.querySelectorAll('.author-total-cit').forEach(el => {
-        el.textContent = data.citationCount + '+';
-      });
-    }
-    if (typeof data.hIndex === 'number') {
-      document.querySelectorAll('.author-hindex').forEach(el => {
-        el.textContent = data.hIndex;
-      });
-    }
-  } catch(e) { /* fail silently */ }
-}
-
-/* Batch load citations for all .cite-badge elements on page */
+/* ─── BATCH LOAD ON DOMCONTENTLOADED ─── */
 window.addEventListener('DOMContentLoaded', () => {
+  // Per-paper citation badges (Semantic Scholar)
   document.querySelectorAll('.cite-badge[data-doi]').forEach(el => {
     const doi = el.dataset.doi;
     if (doi) fetchCitationCount(doi, el.id);
   });
+  // Abstracts (CrossRef)
   document.querySelectorAll('.pub-abstract-text[data-fetch][data-doi]').forEach(el => {
     fetchAbstract(el.dataset.doi, el.id);
   });
-  fetchAuthorStats();
+  // NOTE: Author-level totals (citations, h-index) are set statically from
+  // Google Scholar and are intentionally NOT overwritten at runtime.
+  // Semantic Scholar uses a different methodology and returns lower figures.
 });
 
 /* ─── ABSTRACT TOGGLE ─── */
-document.addEventListener('click', function(e) {
-  if (e.target.closest('.abstract-toggle')) {
-    const btn = e.target.closest('.abstract-toggle');
-    const card = btn.closest('.pub-card');
-    const body = card.querySelector('.pub-abstract-body');
-    const open = body.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
-    btn.querySelector('.toggle-label').textContent = open ? 'Hide abstract' : 'Abstract';
-    btn.querySelector('.toggle-icon').textContent = open ? '▴' : '▾';
+// Global function called by inline onclick="toggleAbstract(n)" on card headers
+function toggleAbstract(n) {
+  const card = document.getElementById('pub-' + n);
+  if (!card) return;
+  const body = card.querySelector('.pub-abstract-body');
+  const btn  = card.querySelector('.abstract-toggle');
+  if (!body) return;
+  const open = body.classList.toggle('open');
+  if (btn) {
+    btn.setAttribute('aria-expanded', String(open));
+    const lbl = btn.querySelector('.toggle-label');
+    const ico = btn.querySelector('.toggle-icon');
+    if (lbl) lbl.textContent = open ? 'Hide abstract' : 'Abstract';
+    if (ico) ico.textContent = open ? '▴' : '▾';
   }
+}
+
+/* ─── PUBLICATION FILTERS ─── */
+window.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.pub-filter-btn');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      const cards  = document.querySelectorAll('#pubs-list .pub-card');
+
+      cards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = '';
+        } else {
+          const tags = (card.dataset.tags || '').split(' ');
+          card.style.display = tags.includes(filter) ? '' : 'none';
+        }
+      });
+
+      // Hide year-group headings that have no visible cards underneath
+      document.querySelectorAll('.pub-year-group').forEach(group => {
+        const anyVisible = [...group.querySelectorAll('.pub-card')]
+          .some(c => c.style.display !== 'none');
+        group.style.display = anyVisible ? '' : 'none';
+      });
+    });
+  });
 });
 
 /* ─── SMOOTH BACK-TO-TOP ─── */

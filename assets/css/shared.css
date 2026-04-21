@@ -367,18 +367,33 @@ footer {
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.reveal-stagger.visible > *:nth-child(1) { opacity:1;transform:none;transition-delay:0s; }
-.reveal-stagger.visible > *:nth-child(2) { opacity:1;transform:none;transition-delay:0.08s; }
-.reveal-stagger.visible > *:nth-child(3) { opacity:1;transform:none;transition-delay:0.16s; }
-.reveal-stagger.visible > *:nth-child(4) { opacity:1;transform:none;transition-delay:0.24s; }
-.reveal-stagger.visible > *:nth-child(5) { opacity:1;transform:none;transition-delay:0.32s; }
-.reveal-stagger.visible > *:nth-child(6) { opacity:1;transform:none;transition-delay:0.40s; }
+.reveal-stagger.visible > *:nth-child(1)  { opacity:1;transform:none;transition-delay:0s; }
+.reveal-stagger.visible > *:nth-child(2)  { opacity:1;transform:none;transition-delay:0.08s; }
+.reveal-stagger.visible > *:nth-child(3)  { opacity:1;transform:none;transition-delay:0.16s; }
+.reveal-stagger.visible > *:nth-child(4)  { opacity:1;transform:none;transition-delay:0.24s; }
+.reveal-stagger.visible > *:nth-child(5)  { opacity:1;transform:none;transition-delay:0.32s; }
+.reveal-stagger.visible > *:nth-child(6)  { opacity:1;transform:none;transition-delay:0.40s; }
+.reveal-stagger.visible > *:nth-child(7)  { opacity:1;transform:none;transition-delay:0.48s; }
+.reveal-stagger.visible > *:nth-child(8)  { opacity:1;transform:none;transition-delay:0.56s; }
+.reveal-stagger.visible > *:nth-child(9)  { opacity:1;transform:none;transition-delay:0.64s; }
+.reveal-stagger.visible > *:nth-child(10) { opacity:1;transform:none;transition-delay:0.72s; }
 
 @keyframes pageIn {
   from { opacity:0; transform:translateY(10px); }
   to   { opacity:1; transform:translateY(0); }
 }
 .page-body { animation: pageIn 0.4s ease both; }
+
+/* ─── STAT SUBLABEL (used in hero stat cards) ─── */
+.stat-sublabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-top: 3px;
+  display: block;
+}
 
 /* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar { width: 5px; }
