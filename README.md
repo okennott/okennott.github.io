@@ -64,7 +64,7 @@ kennott.github.io/
 Per-paper citation badges on the Publications page are fetched live from the [Semantic Scholar API](https://www.semanticscholar.org/product/api) using each paper's DOI. No API key required. Counts load asynchronously and display as gold badges next to each entry. The same badges appear on the Home page for the four highlighted papers.
 
 ### Paper abstracts
-Clicking "Abstract ▾" on any publication card fetches the abstract live from the [CrossRef API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/), with [Semantic Scholar](https://api.semanticscholar.org/) as a fallback. Abstracts are fetched lazily on first open, so page load is not affected. If neither API returns content, a graceful message directs the reader to the DOI link.
+Publication cards are rendered from the Zotero CSL JSON export at `OKOs_Library.json`. Abstracts come from that file when present, so the page remains fast and consistent with the bibliography source. Older static fallback cards still use the CrossRef abstract fetcher when the JSON cannot be loaded, for example when opening the page directly as `file://`.
 
 ### Updating the total citation count
 The hero card on `index.html` shows a static "200+" figure. Update it manually when the Google Scholar total passes a new milestone:
@@ -76,60 +76,21 @@ The hero card on `index.html` shows a static "200+" figure. Update it manually w
 
 ---
 
-## Adding a New Publication
+## Updating Publications
 
-1. Open `publications.html` and locate the correct year group (or create a new `<div class="pub-year-group" id="year-YYYY">` block at the top of `#pubs-list`).
+The live Publications page and the highlighted publications on the Home page are data-driven from `OKOs_Library.json`, a Zotero CSL JSON export stored at the site root.
 
-2. Copy a `.pub-card` block and fill in the new entry. Use `oa` class for open-access papers, `restricted` for subscription journals:
+1. Update the Zotero library record, including DOI, journal, year, volume/issue/pages, abstract, and URL.
 
-```html
-<div class="pub-card oa" id="pub-33" data-tags="first systematics oa">
-  <div class="pub-card-header" onclick="toggleAbstract(33)">
-    <span class="pub-num">33</span>
-    <div class="pub-body">
-      <div class="pub-authors"><strong>Onditi, K. O.</strong>, Co-author, A. B. ...</div>
-      <div class="pub-title">Title of the paper</div>
-      <div class="pub-venue-row">
-        <span class="pub-venue">Journal Name, Vol(Issue), pages ·
-          <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener">doi:10.xxxx/xxxxx</a>
-        </span>
-        <span class="badge badge-oa">🔓 OA</span>
-        <span class="badge badge-citations cite-badge" id="cit-33"
-              data-doi="10.xxxx/xxxxx" style="display:none;"></span>
-      </div>
-    </div>
-    <div class="pub-card-actions">
-      <button class="abstract-toggle" aria-expanded="false"
-              onclick="event.stopPropagation();toggleAbstract(33)">
-        <span class="toggle-label">Abstract</span>
-        <span class="toggle-icon">▾</span>
-      </button>
-    </div>
-  </div>
-  <div class="pub-abstract-body" id="abs-33">
-    <div class="pub-abstract-text" id="abs-text-33"
-         data-doi="10.xxxx/xxxxx" data-fetch="1">
-      <span class="pub-abstract-loading">Loading abstract…</span>
-    </div>
-    <div class="pub-links-row">
-      <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" rel="noopener"
-         class="pub-link">📄 View at Journal ↗</a>
-      <a href="pdfs/Onditi_YYYY_ShortTitle.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
-    </div>
-  </div>
-</div>
-```
+2. Export the selected collection from Zotero as CSL JSON.
 
-3. Add the `data-tags` values relevant to the paper from: `first`, `systematics`, `macroecology`, `conservation`, `oa`.
+3. Replace `OKOs_Library.json` in the repository root with the new export.
 
-4. Update the publication count in three places:
-   - `index.html` hero stats: `<span class="stat-num">33</span>`
-   - `index.html` "View all" button: `View all 33 publications →`
-   - `publications.html` stats bar: `<span class="num">33</span>`
+4. If an author-copy PDF is available, place it in `pdfs/`. The renderer preserves PDF links already present in the static fallback cards; new PDFs can be added to the fallback card or linked in a future data-enrichment field.
 
-5. Place the author-copy PDF in `pdfs/` following the naming convention in `pdfs/README.txt`.
+5. Commit `OKOs_Library.json` with any changed PDFs. Counts, year groups, homepage highlights, DOI links, citation badges, and abstracts update from the JSON automatically.
 
-6. Add a brief entry to the news ticker in `index.html` for visibility.
+The static cards in `publications.html` are retained as a no-network/no-fetch fallback, but they are no longer the primary editing surface.
 
 ---
 
@@ -178,7 +139,7 @@ The site is fully static — push to `main` and GitHub Pages deploys automatical
 
 ```bash
 git add .
-git commit -m "Add pub #33: Onditi et al. YYYY — Journal Name"
+git commit -m "Update Zotero publication data"
 git push origin main
 ```
 

@@ -1,0 +1,2020 @@
+[
+	{
+		"id": "http://zotero.org/users/17243485/items/IIPFXZ7F",
+		"type": "article-journal",
+		"abstract": "Effective biodiversity conservation requires efficient, comprehensive, and cost-effective monitoring tools. While environmental DNA (eDNA) metabarcoding is widely used for aquatic biodiversity assessments, its application for monitoring terrestrial biodiversity remains relatively underexplored. In particular, the effects of seasonal variation on eDNA sampling efficacy and the downstream transport distances of terrestrial vertebrate eDNA in river systems are not well understood. We conducted a year-long survey (April 2023–April 2024) that combined camera trapping and eDNA sampling in the southwestern mountains of China, a global biodiversity hotspot. We collected water eDNA samples during two distinct periods representing different precipitation levels: October–November (low-rainfall season) and April (high-rainfall season). We compared seasonal effectiveness, evaluated costs, and developed an index to assess the relative importance of eDNA sampling sites. We also analyzed the elevational distributions of species detected by both methods and evaluated pairwise β-diversity patterns in relation to geographic distance to estimate the downstream transport distances. Our survey successfully detected 99 terrestrial vertebrate species through the combined efforts of camera trapping and eDNA sampling. This included 64 mammal, 27 bird, 1 reptile, and 7 amphibian species. Across both seasons, eDNA and camera trapping exhibited high complementarity in species detection, with 16 species detected by both methods. eDNA proved particularly cost-effective, detecting a more broad spectrum of taxa from ground-dwelling to arboreal animals compared to camera trapping survey. The relative importance of sampling sites varied between the low- and high-rainfall seasons, with mainstream and first-order tributary sites showing significantly higher importance in the low-rainfall season. Compared to camera trapping survey, water eDNA metabarcoding is more likely to detect the same species at lower-altitude sampling sites, reflecting upstream transport. Terrestrial vertebrate DNA was estimated to be transported downstream over distances of approximately 10–15 km. These findings provide valuable insights into sampling design and result interpretation in terrestrial vertebrate eDNA studies, underscoring the potential of eDNA metabarcoding as a reliable tool for monitoring terrestrial vertebrate biodiversity.",
+		"container-title": "Global Ecology and Conservation",
+		"DOI": "https://doi.org/10.1016/j.gecco.2025.e03854",
+		"ISSN": "2351-9894",
+		"note": "type: Journal Article",
+		"page": "e03854",
+		"title": "Seasonal differences and downstream transport of terrestrial vertebrate eDNA: Insights from integrated camera-trap survey and water eDNA metabarcoding",
+		"URL": "https://www.sciencedirect.com/science/article/pii/S235198942500455X",
+		"volume": "62",
+		"author": [
+			{
+				"family": "Bai",
+				"given": "Ru"
+			},
+			{
+				"family": "Ji",
+				"given": "Yinqiu"
+			},
+			{
+				"family": "Hu",
+				"given": "Wenqiang"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhechang"
+			},
+			{
+				"family": "He",
+				"given": "Shuiwang"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Xiong",
+				"given": "Yun"
+			},
+			{
+				"family": "Zhang",
+				"given": "Jianglin"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/IK2CYN36",
+		"type": "article-journal",
+		"abstract": "Asiatic short-tailed shrews (Blarinella and Parablarinella) are small insectivorous mammals distributed mainly in central and southwestern China, and adjacent Myanmar and Vietnam, currently comprising three species. In 2021, we collected five specimens of Asiatic short-tailed shrews in the Dabie Mountains, eastern China, which is geographically distant from the known distribution of the taxa. Herein, we integrated molecular and morphometric approaches to assess the taxonomy, phylogeny, and divergence of Asiatic short-tailed shrews. Our results indicate that the specimens collected from Dabie Mountains represent a new species, formally described here. The new species is morphologically distinguishable from other Asiatic short-tailed shrews by the combination of a triangular upper P4, lighter feet color, relatively broader skull, and more curved outline of tooth row of P4–M3. Phylogenetic analyses indicate the new species is sister to P. griselda, and the p-distance of Cyt b between the two species is 8.3%. The divergence between the new species and P. griselda occurred ca. 3.08 million years ago and may have been affected by East Asia’s topographic and climate changes in the late Pliocene.",
+		"container-title": "Journal of Mammalogy",
+		"DOI": "10.1093/jmammal/gyad087",
+		"ISSN": "0022-2372 1545-1542",
+		"issue": "6",
+		"note": "type: Journal Article",
+		"page": "1455–1467",
+		"title": "Molecular and morphological evidence support a new species of Asiatic short-tailed shrew (Eulipotyphla: Soricidae)",
+		"URL": "https://doi.org/10.1093/jmammal/gyad087 https://academic.oup.com/jmammal/advance-article-abstract/doi/10.1093/jmammal/gyad087/7310944?redirectedFrom=fulltext",
+		"volume": "104",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Zhongzheng"
+			},
+			{
+				"family": "Hu",
+				"given": "Jiangxiao"
+			},
+			{
+				"family": "He",
+				"given": "Kai"
+			},
+			{
+				"family": "Zhang",
+				"given": "Baowei"
+			},
+			{
+				"family": "Zhang",
+				"given": "Yucai"
+			},
+			{
+				"family": "Chu",
+				"given": "Jun"
+			},
+			{
+				"family": "Zhao",
+				"given": "Kai"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/RHQWIB3N",
+		"type": "article-journal",
+		"abstract": "The genus Micromys is one of the smallest-sized rodents widely distributed in temperate regions of Eurasia. However, its taxonomy and evolutionary history remain unresolved. In this study, we analyzed the phylogenetic and morphological relationships of Micromys species using two mitochondrial genes, three nuclear genes, and a morphological dataset. We also analyzed its geographical distribution structure using 140 cytochrome b (Cyt b) gene sequences. Our results supported the existence of three species in the genus Micromys: M. minutus, M. erythrotis, and M. pygmaeus, which was previously considered a subspecies of M. minutus or M. erythrotis. Micromys minutus is widely distributed in Europe and North-East Asia, M. erythrotis is distributed in central and southern China, Vietnam, Myanmar, and India, and M. pygmaeus is restricted to the middle-to-high elevations of the Himalayas and Hengduan Mountains (1600–3800 m). Phylogenetic analyses indicated that M. pygmaeus is a sister species to M. erythrotis, with a p-distance of 11.4% (Cyt b) and 9.2% (COI) between them. The divergence between M. minutus and M. pygmaeus + M. erythrotis occurred ca. 3.35 Ma, while M. pygmaeus and M. erythrotis diverged ca. 2.55 Ma. The divergence of the Micromys species was likely affected by the rapid uplift of the Tibetan Plateau and Hengduan Mountains, and the global cooling and desiccating events at the Pliocene/Pleistocene boundaries.",
+		"container-title": "Mammalian Biology",
+		"DOI": "10.1007/s42991-023-00360-9",
+		"ISSN": "1616-5047 1618-1476",
+		"issue": "4",
+		"note": "type: Journal Article",
+		"page": "389–403",
+		"title": "Systematics and evolutionary history of the genus Micromys (Mammalia: Rodentia: Muridae)",
+		"URL": "https://doi.org/10.1007/s42991-023-00360-9",
+		"volume": "103",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Zhongzheng"
+			},
+			{
+				"family": "Pei",
+				"given": "Xiaoxin"
+			},
+			{
+				"family": "Song",
+				"given": "Jialu"
+			},
+			{
+				"family": "Song",
+				"given": "Wenyu"
+			},
+			{
+				"family": "Shi",
+				"given": "Zifan"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/SHQC7LJH",
+		"type": "article-journal",
+		"abstract": "All scalopine moles are found in North America, except the Gansu mole (Scapanulus oweni), which is endemic to central-west China. In 2019, we collected two specimens of Scalopini on Mt Namjagbarwa in the eastern Himalayas, Tibet, China. We sequenced two mitochondrial (CYT B and 12S) and three nuclear (APOB, BRCA1 and RAG2) genes to estimate the phylogenetic relationships of the two moles, and also compared their morphology with other genera and species within the Scalopini. Both morphological and molecular analyses strongly suggest that the specimens represent a new monotypic genus and species, which are formally described here as Alpiscaptulus medogensis gen. et sp. nov. The dental formula of the new mole (44 teeth) is distinct from the Chinese Scapanulus oweni (36 teeth) and its hairy and pale brown tail is unique among species of the Scalopini. The Kimura-2-parameter (K2P) distances of CYT B between A. medogensis and the four recognized Scalopini genera range from 14.5% to 18.9%. A sister relationship between A. medogensis and Scapanulus oweni was strongly supported in the phylogenetic trees. The divergence between A. medogensis and Scapanulus oweni occurred in the mid-Miocene (c. 11.56 Mya), which corresponds with the rapid uplift of the Himalayan-Tibetan Plateau.",
+		"container-title": "Zoological Journal of the Linnean Society",
+		"DOI": "10.1093/zoolinnean/zlaa172",
+		"ISSN": "0024-4082 1096-3642",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "432–444",
+		"title": "Morphology and phylogeny of scalopine moles (Eulipotyphla: Talpidae: Scalopini) from the eastern Himalayas, with descriptions of a new genus and species",
+		"URL": "https://doi.org/10.1093/zoolinnean/zlaa172",
+		"volume": "193",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Hu",
+				"given": "Wen-Hao"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/N2R7HU34",
+		"type": "article-journal",
+		"abstract": "Asiatic shrews of the genus Chodsigoa (Soricidae, Eulipotyphla) currently comprise nine species, mostly occurring in southwest China. From May 2017 to August 2020, 11 specimens of Chodsigoa were collected from the Dabie Mountains in Anhui Province, eastern China. Their morphology was compared with other species within the genus and one mitochondrial (cytochrome b) and two nuclear (apolipoprotein B and breast cancer 1) genes were sequenced to estimate the phylogenetic relationships of these specimens. Based on morphological and molecular evidence, these specimens are recognized as a distinct species, Chodsigoa dabieshanensis sp. nov., which is formally described here. Morphologically, the new species is most similar to Chodsigoa hypsibia, but it is distinguishable from all known congeners by the combination of dark brownish pelage, small size, and relatively short tail. Phylogenetic analyses revealed that C. dabieshanensis sp. nov. forms a phylogenetic lineage sister to the clade containing C. parva + C. hypsibia. The-Kimura 2-parameter genetic distances of the cytochrome b (CYT B) gene between the new species and other nominal Chodsigoa species ranged between 8.6 and 17.6%. The new species is distributed at elevations from 750 to 1250 m in the Dabie Mountains and is geographically distant from other species in the genus.",
+		"container-title": "ZooKeys",
+		"DOI": "10.3897/zookeys.1083.78233",
+		"ISSN": "1313-2989 1313-2970",
+		"note": "type: Journal Article",
+		"page": "129–146",
+		"title": "A new species of Asiatic shrew of the genus Chodsigoa (Soricidae, Eulipotyphla, Mammalia) from the Dabie Mountains, Anhui Province, eastern China",
+		"URL": "https://doi.org/10.3897/zookeys.1083.78233 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8807571/pdf/zookeys-1083-129.pdf",
+		"volume": "1083",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Hu",
+				"given": "Ting-Li"
+			},
+			{
+				"family": "Pei",
+				"given": "Xiao-Xin"
+			},
+			{
+				"family": "Yang",
+				"given": "Guang-Dao"
+			},
+			{
+				"family": "Yong",
+				"given": "Fan"
+			},
+			{
+				"family": "Xu",
+				"given": "Zhen"
+			},
+			{
+				"family": "Qu",
+				"given": "Wei-Ying"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Zhang",
+				"given": "Bao-Wei"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2022"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/5DX39A7K",
+		"type": "article-journal",
+		"abstract": "Understanding the species diversity patterns along elevational gradients is critical for biodiversity conservation in mountainous regions. We examined the elevational patterns of species richness and turnover, and evaluated the effects of spatial and environmental factors on nonvolant small mammals (hereafter \"small mammal\") predicted a priori by alternative hypotheses (mid-domain effect [MDE], species-area relationship [SAR], energy, environmental stability, and habitat complexity]) proposed to explain the variation of diversity. We designed a standardized sampling scheme to trap small mammals at ten elevational bands across the entire elevational gradient on Yulong Mountain, southwest China. A total of 1,808 small mammals representing 23 species were trapped. We observed the hump-shaped distribution pattern of the overall species richness along elevational gradient. Insectivores, rodents, large-ranged species, and endemic species richness showed the general hump-shaped pattern but peaked at different elevations, whereas the small-ranged species and endemic species favored the decreasing richness pattern. The MDE and the energy hypothesis were supported, whereas little support was found for the SAR, the environmental stability hypothesis, and the habitat complexity. However, the primary driver(s) for richness patterns differed among the partitioning groups, with NDVI (the normalized difference vegetation index) and MDE being the most important variables for the total richness pattern. Species turnover for all small mammal groups increased with elevation, and it supported a decrease in community similarity with elevational distance. Our results emphasized for increased conservation efforts in the higher elevation regions of the Yulong Mountain.",
+		"container-title": "Ecol Evol",
+		"DOI": "10.1002/ece3.6083",
+		"ISSN": "2045-7758 (Print) 2045-7758 (Linking)",
+		"issue": "5",
+		"note": "type: Journal Article",
+		"page": "2545–2558",
+		"title": "Small mammal species richness and turnover along elevational gradient in Yulong Mountain, Yunnan, Southwest China",
+		"URL": "https://www.ncbi.nlm.nih.gov/pubmed/32185000",
+		"volume": "10",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Khanal",
+				"given": "Laxman"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/7FEC5V3V",
+		"type": "article-journal",
+		"container-title": "Biological Conservation",
+		"DOI": "10.1016/j.biocon.2024.110863",
+		"ISSN": "00063207",
+		"note": "type: Journal Article",
+		"page": "110863",
+		"title": "Spatiotemporal distribution patterns of large and medium-sized mammals in a biodiversity hotspot: Implications for conservation",
+		"URL": "https://www.sciencedirect.com/science/article/pii/S0006320724004257",
+		"volume": "301",
+		"author": [
+			{
+				"family": "Hu",
+				"given": "Wenqiang"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Song",
+				"given": "Wenyu"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhechang"
+			},
+			{
+				"family": "Pu",
+				"given": "Changzhe"
+			},
+			{
+				"family": "Pu",
+				"given": "Mingjing"
+			},
+			{
+				"family": "Xiong",
+				"given": "Yun"
+			},
+			{
+				"family": "Yang",
+				"given": "Suhua"
+			},
+			{
+				"family": "Zhu",
+				"given": "Lin"
+			},
+			{
+				"family": "Yin",
+				"given": "Jianqiang"
+			},
+			{
+				"family": "He",
+				"given": "Lifan"
+			},
+			{
+				"family": "Song",
+				"given": "Haoyang"
+			},
+			{
+				"family": "Li",
+				"given": "Yueti"
+			},
+			{
+				"family": "Gao",
+				"given": "Ge"
+			},
+			{
+				"family": "Bleisch",
+				"given": "William V."
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/SFZNQF9M",
+		"type": "article-journal",
+		"container-title": "Diversity",
+		"DOI": "10.3390/d14020087",
+		"ISSN": "1424-2818",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "87",
+		"title": "Modeling the Potential Distribution of Two Species of Shrews (Chodsigoa hypsibia and Anourosorex squamipes) under Climate Change in China",
+		"URL": "https://www.mdpi.com/1424-2818/14/2/87",
+		"volume": "14",
+		"author": [
+			{
+				"family": "Hu",
+				"given": "Wen-Hao"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			},
+			{
+				"family": "Wu",
+				"given": "Hai-Long"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2022"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/HZKJI9C3",
+		"type": "article-journal",
+		"abstract": "Evidence-based interventions designed to reduce wildlife-caused losses are essential for human-wildlife coexistence. The lack of systematic summarization of research effort and evidence makes it challenging for researchers, managers and policymakers to prioritize interventions for evaluation and implementation. Here, we compiled experimental case studies of nonlethal technical interventions designed to reduce the losses of crops, livestock and fishery catches caused by terrestrial carnivores, elephants, farmland birds and marine fauna worldwide. Then, we summarized the research effort and the performance of interventions by their sensory stimuli and target animals. We found that: (i) 54 of 88 interventions included in this study had statistically effective evidence, where only 39% (21/54) were evaluated with more than three experiments; (ii) physical-, sound-, chemical- and light (or visual) -based interventions were the most in numbers and their performance varied greatly; (iii) farmland birds, seabirds and cetaceans were the most studied animal groups while there are only a few experiments for elephants; and (iv) the interventions for marine fauna generally had no impact on the target catch of fisheries. Syntheses and applications: Our results indicated that collective effort is needed to further evaluate interventions using various sensory stimuli and launch incentive programs to motivate the implementation of interventions, particularly related to marine fauna conservation. Our synthesis could be helpful for stakeholders to tackle the negative human-wildlife interactions outlined as Target 4 of the Kunming-Montreal Global Biodiversity Framework.",
+		"container-title": "Journal of Applied Ecology",
+		"DOI": "10.1111/1365-2664.14857",
+		"ISSN": "0021-8901",
+		"issue": "3",
+		"note": "type: Journal Article",
+		"page": "527–544",
+		"title": "Human-wildlife coexistence needs more evidence-based interventions to reduce the losses of crops, livestock and fishery catches",
+		"URL": "<Go to ISI>://WOS:001405940500001",
+		"volume": "62",
+		"author": [
+			{
+				"family": "Huang",
+				"given": "C."
+			},
+			{
+				"family": "Chen",
+				"given": "Y. Q."
+			},
+			{
+				"family": "Li",
+				"given": "L. L."
+			},
+			{
+				"family": "Campos-Arceiz",
+				"given": "A."
+			},
+			{
+				"family": "Wang",
+				"given": "Y."
+			},
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Li",
+				"given": "Z. Q."
+			},
+			{
+				"family": "Feng",
+				"given": "L. M."
+			},
+			{
+				"family": "Liu",
+				"given": "Y."
+			},
+			{
+				"family": "Lee",
+				"given": "T. M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/IHVH443F",
+		"type": "article-journal",
+		"abstract": "Wildlife vehicle collisions (WVCs) represent a significant threat globally to biodiversity conservation, driver safety and economic resources. This study evaluated the magnitude, spatial-temporal patterns, and influencing factors associated with WVCs within Banke National Park (BaNP), Nepal, to inform effective mitigation planning and biodiversity conservation strategies. Data on WVCs and relevant environmental and anthropogenic variables were collected between April 2015 and March 2024 along a 97.3 km road segment traversing BaNP. The methodological approach integrated field surveys, spatial analyses using kernel density estimation, and statistical modelling to pinpoint collision hotspots and elucidate contributing factors. In total, 488 WVC incidents were documented, predominantly involving mammals (87.52%), followed by reptiles (8.58%) and birds (3.88%). Endangered and vulnerable species, including the golden monitor lizard, leopard cat, and four-horned antelope, were among the recorded fatalities. Spatial analysis identified significant WVC hotspots at Muguwa, Obhari, and Khairi, collectively accounting for over 60% of total incidents. Temporal patterns indicated a seasonal peak during autumn (30%), coinciding with increased post-monsoon dispersal and foraging behaviour. Statistical analyses highlighted that road curvature, proximity to water sources, and surrounding land use significantly influenced collision risk. Specifically, higher WVC odds were associated with curved roads and greater distances from settlements, while straighter road segments and higher forest canopy coverage near roads correlated with reduced risk. This study underscores the pressing need for targeted mitigation measures, such as wildlife crossings, speed reduction zones, and enhanced public awareness initiatives, to reduce WVC occurrences and protect vulnerable wildlife in BaNP. The findings contribute to the existing knowledge regarding road ecology and provide crucial insights for informed conservation interventions within protected areas.",
+		"container-title": "Scientific Reports",
+		"DOI": "10.1038/s41598-025-04609-w",
+		"ISSN": "2045-2322",
+		"issue": "1",
+		"note": "type: Journal Article",
+		"page": "19478",
+		"title": "Spatiotemporal patterns and environmental determinants of wildlife-vehicle collisions in Banke National Park, Nepal",
+		"URL": "https://doi.org/10.1038/s41598-025-04609-w https://www.nature.com/articles/s41598-025-04609-w.pdf",
+		"volume": "15",
+		"author": [
+			{
+				"family": "Koju",
+				"given": "Narayan Prasad"
+			},
+			{
+				"family": "Anish",
+				"given": "K. C."
+			},
+			{
+				"family": "Dodhari",
+				"given": "Keshav"
+			},
+			{
+				"family": "Giri",
+				"given": "Pratikshya"
+			},
+			{
+				"family": "Lee",
+				"given": "Miriam"
+			},
+			{
+				"family": "Pokhrel",
+				"given": "Sudip"
+			},
+			{
+				"family": "Ghimire",
+				"given": "Asmina"
+			},
+			{
+				"family": "Nyaichyai",
+				"given": "Lila"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			},
+			{
+				"family": "Kyes",
+				"given": "Randall C."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/WJZG3NW7",
+		"type": "article-journal",
+		"abstract": "Gaoligong Mountain (hereafter, GLGM) is located at the intersection of Myanmar and China’s Yunnan Province and Xizang Zizhiqu, and spans three globally significant biodiversity hotspots: the Himalayas, Indo-Burma, and the Mountains of Southwest China. Although surveys of mammals in this ecologically important region have a long history, there is no comprehensive systematic checklist and distribution account of the mammals of GLGM. Here, we compiled a mammal species checklist of GLGM based on thorough field investigations and literature reviews. We also examined specimen collections and applied camera trapping surveys to explore the region’s mammal diversity and distribution patterns. We recorded 212 mammal species in nine orders, 33 families, and 119 genera, which accounts for 30.5% of China’s mammal species, and a high proportion of nationally protected (50) and globally threatened (29) species. Mammal species richness showed a symmetrical unimodal curve along the elevation gradient, peaking at intermediate elevations (2 000 to 2 500 m a.s.l.), and increasing generally from south to north, slightly higher in the east slope than in the west. Cluster analysis and non-metric multidimensional scaling revealed three distinct elevational assemblages (&lt;900 m a.s.l., 900–3 500 m a.s.l., and &gt;3 500 m a.s.l.) and significant south-to-north variation, but no substantial differences between the east and west slopes. The GLGM present a unique conservation value due to the high proportions of rare and endangered mammal species, complex faunal composition, high endemism, and being the distribution boundary for many species. This study is an important phased account of mammal diversity in GLGM and makes a prospect for future research.",
+		"container-title": "Zoological Research Diversity and Conservation",
+		"DOI": "10.24272/j.issn.2097-3772.2023.005",
+		"ISSN": "2097-3772",
+		"note": "type: Journal Article",
+		"page": "1–17",
+		"title": "The mammals of Gaoligong Mountain in China: diversity, distribution, and conservation",
+		"URL": "https://www.zrdc.ac.cn/en/article/doi/10.24272/j.issn.2097-3772.2023.005",
+		"author": [
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Hu",
+				"given": "Wen-Qiang"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Wang",
+				"given": "Hong-Jiao"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhe-Chang"
+			},
+			{
+				"family": "Li",
+				"given": "Meng-Cheng"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Pu",
+				"given": "Chang-Zhe"
+			},
+			{
+				"family": "Xiong",
+				"given": "Yun"
+			},
+			{
+				"family": "Rao",
+				"given": "Cai-Hong"
+			},
+			{
+				"family": "Zhang",
+				"given": "Fu-You"
+			},
+			{
+				"family": "Zuo",
+				"given": "Chang-Sheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2024"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/XXI9JP95",
+		"type": "article-journal",
+		"abstract": "Forest fragmentation has critical and ongoing impacts on multiple facets of biodiversity. Yet, the specific impacts of fragmentation on animal communities, especially beyond species richness, remain less understood. Here, we addressed the question of how forest fragmentation affects both community occupancy (i.e., average occupancy across the species community) and functional richness of 39 medium- and large-sized mammals, accounting for imperfect detection and collinearity among landscape metrics. We conducted an intensive camera-trapping survey (731 camera traps, 79,108 trap nights) across a broad gradient of forest fragmentation in Southwest China. We investigated the relationships between fragmentation (quantified as patch density) and mammalian community occupancy, species richness, and functional richness for medium- to large-bodied mammals. We applied Bayesian hierarchical multispecies occupancy models to account for imperfect detection and assess both individual species and community-level responses. Additionally, we used piecewise structural equation modeling to disentangle the direct effects of fragmentation from those of forest cover, addressing collinearity among landscape metrics. Our results demonstrate that increased forest fragmentation significantly reduces both community occupancy and functional richness. Notably, functional richness continually decreased even when species richness leveled out along gradients of fragmentation, indicating that forest fragmentation filters for species that are more functionally similar, thus homogenizing functional diversity. Structural equation modeling consistently revealed forest fragmentation as a stronger determinant of both species and functional richness compared to forest cover, underscoring the importance of habitat configuration in determining species distributions and functional diversity of forest-dwelling mammals. At the species level, 85% of mammals exhibited a negative response to fragmentation, with nocturnal species and those with narrower habitat width being particularly sensitive. We conclude that forest fragmentation fundamentally impacts not just where species occur, but also the functional traits present within a community. Our findings highlight the importance of retaining large, contiguous forest areas in mountain landscapes for supporting diverse mammalian communities.",
+		"container-title": "Biological Conservation",
+		"DOI": "https://doi.org/10.1016/j.biocon.2026.111828",
+		"ISSN": "0006-3207",
+		"note": "type: Journal Article",
+		"page": "111828",
+		"title": "Beyond species richness: Habitat fragmentation reduces community occupancy and functional richness of mountain forest mammals",
+		"URL": "https://www.sciencedirect.com/science/article/pii/S0006320726001394",
+		"volume": "318",
+		"author": [
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Hu",
+				"given": "Wenqiang"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhechang"
+			},
+			{
+				"family": "Liu",
+				"given": "Yang"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/GYF3QLYA",
+		"type": "article-journal",
+		"abstract": "Abstract Despite the crucial role of human impacts on biodiversity loss, many assessments of this loss focus on single metrics, such as species richness, and overlook the multidimensional effects of human activities. Because of its importance to ecosystem functioning, we investigated the functional diversity of medium- and large-sized mammal assemblages in protected and unprotected mountain forests in the Hengduan Mountains of southwest China. We hypothesized that anthropogenic pressures outside protected areas (PAs) favor generalist species and lead to functionally homogenized assemblages compared with assemblages inside PAs. Using generalized dissimilarity models, we also examined the key drivers shaping patterns of functional β diversity in these landscapes. Outside PAs, functional richness was markedly lower, trait space was significantly more homogeneous, and nestedness β diversity was more prevalent (57.6%) than inside PAs, clear indications of functional homogenization. Anthropogenic variables consistently outweighed environmental gradients and spatial distance in explaining variation in functional β diversity. Our results demonstrate that anthropogenic pressure affects trait composition in ways that species counts alone do not fully capture, emphasizing the importance of conservation strategies that protect both functional integrity and taxonomic diversity.",
+		"container-title": "Conservation Biology",
+		"DOI": "https://doi.org/10.1111/cobi.70214",
+		"ISSN": "0888-8892",
+		"note": "type: Journal Article",
+		"page": "e70214",
+		"title": "Functional homogenization of terrestrial mammals outside protected areas in the Hengduan Mountains, China",
+		"URL": "https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/cobi.70214",
+		"author": [
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Hu",
+				"given": "Wenqiang"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhechang"
+			},
+			{
+				"family": "Bai",
+				"given": "Ru"
+			},
+			{
+				"family": "Liu",
+				"given": "Yang"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/QIIP5KR5",
+		"type": "article-journal",
+		"abstract": "The Mountains of Southwest China, a global biodiversity hotspot, have a unique “sky island” landscape with high diversity of both ancient and recent-formed species. Although their distribution patterns offer significant insights into diversification processes, the complex geological and climatic history, combined with dynamic histories of gene flow in endemic taxa, makes unraveling this history challenging. This study focuses on Asian shrew moles (genus Uropsilus), an ancient group endemic to this region with an unresolved taxonomic system. By combining phylogenomic, introgression, and demographic history analyses, we investigated the historical patterns of species diversification in this genus. We detected phylogenetic discordances among rapidly diverged lineages, driven by incomplete lineage sorting, both recent and ancient gene flow, and ghost introgression. The gene flow patterns revealed strong genetic isolation in the Hengduan Mountains region, contrasted by more extensive dispersal or connectivity in areas to its east, while suggesting potential ring-like diversification around the Sichuan Basin. Demographic history indicated that rapidly diverged lineages south of the Yangtze River exhibited significantly different responses to climatic fluctuations compared with other lineages, with the East Asian monsoon likely driving their radiative differentiation and dispersal. Our study demonstrates the impacts of mountain uplift, climatic changes, and the connectivity of sky island refugia in shaping the diverse patterns of species differentiation and their distribution.",
+		"container-title": "Systematic Biology",
+		"DOI": "10.1093/sysbio/syaf052",
+		"ISSN": "1063-5157",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "221–235",
+		"title": "Species Diversification in the Sky Islands of Southwestern China Revealed by Genomic, Introgression, and Demographic Analyses of Asian Shrew Moles",
+		"URL": "https://doi.org/10.1093/sysbio/syaf052",
+		"volume": "75",
+		"author": [
+			{
+				"family": "Li",
+				"given": "Yi-Xian"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Zhang",
+				"given": "Tao"
+			},
+			{
+				"family": "Cheng",
+				"given": "Feng"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Wang",
+				"given": "Hong-Jiao"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/2QP338DN",
+		"type": "article-journal",
+		"abstract": "ABSTRACT Human activities strongly alter wildlife distributions and behaviors, rapidly reshaping their community structure. Although links between human pressures and community assembly have been explored, practical integration of multiple biodiversity indicators, especially compositional homogenization and functional trait patterns, remains limited. We addressed this gap by jointly assessing the compositional and functional responses of mammal communities to human pressures across Southeast Asia. We compiled an extensive camera-trapping dataset from 4508 sites spanning > 38° of latitude across tropical and temperate forests in Southeast Asia. We quantified compositional homogenization and functional diversity trait patterns in relation to human pressures within and across forests. Our results show that community assembly is broadly affected by human pressures, with communities in Tropical & Subtropical Moist Broadleaf Forests (TSMBF) exhibiting greater vulnerability than those in Temperate Coniferous Forests (TCF), as evidenced by pronounced compositional homogenization and distinct changes in functional traits. High-intensity human modification promoted compositional homogenization alongside functional trait divergence, while long-term changes in building-density drove functional trait convergence. This study demonstrates that integrating compositional and functional indicators provides a more holistic understanding of anthropogenic impacts on biodiversity. The heightened vulnerability of tropical mammal communities underscores the urgent need for targeted conservation strategies in these regions to curb the replacement of endemic specialists with widespread generalists.",
+		"container-title": "Global Change Biology",
+		"DOI": "https://doi.org/10.1111/gcb.70916",
+		"ISSN": "1354-1013",
+		"issue": "5",
+		"note": "type: Journal Article",
+		"page": "e70916",
+		"title": "Human Pressures Drive Compositional Homogenization and Functional Shifts in Southeast Asian Mammal Communities",
+		"URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.70916",
+		"volume": "32",
+		"author": [
+			{
+				"family": "Liu",
+				"given": "Yang"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Hu",
+				"given": "Wenqiang"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/3WV75LM6",
+		"type": "article-journal",
+		"abstract": "The distribution of small mammals in mountainous environments across different elevations can provide important information on the effects of climate change on the dispersal of species. However, few studies conducted on Afromontane ecosystems have compared the altitudinal patterns of small mammal diversity. We investigated the species diversity and abundance of non-volant small mammals (hereafter 'small mammals') on Mt. Kenya, the second tallest mountain in Africa, using a standard sampling scheme. Nine sampling transects were established at intervals of 200 m on the eastern (Chogoria) and western (Sirimon) slopes. A total of 1 905 individuals representing 25 species of small mammals were trapped after 12 240 trap-nights. Abundance was highest at mid-elevations on both slopes. However, species richness and distribution patterns differed between the two slopes. More species were recorded on Chogoria (24) than on Sirimon (17). On Chogoria, species richness was higher at mid-high elevations, with a peak at mid-elevation (2 800 m a.s.l.), whereas species richness showed little variation on the Sirimon slope. These results indicate that patterns of species diversity can differ between slopes on the same mountain. In addition, we extensively reviewed literature on Mt. Kenya's mammals and compiled a comprehensive checklist of 76 mammalian species. However, additional research is required to improve our understanding of small mammal diversity in mountain habitats in Africa.",
+		"container-title": "Zool Res",
+		"DOI": "10.24272/j.issn.2095-8137.2019.004",
+		"ISSN": "2095-8137 (Print) 2095-8137 (Linking)",
+		"issue": "1",
+		"note": "type: Journal Article",
+		"page": "53–60",
+		"title": "Diversity and distribution patterns of non-volant small mammals along different elevation gradients on Mt. Kenya, Kenya",
+		"URL": "https://www.ncbi.nlm.nih.gov/pubmed/30581186",
+		"volume": "40",
+		"author": [
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Chen",
+				"given": "Z. Z."
+			},
+			{
+				"family": "Li",
+				"given": "Q."
+			},
+			{
+				"family": "Yego",
+				"given": "R."
+			},
+			{
+				"family": "Zhang",
+				"given": "B."
+			},
+			{
+				"family": "Onditi",
+				"given": "K."
+			},
+			{
+				"family": "Muthoni",
+				"given": "I."
+			},
+			{
+				"family": "He",
+				"given": "S. W."
+			},
+			{
+				"family": "Omondi",
+				"given": "S."
+			},
+			{
+				"family": "Mathenge",
+				"given": "J."
+			},
+			{
+				"family": "Kioko",
+				"given": "E. N."
+			},
+			{
+				"family": "Jiang",
+				"given": "X. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/44WJVGAL",
+		"type": "article-journal",
+		"abstract": "The fragmented forests of the Kenya highlands, known for their exceptional species richness and endemism, are among the world's most important biodiversity hotspots. However, detailed studies on the fauna of these ecosystems-especially specialist species that depend on moist forests, which are particularly threatened by habitat fragmentation-are still limited. In this study, we used mitochondrial genes (cytochrome b and the displacement loop) and a nuclear marker (retinol-binding protein 3) to investigate genetic and morphological diversity, phylogenetic associations, historical divergence, population dynamics, and phylogeographic patterns in two rodent species-the soft-furred mouse (Praomys jacksoni) and the African wood mouse (Hylomyscus endorobae)-across Kenya's forest landscapes. We found a complex genetic structure, with P. jacksoni exhibiting greater genetic diversity than H. endorobae. The Mt. Kenya P. jacksoni populations are significantly genetically different from those in southwestern forests (Mau Forest, Kakamega Forest, and Loita Hills). In contrast, H. endorobae presented no observable biogeographic structuring across its range. The genetic diversity and geographic structuring patterns highlighted selectively strong effects of forest fragmentation and differing species' ecological and evolutionary responses to these landscape changes. Our findings further underscore the need for expanded sampling across Kenya's highland forests to better understand species' changing diversity and distribution patterns in response to the impacts of human-mediated habitat changes. These insights are critical for informing conservation strategies to preserve biodiversity better in this globally important region.",
+		"container-title": "Life (Basel)",
+		"DOI": "10.3390/life14111469",
+		"ISSN": "2075-1729 (Print) 2075-1729 (Electronic) 2075-1729 (Linking)",
+		"issue": "11",
+		"note": "type: Journal Article",
+		"title": "Comparative Phylogeography of Two Specialist Rodents in Forest Fragments in Kenya",
+		"URL": "https://www.ncbi.nlm.nih.gov/pubmed/39598267",
+		"volume": "14",
+		"author": [
+			{
+				"family": "Mweu",
+				"given": "A. W."
+			},
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Khanal",
+				"given": "L."
+			},
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Kioko",
+				"given": "E."
+			},
+			{
+				"family": "Jiang",
+				"given": "X."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2024"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/W8JVRMTC",
+		"type": "article-journal",
+		"abstract": "Montane ecosystems play crucial roles as global biodiversity hotspots. However, climatic changes and anthropogenic pressure increasingly threaten the stability of montane community dynamics, such as diversity-elevation interactions, creating a challenge in understanding species biogeography and community ecology dynamics in these crucial conservation areas. We examined how varying sampling spatial grains influence small mammal diversity patterns within Kenya’s tallest montane ecosystems.",
+		"container-title": "BMC Ecology and Evolution",
+		"DOI": "10.1186/s12862-024-02328-w",
+		"ISSN": "2730-7182",
+		"issue": "1",
+		"note": "type: Journal Article",
+		"page": "139",
+		"title": "Unravelling spatial scale effects on elevational diversity gradients: insights from montane small mammals in Kenya",
+		"URL": "https://doi.org/10.1186/s12862-024-02328-w https://bmcecolevol.biomedcentral.com/counter/pdf/10.1186/s12862-024-02328-w.pdf",
+		"volume": "24",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Sancha",
+				"given": "Noé U.",
+				"non-dropping-particle": "de la"
+			},
+			{
+				"family": "Musila",
+				"given": "Simon"
+			},
+			{
+				"family": "Kioko",
+				"given": "Esther"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2024"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/Z75E9RH4",
+		"type": "article-journal",
+		"abstract": "BACKGROUND: The speckled-pelage brush-furred rats (Lophuromys flavopunctatus group) have been difficult to define given conflicting genetic, morphological, and distributional records that combine to obscure meaningful accounts of its taxonomic diversity and evolution. In this study, we inferred the systematics, phylogeography, and evolutionary history of the L. flavopunctatus group using maximum likelihood and Bayesian phylogenetic inference, divergence times, historical biogeographic reconstruction, and morphometric discriminant tests. We compiled comprehensive datasets of three loci (two mitochondrial [mtDNA] and one nuclear) and two morphometric datasets (linear and geometric) from across the known range of the genus Lophuromys. RESULTS: The mtDNA phylogeny supported the division of the genus Lophuromys into three primary groups with nearly equidistant pairwise differentiation: one group corresponding to the subgenus Kivumys (Kivumys group) and two groups corresponding to the subgenus Lophuromys (L. sikapusi group and L. flavopunctatus group). The L. flavopunctatus group comprised the speckled-pelage brush-furred Lophuromys endemic to Ethiopia (Ethiopian L. flavopunctatus members [ETHFLAVO]) and the non-Ethiopian ones (non-Ethiopian L. flavopunctatus members [NONETHFLAVO]) in deeply nested relationships. There were distinctly geographically structured mtDNA clades among the NONETHFLAVO, which were incongruous with the nuclear tree where several clades were unresolved. The morphometric datasets did not systematically assign samples to meaningful taxonomic units or agree with the mtDNA clades. The divergence dating and ancestral range reconstructions showed the NONETHFLAVO colonized the current ranges over two independent dispersal events out of Ethiopia in the early Pleistocene. CONCLUSION: The phylogenetic associations and divergence times of the L. flavopunctatus group support the hypothesis that paleoclimatic impacts and ecosystem refugia during the Pleistocene impacted the evolutionary radiation of these rodents. The overlap in craniodental variation between distinct mtDNA clades among the NONETHFLAVO suggests unraveling underlying ecomorphological drivers is key to reconciling taxonomically informative morphological characters. The genus Lophuromys requires a taxonomic reassessment based on extensive genomic evidence to elucidate the patterns and impacts of genetic isolation at clade contact zones.",
+		"container-title": "BMC Ecol Evol",
+		"DOI": "10.1186/s12862-021-01813-w",
+		"ISSN": "2730-7182 (Electronic) 2730-7182 (Linking)",
+		"issue": "1",
+		"note": "type: Journal Article",
+		"page": "89",
+		"title": "Historical biogeography, systematics, and integrative taxonomy of the non-Ethiopian speckled pelage brush-furred rats (Lophuromys flavopunctatus group)",
+		"URL": "https://www.ncbi.nlm.nih.gov/pubmed/34011264",
+		"volume": "21",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Demos",
+				"given": "T. C."
+			},
+			{
+				"family": "Kerbis Peterhans",
+				"given": "J."
+			},
+			{
+				"family": "Chen",
+				"given": "Z. Z."
+			},
+			{
+				"family": "Bryja",
+				"given": "J."
+			},
+			{
+				"family": "Lavrenchenko",
+				"given": "L. A."
+			},
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Verheyen",
+				"given": "E."
+			},
+			{
+				"family": "Van de Perre",
+				"given": "F."
+			},
+			{
+				"family": "Akaibe",
+				"given": "B. D."
+			},
+			{
+				"family": "Sancha",
+				"given": "N. U.",
+				"non-dropping-particle": "de la"
+			},
+			{
+				"family": "Jiang",
+				"given": "X. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/5YXEVXH2",
+		"type": "article-journal",
+		"abstract": "The sub-Saharan Africa endemic dormouse genus Graphiurus is a morphologically diverse group of rodents that has lacked a genus-wide genetic framework, hindering inference of their evolution and biogeography. Here, we assembled the first comprehensive, range-wide genomic dataset for Graphiurus, including ultraconserved elements and the cytochrome b gene. We used phylogenetic reconstruction, divergence-time estimation, and ancestral area reconstruction to clarify biogeographic histories and evaluate how historical range dynamics may have influenced lineage diversification. Graphiurus is the earliest-diverging lineage within Gliridae sister to all other extant genera. Within Graphiurus, we recovered 24 molecular operational taxonomic units (MOTUs) forming two reciprocally monophyletic, deeply divergent clades: a West African lineage comprising three MOTUs and a pan-sub-Saharan Africa lineage comprising 21 MOTUs. Genetic distances between these clades are equal to or greater than those used to distinguish genera. Diversification within Graphiurus started in the middle Miocene, peaking in a rapid radiation during the Plio-Pleistocene. These diversification events coincided with increased climatic instability that fragmented forests into isolated refugia. Ancestral-area reconstructions suggest a Graphiurus origin in the Upper Guinean rainforest, followed by jump dispersal across the Afrotropics, with most subsequent divergences occurring in East Africa. As the first comprehensive phylogenetic analysis of Graphiurus, our study underscores the urgent need for an integrated taxonomic revision of the genus that couples genomic data with detailed morphology and critical re-examination of type material to resolve species limits and formally describe the recovered MOTUs. Many MOTUs appear range restricted, underscoring vulnerability to ongoing habitat loss within montane refugia.",
+		"container-title": "Mol Phylogenet Evol",
+		"DOI": "10.1016/j.ympev.2026.108549",
+		"ISSN": "1095-9513 (Electronic) 1055-7903 (Linking)",
+		"note": "type: Journal Article",
+		"page": "108549",
+		"title": "Diversification and biogeographic history of African dormice (genus Graphiurus) revealed by ultraconserved elements and mitochondrial data",
+		"URL": "https://www.ncbi.nlm.nih.gov/pubmed/41565127",
+		"volume": "217",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Demos",
+				"given": "T. C."
+			},
+			{
+				"family": "Kerbis Peterhans",
+				"given": "J. C."
+			},
+			{
+				"family": "Nicolas",
+				"given": "V."
+			},
+			{
+				"family": "Mikula",
+				"given": "O."
+			},
+			{
+				"family": "Bryjova",
+				"given": "A."
+			},
+			{
+				"family": "Hounmavo",
+				"given": "A."
+			},
+			{
+				"family": "Monadjem",
+				"given": "A."
+			},
+			{
+				"family": "Bryja",
+				"given": "J."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/92I9C33W",
+		"type": "article-journal",
+		"abstract": "Merely designating new and/or expanding existing protected areas (PAs) does not guarantee the protection of critical ecosystems and species. The management of PAs must be effective to sustain meaningful conservational outcomes. We inferred the management effectiveness of PAs in Kenya based on the representation of ranges and distribution of multiple diversity dimensions of terrestrial mammals and their association with governance and designation types. We hypothesized that different governance types underlie variable management efficacies, such that stricter-managed PAs have better habitats that attract more wildlife, translating to higher species diversity compared to less strictly-managed PAs, especially for focal species groups (large carnivores, large herbivores, and endangered species). The results showed nearly all terrestrial mammals in Kenya represented in at least one PA. However, the relative proportion of represented ranges were low, and analysis of spatial conservation prioritization showed significant expansion beyond current PAs needed to achieve a one third coverage of focal species' ranges in a best-solution reserve system. Differences in PA governance and designation types were not systematically associated with diversity variances, and while there were more unique species in state-managed PAs than in privately-managed ones, averaged diversity coefficients were comparable between categories. Diversity variances explained by PA size and status year were low in a combined species pool but increased in focal species groups. These findings suggest that success in terrestrial mammal conservation in PAs in Kenya require clearly and formally streamlined definition, performance feedback, and collaboration terms between state-managed and privately-managed PAs.",
+		"container-title": "Biodiversity and Conservation",
+		"DOI": "10.1007/s10531-021-02276-7",
+		"ISSN": "0960-3115",
+		"issue": "13",
+		"note": "type: Journal Article",
+		"page": "3813–3836",
+		"title": "The management effectiveness of protected areas in Kenya",
+		"URL": "<Go to ISI>://WOS:000695455000001",
+		"volume": "30",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Li",
+				"given": "X. Y."
+			},
+			{
+				"family": "Song",
+				"given": "W. Y."
+			},
+			{
+				"family": "Li",
+				"given": "Q."
+			},
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Mathenge",
+				"given": "J."
+			},
+			{
+				"family": "Kioko",
+				"given": "E."
+			},
+			{
+				"family": "Jiang",
+				"given": "X. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/MSCLD2EJ",
+		"type": "article-journal",
+		"abstract": "Brush-furred rats (Lophuromys Peters 1874) are the most abundant and widely distributed small mammals on Mount Kenya. However, their ecology is poorly known and their taxonomic status is questionable. This study investigates whether or not the morphology and genetics of the Mt. Kenya Lophuromys correspond with elevation, vegetation, and climate variables. We also investigate the taxonomic relationship of the Mt. Kenya Lophuromys to the Aberdare Range and Mt. Kilimanjaro populations using genetic and craniodental data. Specimens were captured along Mt. Kenya's western and eastern slopes, and other specimens (from Aberdare and Mt. Kilimanjaro) were obtained from Museum collections. The datasets were analyzed using multivariate and univariate statistics, discriminant function analysis, and phylogenetic analyses. The results show that Mt. Kenya Lophuromys specimens from different habitats and elevations are significantly differentiated by external morphology but not craniodental variables, and have low genetic variation and no population genetic structure, supporting the entire population is consistent with a single species model. In addition, Mt. Kenya and Aberdare Lophuromys cluster separately from Mt. Kilimanjaro Lophuromys based on craniodental analyses while phylogenetic and haplotype analyses also support the Mt. Kenya and Aberdare Lophuromys as evolutionarily isolated from Mt. Kilimanjaro's population. These results contradict recent studies that hypothesized the distribution of Lophuromys margarettae in lower elevations of Mt. Kenya with Lophuromys zena restricted to the higher elevations.",
+		"container-title": "Mammal Research",
+		"DOI": "10.1007/s13364-019-00470-1",
+		"ISSN": "2199-2401",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "387–400",
+		"title": "Morphological and genetic characterization of Mount Kenya brush-furred rats (Peters 1874); relevance to taxonomy and ecology",
+		"URL": "<Go to ISI>://WOS:000504885300001",
+		"volume": "65",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Peterhans",
+				"given": "J. K."
+			},
+			{
+				"family": "Demos",
+				"given": "T. C."
+			},
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Chen",
+				"given": "Z. Z."
+			},
+			{
+				"family": "Jiang",
+				"given": "X. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/Z7ZEMYIW",
+		"type": "article-journal",
+		"abstract": "The original version of this article, unfortunately, contained an error. The corrections are presented in this article.",
+		"container-title": "Mammal Research",
+		"DOI": "10.1007/s13364-019-00475-w",
+		"ISSN": "2199-2401 2199-241X",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "401–402",
+		"title": "Correction to: Morphological and genetic characterization of Mount Kenya brush-furred rats (Lophuromys Peters 1874); relevance to taxonomy and ecology",
+		"URL": "https://doi.org/10.1007/s13364-019-00475-w",
+		"volume": "65",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Peterhans",
+				"given": "Julian Kerbis"
+			},
+			{
+				"family": "Demos",
+				"given": "Terrence C."
+			},
+			{
+				"family": "Musila",
+				"given": "Simon"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/7VNLP56P",
+		"type": "article-journal",
+		"abstract": "Animals perceive their ecosystems at multiple spatial scales such that the pattern–process relationships that determine their ecological and evolutionary opportunities are also spatially variable. Understanding how spatial scale impacts our observations of ecological and evolutionary patterns and processes is therefore crucial for effective biodiversity management. In this study, using a comprehensive dataset of small mammals from primary field surveys supplemented with literature data across Kenya, we investigated the effects of spatial scale on the distribution patterns of taxonomic, phylogenetic, and functional diversity indices. We also tested how relationships between taxonomic, phylogenetic, and functional diversity and various environmental and anthropogenic variables change across spatial scales. The results showed that with increasing spatial scale, species richness and phylogenetic and functional richness consistently increased. Community-wide mean pairwise distance indices for phylogenetic and functional dimensions also increased, while fine-scale mean nearest taxon distance indices decreased. Notably, community structure indices exhibited nonmonotonic patterns across spatial scales. The associations between diversity patterns and environmental and human covariates increased with scale but were more variable and complex across regions. These findings highlight a negative correlation between spatial scale and phylogenetic and functional divergence while reinforcing the species-area hypotheses for richness-dependent diversity indices. Identifying the optimal scales of field studies and conservational actions must factor in the species group of interest and the geographical context.",
+		"container-title": "Ecosphere",
+		"DOI": "10.1002/ecs2.70179",
+		"ISSN": "2150-8925",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "e70179",
+		"title": "Multiscale spatial dependency of small mammal diversity patterns and their determinants",
+		"URL": "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecs2.70179",
+		"volume": "16",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Song",
+				"given": "Wenyu"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhongzheng"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Sancha",
+				"given": "Noé U.",
+				"non-dropping-particle": "de la"
+			},
+			{
+				"family": "Musila",
+				"given": "Simon"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/BANW6V5Q",
+		"type": "article-journal",
+		"abstract": "Mountains of the Afrotropics are global biodiversity hotspots and centers of speciation and endemism; however, very few studies have focused on the phylogenetic and functional dimensions of Afromontane small mammals. We investigated the patterns and mechanisms of small mammal phylogenetic and functional diversity and assembly along elevational gradients in Mount Kenya, the second highest mountain in Africa, and a contrasting low mountain range, Chyulu Hills. We sampled 24 200-m interval transects in both sites; 18 in Mt. Kenya (9 each in the windward side, Chogoria, and the leeward side, Sirimon) and 6 in Chyulu. We extracted the mitochondrial Cytochrome b gene to reconstruct a time-calibrated species tree for estimating phylogenetic diversity indices [phylogenetic richness (PD), mean nearest taxon distance (PDMNTD), and nearest taxon index (PDNTI)]. A functional trait data set was compiled from the field-recorded measurements and published data sets for estimating functional diversity indices [functional richness (FD), mean nearest taxon distance (FDMNTD), and nearest taxon index (FDNTI)]. Several environmental variables representing water-energy availability, primary habitat productivity, and topographic heterogeneity were used to estimate the predictive power of abiotic conditions on diversity variances using generalized linear and generalized additive regression models. The PD and FD peaked around mid-elevations in Mt. Kenya, unimodally increased or decreased in Chogoria and Sirimon, and monotonically increased in Chyulu. The divergence and community structure indices-PDMNTD, FDMNTD, and PDNTI and FDNTI-were relatively weakly associated with elevation. Overall, the tendency of assemblages to be phylogenetically and functionally closely related than expected by chance decreased with elevation in Mt. Kenya but increased in Chyulu. Across the indices, the annual precipitation and topographic ruggedness were the strongest predictors in Mt. Kenya, evapotranspiration and temperature seasonality were the strongest predictors in Chyulu, while temperature seasonality and terrain ruggedness overlapped as the strongest predictors in Chogoria and Sirimon in addition to annual precipitation in the latter and normalized difference vegetation index in the former. The observed contrasting trends in diversity distribution and the strongest predictors between elevational gradients are integral to the sustainable management of the high faunal biodiversity in tropical Afromontane ecosystems.",
+		"container-title": "Frontiers in Ecology and Evolution",
+		"DOI": "10.3389/fevo.2021.742524",
+		"ISSN": "2296-701x",
+		"issue": "964",
+		"note": "type: Journal Article",
+		"page": "742524",
+		"title": "Patterns and Predictors of Small Mammal Phylogenetic and Functional Diversity in Contrasting Elevational Gradients in Kenya",
+		"URL": "<Go to ISI>://WOS:000745180600001",
+		"volume": "9",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Song",
+				"given": "W. Y."
+			},
+			{
+				"family": "Li",
+				"given": "X. Y."
+			},
+			{
+				"family": "Chen",
+				"given": "Z. Z."
+			},
+			{
+				"family": "Li",
+				"given": "Q."
+			},
+			{
+				"family": "He",
+				"given": "S. W."
+			},
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Kioko",
+				"given": "E."
+			},
+			{
+				"family": "Jiang",
+				"given": "X. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2022"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/DUZZFH79",
+		"type": "article-journal",
+		"abstract": "Understanding the interactions between abiotic (environmental and anthropogenic) factors and species diversity and distribution patterns is fundamental to improving the ecological representativeness of biodiversity man-agement tools such as protected areas (PAs). However, significant knowledge gaps remain about how species' ecological and evolutionary opportunities are associated with abiotic factors, especially in biodiversity-rich but economically ill-equipped countries such as Kenya. Here, we explored the interactions of terrestrial mammal diversity patterns and abiotic factors across species groups and ecoregions in Kenya. We coupled data on terrestrial mammal occurrences, phylogeny, functional traits, and environmental predictors in Kenya to derive multiple diversity indices, encompassing species richness and phylogenetic and functional richness, and mean pairwise and nearest taxon distances. We explored the interactions of these indices with several abiotic factors using multivariate regression analyses while adjusting for spatial autocorrelation. The results showed weak correlations between species richness versus the phylogenetic and functional diversity indices. The best-fit models explained variable proportions of diversity indices between species groups and ecoregions and consis-tently retained annual temperature and precipitation averages and seasonality and human footprint as the strongest predictors. Compared to the species-poor xeric northern and eastern Kenya regions, the predictors had weak associations with diversity variances in the species-rich mesic western and central Kenya regions, similar to focal species groups compared to ordinal classifications and the combined species pool. These findings illustrate that climate and human footprint interplay determine multiple facets of terrestrial mammal diversity patterns in Kenya. Accordingly, curbing human activities degrading long-term climatic regimes is vital to ensuring the ecological integrity of terrestrial mammal communities and should be integrated into biodiversity management frameworks. For a holistic representation of critical conservation areas, biodiversity managements should also prioritize terrestrial mammal phylogenetic and functional attributes besides species richness.",
+		"container-title": "Ecological Indicators",
+		"DOI": "10.1016/j.ecolind.2023.110595",
+		"ISSN": "1470-160x",
+		"issue": "-",
+		"note": "type: Journal Article",
+		"page": "110595",
+		"title": "Untangling key abiotic predictors of terrestrial mammal diversity patterns across ecoregions and species groups in Kenya",
+		"URL": "<Go to ISI>://WOS:001039468100001",
+		"volume": "154",
+		"author": [
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Song",
+				"given": "W. Y."
+			},
+			{
+				"family": "Li",
+				"given": "X. Y."
+			},
+			{
+				"family": "Musila",
+				"given": "S."
+			},
+			{
+				"family": "Chen",
+				"given": "Z. Z."
+			},
+			{
+				"family": "Li",
+				"given": "Q."
+			},
+			{
+				"family": "Mathenge",
+				"given": "J."
+			},
+			{
+				"family": "Kioko",
+				"given": "E."
+			},
+			{
+				"family": "Jiang",
+				"given": "X. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/T95CGJCJ",
+		"type": "article-journal",
+		"abstract": "<sec>IntroductionThe Millettioid/Phaseoloid (MP) clade of Fabaceae is globally distributed, economically important, and highly diverse, making it an attractive system for studying biogeographic and macroecological patterns at a global scale. We conducted the first global macroecological study to map and explore the environmental drivers of the MP clade's species richness patterns.</sec><sec>MethodsWe compiled 116,212 species occurrences (161 genera) for the MP clade and 20 environmental variables (19 bioclimatic variables and elevation). Geospatial analyses were performed to estimate species richness patterns and biogeographic heterogeneity. The effects of environmental variables on the species richness of the MP clade were measured through multiple regression models.</sec><sec>ResultsOur study identified the megathermal regions as hotspots of species richness for the MP clade. While species distributions and richness largely fit the latitudinal diversity gradient pattern, there was a significant negative relationship between the species richness of the MP clade along the latitude and longitude. The Afrotropic biogeographic realm had the highest alpha diversity ( 36%); in terms of biome types, tropical and subtropical moist broadleaf forests had the highest alpha diversity (25%), while the beta diversity revealed a high dispersal rate and habitat tracking. Furthermore, the species richness was positively influenced by multiple climatic factors, with the mean diurnal range of temperatures and precipitation in the warmest quarter having strongest influence.</sec><sec>DiscussionOverall, the staggering species richness patterns could be explained by multiple diversity gradient hypotheses. Particularly, colder climates play a crucial role in shaping the species richness pattern by limiting the ecological opportunities for MP clade species in the higher latitudes of the Northern Hemisphere. This suggests that the species richness patterns of the MP clade can be described as \"when dispersal meets adaptation.\" Our study provides a new basis for identifying priority regions for conservation of legumes.</sec>",
+		"container-title": "Frontiers in Ecology and Evolution",
+		"DOI": "10.3389/fevo.2023.1231553",
+		"ISSN": "2296-701X",
+		"note": "type: Journal Article",
+		"title": "Biogeographic patterns and environmental drivers of species richness in the globally distributed Millettioid/Phaseoloid clade (Fabaceae, subfamily Papilionoideae)",
+		"URL": "https://www.frontiersin.org/articles/10.3389/fevo.2023.1231553",
+		"volume": "11",
+		"author": [
+			{
+				"family": "Oyebanji",
+				"given": "Oyetola O."
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Azevedo",
+				"given": "Josué A. R."
+			},
+			{
+				"family": "Rahaingoson",
+				"given": "Fabien R."
+			},
+			{
+				"family": "Nneji",
+				"given": "Lotanna M."
+			},
+			{
+				"family": "Adeleye",
+				"given": "Matthew. A."
+			},
+			{
+				"family": "Stull",
+				"given": "Gregory W."
+			},
+			{
+				"family": "Zhang",
+				"given": "Rong"
+			},
+			{
+				"family": "Yi",
+				"given": "Ting-Shuang"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/IRKYD3RD",
+		"type": "article-journal",
+		"abstract": "Understanding the mechanisms influencing patterns and processes of biological diversity is critical to protecting biodiversity, particularly in species-rich ecosystems such as mountains. Even so, there is limited knowledge of biodiversity patterns and processes in the mountains of eastern China, especially about small mammals. In this study, we examined the taxonomic, functional, and phylogenetic diversity of small mammal distribution and community structure along the elevational gradient of Qingliang Mountain, eastern China. We then evaluated how they are influenced by space (area and mid-domain effect (MDE)), environment (temperature, precipitation, and normalized difference vegetation index (NDVI)), and human disturbance. The results showed hump-shaped patterns of taxonomic and phylogenetic diversity along elevation gradients, peaking at 1000 m, unlike functional diversity, which peaked at lower elevations (600 m). The mean pairwise distance and mean nearest taxon distance of functional and phylogenetic variance (MFD and MPD, respectively) were also incongruent. The MFD and MPD showed hump-shaped patterns along elevations; however, unlike MFD, which peaked at lower elevations (600 m), MPD peaked at higher elevations (1200 m). The mean nearest functional taxon distance (MNFD) decreased, while the mean nearest phylogenetic taxon distance (MNTD) increased along the elevation gradient. The higher elevations were functionally more clustered, while the lower elevations were phylogenetically more clustered, suggesting that environmental filtering for traits was stronger at higher elevations. In comparison, phylogenetic conservatism of ecological niches had a stronger influence at lower elevations. The diversity and community structure indices were inconsistently explained, with human disturbance and MDE accounting for the biggest proportions of the model-explained variances. Overall, the results confirm that environmental filtering and human disturbance significantly influence small mammals' diversity and community structure. These findings also emphasize the need for increased conservation efforts in the middle and lower elevation regions of Qingliang Mountain.",
+		"container-title": "Animals (Basel)",
+		"DOI": "10.3390/ani12151915",
+		"ISSN": "2076-2615 (Print) 2076-2615",
+		"issue": "15",
+		"note": "type: Journal Article",
+		"title": "Human Disturbance and Geometric Constraints Drive Small Mammal Diversity and Community Structure along an Elevational Gradient in Eastern China",
+		"volume": "12",
+		"author": [
+			{
+				"family": "Pei",
+				"given": "X."
+			},
+			{
+				"family": "Ren",
+				"given": "X."
+			},
+			{
+				"family": "Hu",
+				"given": "J."
+			},
+			{
+				"family": "Onditi",
+				"given": "K. O."
+			},
+			{
+				"family": "Xu",
+				"given": "Y."
+			},
+			{
+				"family": "Zhang",
+				"given": "M."
+			},
+			{
+				"family": "Chang",
+				"given": "W."
+			},
+			{
+				"family": "Chen",
+				"given": "Z."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2022"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/FLAR8BVN",
+		"type": "article-journal",
+		"abstract": "Small mammals serve as important model organisms for studying how climate and human activities influence biodiversity and human–animal interactions. However, their ecological and phylogeographic histories, and how these relate to rapid climate and land-use changes, remain poorly understood. The pan-African open-habitat murine genus Lemniscomys (striped grass mice) illustrates this pattern. Using the most comprehensive genetic data for this genus, we combined integrative phylogenetics, divergence dating, and ancestral-range reconstruction to connect lineage history with spatiotemporal habitat dynamics. We identified 15 molecular operational taxonomic units (MOTUs) corresponding to nine named species, along with cryptic diversity in three species. The genus diverged from its sister lineage (genus Arvicanthis) about 2.8 million years ago in the Sudanian Savanna belt, with internal diversification peaking during the early to mid-Pleistocene. Despite ongoing habitat contraction, Lemniscomys MOTUs maintained suitable habitats across past and future climate scenarios (from the late Pliocene to the end of the 21st century). Our results clarify the phylogeography of the genus and emphasize the need for a formal reassessment of several traditional lineages to reevaluate MOTUs-morphospecies relationships across different sampling depths.",
+		"container-title": "Zoological Research: Diversity and Conservation",
+		"DOI": "10.24272/j.issn.2097-3772.2025.030",
+		"ISSN": "2097-3772",
+		"issue": "4",
+		"note": "type: Journal Article",
+		"page": "233–249",
+		"title": "Integrative phylogeography of African striped grass mice (Lemniscomys): Cryptic diversity and habitat resilience",
+		"URL": "https://www.zrdc.ac.cn/en/article/doi/10.24272/j.issn.2097-3772.2025.030",
+		"volume": "2",
+		"author": [
+			{
+				"family": "Sambaya",
+				"given": "Brian Anoto"
+			},
+			{
+				"family": "Ouru",
+				"given": "Samson Mabeya"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Musila",
+				"given": "Simon"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/3NIBRNVZ",
+		"type": "article-journal",
+		"abstract": "The hedgehog genus Mesechinus (Erinaceidae, Eulipotyphla) is currently comprised of four species, M. dauuricus, M. hughi, M. miodon, and M. wangi. Except for M. wangi, which is found in southwestern China, the other three species are mainly distributed in northern China and adjacent Mongolia and Russia. From 2018 to 2023, we collected seven Mesechinus specimens from Anhui and Zhejiang provinces, eastern China. Here, we evaluate the taxonomic and phylogenetic status of these specimens by integrating molecular, morphometric, and karyotypic approaches. Our results indicate that the Anhui and Zhejiang specimens are distinct from the four previously recognized species and are a new species. We formally described it here as Mesechinus orientalis sp. nov. It is the only Mesechinus species occurring in eastern China and is geographically distant from all known congeners. Morphologically, the new species is most similar to M. hughi, but it is distinguishable from that species by the combination of its smaller size, shorter spines, and several cranial characteristics. Mesechinus orientalis sp. nov. is a sister to the lineage composed of M. hughi and M. wangi from which it diverged approximately 1.10 Ma.",
+		"container-title": "ZooKeys",
+		"DOI": "10.3897/zookeys.1185.111615",
+		"ISSN": "1313-2989 1313-2970",
+		"note": "type: Journal Article",
+		"page": "143–161",
+		"title": "A new species of forest hedgehog (Mesechinus, Erinaceidae, Eulipotyphla, Mammalia) from eastern China",
+		"URL": "https://doi.org/10.3897/zookeys.1185.111615 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10698749/pdf/zookeys-1185-143_article-111615__.pdf",
+		"volume": "1185",
+		"author": [
+			{
+				"family": "Shi",
+				"given": "Zifan"
+			},
+			{
+				"family": "Yao",
+				"given": "Hongfeng"
+			},
+			{
+				"family": "He",
+				"given": "Kai"
+			},
+			{
+				"family": "Bai",
+				"given": "Weipeng"
+			},
+			{
+				"family": "Zhou",
+				"given": "Jiajun"
+			},
+			{
+				"family": "Fan",
+				"given": "Jingyi"
+			},
+			{
+				"family": "Su",
+				"given": "Weiting"
+			},
+			{
+				"family": "Nie",
+				"given": "Wenhui"
+			},
+			{
+				"family": "Yang",
+				"given": "Shuzhen"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth O."
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhongzheng"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/UAEREKCB",
+		"type": "article-journal",
+		"container-title": "Acta Theriologica Sinica",
+		"issue": "3",
+		"note": "type: Journal Article",
+		"page": "312–324",
+		"title": "Methodological advances in explaining community assembly with niche-based theory",
+		"URL": "https://www.mammal.cn",
+		"volume": "42",
+		"author": [
+			{
+				"family": "SONG",
+				"given": "Wenyu"
+			},
+			{
+				"family": "LI",
+				"given": "Xueyou"
+			},
+			{
+				"family": "ONDITI",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "JIANG",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2022"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/ZFXB9UL5",
+		"type": "article-journal",
+		"abstract": "The interpretation of patterns of biodiversity requires the disentanglement of geographical and environmental variables. Disjunct alpine communities are geographically isolated from one another but experience similar environmental impacts. Isolated homogenous habitats may promote speciation but constrain functional trait variation. In this study, we examined the hypothesis that dispersal limitation promotes taxonomic divergence, whereas habitat similarity in alpine mountains leads to functional convergence. We performed standardized field investigation to sample non-volant small mammals from 18 prominent alpine sites in the Three Parallel Rivers area. We estimated indices quantifying taxonomic and functional alpha- and beta-diversity, as well as beta-diversity components. We then assessed the respective importance of geographical and environmental predictors in explaining taxonomic and functional compositions. No evidence was found to show that species were more functionally similar than expected in local assemblages. However, the taxonomic turnover components were higher than functional ones (0.471+/-0.230 vs. 0.243+/-0.215), with nestedness components showing the opposite pattern (0.063+/-0.054 vs. 0.269+/-0.225). This indicated that differences in taxonomic compositions between sites occurred from replacement of functionally similar species. Geographical barriers were the key factor influencing both taxonomic total dissimilarity and turnover components, whereas functional beta-diversity was primarily explained by climatic factors such as minimum temperature of the coldest month. Our findings provide empirical evidence that taxonomic and functional diversity patterns can be independently driven by different ecological processes. Our results point to the importance of clarifying different components of beta-diversity to understand the underlying mechanisms of community assembly. These results also shed light on the assembly rules and ecological processes of terrestrial mammal communities in extreme environments.",
+		"container-title": "Zool Res",
+		"DOI": "10.24272/j.issn.2095-8137.2020.085",
+		"ISSN": "2095-8137 (Print) 2095-8137 (Linking)",
+		"issue": "6",
+		"note": "type: Journal Article",
+		"page": "670–683",
+		"title": "Isolated alpine habitats reveal disparate ecological drivers of taxonomic and functional beta-diversity of small mammal assemblages",
+		"URL": "https://www.ncbi.nlm.nih.gov/pubmed/32918407",
+		"volume": "41",
+		"author": [
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Onditi"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/FPZDFZ3Y",
+		"type": "article-journal",
+		"abstract": "<sec>IntroductionSpecies distribution in alpine areas is constrained by multiple abiotic and biotic stressors. This leads to discrepant assembly patterns between different locations and study objects as opposite niche-based processes—limiting similarity and habitat filtering—simultaneously structure communities, masking overall patterns. We aimed to address how these processes structure small mammal communities in the alpine tree line transition zone, one of the most distinct vegetation transitions between alpine and montane habitats.</sec><sec>MethodsWe compiled a dataset of species checklist, phylogeny, and functional traits from field collection and published sources spanning 18 mountains in southwest China. We first examined hypothetical niche-based processes with frequently used phylogenetic and trait approaches using this dataset. The species traits were decomposed into different niche components to explore the respective effects of specific stressors. Indices representing evolutionary history, trait space, and pairwise species distance were estimated and compared with null model expectations. Linear mixed-effect models were used to assess the association patterns between diversity indices and elevation.</sec><sec>ResultsThe results indicated that phylogenetic and functional richness were positively correlated with species richness. In contrast, distance-based indices were either negatively or weakly positively correlated with species richness. Null model analyses suggested no evidence of non-random phylogenetic or overall trait patterns. However, the resource acquisition niche tended to be more overdispersed (positive slopes), while the habitat affinity niche tended to be more clustered (negative slopes) beyond the high elevation tree line.</sec><sec>DiscussionThese findings show that opposite niche-based processes simultaneously structure small mammal communities in alpine areas. Overall, the present study provides vital insights into the complexity of assembly processes in these habitats. It also highlights the importance of relating relevant traits to distinguish the influences of specific abiotic and biotic stressors.</sec>",
+		"container-title": "Frontiers in Ecology and Evolution",
+		"DOI": "10.3389/fevo.2022.999573",
+		"ISSN": "2296-701X",
+		"note": "type: Journal Article",
+		"title": "Decomposing niche components reveals simultaneous effects of opposite deterministic processes structuring alpine small mammal assembly",
+		"URL": "https://www.frontiersin.org/articles/10.3389/fevo.2022.999573",
+		"volume": "10",
+		"author": [
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/C68J5J53",
+		"type": "article-journal",
+		"abstract": "A survey of small mammals conducted on the Qinghai-Xizang Plateau in August 2023 yielded a series of specimens of a distinctive and previously unidentified Neodon species from high-altitude shrubland and grassland habitats at elevations of 2800–4000 m in Lhozhag County, Xizang, China. This study employed an integrative approach, combining molecular and morphological evidence to determine the taxonomic placement of the species. Results confirmed that these specimens represent a new species, formally described herein as Neodon lhozhagensis sp. nov. The new species can be distinguished from all other Neodon species based on larger body size, longer tail, five closed triangles in first lower molar, and obvious interorbital crest. Molecular analysis strongly supported Neodon lhozhagensis sp. nov. as a monophyletic clade that diverged from its sister taxon, Neodon tsonaensis, approximately 0.89–1.68 million years ago. Kimura-2-parameter genetic distances of the complete cytochrome b gene between Neodon lhozhagensis sp. nov. and other nominal Neodon species ranged from 9.3% to 12.8%. This discovery underscores the importance of continued efforts to investigate and document the biodiversity of the Himalayan region.",
+		"container-title": "Zoological Research: Diversity and Conservation",
+		"DOI": "10.24272/j.issn.2097-3772.2024.011",
+		"ISSN": "2097-3772",
+		"issue": "4",
+		"note": "type: Journal Article",
+		"page": "282–289",
+		"title": "A new species of mountain vole (Rodentia, Cricetidae, Neodon) from south Xizang, China",
+		"URL": "https://www.zrdc.ac.cn/en/article/doi/10.24272/j.issn.2097-3772.2024.011 https://www.zrdc.ac.cn/en/article/pdf/preview/10.24272/j.issn.2097-3772.2024.011.pdf",
+		"volume": "1",
+		"author": [
+			{
+				"family": "Wang",
+				"given": "Si-Yuan"
+			},
+			{
+				"family": "Li",
+				"given": "Yi-Xian"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Wang",
+				"given": "Hong-Jiao"
+			},
+			{
+				"family": "He",
+				"given": "Shui-Wang"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Khanal",
+				"given": "Laxman"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2024"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/EPSC2B4R",
+		"type": "article-journal",
+		"abstract": "Tropical forests are undergoing land use change in many regions of the world, with an increasingly prominent trend of landscape fragmentation. Nevertheless, the Asian elephant (Elephas maximus) population in tropical forests of China has continued to increase, and their distribution range is expanding to human-modified landscapes, resulting in increased severe human-elephant conflicts. Little is known about the habitat adaptation strategies of Asian elephants in human-dominated habitats. Here, we applied maximum entropy modeling to extensive occurrence data (21,011 independent records) of Asian elephants in southwest China to explore temporal changes in their distribution under climate change. We also identified critical factors shaping their current distribution and habitat selection strategies concerning human-induced land-use changes at multiple spatial scales. We found that the area of suitable habitats for Asian elephants will slightly increase in the future (7,025 km2) compared with the present climatic scenario (6,468 km2). At a finer spatial scale, topographic variables such as elevation (74%) and slope (11%) are the dominant factors shaping the habitat selection of Asian elephants. However, at a larger spatial scale, anthropogenic variables are the main factors associated with the habitat preference of Asian elephants. Most suitable and sub-suitable habitats (65%) of Asian elephants overlap with human-dominated areas. Our findings suggest that the effects of human activity on Asian elephants are scale-dependent and demonstrate that the suitable habitats of Asian elephants in China are shifting to human-dominated regions.",
+		"container-title": "Biodiversity and Conservation",
+		"DOI": "10.1007/s10531-023-02766-w",
+		"ISSN": "0960-3115 1572-9710",
+		"issue": "2",
+		"note": "type: Journal Article",
+		"page": "685–704",
+		"title": "Suitable habitats shifting toward human-dominated landscapes of Asian elephants in China",
+		"URL": "<Go to ISI>://WOS:001125873800001",
+		"volume": "33",
+		"author": [
+			{
+				"family": "Yu",
+				"given": "Qiupeng"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhechang"
+			},
+			{
+				"family": "Huang",
+				"given": "Cheng"
+			},
+			{
+				"family": "Xu",
+				"given": "Tongmei"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	}
+]
