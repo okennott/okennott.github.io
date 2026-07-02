@@ -2016,5 +2016,62 @@
 				]
 			]
 		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/UROPSILU2026",
+		"type": "article-journal",
+		"container-title": "Molecular Phylogenetics and Evolution",
+		"DOI": "10.1016/j.ympev.2026.108652",
+		"page": "108652",
+		"title": "Integrative taxonomic revision of Uropsilus (Uropsilinae, Talpidae) combining genomic, morphological and geographic evidence",
+		"volume": "223",
+		"author": [
+			{ "family": "Li", "given": "Yi-Xian" },
+			{ "family": "Li", "given": "Quan" },
+			{ "family": "Song", "given": "Wen-Yu" },
+			{ "family": "Li", "given": "Xue-You" },
+			{ "family": "Onditi", "given": "Kenneth Otieno" },
+			{ "family": "Pei", "given": "Xiao-Xin" },
+			{ "family": "Wang", "given": "Hong-Jiao" },
+			{ "family": "Fu", "given": "Chang-Kun" },
+			{ "family": "Liu", "given": "Shao-Ying" },
+			{ "family": "Chen", "given": "Zhong-Zheng" },
+			{ "family": "Jiang", "given": "Xue-Long" }
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/17243485/items/RAINSHADW2026",
+		"type": "article-journal",
+		"container-title": "Biodiversity and Conservation",
+		"DOI": "10.1007/s10531-026-03383-z",
+		"issue": "8",
+		"page": "189",
+		"title": "Rain-shadow effects drive contrasting elevational patterns and assembly processes of small mammal diversity on windward and leeward slopes",
+		"volume": "35",
+		"author": [
+			{ "family": "Li", "given": "Yongyuan" },
+			{ "family": "Xie", "given": "Mengru" },
+			{ "family": "Onditi", "given": "Kenneth Otieno" },
+			{ "family": "Li", "given": "Xueyou" },
+			{ "family": "Chen", "given": "Guangzhi" },
+			{ "family": "Wang", "given": "Hongjiao" },
+			{ "family": "Fang", "given": "Yihao" },
+			{ "family": "Shu", "given": "Xuehua" },
+			{ "family": "Song", "given": "Wenyu" }
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
 	}
 ]

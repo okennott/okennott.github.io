@@ -407,14 +407,38 @@ function hydrateAbstracts(root = document) {
   });
 }
 
+/* ─── SCHOLAR STATS LOADER (from assets/data/scholar-stats.json) ─── */
+async function loadScholarStats() {
+  try {
+    const res = await fetch('assets/data/scholar-stats.json', {
+      cache: 'no-cache',
+      signal: AbortSignal.timeout(6000)
+    });
+    if (!res.ok) return;
+    const d = await res.json();
+
+    const set = (id, val) => {
+      if (val == null) return;
+      const el = document.getElementById(id);
+      if (el) el.textContent = typeof val === 'number' ? val.toLocaleString() : val;
+    };
+
+    if (d.citations) {
+      set('stat-citations',        d.citations);
+      set('total-citations-badge', d.citations);   // publications page
+    }
+    if (d.h_index != null)   set('stat-hindex',     d.h_index);
+    if (d.i10_index != null) set('stat-i10',        d.i10_index);
+    if (d.last_updated)      set('scholar-updated', d.last_updated);
+  } catch(e) { /* fall back to static values in HTML */ }
+}
+
 /* ─── BATCH LOAD ON DOMCONTENTLOADED ─── */
 window.addEventListener('DOMContentLoaded', () => {
   initPublicationsData();
   hydrateCitationBadges();
   hydrateAbstracts();
-  // NOTE: Author-level totals (citations, h-index) are set statically from
-  // Google Scholar and are intentionally NOT overwritten at runtime.
-  // Semantic Scholar uses a different methodology and returns lower figures.
+  loadScholarStats();
 });
 
 /* ─── ABSTRACT TOGGLE ─── */

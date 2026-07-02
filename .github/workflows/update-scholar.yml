@@ -1,0 +1,35 @@
+name: Update Google Scholar Stats
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'   # Every Monday 05:00 UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install scholarly
+        run: pip install scholarly
+
+      - name: Fetch Scholar data
+        run: python scripts/fetch_scholar.py
+        timeout-minutes: 5
+
+      - name: Commit updated stats
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: auto-update Google Scholar stats'
+          file_pattern: 'assets/data/scholar-stats.json'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
