@@ -113,27 +113,86 @@
 .hero-card {
   background: var(--panel);
   border: 1px solid var(--border);
-  padding: 32px;
+  padding: 0;           /* reset — image bleeds to edge */
   position: relative;
+  overflow: hidden;
 }
-.hero-card::before {
+
+/* Profile image block */
+.hero-profile-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;   /* keep face centred */
+  display: block;
+  filter: grayscale(22%) contrast(1.06) brightness(0.84) saturate(0.85);
+  transition: filter 0.4s ease;
+}
+.hero-card:hover .hero-profile-img {
+  filter: grayscale(10%) contrast(1.04) brightness(0.90) saturate(0.95);
+}
+/* Warm amber overlay + bottom fade into card */
+.hero-profile-wrap::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(200,148,58,0.05) 0%,
+      transparent            45%,
+      rgba(30,23,16,0.72)   80%,
+      var(--panel)          100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(90,140,106,0.07) 0%,
+      transparent           60%
+    );
+  pointer-events: none;
+}
+/* Diagonal geometric cut — gold accent line */
+.hero-profile-wrap::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
   height: 2px;
   background: linear-gradient(to right, var(--gold), var(--green));
+  z-index: 2;
 }
+/* Name tag pinned above the divider */
+.hero-profile-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 20px;
+  z-index: 3;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.7;
+}
+
+/* Card body (stats + links) */
+.hero-card-body { padding: 24px 28px 28px; }
 
 .hero-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .hero-stat {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 18px 16px;
+  padding: 16px 14px;
   text-align: center;
 }
 .stat-num {
@@ -378,12 +437,6 @@
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 48px; }
   .hero-card { display: none; }
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    margin-top: 32px;
-  }
   .hero-ornament { display: none; }
   .research-areas { grid-template-columns: 1fr; }
 }
@@ -391,7 +444,6 @@
 @media (max-width: 600px) {
   #hero { padding-top: calc(var(--nav-h) + 40px); padding-left: 20px; padding-right: 20px; }
   .container { padding: 0 20px; }
-  .hero-stats { grid-template-columns: 1fr 1fr; }
   .pub-preview { grid-template-columns: auto 1fr; }
   .pub-preview-cit { display: none; }
 }
@@ -511,42 +563,50 @@
       </div>
     </div>
 
-    <!-- Right: Stat card -->
+    <!-- Right: Profile card -->
     <div class="hero-card">
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="stat-num" id="counter-pubs">35</span>
-          <span class="stat-label">Publications</span>
+
+      <!-- Profile image with cinematic treatment -->
+      <div class="hero-profile-wrap">
+        <img
+          src="assets/data/profile-image.jpg"
+          alt="Kenneth Otieno Onditi"
+          class="hero-profile-img"
+          loading="eager"
+        >
+        <span class="hero-profile-tag">Kenneth Otieno Onditi</span>
+      </div>
+
+      <!-- Stats + links -->
+      <div class="hero-card-body">
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-num" id="counter-pubs">37</span>
+            <span class="stat-label">Publications</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num author-total-cit" id="stat-citations">357</span>
+            <span class="stat-label">Citations</span>
+            <span class="stat-sublabel">h&thinsp;=&thinsp;<span class="author-hindex" id="stat-hindex">11</span> · i10&thinsp;=&thinsp;<span id="stat-i10">12</span></span>
+          </div>
         </div>
-        <div class="hero-stat">
-          <span class="stat-num author-total-cit" id="stat-citations">357</span>
-          <span class="stat-label">Citations</span>
-          <span class="stat-sublabel">h-index <span class="author-hindex" id="stat-hindex">11</span> · i10 = <span id="stat-i10">12</span></span>
-        </div>
-        <div class="hero-stat">
-          <span class="stat-num">6</span>
-          <span class="stat-label">Field campaigns</span>
-        </div>
-        <div class="hero-stat">
-          <span class="stat-num">~6,000</span>
-          <span class="stat-label">Specimens</span>
+
+        <div class="hero-card-links">
+          <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-card-link">
+            <span class="hero-card-link-icon">📚</span> Google Scholar
+          </a>
+          <a href="https://www.researchgate.net/profile/Kenneth-Otieno-Onditi" target="_blank" rel="noopener" class="hero-card-link">
+            <span class="hero-card-link-icon">🔬</span> ResearchGate
+          </a>
+          <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener" class="hero-card-link">
+            <span class="hero-card-link-icon">🆔</span> ORCID 0000-0003-4034-6818
+          </a>
+          <a href="mailto:kenotieno@hotmail.com" class="hero-card-link">
+            <span class="hero-card-link-icon">✉</span> kenotieno@hotmail.com
+          </a>
         </div>
       </div>
 
-      <div class="hero-card-links">
-        <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-card-link">
-          <span class="hero-card-link-icon">📚</span> Google Scholar
-        </a>
-        <a href="https://www.researchgate.net/profile/Kenneth-Otieno-Onditi" target="_blank" rel="noopener" class="hero-card-link">
-          <span class="hero-card-link-icon">🔬</span> ResearchGate
-        </a>
-        <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener" class="hero-card-link">
-          <span class="hero-card-link-icon">🆔</span> ORCID 0000-0003-4034-6818
-        </a>
-        <a href="mailto:kenotieno@hotmail.com" class="hero-card-link">
-          <span class="hero-card-link-icon">✉</span> kenotieno@hotmail.com
-        </a>
-      </div>
     </div>
   </div>
 
