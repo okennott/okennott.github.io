@@ -591,6 +591,57 @@ async function initMetrics(derived = {}) {
   });
 }
 
+/* ─── STRUCTURED DATA ──────────────────────────────────────────────────
+   The publication list is rendered from the bibliography, so its schema.org
+   description is generated from the same data rather than maintained by hand
+   in the markup, where it would silently drift out of date.
+   ------------------------------------------------------------------- */
+function injectPublicationSchema(items) {
+  if (!Array.isArray(items) || !items.length) return;
+  if (!document.getElementById('pubs-list')) return;
+  if (document.getElementById('pubs-schema')) return;
+
+  const sorted = [...items]
+    .map((item, index) => ({ item, index }))
+    .sort((a, b) => dateSortKey(b.item, b.index) - dateSortKey(a.item, a.index));
+
+  const payload = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Publications — Kenneth Otieno Onditi',
+    numberOfItems: sorted.length,
+    itemListElement: sorted.map(({ item }, i) => {
+      const doi = cleanDoi(item.DOI);
+      const work = {
+        '@type': 'ScholarlyArticle',
+        name: String(item.title || '').replace(/<[^>]+>/g, ''),
+        author: (item.author || []).map(a => ({
+          '@type': 'Person',
+          name: [a.given, a.family].filter(Boolean).join(' ')
+        })),
+        datePublished: String(publicationYear(item) || ''),
+        url: doi ? `https://doi.org/${doi}` : (item.URL || '')
+      };
+      if (doi) {
+        work.identifier = { '@type': 'PropertyValue', propertyID: 'DOI', value: doi };
+        work.sameAs = `https://doi.org/${doi}`;
+      }
+      if (item['container-title']) {
+        work.isPartOf = { '@type': 'Periodical', name: item['container-title'] };
+      }
+      if (item.abstract) work.abstract = item.abstract;
+      if (isPreprint(item)) work.creativeWorkStatus = 'Preprint';
+      return { '@type': 'ListItem', position: i + 1, item: work };
+    })
+  };
+
+  const tag = document.createElement('script');
+  tag.type = 'application/ld+json';
+  tag.id = 'pubs-schema';
+  tag.textContent = JSON.stringify(payload);
+  document.head.appendChild(tag);
+}
+
 /* ─── DEEP LINKS ───────────────────────────────────────────────────────
    Publication cards are rendered after an async fetch, so by the time they
    exist the browser has already tried and failed to resolve the URL fragment.
@@ -612,6 +663,7 @@ function focusHashTarget() {
 window.addEventListener('DOMContentLoaded', async () => {
   const items = await initPublicationsData();
   await initMetrics(derivedMetrics(items));
+  injectPublicationSchema(items);
   hydrateCitationBadges();
   hydrateAbstracts();
   focusHashTarget();

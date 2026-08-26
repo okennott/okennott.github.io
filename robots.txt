@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The bibliography and metrics that drive the pages, for anyone who wants the data directly.
+Allow: /OKOs_Library.json
+Allow: /assets/data/scholar-stats.json
+
+Sitemap: https://okennott.github.io/sitemap.xml
