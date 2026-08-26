@@ -31,13 +31,130 @@
   "openalex_works": 50,
   "orcid_id": "0000-0003-4034-6818",
   "orcid_peer_reviewed": 36,
+  "peer_review_breakdown": [
+    {
+      "issn": "2071-1050",
+      "name": "Sustainability",
+      "reviews": 15
+    },
+    {
+      "issn": "2045-7758",
+      "name": "Ecology and Evolution",
+      "reviews": 12
+    },
+    {
+      "issn": "2076-2615",
+      "name": "Animals",
+      "reviews": 7
+    },
+    {
+      "issn": "2073-445X",
+      "name": "Land",
+      "reviews": 6
+    },
+    {
+      "issn": "2079-7737",
+      "name": "Biology",
+      "reviews": 4
+    },
+    {
+      "issn": "1472-4642",
+      "name": "Diversity and Distributions",
+      "reviews": 3
+    },
+    {
+      "issn": "2150-8925",
+      "name": "Ecosphere",
+      "reviews": 3
+    },
+    {
+      "issn": "1365-2486",
+      "name": "Global Change Biology",
+      "reviews": 3
+    },
+    {
+      "issn": "1466-8238",
+      "name": "Global Ecology and Biogeography",
+      "reviews": 3
+    },
+    {
+      "issn": "2673-6004",
+      "name": "Birds",
+      "reviews": 2
+    },
+    {
+      "issn": "1424-2818",
+      "name": "Diversity",
+      "reviews": 2
+    },
+    {
+      "issn": "1999-4907",
+      "name": "Forests",
+      "reviews": 2
+    },
+    {
+      "issn": "1616-5047",
+      "name": "Mammalian Biology",
+      "reviews": 2
+    },
+    {
+      "issn": "3042-4526",
+      "name": "Wild",
+      "reviews": 2
+    },
+    {
+      "issn": "2578-4854",
+      "name": "Conservation Science and Practice",
+      "reviews": 1
+    },
+    {
+      "issn": "2474-9508",
+      "name": "Geology Ecology and Landscapes",
+      "reviews": 1
+    },
+    {
+      "issn": "0021-8901",
+      "name": "Journal of Applied Ecology",
+      "reviews": 1
+    },
+    {
+      "issn": "0305-0270",
+      "name": "Journal of Biogeography",
+      "reviews": 1
+    },
+    {
+      "issn": "0974-7907",
+      "name": "Journal of Threatened Taxa",
+      "reviews": 1
+    },
+    {
+      "issn": "1937-2817",
+      "name": "Journal of Wildlife Management",
+      "reviews": 1
+    },
+    {
+      "issn": "1439-0469",
+      "name": "Journal of Zoological Systematics & Evolutionary Research",
+      "reviews": 1
+    },
+    {
+      "issn": "1755-1668",
+      "name": "Plant Ecology & Diversity",
+      "reviews": 1
+    }
+  ],
+  "peer_review_first_year": 2020,
+  "peer_review_journals": 22,
+  "peer_review_latest_year": 2026,
   "peer_reviewed_works": 39,
+  "peer_reviews": 74,
   "preprints": 2,
   "scholar_id": "qnHYvIIAAAAJ",
   "sources": {
     "library": "ok",
     "openalex": "ok",
     "orcid": "ok",
+    "orcid_peer_reviews": "ok",
     "scholar": "unavailable"
   },
   "works_pending_in_orcid": 3,

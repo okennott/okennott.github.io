@@ -150,6 +150,15 @@
   margin-bottom: 6px;
 }
 .cv-sidebar a:hover { color: var(--gold2); }
+.review-summary {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.review-summary strong { color: var(--gold2); font-size: 12px; }
 
 /* Skill bars */
 .cv-skill-bar { margin-bottom: 13px; }
@@ -400,18 +409,36 @@
 
       <div class="cv-sidebar-section">
         <div class="cv-sidebar-title">Peer Review Activity</div>
-        <div class="review-tags">
-          <span class="review-tag">Animals (6)</span>
+        <p class="review-summary">
+          <strong data-metric="peer_reviews">74</strong> manuscripts reviewed for
+          <strong data-metric="peer_review_journals">22</strong> journals,
+          <span data-metric="peer_review_years_label">2020–2026</span> ·
+          <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">via ORCID ↗</a>
+        </p>
+        <!-- Rendered from the ORCID peer-review record; the list below is the fallback. -->
+        <div class="review-tags" id="review-tags">
+          <span class="review-tag">Sustainability (15)</span>
+          <span class="review-tag">Ecology and Evolution (12)</span>
+          <span class="review-tag">Animals (7)</span>
+          <span class="review-tag">Land (6)</span>
+          <span class="review-tag">Biology (4)</span>
+          <span class="review-tag">Diversity and Distributions (3)</span>
+          <span class="review-tag">Ecosphere (3)</span>
+          <span class="review-tag">Global Change Biology (3)</span>
+          <span class="review-tag">Global Ecology and Biogeography (3)</span>
           <span class="review-tag">Birds (2)</span>
           <span class="review-tag">Diversity (2)</span>
-          <span class="review-tag">Ecology &amp; Evolution (9)</span>
-          <span class="review-tag">Ecosphere (2)</span>
-          <span class="review-tag">Global Change Biology (1)</span>
-          <span class="review-tag">Land (4)</span>
-          <span class="review-tag">Mammalian Biology (1)</span>
-          <span class="review-tag">Sustainability (12)</span>
-          <span class="review-tag">J. Wildlife Management (1)</span>
+          <span class="review-tag">Forests (2)</span>
+          <span class="review-tag">Mammalian Biology (2)</span>
+          <span class="review-tag">Wild (2)</span>
+          <span class="review-tag">Conservation Science and Practice (1)</span>
+          <span class="review-tag">Geology Ecology and Landscapes (1)</span>
+          <span class="review-tag">J. Applied Ecology (1)</span>
+          <span class="review-tag">J. Biogeography (1)</span>
           <span class="review-tag">J. Threatened Taxa (1)</span>
+          <span class="review-tag">J. Wildlife Management (1)</span>
+          <span class="review-tag">J. Zoological Systematics &amp; Evol. Res. (1)</span>
+          <span class="review-tag">Plant Ecology &amp; Diversity (1)</span>
         </div>
       </div>
 

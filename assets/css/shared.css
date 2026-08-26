@@ -412,9 +412,12 @@ footer {
   font-family: 'DM Mono', monospace;
   font-size: 8.5px;
   letter-spacing: 1.6px;
+  line-height: 1.8;
   text-transform: uppercase;
   color: var(--faint);
-  margin: 10px 0 0;
+  margin: 12px 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
 }
 
 /* Stable deep-link anchor, offset so the sticky nav does not cover the card. */

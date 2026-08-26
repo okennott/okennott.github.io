@@ -548,6 +548,26 @@ function derivedMetrics(items) {
   };
 }
 
+/* Journals reviewed for, from the ORCID peer-review record. The static list in
+   the CV markup is the fallback; it was hand-maintained and had drifted well
+   behind the real total, which is exactly what this replaces. */
+function renderPeerReviews(breakdown) {
+  const host = document.getElementById('review-tags');
+  if (!host || !Array.isArray(breakdown) || !breakdown.length) return;
+
+  const SHORTEN = [
+    [/^Journal of /, 'J. '],
+    [/^Proceedings of the /, 'Proc. '],
+    [/ & Evolutionary Research$/, ' & Evol. Res.'],
+  ];
+  const label = name => SHORTEN.reduce((acc, [re, to]) => acc.replace(re, to), name);
+
+  host.innerHTML = breakdown
+    .filter(j => j && j.name && j.reviews > 0)
+    .map(j => `<span class="review-tag">${escapeHtml(label(j.name))} (${j.reviews})</span>`)
+    .join('\n');
+}
+
 function applyMetrics(values, root = document) {
   root.querySelectorAll('[data-metric]').forEach(el => {
     const value = values[el.dataset.metric];
@@ -587,8 +607,12 @@ async function initMetrics(derived = {}) {
     citation_source_name: source.name,
     citation_source_url:  source.url,
     citation_as_of_label: formatMetricDate(d.citation_as_of || d.last_updated),
-    last_updated_label:   formatMetricDate(d.last_updated)
+    last_updated_label:   formatMetricDate(d.last_updated),
+    peer_review_years_label: d.peer_review_first_year && d.peer_review_latest_year
+      ? `${d.peer_review_first_year}\u2013${d.peer_review_latest_year}` : ''
   });
+
+  renderPeerReviews(d.peer_review_breakdown);
 }
 
 /* ─── STRUCTURED DATA ──────────────────────────────────────────────────

@@ -289,6 +289,10 @@
   gap: 2px;
   margin-bottom: 20px;
 }
+/* Review service gets a full-width row: the label is long and the number
+   deserves to sit beside publications and citations, not be cropped. */
+.hero-stat-wide { grid-column: 1 / -1; }
+.hero-stat-wide .stat-num { font-size: 30px; }
 .hero-stat {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -645,10 +649,10 @@
       </p>
 
       <p class="hero-bio">
-        Integrating ecological and genomic data to investigate biodiversity patterns
-        across Africa's and Asia's montane mammal communities — from Mt. Kenya to the
-        Hengduan Mountains. Specialising in systematics, phylogeography, and
-        conservation biology.
+        Integrating ecological and genomic data to investigate biodiversity patterns in
+        mammal communities — from Kenya's montane forests and Rift Valley savannas,
+        across sub-Saharan Africa, to the Himalaya–Hengduan sky islands of southwest
+        China. Specialising in systematics, phylogeography, and conservation biology.
       </p>
 
       <div class="hero-actions">
@@ -686,7 +690,7 @@
         <div class="hero-stats">
           <div class="hero-stat">
             <span class="stat-num" data-metric="peer_reviewed_works" id="counter-pubs">39</span>
-            <span class="stat-label">Peer-reviewed</span>
+            <span class="stat-label">Publications</span>
             <span class="stat-sublabel">via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID</a></span>
           </div>
           <div class="hero-stat">
@@ -694,10 +698,16 @@
             <span class="stat-label">Citations</span>
             <span class="stat-sublabel">h&thinsp;=&thinsp;<span class="author-hindex" data-metric="h_index" id="stat-hindex">11</span> · i10&thinsp;=&thinsp;<span data-metric="i10_index" id="stat-i10">12</span></span>
           </div>
+          <div class="hero-stat hero-stat-wide">
+            <span class="stat-num" data-metric="peer_reviews">74</span>
+            <span class="stat-label">Manuscripts peer reviewed</span>
+            <span class="stat-sublabel"><span data-metric="peer_review_journals">22</span> journals · via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID</a></span>
+          </div>
         </div>
         <p class="hero-stats-src">
-          <span data-metric="citation_source_name">Google Scholar</span> ·
-          updated <span data-metric="last_updated_label">Jul 2026</span>
+          Citations via <span data-metric="citation_source_name">Google Scholar</span>,
+          <span data-metric="citation_as_of_label">Jul 2026</span> ·
+          checked <span data-metric="last_updated_label">Aug 2026</span>
         </p>
 
         <div class="hero-card-links">

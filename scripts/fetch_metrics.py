@@ -145,6 +145,67 @@ def from_orcid():
     return stats
 
 
+def from_orcid_peer_reviews():
+    """Manuscripts reviewed for journals — ORCID's peer-review record.
+
+    ORCID groups reviews by the journal's ISSN, and names only the aggregator
+    that reported them (Clarivate/Web of Science, Springer Nature) rather than
+    the journal. Journal names are resolved from the ISSN via OpenAlex and
+    cached in the output, so the site needs no lookups of its own.
+    """
+    data = get_json(f"https://pub.orcid.org/v3.0/{ORCID_ID}/peer-reviews")
+    groups = data.get("group") or []
+    if not groups:
+        raise RuntimeError("ORCID returned no peer-review groups")
+
+    journals, years, total = [], [], 0
+    for group in groups:
+        issn = None
+        for ext in (group.get("external-ids") or {}).get("external-id") or []:
+            value = str(ext.get("external-id-value") or "")
+            if value.startswith("issn:"):
+                issn = value.split(":", 1)[1]
+        count = 0
+        for sub in group.get("peer-review-group") or []:
+            for summary in sub.get("peer-review-summary") or []:
+                count += 1
+                year = ((summary.get("completion-date") or {}).get("year") or {}).get("value")
+                if year and str(year).isdigit():
+                    years.append(int(year))
+        total += count
+        journals.append({"issn": issn, "reviews": count, "name": resolve_journal(issn)})
+
+    journals.sort(key=lambda j: (-j["reviews"], j["name"] or ""))
+    stats = {
+        "peer_reviews":          total,
+        "peer_review_journals":  len(journals),
+        "peer_review_breakdown": journals,
+    }
+    if years:
+        stats["peer_review_first_year"] = min(years)
+        stats["peer_review_latest_year"] = max(years)
+    log(f"  {total} reviews across {len(journals)} journals")
+    return stats
+
+
+_JOURNAL_CACHE = {}
+
+
+def resolve_journal(issn):
+    """ISSN -> journal name, via OpenAlex. Returns None rather than raising."""
+    if not issn:
+        return None
+    if issn in _JOURNAL_CACHE:
+        return _JOURNAL_CACHE[issn]
+    try:
+        data = get_json(f"https://api.openalex.org/sources/issn:{issn}?mailto={CONTACT}")
+        name = data.get("display_name")
+    except Exception:                                       # noqa: BLE001
+        name = None
+    _JOURNAL_CACHE[issn] = name
+    return name
+
+
 def from_openalex():
     """Citations and indices — reliable, CORS-open, and never rate-limits us."""
     data = get_json(
@@ -331,6 +392,27 @@ def main():
             log(f"  REJECTED (kept previous): {rejected}")
     except Exception as exc:                                # noqa: BLE001
         provenance["orcid"] = "unavailable"
+        log(f"  unavailable: {exc}")
+
+    # ORCID — peer reviews performed for journals.
+    log("Fetching orcid peer reviews...")
+    try:
+        reviews = from_orcid_peer_reviews()
+        # Guard the headline count the same way as the work counts; the journal
+        # breakdown is replaced wholesale only when the count itself is sane.
+        if sane_count(reviews.get("peer_reviews")) and reviews["peer_reviews"] > 0:
+            old_total = previous.get("peer_reviews")
+            if sane_count(old_total) and reviews["peer_reviews"] < old_total * DROP_TOLERANCE:
+                log(f"  REJECTED: peer_reviews fell {old_total} -> {reviews['peer_reviews']}")
+            else:
+                works.update(reviews)
+                healthy.append("orcid-reviews")
+                provenance["orcid_peer_reviews"] = "ok"
+        else:
+            log("  REJECTED: no usable review count")
+            provenance["orcid_peer_reviews"] = "rejected"
+    except Exception as exc:                                # noqa: BLE001
+        provenance["orcid_peer_reviews"] = "unavailable"
         log(f"  unavailable: {exc}")
 
     # Citation profiles — each source snapshotted independently.

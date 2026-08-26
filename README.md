@@ -75,13 +75,19 @@ Every live number is bound declaratively, and the text already in the HTML is th
 <a data-metric-href="citation_source_url" href="...">…</a>
 ```
 
-Values come from `assets/data/scholar-stats.json`, refreshed weekly by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
+Values come from `assets/data/scholar-stats.json`, refreshed weekly by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `peer_reviews`, `peer_review_journals`, `peer_review_years_label`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
+
+Note the two distinct "peer review" metrics: `peer_reviewed_works` is **articles Kenneth has published**; `peer_reviews` is **manuscripts he has reviewed for journals**. They are unrelated numbers from two different ORCID endpoints.
+
+### Peer review service
+The CV's "Peer Review Activity" list is generated from ORCID's `/peer-reviews` endpoint. ORCID groups reviews by the journal's ISSN and names only the reporting aggregator (Clarivate/Web of Science, Springer Nature) rather than the journal, so journal names are resolved from the ISSN via OpenAlex and cached into `peer_review_breakdown` — the page itself does no lookups. The static list in `cv.html` is the no-JavaScript fallback and is refreshed whenever the data is.
 
 **Sources, and why each one:**
 
 | Metric | Source | Rationale |
 |---|---|---|
-| Peer-reviewed works | [ORCID](https://orcid.org/0000-0003-4034-6818) | The authoritative record of what has actually been published, rather than whatever a citation index happens to have indexed. |
+| Peer-reviewed articles | [ORCID](https://orcid.org/0000-0003-4034-6818) | The authoritative record of what has actually been published, rather than whatever a citation index happens to have indexed. |
+| Peer review service | [ORCID](https://orcid.org/0000-0003-4034-6818) peer-review record | Manuscripts reviewed for journals. ORCID is the only place this is tracked at all, and it stays current because Web of Science and Springer Nature report into it automatically. |
 | Citations, h-index, i10 | Google Scholar, else OpenAlex | Broadest coverage first; OpenAlex takes over automatically once a Scholar snapshot goes stale. |
 | Per-paper citations | OpenAlex | One batched request, no rate limit, returns open-access status in the same payload. |
 
