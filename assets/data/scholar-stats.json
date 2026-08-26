@@ -1,10 +1,46 @@
 {
+  "citation_as_of": "2026-07-13",
+  "citation_profiles": {
+    "openalex": {
+      "as_of": "2026-08-26",
+      "citations": 288,
+      "h_index": 10,
+      "i10_index": 10
+    },
+    "scholar": {
+      "as_of": "2026-07-13",
+      "citations": 358,
+      "citations_since_2021": 346,
+      "h_index": 11,
+      "h_index_since_2021": 11,
+      "i10_index": 12,
+      "i10_index_since_2021": 12
+    }
+  },
+  "citation_source": "scholar",
   "citations": 358,
-  "citations_since_2021": 346,
+  "first_year": 2019,
   "h_index": 11,
-  "h_index_since_2021": 11,
   "i10_index": 12,
-  "i10_index_since_2021": 12,
-  "total_publications": 0,
-  "last_updated": "2026-07-13"
+  "last_updated": "2026-08-26",
+  "latest_year": 2026,
+  "library_peer_reviewed": 39,
+  "library_preprints": 1,
+  "library_records": 40,
+  "openalex_id": "https://openalex.org/A5086398996",
+  "openalex_works": 50,
+  "orcid_id": "0000-0003-4034-6818",
+  "orcid_peer_reviewed": 36,
+  "peer_reviewed_works": 39,
+  "preprints": 2,
+  "scholar_id": "qnHYvIIAAAAJ",
+  "sources": {
+    "library": "ok",
+    "openalex": "ok",
+    "orcid": "ok",
+    "scholar": "unavailable"
+  },
+  "works_pending_in_orcid": 3,
+  "works_total": 42,
+  "year_span": 8
 }

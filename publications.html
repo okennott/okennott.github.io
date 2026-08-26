@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Publications — Kenneth Otieno Onditi</title>
-<meta name="description" content="Full list of peer-reviewed publications by Kenneth Otieno Onditi — 35 records in mammal ecology, systematics, and conservation biology.">
+<meta name="description" content="Full list of peer-reviewed publications by Kenneth Otieno Onditi — 40 records in mammal ecology, systematics, and conservation biology.">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&family=Bitter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/shared.css">
 <style>
@@ -50,6 +50,26 @@
   text-decoration: none;
 }
 .pub-stat-box .lbl a:hover { color: var(--gold2); }
+.pub-stat-box .lbl-src {
+  margin-top: 5px;
+  font-size: 8.5px;
+  letter-spacing: 1.4px;
+  color: var(--faint);
+}
+.pub-stats-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  line-height: 1.9;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: -22px 0 34px;
+}
+.pub-stats-note a { color: var(--green); text-decoration: none; }
+.pub-stats-note a:hover { color: var(--gold2); }
+
+/* A number that has just been replaced by live data. */
+.metric-live { transition: color .5s ease; }
 
 /* Filters */
 .pub-filters {
@@ -311,8 +331,8 @@
     <h1 class="serif-display">Publications</h1>
     <div class="accent-rule" style="background:var(--green);"></div>
     <p style="color:var(--muted);font-size:16px;max-width:600px;line-height:1.7;">
-      35 publication records across mammal systematics, macroecology, and conservation biology.
-      Citations tracked live via
+      <span data-metric="library_records">40</span> publication records across mammal systematics,
+      macroecology, and conservation biology. Works tracked via ORCID; citations tracked live via
       <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener"
          style="color:var(--green);text-decoration:none;">Google Scholar ↗</a> ·
       <a href="https://www.researchgate.net/profile/Kenneth-Onditi" target="_blank" rel="noopener"
@@ -325,28 +345,32 @@
 
 <div class="container">
 
-  <!-- Stats bar -->
+  <!-- Stats bar — every number is live; the text here is the offline fallback -->
   <div class="pub-stats-bar">
     <div class="pub-stat-box">
-      <span class="num">35</span>
-      <span class="lbl">Total publications</span>
+      <span class="num" data-metric="peer_reviewed_works">39</span>
+      <span class="lbl">Peer-reviewed works</span>
+      <span class="lbl lbl-src">via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID ↗</a></span>
     </div>
     <div class="pub-stat-box">
-      <span class="num author-total-cit" id="total-citations-badge">315</span>
-      <span class="lbl">Citations · h-index <span class="author-hindex">11</span></span>
-      <span class="lbl" style="margin-top:4px;"><a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></span>
+      <span class="num author-total-cit" data-metric="citations" id="total-citations-badge">358</span>
+      <span class="lbl">Citations · h-index <span class="author-hindex" data-metric="h_index">11</span> · i10 <span data-metric="i10_index">12</span></span>
+      <span class="lbl lbl-src">via <a data-metric-href="citation_source_url" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener"><span data-metric="citation_source_name">Google Scholar</span> ↗</a> · <span data-metric="citation_as_of_label">Jul 2026</span></span>
     </div>
     <div class="pub-stat-box">
-      <span class="num">8</span>
-      <span class="lbl">Years 2019–2026</span>
+      <span class="num" data-metric="year_span">8</span>
+      <span class="lbl" data-metric="year_range_label">Years 2019–2026</span>
     </div>
     <div class="pub-stat-box">
-      <span class="num">24</span>
-      <span class="lbl">Open-access papers <span style="color:var(--green);">🔓</span></span>
+      <span class="num" data-metric="open_access_count">27</span>
+      <span class="lbl">Open-access works <span style="color:var(--green);">🔓</span></span>
     </div>
   </div>
-  <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin:-22px 0 34px;">
-    Updated June 2026 · latest 2026 papers cross-checked against DOI, ORCID, and publisher records
+  <p class="pub-stats-note">
+    Works from <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID</a>;
+    citations from <a data-metric-href="citation_source_url" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener"><span data-metric="citation_source_name">Google Scholar</span></a>,
+    per-paper counts from <a href="https://openalex.org/" target="_blank" rel="noopener">OpenAlex</a>.
+    Refreshed weekly · last checked <span data-metric="last_updated_label">Jul 2026</span>.
   </p>
 
   <!-- Legend -->
@@ -354,7 +378,8 @@
     <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;">Key:</span>
     <span class="badge badge-oa">🔓 Open Access</span>
     <span class="badge badge-restricted">🔒 Subscription · author copy available</span>
-    <span class="badge badge-citations">★ Citation count (Semantic Scholar)</span>
+    <span class="badge badge-citations">★ Citation count (OpenAlex)</span>
+    <span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>
   </div>
 
   <!-- Filters -->
@@ -365,6 +390,7 @@
     <button class="pub-filter-btn" data-filter="macroecology">Macroecology</button>
     <button class="pub-filter-btn" data-filter="conservation">Conservation</button>
     <button class="pub-filter-btn" data-filter="oa">Open Access</button>
+    <button class="pub-filter-btn" data-filter="preprint">Preprints</button>
   </div>
 
   <div id="pubs-list">

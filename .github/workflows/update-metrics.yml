@@ -1,0 +1,59 @@
+name: Update publication metrics
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'   # Every Monday 05:00 UTC
+  workflow_dispatch:
+    inputs:
+      skip_scholar:
+        description: 'Skip the Google Scholar scrape (it is usually blocked from CI)'
+        type: boolean
+        default: false
+
+# Never let two runs race on the same committed file.
+concurrency:
+  group: update-metrics
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      # ORCID and OpenAlex are fetched with the standard library, so the metrics
+      # that actually drive the site do not depend on this step succeeding.
+      - name: Install optional Google Scholar scraper
+        continue-on-error: true
+        run: pip install scholarly
+
+      - name: Fetch metrics
+        # The script is internally time-boxed and degrades to previously stored
+        # values, so a blocked source is logged rather than failing the run.
+        timeout-minutes: 8
+        env:
+          # Unset on a schedule run, so Scholar is attempted by default and the
+          # manual checkbox is an explicit opt-out.
+          SKIP_SCHOLAR: ${{ inputs.skip_scholar && '1' || '0' }}
+        run: python scripts/fetch_metrics.py
+
+      - name: Show resulting file
+        run: cat assets/data/scholar-stats.json
+
+      - name: Commit updated metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: auto-update publication metrics'
+          file_pattern: 'assets/data/scholar-stats.json'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

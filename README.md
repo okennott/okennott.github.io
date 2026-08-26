@@ -38,7 +38,8 @@ kennott.github.io/
 │   ├── css/
 │   │   └── shared.css          # All shared variables, nav, footer, utilities
 │   ├── js/
-│   │   └── main.js             # Nav active state, scroll reveals, citation & abstract fetchers
+│   │   └── main.js             # Nav, scroll reveals, publication rendering, metric trackers,
+│   │                               #   batched citation fetch, deep-link resolution
 │   └── icons/
 │       └── logo-mark.svg       # Rodent-skull / DNA nav logo mark
 │
@@ -61,18 +62,57 @@ kennott.github.io/
 ## Live Data Features
 
 ### Citation counts
-Per-paper citation badges on the Publications page are fetched live from the [Semantic Scholar API](https://www.semanticscholar.org/product/api) using each paper's DOI. No API key required. Counts load asynchronously and display as gold badges next to each entry. The same badges appear on the Home page for the four highlighted papers.
+Per-paper citation badges are fetched in **one batched request** covering every DOI on the page, from the [OpenAlex API](https://docs.openalex.org/) (no key, no anonymous rate limit), with the [Semantic Scholar batch endpoint](https://api.semanticscholar.org/api-docs/) as a fallback. Counts display as gold badges next to each entry, on both the Publications and Home pages.
+
+Batching matters: the earlier implementation issued one request per paper, which fired ~40 parallel calls on every page load and reliably tripped Semantic Scholar's anonymous rate limit (HTTP 429), leaving most badges blank.
+
+### Site-wide metric trackers
+Every live number is bound declaratively, and the text already in the HTML is the offline fallback:
+
+```html
+<span data-metric="peer_reviewed_works">39</span>
+<span data-metric="citations">358</span>
+<a data-metric-href="citation_source_url" href="...">…</a>
+```
+
+Values come from `assets/data/scholar-stats.json`, refreshed weekly by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
+
+**Sources, and why each one:**
+
+| Metric | Source | Rationale |
+|---|---|---|
+| Peer-reviewed works | [ORCID](https://orcid.org/0000-0003-4034-6818) | The authoritative record of what has actually been published, rather than whatever a citation index happens to have indexed. |
+| Citations, h-index, i10 | Google Scholar, else OpenAlex | Broadest coverage first; OpenAlex takes over automatically once a Scholar snapshot goes stale. |
+| Per-paper citations | OpenAlex | One batched request, no rate limit, returns open-access status in the same payload. |
+
+Scholar and OpenAlex index different corpora, so their numbers never agree. Each is therefore stored as a **complete, self-consistent snapshot** under `citation_profiles`, and the site displays one snapshot at a time with its source named next to the number — never a citation count from one index beside an h-index from another.
+
+### Deep-linking to a publication
+Card numbers (`#pub-12`) are positions in a reverse-chronological list, so they shift whenever a paper is added. Link to the **DOI-derived anchor** instead, which never moves:
+
+```
+publications.html#p-10-1111-cobi-70214     ← doi:10.1111/cobi.70214
+```
+
+The slug is the DOI lowercased with every run of non-alphanumeric characters replaced by `-`, prefixed with `p-`. Because cards render after an async fetch, `main.js` re-resolves the fragment once the list exists and opens the linked paper's abstract.
 
 ### Paper abstracts
 Publication cards are rendered from the Zotero CSL JSON export at `OKOs_Library.json`. Abstracts come from that file when present, so the page remains fast and consistent with the bibliography source. Older static fallback cards still use the CrossRef abstract fetcher when the JSON cannot be loaded, for example when opening the page directly as `file://`.
 
-### Updating the total citation count
-The hero card on `index.html` shows a static "200+" figure. Update it manually when the Google Scholar total passes a new milestone:
+### Updating the metrics
+Nothing to do by hand. `.github/workflows/update-metrics.yml` runs every Monday at 05:00 UTC and commits `assets/data/scholar-stats.json`. To refresh immediately, run the workflow from the Actions tab, or locally:
 
-```html
-<!-- index.html, inside .hero-stats -->
-<span class="stat-num">350<sup style="font-size:18px">+</sup></span>
+```bash
+python scripts/fetch_metrics.py          # all sources
+SKIP_SCHOLAR=1 python scripts/fetch_metrics.py   # skip the Scholar scrape
 ```
+
+The script is designed never to destroy good data:
+
+- ORCID and OpenAlex are fetched with the **standard library only**, so the metrics that drive the site cannot be broken by a failed `pip install`.
+- Google Scholar has no API and blocks datacentre IPs, so it is **best-effort**: hard-timed-out, non-fatal, and never able to lower a figure another source established.
+- A metric that arrives as `0`, or that collapses by more than 15% against the same source's previous reading, is **rejected** as a failed fetch and the stored value is kept.
+- If every source fails, the existing file is left untouched and the run still succeeds.
 
 ---
 
@@ -187,8 +227,9 @@ Opening `index.html` directly as a `file://` URL will work for layout review but
 | Styling | CSS3 — custom properties, Grid, Flexbox; no framework |
 | Scripts | Vanilla ES2020 JavaScript; no bundler |
 | Fonts | EB Garamond, DM Mono, Bitter (Google Fonts CDN) |
-| Live citations | [Semantic Scholar Graph API](https://api.semanticscholar.org/graph/v1/) |
-| Live abstracts | [CrossRef REST API](https://api.crossref.org/works/) + Semantic Scholar fallback |
+| Live citations | [OpenAlex API](https://api.openalex.org/) (batched), Semantic Scholar fallback |
+| Live abstracts | Zotero CSL JSON, [CrossRef REST API](https://api.crossref.org/works/) fallback |
+| Works / metrics | [ORCID Public API](https://pub.orcid.org/) + OpenAlex, refreshed weekly by GitHub Actions |
 | Hosting | GitHub Pages (static, free tier) |
 
 ---

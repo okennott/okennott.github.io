@@ -1,0 +1,16 @@
+# Editor / workspace
+*.code-workspace
+.vscode/
+.idea/
+
+# OS / sync noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Python (scripts/)
+__pycache__/
+*.py[cod]
+.venv/
+venv/

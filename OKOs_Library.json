@@ -2026,17 +2026,50 @@
 		"title": "Integrative taxonomic revision of Uropsilus (Uropsilinae, Talpidae) combining genomic, morphological and geographic evidence",
 		"volume": "223",
 		"author": [
-			{ "family": "Li", "given": "Yi-Xian" },
-			{ "family": "Li", "given": "Quan" },
-			{ "family": "Song", "given": "Wen-Yu" },
-			{ "family": "Li", "given": "Xue-You" },
-			{ "family": "Onditi", "given": "Kenneth Otieno" },
-			{ "family": "Pei", "given": "Xiao-Xin" },
-			{ "family": "Wang", "given": "Hong-Jiao" },
-			{ "family": "Fu", "given": "Chang-Kun" },
-			{ "family": "Liu", "given": "Shao-Ying" },
-			{ "family": "Chen", "given": "Zhong-Zheng" },
-			{ "family": "Jiang", "given": "Xue-Long" }
+			{
+				"family": "Li",
+				"given": "Yi-Xian"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Pei",
+				"given": "Xiao-Xin"
+			},
+			{
+				"family": "Wang",
+				"given": "Hong-Jiao"
+			},
+			{
+				"family": "Fu",
+				"given": "Chang-Kun"
+			},
+			{
+				"family": "Liu",
+				"given": "Shao-Ying"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
 		],
 		"issued": {
 			"date-parts": [
@@ -2056,20 +2089,232 @@
 		"title": "Rain-shadow effects drive contrasting elevational patterns and assembly processes of small mammal diversity on windward and leeward slopes",
 		"volume": "35",
 		"author": [
-			{ "family": "Li", "given": "Yongyuan" },
-			{ "family": "Xie", "given": "Mengru" },
-			{ "family": "Onditi", "given": "Kenneth Otieno" },
-			{ "family": "Li", "given": "Xueyou" },
-			{ "family": "Chen", "given": "Guangzhi" },
-			{ "family": "Wang", "given": "Hongjiao" },
-			{ "family": "Fang", "given": "Yihao" },
-			{ "family": "Shu", "given": "Xuehua" },
-			{ "family": "Song", "given": "Wenyu" }
+			{
+				"family": "Li",
+				"given": "Yongyuan"
+			},
+			{
+				"family": "Xie",
+				"given": "Mengru"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Chen",
+				"given": "Guangzhi"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Fang",
+				"given": "Yihao"
+			},
+			{
+				"family": "Shu",
+				"given": "Xuehua"
+			},
+			{
+				"family": "Song",
+				"given": "Wenyu"
+			}
 		],
 		"issued": {
 			"date-parts": [
 				[
 					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "https://doi.org/10.3897/vz.76.e188776",
+		"type": "article-journal",
+		"abstract": "The Hengduan Mountains of southwestern China constitute a classic sky-island system shaped by complex topography and climatic history. We investigated the evolutionary history of the shrew tribe Blarinellini using 272 samples representing both genera and all four recognized species. Based on mitochondrial and nuclear sequence data, we reconstructed phylogenetic relationships, estimated divergence times, and examined population genetic structure and ecological niche dynamics. Our results support an early Miocene origin of Blarinellini (~18.2 million years). Population genetic analyses recovered five and four deeply divergent geographic lineages within Blarinella quadraticauda and B. wardi, respectively. Most genetic variation was partitioned among lineages, indicating strong long-term isolation. Lineage distributions closely correspond to major river systems and montane regions, suggesting that the effects of river barriers and sky-island fragmentation may have contributed to the observed patterns of diversification. Ecological niche models identified climatically stable habitats within the Hengduan Mountains across multiple glacial–interglacial cycles, whereas demographic analyses revealed recent expansion in a subset of lineages. Together, these results suggest that river barriers, sky-island fragmentation, and climatic change may have jointly contributed to diversification in Blarinellini, and suggest that evolutionary diversity within the tribe may be substantially underestimated. These findings highlight the dual role of the Hengduan Mountains as both a refuge preserving ancient lineages and a cradle generating new diversity.",
+		"container-title": "Vertebrate Zoology",
+		"DOI": "10.3897/vz.76.e188776",
+		"ISSN": "2625-8498",
+		"note": "type: Journal Article",
+		"page": "611–624",
+		"title": "Geographic isolation and climatic heterogeneity shape the genetic diversity of Blarinellini (Eulipotyphla: Soricidae) in the Hengduan Mountains",
+		"URL": "https://doi.org/10.3897/vz.76.e188776",
+		"volume": "76",
+		"author": [
+			{
+				"family": "Diao",
+				"given": "Hai-Xin"
+			},
+			{
+				"family": "Xiong",
+				"given": "Yu-Xin"
+			},
+			{
+				"family": "Nie",
+				"given": "Wen-Li"
+			},
+			{
+				"family": "Pei",
+				"given": "Xiao-Xin"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Wang",
+				"given": "Xiao-Han"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Wang",
+				"given": "Hong-Jiao"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			},
+			{
+				"family": "He",
+				"given": "Kai"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026",
+					8,
+					19
+				]
+			]
+		}
+	},
+	{
+		"id": "https://doi.org/10.24272/j.issn.2095-8137.2026.291",
+		"type": "article-journal",
+		"abstract": "Small insectivorous shrews of the genus Episoriculus (Soricidae: Nectogalini) are distributed primarily across the Himalaya-Hengduan Mountains. The taxonomy of the genus has remained unstable because earlier classifications relied mainly on morphology and geographically restricted materials. We conducted extensive field surveys across the region, sequenced two mitochondrial and six nuclear genes, and generated complete mitogenomes for representative operational taxonomic units (OTUs) to evaluate phylogenetic relationships. We also measured five external and 19 craniodental characters to evaluate morphometric variation. The analyses identify two previously unrecognized species, Episoriculus gaoligongensis sp. nov. from the Gaoligong Mountains and Medog, and E. damuensis sp. nov. from Medog, southeastern Xizang. Our integrative evidence further supports recognition of eight valid species within Episoriculus: E. caudatus, E. leucops, E. macrurus, E. sacratus, E. soluensis, E. umbrinus, E. gaoligongensis sp. nov., and E. damuensis sp. nov. We treat E. baileyi as a subspecies of E. leucops and clarify morphological delimitation criteria and distribution ranges for these taxa. Divergence-time estimates suggest that major splits within Episoriculus occurred from the Miocene to the Pleistocene, broadly consistent with a history shaped by interacting geological, climatic, ecological, and geographic processes in the Himalaya-Hengduan Mountains. More broadly, our results highlight the importance of integrative taxonomy and caution against relying on short mitochondrial fragments alone when delimiting species in rapidly diversifying montane mammals.",
+		"container-title": "Zoological Research",
+		"DOI": "10.24272/j.issn.2095-8137.2026.291",
+		"ISSN": "2095-8137",
+		"note": "type: Journal Article; status: in press",
+		"title": "Systematic revision and species diversification of the genus Episoriculus (Mammalia: Eulipotyphla: Soricidae), with descriptions of two new species",
+		"URL": "https://www.zoores.ac.cn/article/doi/10.24272/j.issn.2095-8137.2026.291",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Zhong-Zheng"
+			},
+			{
+				"family": "Shen",
+				"given": "Yi-Cheng"
+			},
+			{
+				"family": "Zhang",
+				"given": "Min"
+			},
+			{
+				"family": "Pei",
+				"given": "Xiao-Xin"
+			},
+			{
+				"family": "Xu",
+				"given": "Yi-Fan"
+			},
+			{
+				"family": "Song",
+				"given": "Wen-Yu"
+			},
+			{
+				"family": "Zhu",
+				"given": "Zhong-Xu"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "https://doi.org/10.21203/rs.3.rs-10531544/v1",
+		"type": "preprint",
+		"abstract": "Protected areas are central to global biodiversity conservation, yet assessments of their effectiveness focus largely on observed species richness. This approach overlooks dark diversity—the species absent from biogeographically suitable habitats and their associated evolutionary and ecological roles. We used a dataset comprising 7.4 million camera-trap days across 199 nature reserves in China to assess the taxonomic, phylogenetic, and functional dark diversity of medium- and large-sized mammals. On average, protected areas were missing more than half of the mammal species expected under their environmental conditions (mean adjusted taxonomic dark diversity = 0.56), revealing pervasive community incompleteness across the national reserve network. Phylogenetic dark diversity indicated substantial losses of evolutionary history (mean expected deficit = 468 Myr), while functional dark diversity showed widespread deficits in ecological trait space. A biogeographic null-model analysis revealed that these deficits were strongly non-random, with South China exhibiting significantly elevated taxonomic, phylogenetic, and functional dark diversity relative to null expectations. The three dimensions were positively correlated but captured complementary conservation signals: taxonomic dark diversity was primarily associated with reserve area, sampling effort, and governance context; phylogenetic dark diversity reflected elevation, topographic heterogeneity, precipitation, and productivity; and functional dark diversity was linked to historical defaunation interacting with regional trait-space constraints. Species absent from otherwise suitable reserves were disproportionately threatened, dietary specialists, and cathemeral or crepuscular mammals, indicating trait-selective defaunation. Together, our results show that China’s protected areas are often incomplete remnants of historically richer mammal communities and that assessments based on species richness alone substantially underestimate biodiversity erosion. Integrating taxonomic, phylogenetic, and functional dark diversity into protected-area evaluation provides a powerful framework for identifying hidden conservation debt, prioritizing restoration and connectivity, and advancing biodiversity recovery under the Kunming–Montreal Global Biodiversity Framework.",
+		"container-title": "Research Square",
+		"DOI": "10.21203/rs.3.rs-10531544/v1",
+		"note": "type: Preprint; version: v1; not peer reviewed",
+		"title": "Non-random defaunation across China’s protected area network revealed by multidimensional dark diversity",
+		"URL": "https://www.researchsquare.com/article/rs-10531544/v1",
+		"author": [
+			{
+				"family": "Zhu",
+				"given": "Chen-Yang"
+			},
+			{
+				"family": "Hu",
+				"given": "Zhe-Chang"
+			},
+			{
+				"family": "Yang",
+				"given": "Ming-Wei"
+			},
+			{
+				"family": "Liu",
+				"given": "Yang"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Wang",
+				"given": "Hong-Jiao"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xue-Long"
+			},
+			{
+				"family": "Li",
+				"given": "Xue-You"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026",
+					8,
+					5
 				]
 			]
 		}

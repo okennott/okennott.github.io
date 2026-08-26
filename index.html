@@ -545,9 +545,9 @@
 
       <p class="hero-bio">
         Integrating ecological and genomic data to investigate biodiversity patterns
-        across Africa's mammal communities — from the montane forests of Mt. Kenya
-        to the savanna ecoregions of the Rift Valley. Specialising in systematics,
-        phylogeography, and conservation biology.
+        across Africa's and Asia's montane mammal communities — from Mt. Kenya to the
+        Hengduan Mountains. Specialising in systematics, phylogeography, and
+        conservation biology.
       </p>
 
       <div class="hero-actions">
@@ -579,17 +579,25 @@
 
       <!-- Stats + links -->
       <div class="hero-card-body">
+        <!-- Live trackers. The numbers below are the offline fallback; both are
+             replaced on load from assets/data/scholar-stats.json (works from
+             ORCID, citations from Google Scholar / OpenAlex). -->
         <div class="hero-stats">
           <div class="hero-stat">
-            <span class="stat-num" id="counter-pubs">37</span>
-            <span class="stat-label">Publications</span>
+            <span class="stat-num" data-metric="peer_reviewed_works" id="counter-pubs">39</span>
+            <span class="stat-label">Peer-reviewed</span>
+            <span class="stat-sublabel">via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID</a></span>
           </div>
           <div class="hero-stat">
-            <span class="stat-num author-total-cit" id="stat-citations">357</span>
+            <span class="stat-num author-total-cit" data-metric="citations" id="stat-citations">358</span>
             <span class="stat-label">Citations</span>
-            <span class="stat-sublabel">h&thinsp;=&thinsp;<span class="author-hindex" id="stat-hindex">11</span> · i10&thinsp;=&thinsp;<span id="stat-i10">12</span></span>
+            <span class="stat-sublabel">h&thinsp;=&thinsp;<span class="author-hindex" data-metric="h_index" id="stat-hindex">11</span> · i10&thinsp;=&thinsp;<span data-metric="i10_index" id="stat-i10">12</span></span>
           </div>
         </div>
+        <p class="hero-stats-src">
+          <span data-metric="citation_source_name">Google Scholar</span> ·
+          updated <span data-metric="last_updated_label">Jul 2026</span>
+        </p>
 
         <div class="hero-card-links">
           <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-card-link">
@@ -732,7 +740,7 @@
     </div>
 
     <div style="margin-top: 32px; display:flex; gap:14px; flex-wrap:wrap;">
-      <a class="btn-ghost" href="publications.html" id="home-all-publications-link">View all 35 publications →</a>
+      <a class="btn-ghost" href="publications.html" id="home-all-publications-link">View all 40 publications →</a>
       <a class="btn-ghost" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
     </div>
   </div>
