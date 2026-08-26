@@ -615,6 +615,103 @@ async function initMetrics(derived = {}) {
   renderPeerReviews(d.peer_review_breakdown);
 }
 
+/* ─── NEWS TICKER ──────────────────────────────────────────────────────
+   The strip announces recent work, so it is built from the bibliography
+   rather than hand-maintained, and every publication item links to that
+   paper's card on the publications page. The markup already in the HTML is
+   the fallback and the source of the curated non-publication items (talks,
+   grants), which are in no feed.
+
+   The marquee works by translating the track -50%, which requires the
+   content to appear exactly twice. The second copy is inert for assistive
+   technology and unreachable by keyboard, so the same links are not
+   announced or tabbed through twice.
+   ------------------------------------------------------------------- */
+const NEWS_PUBLICATION_COUNT = 6;
+const NEWEST_YEAR_TAG = new Date().getFullYear();   // papers this year get a "New" tag
+
+const VENUE_ABBREVIATIONS = {
+  'Molecular Phylogenetics and Evolution': 'Mol. Phylogenet. Evol.',
+  'Mol Phylogenet Evol':                   'Mol. Phylogenet. Evol.',
+  'Biological Conservation':               'Biol. Conserv.',
+  'Biodiversity and Conservation':         'Biodivers. Conserv.',
+  'Global Change Biology':                 'Glob. Change Biol.',
+  'Global Ecology and Conservation':       'Glob. Ecol. Conserv.',
+  'Conservation Biology':                  'Conserv. Biol.',
+  'Systematic Biology':                    'Syst. Biol.',
+  'Zoological Research':                   'Zool. Res.',
+  'Zool Res':                              'Zool. Res.',
+  'Vertebrate Zoology':                    'Vertebr. Zool.',
+  'Scientific Reports':                    'Sci. Rep.',
+  'Journal of Applied Ecology':            'J. Appl. Ecol.',
+  'Journal of Mammalogy':                  'J. Mammal.',
+  'Research Square':                       'Research Square',
+  'Zoological Research: Diversity and Conservation': 'Zool. Res. Divers. Conserv.'
+};
+
+function tickerTitle(title) {
+  // Ticker pills are one line; drop any subtitle, then hard-cap the length.
+  let text = String(title || '').replace(/<[^>]+>/g, '')
+    .split(/\s*:\s+|\s+[\u2013\u2014]\s+/)[0].trim();
+  const LIMIT = 46;
+  if (text.length > LIMIT) {
+    const cut = text.slice(0, LIMIT);
+    text = cut.slice(0, Math.max(cut.lastIndexOf(' '), LIMIT - 12)).replace(/[,;]$/, '') + '\u2026';
+  }
+  return text;
+}
+
+function newsItemsFromPublications(items) {
+  return [...items]
+    .map((item, index) => ({ item, index }))
+    .sort((a, b) => dateSortKey(b.item, b.index) - dateSortKey(a.item, a.index))
+    .slice(0, NEWS_PUBLICATION_COUNT)
+    .map(({ item }) => {
+      const doi = cleanDoi(item.DOI);
+      const year = publicationYear(item);
+      const venue = VENUE_ABBREVIATIONS[item['container-title']] || item['container-title'] || '';
+      const tag = isPreprint(item) ? 'Preprint' : (year >= NEWEST_YEAR_TAG ? `New ${year}` : String(year || ''));
+      return {
+        href: doi ? `publications.html#${doiSlug(doi)}` : 'publications.html',
+        tag,
+        text: [tickerTitle(item.title), venue].filter(Boolean).join(' \u00b7 ')
+      };
+    });
+}
+
+function renderNewsTicker(items) {
+  const track = document.getElementById('news-scroll');
+  if (!track) return;
+
+  // Curated items already in the markup that are not publications.
+  const curated = [...track.querySelectorAll('.news-item')]
+    .filter(el => !el.getAttribute('href')?.startsWith('publications.html'))
+    .map(el => el.outerHTML);
+
+  let html;
+  if (Array.isArray(items) && items.length) {
+    const fresh = newsItemsFromPublications(items).map(n =>
+      `<a class="news-item" href="${escapeHtml(n.href)}">` +
+      `<span class="news-tag">${escapeHtml(n.tag)}</span> \u00b7 ${escapeHtml(n.text)}</a>`
+    );
+    html = fresh.concat(curated).join('\n');
+  } else {
+    html = [...track.querySelectorAll('.news-item')].map(el => el.outerHTML).join('\n');
+  }
+  if (!html) return;
+
+  // Second copy: purely visual, so hide it from assistive tech and the tab order.
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = html;
+  wrapper.querySelectorAll('.news-item').forEach(el => {
+    el.classList.add('news-duplicate');
+    el.setAttribute('aria-hidden', 'true');
+    el.setAttribute('tabindex', '-1');
+  });
+
+  track.innerHTML = html + '\n' + wrapper.innerHTML;
+}
+
 /* ─── STRUCTURED DATA ──────────────────────────────────────────────────
    The publication list is rendered from the bibliography, so its schema.org
    description is generated from the same data rather than maintained by hand
@@ -688,6 +785,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   const items = await initPublicationsData();
   await initMetrics(derivedMetrics(items));
   injectPublicationSchema(items);
+  renderNewsTicker(items);
   hydrateCitationBadges();
   hydrateAbstracts();
   focusHashTarget();

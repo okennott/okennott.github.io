@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kenneth Otieno Onditi | Mammal Ecologist & Evolutionary Biologist</title>
-<meta name="description" content="Academic profile of Kenneth Otieno Onditi — mammal ecologist and evolutionary biologist at Kunming Institute of Zoology, CAS.">
+<meta name="description" content="Kenneth Otieno Onditi — mammal ecologist and evolutionary biologist integrating ecological and genomic data to investigate evolutionary and biodiversity patterns, centred on African mammals with long-running collaboration on Southeast Asian mammals.">
 <link rel="canonical" href="https://okennott.github.io/">
 
 <!-- Rendering + font performance -->
@@ -24,12 +24,12 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://okennott.github.io/">
 <meta property="og:title" content="Kenneth Otieno Onditi | Mammal Ecologist & Evolutionary Biologist">
-<meta property="og:description" content="Academic profile of Kenneth Otieno Onditi — mammal ecologist and evolutionary biologist at Kunming Institute of Zoology, CAS.">
+<meta property="og:description" content="Kenneth Otieno Onditi — mammal ecologist and evolutionary biologist integrating ecological and genomic data to investigate evolutionary and biodiversity patterns, centred on African mammals with long-running collaboration on Southeast Asian mammals.">
 <meta property="og:image" content="https://okennott.github.io/assets/data/profile-image.jpg">
 <meta property="og:image:alt" content="Kenneth Otieno Onditi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kenneth Otieno Onditi | Mammal Ecologist & Evolutionary Biologist">
-<meta name="twitter:description" content="Academic profile of Kenneth Otieno Onditi — mammal ecologist and evolutionary biologist at Kunming Institute of Zoology, CAS.">
+<meta name="twitter:description" content="Kenneth Otieno Onditi — mammal ecologist and evolutionary biologist integrating ecological and genomic data to investigate evolutionary and biodiversity patterns, centred on African mammals with long-running collaboration on Southeast Asian mammals.">
 <meta name="twitter:image" content="https://okennott.github.io/assets/data/profile-image.jpg">
 
 <!-- Scholarly indexing -->
@@ -506,36 +506,79 @@
   white-space: nowrap;
 }
 
-/* News ticker */
+/* News ticker — each item is a link to the paper it announces */
 .news-bar {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 12px 0;
+  padding: 10px 0;
   overflow: hidden;
+  /* Fade the pills into the page edges so they do not appear clipped. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+          mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
 }
 .news-scroll {
   display: flex;
-  gap: 60px;
-  animation: marquee 30s linear infinite;
+  gap: 12px;
+  animation: marquee 60s linear infinite;
   white-space: nowrap;
   will-change: transform;
 }
-.news-scroll:hover { animation-play-state: paused; }
+/* Pause while the reader is engaging with it, by pointer or by keyboard. */
+.news-bar:hover .news-scroll,
+.news-bar:focus-within .news-scroll { animation-play-state: paused; }
+
 .news-item {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
   color: var(--muted);
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel);
+  text-decoration: none;
+  transition: border-color .2s, background .2s, color .2s, transform .2s;
 }
-.news-item span { color: var(--gold); }
+a.news-item:hover,
+a.news-item:focus-visible {
+  border-color: var(--gold);
+  background: rgba(200,148,58,0.09);
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+.news-item .news-tag {
+  color: var(--gold);
+  font-weight: 500;
+}
+a.news-item::after {
+  content: '↗';
+  font-size: 9px;
+  color: var(--faint);
+  transition: color .2s;
+}
+a.news-item:hover::after,
+a.news-item:focus-visible::after { color: var(--gold); }
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+/* With motion reduced the marquee is stopped, so the strip becomes a normal
+   horizontally scrollable row instead of a frozen, half-cropped one. */
+@media (prefers-reduced-motion: reduce) {
+  .news-bar {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  .news-scroll { animation: none; padding: 0 24px; }
+  .news-scroll .news-duplicate { display: none; }
 }
 
 @media (max-width: 900px) {
@@ -578,33 +621,19 @@
 <div class="page-body">
 
 <!-- ═══ NEWS TICKER ═══ -->
-<div class="news-bar">
-  <div class="news-scroll">
-    <span class="news-item"><span>New 2026</span> · Rain-shadow effects drive elevational mammal diversity patterns · Biodivers. Conserv.</span>
-    <span class="news-item"><span>New 2026</span> · Integrative taxonomic revision of Uropsilus shrew moles · Mol. Phylogenet. Evol.</span>
-    <span class="news-item"><span>New 2026</span> · Habitat fragmentation &amp; functional richness, mountain mammals · Biol. Conserv.</span>
-    <span class="news-item"><span>New 2026</span> · Human pressures &amp; mammal community homogenization · Glob. Change Biol.</span>
-    <span class="news-item"><span>New 2026</span> · Graphiurus UCE phylogenomics · Mol. Phylogenet. Evol.</span>
-    <span class="news-item"><span>New 2026</span> · Mammal functional homogenization, Hengduan Mts · Conserv. Biol.</span>
-    <span class="news-item"><span>2026</span> · Asian Shrew Mole diversification · Systematic Biology</span>
-    <span class="news-item"><span>2025</span> · Multiscale small mammal diversity patterns · Ecosphere</span>
-    <span class="news-item"><span>2025</span> · Lemniscomys integrative phylogeography · Zool. Res. Divers. Conserv.</span>
-    <span class="news-item"><span>Invited Talk</span> · Univ. of Potsdam, Germany · Jul 2025</span>
-    <span class="news-item"><span>Invited Talk</span> · Masaryk University, Czech Republic · Oct 2024</span>
-    <span class="news-item"><span>Grant</span> · NSFC 32350410430 · Lophuromys conservation genomics</span>
-    <!-- duplicate for seamless loop -->
-    <span class="news-item"><span>New 2026</span> · Rain-shadow effects drive elevational mammal diversity patterns · Biodivers. Conserv.</span>
-    <span class="news-item"><span>New 2026</span> · Integrative taxonomic revision of Uropsilus shrew moles · Mol. Phylogenet. Evol.</span>
-    <span class="news-item"><span>New 2026</span> · Habitat fragmentation &amp; functional richness, mountain mammals · Biol. Conserv.</span>
-    <span class="news-item"><span>New 2026</span> · Human pressures &amp; mammal community homogenization · Glob. Change Biol.</span>
-    <span class="news-item"><span>New 2026</span> · Graphiurus UCE phylogenomics · Mol. Phylogenet. Evol.</span>
-    <span class="news-item"><span>New 2026</span> · Mammal functional homogenization, Hengduan Mts · Conserv. Biol.</span>
-    <span class="news-item"><span>2026</span> · Asian Shrew Mole diversification · Systematic Biology</span>
-    <span class="news-item"><span>2025</span> · Multiscale small mammal diversity patterns · Ecosphere</span>
-    <span class="news-item"><span>2025</span> · Lemniscomys integrative phylogeography · Zool. Res. Divers. Conserv.</span>
-    <span class="news-item"><span>Invited Talk</span> · Univ. of Potsdam, Germany · Jul 2025</span>
-    <span class="news-item"><span>Invited Talk</span> · Masaryk University, Czech Republic · Oct 2024</span>
-    <span class="news-item"><span>Grant</span> · NSFC 32350410430 · Lophuromys conservation genomics</span>
+<!-- Rebuilt on load from the bibliography (see renderNewsTicker); this markup
+     is the fallback and the source of the curated non-publication items. -->
+<div class="news-bar" aria-label="Recent publications and news">
+  <div class="news-scroll" id="news-scroll">
+    <a class="news-item" href="publications.html#p-10-3897-vz-76-e188776"><span class="news-tag">New 2026</span> · Geographic isolation and climatic … · Vertebr. Zool.</a>
+    <a class="news-item" href="publications.html#p-10-21203-rs-3-rs-10531544-v1"><span class="news-tag">Preprint</span> · Non-random defaunation across China’s… · Research Square</a>
+    <a class="news-item" href="publications.html#p-10-1016-j-biocon-2026-111828"><span class="news-tag">New 2026</span> · Beyond species richness · Biol. Conserv.</a>
+    <a class="news-item" href="publications.html#p-10-1111-cobi-70214"><span class="news-tag">New 2026</span> · Functional homogenization of terrestrial… · Conserv. Biol.</a>
+    <a class="news-item" href="publications.html#p-10-1093-sysbio-syaf052"><span class="news-tag">New 2026</span> · Species Diversification in the Sky Islands of… · Syst. Biol.</a>
+    <a class="news-item" href="publications.html#p-10-1111-gcb-70916"><span class="news-tag">New 2026</span> · Human Pressures Drive Compositional… · Glob. Change Biol.</a>
+    <a class="news-item" href="cv.html#talks"><span class="news-tag">Invited Talk</span> · Univ. of Potsdam, Germany · Jul 2025</a>
+    <a class="news-item" href="cv.html#talks"><span class="news-tag">Invited Talk</span> · Masaryk University · Oct 2024</a>
+    <a class="news-item" href="cv.html#grants"><span class="news-tag">Grant</span> · NSFC 32350410430 · Lophuromys genomics</a>
   </div>
 </div>
 
@@ -649,10 +678,10 @@
       </p>
 
       <p class="hero-bio">
-        Integrating ecological and genomic data to investigate biodiversity patterns in
-        mammal communities — from Kenya's montane forests and Rift Valley savannas,
-        across sub-Saharan Africa, to the Himalaya–Hengduan sky islands of southwest
-        China. Specialising in systematics, phylogeography, and conservation biology.
+        Integrating ecological and genomic data to investigate evolutionary and
+        biodiversity patterns — centred on African mammals, with an extensive,
+        long-running collaboration on the mammals of Southeast Asia. Specialising in
+        systematics, phylogeography, and conservation biology.
       </p>
 
       <div class="hero-actions">
@@ -755,7 +784,7 @@
           <line x1="13" y1="30" x2="27" y2="30" stroke="#5a8c6a" stroke-width="1" opacity="0.6"/>
         </svg>
         <h3>Systematics &amp; Phylogeography</h3>
-        <p>Unravelling the evolutionary histories and biogeographic patterns of African small mammals using genomic and morphological data.</p>
+        <p>Unravelling the evolutionary histories and biogeographic patterns of small mammals — principally African, and Southeast Asian through long-running collaboration — using genomic and morphological data.</p>
         <span class="area-link">Explore →</span>
       </a>
 
