@@ -14,3 +14,10 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Quarto / CV build artefacts
+cv/.quarto/
+cv/cv.docx
+cv/cv.pdf
+cv/cv_files/
+cv/*.png

@@ -1,0 +1,331 @@
+---
+# An explicit title stops Quarto promoting the first "##" heading into one.
+# The filter then drops the title block, since the name is rendered by CVName.
+title: "Kenneth Otieno Onditi — Curriculum Vitae"
+format:
+  docx:
+    reference-doc: reference.docx
+execute:
+  echo: false
+  warning: false
+filters:
+  - filters/cvstyle.lua
+jupyter: python3
+---
+
+```{python}
+#| output: asis
+import cvdata, render_helpers as H
+M = cvdata.metrics()
+P = cvdata.publications()
+H.header()
+```
+
+## Research Profile
+
+::: {custom-style="CVProfile"}
+Mammal ecologist and evolutionary biologist integrating ecological and genomic data
+to investigate evolutionary and biodiversity patterns. My research is centred on
+African mammals — systematics, phylogeography, and conservation biology — alongside
+an extensive, long-running collaboration on the mammals of Southeast Asia. I combine
+field-collected specimen data with phylogenomic and macroecological analysis to
+resolve species limits, reconstruct diversification histories, and quantify how
+climatic and anthropogenic pressures shape mammal diversity across elevational and
+ecoregional gradients.
+:::
+
+```{python}
+#| output: asis
+H.metrics(M, P)
+```
+
+## Education
+
+::: {.entry date="2018 – 2022"}
+PhD in Zoology
+
+*University of Chinese Academy of Sciences · Beijing, China*
+
+Research conducted at the Kunming Institute of Zoology, CAS, Kunming. Dissertation
+on the systematics, phylogeography, and macroecology of African small mammals.
+Advisor: Prof. Jiang Xuelong.
+:::
+
+::: {.entry date="2015 – 2018"}
+Master of Natural Sciences
+
+*University of Chinese Academy of Sciences · Beijing, China*
+
+Research conducted at the Kunming Institute of Zoology, CAS, Kunming.
+Advisor: Prof. Jiang Xuelong.
+:::
+
+::: {.entry date="2009 – 2013"}
+BSc in Environmental Studies
+
+*Kenyatta University · Nairobi, Kenya*
+:::
+
+## Professional Appointments
+
+::: {.entry date="Jul 2022 – Present"}
+Special Research Assistant
+
+*Kunming Institute of Zoology, Chinese Academy of Sciences · Kunming, China*
+
+- Lead integrative research on the systematics, phylogeography, and conservation
+  biology of African mammals, with sustained collaboration on Chinese and Southeast
+  Asian taxa.
+- Apply genomic and ecological data to species richness, phylogenetic and functional
+  diversity, and the influence of climatic and anthropogenic drivers; examine
+  evolutionary history, taxonomy, and morphological variation across elevational and
+  ecoregional gradients.
+- Principal investigator on an NSFC research grant; supervise graduate students in
+  research design, data analysis, and manuscript preparation.
+:::
+
+::: {.entry date="Aug 2013 – Apr 2015"}
+Research Assistant
+
+*National Museums of Kenya · Nairobi, Kenya*
+
+- Field research on small mammals and their habitats: habitat suitability analysis,
+  strategic site selection, and trapping design.
+- Specimen handling in the field and laboratory, with taxonomic identification from
+  morphological and ecological characters.
+- Contributed to monitoring protocols for mammals and habitats in Kenya; managed data
+  digitisation and activity reporting.
+:::
+
+::: {.entry date="Apr – Aug 2012"}
+Undergraduate Industrial Attachment
+
+*Nairobi City Water and Sewerage Company · Nairobi, Kenya*
+
+- Environmental monitoring and compliance, wastewater quality assessment, review of
+  Environmental Impact Assessment and Occupational Safety and Health Audit reports.
+:::
+
+## Publications
+
+```{python}
+#| output: asis
+H.publications(P)
+```
+
+## Research Grants
+
+::: {.entry date="Jan – Dec 2024"}
+National Natural Science Foundation of China (NSFC)
+
+*Grant No. 32350410430 · ¥240,000 (approx. US$33,300) · Principal Investigator*
+
+Genomic analysis of the *Lophuromys flavopunctatus* species group: relevancy of
+conservation genomics to enhancing biodiversity management and human welfare.
+:::
+
+## Honours, Awards & Fellowships
+
+::: {.entry date="2019"}
+IDEA WILD Grant
+
+Equipment award supporting small mammal field surveys in Kenya.
+:::
+
+::: {.entry date="2018"}
+CAS–TWAS President's Fellowship
+
+Full fellowship for PhD studies, 2018–2021. Chinese Academy of Sciences / The World
+Academy of Sciences.
+:::
+
+::: {.entry date="2018"}
+Stipends for Junior Scientists
+
+Sponsorship to attend the 92nd Annual Meeting of the German Society for Mammalian
+Biology, Bonn, Germany, including a scholarly visit to the Zoological Research Museum
+Alexander Koenig.
+:::
+
+::: {.entry date="2017"}
+Council on Africa Award — Field Museum of Natural History
+
+Scholarly visit to the Field Museum of Natural History, Chicago, USA, for
+collaborative taxonomic work.
+:::
+
+::: {.entry date="2015"}
+University of Chinese Academy of Sciences Full Scholarship
+
+Full scholarship for Master's studies, 2015–2018.
+:::
+
+## Invited Talks
+
+::: {.entry date="7 Jul 2025"}
+Community ecology of terrestrial mammals of Kenya: eco-evolutionary patterns and
+processes, and conservation implications
+
+*University of Potsdam, Institute of Biochemistry and Biology · Potsdam, Germany*
+:::
+
+::: {.entry date="31 Oct 2024"}
+The problem of spatial scale in small mammal diversity patterns and processes
+
+*Masaryk University, Vertebrate Research Group, Faculty of Science · Brno, Czech Republic*
+:::
+
+## Conference Presentations
+
+::: {.entry date="3–6 Jun 2024"}
+Effectiveness of protected areas in Kenya based on terrestrial mammal diversity
+patterns: implications for conservation strategies
+
+*Poster · 1st Joint International Scientific Conference, National Museums of Kenya · Nairobi, Kenya*
+:::
+
+::: {.entry date="27 Aug 2023"}
+Untangling key abiotic predictors of terrestrial mammal diversity patterns in Kenya
+and the protected areas' management implications
+
+*Oral presentation · 16th National Academic Symposium on Wildlife Ecology and Resource Conservation, Chinese Zoological Society · Yichang, Hubei, China*
+:::
+
+::: {.entry date="23 Nov 2018"}
+Morphometrics of the *Lophuromys aquilus* species complex: taxonomic and
+biogeographic relevancy
+
+*Oral presentation · 14th National Symposium on Wildlife Ecology and Resource Conservation, Chinese Zoological Society · Kunming, Yunnan, China*
+:::
+
+::: {.entry date="18 Sep 2018"}
+Morphological variation, biogeography, and a taxonomic synopsis of the
+*Lophuromys aquilus* species complex
+
+*Oral presentation · 92nd Annual Meeting of the German Society for Mammalian Biology, Museum Koenig · Bonn, Germany*
+:::
+
+## Field Research Experience
+
+::: {custom-style="CVLead"}
+All campaigns were joint surveys of the National Museums of Kenya and the Kunming
+Institute of Zoology, CAS, totalling 5,974 catalogued small mammal specimens.
+Methods: Sherman live-trap and pitfall–drift-fence arrays on standardised elevational
+transects; in situ external and cranial morphometrics; tissue sampling in 95% ethanol;
+voucher preparation and accession into the NMK mammal collection.
+:::
+
+::: {.entry date="28 Sep – 14 Nov 2019"}
+Cherang'any Hills, Mt. Elgon & Mathews Range · Kenya
+
+854 rodents and shrews. Montane survey across three geographically isolated
+highlands, targeting elevational gradients in western and northern Kenya.
+:::
+
+::: {.entry date="12 Aug – 14 Sep 2018"}
+Mau Forests, Kakamega Forest & Yala Swamp · Kenya
+
+1,450 rodents and shrews. Gradient from highland forest through Guineo-Congolian
+lowland rainforest to wetland.
+:::
+
+::: {.entry date="9 Jan – 5 Feb 2018"}
+Loita Hills forest ecosystem · Kenya
+
+877 rodents and shrews. Dry montane forest isolated from other Kenyan highlands;
+key data for comparative phylogeography of forest specialists.
+:::
+
+::: {.entry date="19 Aug – 22 Sep 2016"}
+Chyulu Hills, Tsavo National Parks, Shimba Hills & Gongoni Forest · Kenya
+
+861 rodents, shrews and bats. East–west transect from coastal forest to interior
+savanna; first comprehensive small mammal survey at several sites.
+:::
+
+::: {.entry date="6 Sep – 13 Oct 2015"}
+Mount Kenya — Chogoria and Sirimon transects · Kenya
+
+1,932 rodents and shrews. Two-transect elevational survey from montane forest through
+bamboo and moorland to alpine heath; the largest single-site small mammal dataset
+from Kenya.
+:::
+
+::: {.entry date="Jul – Aug 2015"}
+Loita Forest & Kakamega Forest National Reserve · Kenya
+
+Forest-dependent small mammal communities in two contrasting forest types, with a
+team led by Prof. Julian Kerbis Peterhans (Field Museum of Natural History /
+Roosevelt University).
+:::
+
+## Graduate Supervision & Mentorship
+
+::: {.entry date="2022 – 2025"}
+Brian Anoto Sambaya — MSc
+
+*Kunming Institute of Zoology, CAS*
+
+Integrative phylogeography of African striped grass mice (*Lemniscomys*); resulting
+in a first-author publication in *Zoological Research: Diversity and Conservation*
+(2025).
+:::
+
+::: {.entry date="2019 – 2022"}
+Alois Wambua Mweu — MSc
+
+*Kunming Institute of Zoology, CAS*
+
+Comparative phylogeography of specialist rodents in Kenyan forest fragments;
+resulting in a first-author publication in *Life* (2024).
+:::
+
+::: {.entry date="2019 – 2022"}
+Samson Mabeya Ouru — MSc
+
+*Kunming Institute of Zoology, CAS*
+:::
+
+## Professional Service
+
+```{python}
+#| output: asis
+H.peer_review(M)
+```
+
+::: {.labelled date="Societies"}
+Association for Tropical Biology and Conservation; Ecological Society for Eastern
+Africa (ESEA); Ecological Society of America; Society for the Study of Evolution;
+Society for Tropical Ecology (gtö); Society of Systematic Biologists.
+:::
+
+## Technical & Analytical Skills
+
+```{python}
+#| output: asis
+H.labelled([
+ ("Systematics & genomics",
+  "Integrative taxonomy; phylogenomics with ultraconserved elements (UCEs); "
+  "mitochondrial and multilocus phylogenetics; species delimitation; divergence-time "
+  "and demographic inference; linear and geometric morphometrics."),
+ ("Macroecology & modelling",
+  "Species distribution and habitat suitability modelling; phylogenetic and functional "
+  "diversity; beta-diversity decomposition; occupancy modelling; multi-scale spatial "
+  "analysis; protected-area effectiveness assessment."),
+ ("Field & collections",
+  "Small mammal live-trapping and pitfall arrays; elevational transect design; specimen "
+  "preparation, curation and museum accession; tissue archiving."),
+ ("Computing",
+  "R (statistical modelling, spatial analysis, reproducible workflows); bioinformatics "
+  "pipelines for phylogenomic data; GIS."),
+ ("Languages",
+  "English (fluent) · Swahili (fluent) · Mandarin Chinese (basic)"),
+])
+```
+
+## Referees
+
+```{python}
+#| output: asis
+H.referees()
+```

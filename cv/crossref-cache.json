@@ -1,0 +1,6942 @@
+{
+ "10.1002/ece3.6083": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3821-0145",
+    "affiliation": [
+     {
+      "name": "Anhui Provincial Key Laboratory of the Conservation and Exploitation of Biological Resources College of Life Sciences Anhui Normal University Wuhu China"
+     },
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2411-3627",
+    "affiliation": [
+     {
+      "name": "Central Department of Zoology Institute of Science and Technology Tribhuvan University Kathmandu Nepal"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Khanal",
+    "given": "Laxman",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Ecology and Evolution"
+  ],
+  "issue": "5",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     23
+    ]
+   ]
+  },
+  "page": "2545-2558",
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     23
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Ecology and Evolution"
+  ],
+  "title": [
+   "Small mammal species richness and turnover along elevational gradient in Yulong Mountain, Yunnan, Southwest China"
+  ],
+  "type": "journal-article",
+  "volume": "10"
+ },
+ "10.1002/ecs2.70179": {
+  "article-number": "e70179",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     },
+     {
+      "name": "Department of Zoology National Museums of Kenya  Nairobi Kenya"
+     },
+     {
+      "name": "Sino‐Africa Joint Research Centre, Chinese Academy of Sciences  Nairobi Kenya"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     },
+     {
+      "name": "Vector Laboratory, Institute of Pathogens and Vectors, Yunnan Provincial Key Laboratory for Zoonosis Control and Prevention Dali University  Dali China"
+     }
+    ],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     },
+     {
+      "name": "Collaborative Innovation Centre of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co‐Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University  Wuhu Anhui China"
+     }
+    ],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1342-5556",
+    "affiliation": [
+     {
+      "name": "Department of Environmental Science and Studies DePaul University  Chicago Illinois USA"
+     },
+     {
+      "name": "Negaunee Integrative Research Centre, The Field Museum of Natural History  Chicago Illinois USA"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "de la Sancha",
+    "given": "Noé U.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Department of Zoology National Museums of Kenya  Nairobi Kenya"
+     }
+    ],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     },
+     {
+      "name": "Sino‐Africa Joint Research Centre, Chinese Academy of Sciences  Nairobi Kenya"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Ecosphere"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     2
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     2
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Ecosphere"
+  ],
+  "title": [
+   "Multiscale spatial dependency of small mammal diversity patterns and their determinants"
+  ],
+  "type": "journal-article",
+  "volume": "16"
+ },
+ "10.1007/s10531-021-02276-7": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Mathenge",
+    "given": "James",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Biodiversity and Conservation"
+  ],
+  "issue": "13",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     9,
+     13
+    ]
+   ]
+  },
+  "page": "3813-3836",
+  "published": {
+   "date-parts": [
+    [
+     2021,
+     9,
+     13
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Biodivers Conserv"
+  ],
+  "title": [
+   "The management effectiveness of protected areas in Kenya"
+  ],
+  "type": "journal-article",
+  "volume": "30"
+ },
+ "10.1007/s10531-023-02766-w": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Yu",
+    "given": "Qiupeng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Huang",
+    "given": "Cheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xu",
+    "given": "Tongmei",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Biodiversity and Conservation"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     12,
+     18
+    ]
+   ]
+  },
+  "page": "685-704",
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     12,
+     18
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Biodivers Conserv"
+  ],
+  "title": [
+   "Suitable habitats shifting toward human-dominated landscapes of Asian elephants in China"
+  ],
+  "type": "journal-article",
+  "volume": "33"
+ },
+ "10.1007/s10531-026-03383-z": {
+  "article-number": "189",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Yongyuan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Xie",
+    "given": "Mengru",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Guangzhi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Fang",
+    "given": "Yihao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Shu",
+    "given": "Xuehua",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Biodiversity and Conservation"
+  ],
+  "issue": "8",
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     19
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     19
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Biodivers Conserv"
+  ],
+  "title": [
+   "Rain-shadow effects drive contrasting elevational patterns and assembly processes of small mammal diversity on windward and leeward slopes"
+  ],
+  "type": "journal-article",
+  "volume": "35"
+ },
+ "10.1007/s13364-019-00470-1": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Peterhans",
+    "given": "Julian Kerbis",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Demos",
+    "given": "Terrence C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhongzheng",
+    "given": "Chen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xuelong",
+    "given": "Jiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Mammal Research"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2019,
+     12,
+     6
+    ]
+   ]
+  },
+  "page": "387-400",
+  "published": {
+   "date-parts": [
+    [
+     2019,
+     12,
+     6
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Mamm Res"
+  ],
+  "title": [
+   "Morphological and genetic characterization of Mount Kenya brush-furred rats (Lophuromys Peters 1874); relevance to taxonomy and ecology"
+  ],
+  "type": "journal-article",
+  "volume": "65"
+ },
+ "10.1007/s13364-019-00475-w": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Peterhans",
+    "given": "Julian Kerbis",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Demos",
+    "given": "Terrence C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhongzheng",
+    "given": "Chen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xuelong",
+    "given": "Jiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Mammal Research"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     1,
+     8
+    ]
+   ]
+  },
+  "page": "401-402",
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     1,
+     8
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Mamm Res"
+  ],
+  "title": [
+   "Correction to: Morphological and genetic characterization of Mount Kenya brush-furred rats (Lophuromys Peters 1874); relevance to taxonomy and ecology"
+  ],
+  "type": "journal-article",
+  "volume": "65"
+ },
+ "10.1007/s42991-023-00360-9": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3821-0145",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Pei",
+    "given": "Xiaoxin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Jialu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Shi",
+    "given": "Zifan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Mammalian Biology"
+  ],
+  "issue": "4",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     4,
+     17
+    ]
+   ]
+  },
+  "page": "389-403",
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     4,
+     17
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Mamm Biol"
+  ],
+  "title": [
+   "Systematics and evolutionary history of the genus Micromys (Mammalia: Rodentia: Muridae)"
+  ],
+  "type": "journal-article",
+  "volume": "103"
+ },
+ "10.1016/j.biocon.2024.110863": {
+  "article-number": "110863",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Wenqiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Pu",
+    "given": "Changzhe",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Pu",
+    "given": "Mingjing",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xiong",
+    "given": "Yun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yang",
+    "given": "Suhua",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhu",
+    "given": "Lin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yin",
+    "given": "Jianqiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "He",
+    "given": "Lifan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Haoyang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Yueti",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Gao",
+    "given": "Ge",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Bleisch",
+    "given": "William V.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Biological Conservation"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     1
+    ]
+   ]
+  },
+  "page": "110863",
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     1
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Biological Conservation"
+  ],
+  "title": [
+   "Spatiotemporal distribution patterns of large and medium-sized mammals in a biodiversity hotspot: mplications for conservation"
+  ],
+  "type": "journal-article",
+  "volume": "301"
+ },
+ "10.1016/j.biocon.2026.111828": {
+  "article-number": "111828",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Wenqiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Liu",
+    "given": "Yang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Biological Conservation"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     6
+    ]
+   ]
+  },
+  "page": "111828",
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     6
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Biological Conservation"
+  ],
+  "title": [
+   "Beyond species richness: Habitat fragmentation reduces community occupancy and functional richness of mountain forest mammals"
+  ],
+  "type": "journal-article",
+  "volume": "318"
+ },
+ "10.1016/j.ecolind.2023.110595": {
+  "article-number": "110595",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Mathenge",
+    "given": "James",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Ecological Indicators"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     10
+    ]
+   ]
+  },
+  "page": "110595",
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     10
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Ecological Indicators"
+  ],
+  "title": [
+   "Untangling key abiotic predictors of terrestrial mammal diversity patterns across ecoregions and species groups in Kenya"
+  ],
+  "type": "journal-article",
+  "volume": "154"
+ },
+ "10.1016/j.gecco.2025.e03854": {
+  "article-number": "e03854",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0007-3953-6637",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Bai",
+    "given": "Ru",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Ji",
+    "given": "Yinqiu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Wenqiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "He",
+    "given": "Shuiwang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xiong",
+    "given": "Yun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhang",
+    "given": "Jianglin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Global Ecology and Conservation"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10
+    ]
+   ]
+  },
+  "page": "e03854",
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     10
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Global Ecology and Conservation"
+  ],
+  "title": [
+   "Seasonal differences and downstream transport of terrestrial vertebrate eDNA: Insights from integrated camera-trap survey and water eDNA metabarcoding"
+  ],
+  "type": "journal-article",
+  "volume": "62"
+ },
+ "10.1016/j.ympev.2026.108549": {
+  "article-number": "108549",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Demos",
+    "given": "Terrence C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kerbis Peterhans",
+    "given": "Julian C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Nicolas",
+    "given": "Violaine",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Mikula",
+    "given": "Ondřej",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Bryjová",
+    "given": "Anna",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hounmavo",
+    "given": "Amétépé",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Monadjem",
+    "given": "Ara",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Bryja",
+    "given": "Josef",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Molecular Phylogenetics and Evolution"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     4
+    ]
+   ]
+  },
+  "page": "108549",
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     4
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Molecular Phylogenetics and Evolution"
+  ],
+  "title": [
+   "Diversification and biogeographic history of African dormice (genus Graphiurus) revealed by ultraconserved elements and mitochondrial data"
+  ],
+  "type": "journal-article",
+  "volume": "217"
+ },
+ "10.1016/j.ympev.2026.108652": {
+  "article-number": "108652",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Yi-Xian",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wen-Yu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xue-You",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Pei",
+    "given": "Xiao-Xin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hong-Jiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Fu",
+    "given": "Chang-Kun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Liu",
+    "given": "Shao-Ying",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Molecular Phylogenetics and Evolution"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     10
+    ]
+   ]
+  },
+  "page": "108652",
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     10
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Molecular Phylogenetics and Evolution"
+  ],
+  "title": [
+   "Integrative taxonomic revision of Uropsilus (Uropsilinae, Talpidae) combining genomic, morphological and geographic evidence"
+  ],
+  "type": "journal-article",
+  "volume": "223"
+ },
+ "10.1038/s41598-025-04609-w": {
+  "article-number": "19478",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Koju",
+    "given": "Narayan Prasad",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Anish",
+    "given": "K. C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Dodhari",
+    "given": "Keshav",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Giri",
+    "given": "Pratikshya",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Lee",
+    "given": "Miriam",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Pokhrel",
+    "given": "Sudip",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Ghimire",
+    "given": "Asmina",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Nyaichyai",
+    "given": "Lila",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kyes",
+    "given": "Randall C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Scientific Reports"
+  ],
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     6,
+     3
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     6,
+     3
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Sci Rep"
+  ],
+  "title": [
+   "Spatiotemporal patterns and environmental determinants of wildlife-vehicle collisions in Banke National Park, Nepal"
+  ],
+  "type": "journal-article",
+  "volume": "15"
+ },
+ "10.1093/jmammal/gyad087": {
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University , Wuhu, Anhui 241002 , China"
+     },
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution & Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan 650204 , China"
+     }
+    ],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University , Wuhu, Anhui 241002 , China"
+     }
+    ],
+    "family": "Hu",
+    "given": "Jiangxiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Conservation and Application in Biodiversity of South China, School of Life Sciences, Guangzhou University , Guangzhou, Guangdong 510006 , China"
+     }
+    ],
+    "family": "He",
+    "given": "Kai",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "School of Life Sciences, Anhui University , Hefei, Anhui 230601 , China"
+     }
+    ],
+    "family": "Zhang",
+    "given": "Baowei",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Administrative Committee of Yaoluoping National Nature Reserve , Yuexi, Anhui 246600 , China"
+     }
+    ],
+    "family": "Zhang",
+    "given": "Yucai",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Administrative Committee of Yaoluoping National Nature Reserve , Yuexi, Anhui 246600 , China"
+     }
+    ],
+    "family": "Chu",
+    "given": "Jun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "College of Life Science, Anqing Normal University , Anqing 246011 , China"
+     }
+    ],
+    "family": "Zhao",
+    "given": "Kai",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution & Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan 650204 , China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth O",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution & Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan 650204 , China"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Journal of Mammalogy"
+  ],
+  "issue": "6",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     13
+    ]
+   ]
+  },
+  "page": "1455-1467",
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     13
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Molecular and morphological evidence support a new species of Asiatic short-tailed shrew (Eulipotyphla: Soricidae)"
+  ],
+  "type": "journal-article",
+  "volume": "104"
+ },
+ "10.1093/sysbio/syaf052": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0001-3025-6993",
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     },
+     {
+      "name": "University of Chinese Academy of Sciences Kunming College of Life Sciences, , No. 19 Qingsong Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Li",
+    "given": "Yi-Xian",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Anhui Normal University Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, , No. 189 Jiuhuanan Road, Yijiang District, Wuhu, Anhui 241002 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7536-5475",
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "family": "Zhang",
+    "given": "Tao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "University of Potsdam Unit of Evolutionary Biology/Systematic Zoology, Institute of Biochemistry and Biology, , 10 Am Neuen Palais, Potsdam 14476 ,",
+      "place": [
+       "Germany"
+      ]
+     }
+    ],
+    "family": "Cheng",
+    "given": "Feng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1274-259X",
+    "affiliation": [
+     {
+      "name": "Dali University Vector Laboratory, Institute of Pathogens and Vectors, Yunnan Provincial Key Laboratory for Zoonosis Control and Prevention, , No. 2 Hongsheng Road, Dali Town, Dali, Yunnan 671000 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Song",
+    "given": "Wen-Yu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "family": "Li",
+    "given": "Xue-You",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "family": "He",
+    "given": "Shui-Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "family": "Wang",
+    "given": "Hong-Jiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Chinese Academy of Sciences State Key Laboratory of Genetic Evolution and Animal Models and Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, , No. 17 Longxin Road, Panlong District, Kunming, Yunnan 650201 ,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Systematic Biology"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     31
+    ]
+   ]
+  },
+  "page": "221-235",
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     31
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Species Diversification in the Sky Islands of Southwestern China Revealed by Genomic, Introgression, and Demographic Analyses of Asian Shrew Moles"
+  ],
+  "type": "journal-article",
+  "volume": "75"
+ },
+ "10.1093/zoolinnean/zlaa172": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3821-0145",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     },
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University , Wuhu, Anhui, China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     }
+    ],
+    "family": "He",
+    "given": "Shui-Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     },
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University , Wuhu, Anhui, China"
+     }
+    ],
+    "family": "Hu",
+    "given": "Wen-Hao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     }
+    ],
+    "family": "Song",
+    "given": "Wen-Yu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     }
+    ],
+    "family": "Onditi",
+    "given": "Kenneth O",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     }
+    ],
+    "family": "Li",
+    "given": "Xue-You",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences , Kunming, Yunnan, China"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Zoological Journal of the Linnean Society"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     1,
+     8
+    ]
+   ]
+  },
+  "page": "432-444",
+  "published": {
+   "date-parts": [
+    [
+     2021,
+     1,
+     8
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Morphology and phylogeny of scalopine moles (Eulipotyphla: Talpidae: Scalopini) from the eastern Himalayas, with descriptions of a new genus and species"
+  ],
+  "type": "journal-article",
+  "volume": "193"
+ },
+ "10.1111/1365-2664.14857": {
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "State Key Lab of Biocontrol and School of Ecology Sun Yat‐Sen University  Shenzhen China"
+     }
+    ],
+    "family": "Huang",
+    "given": "Cheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4311-9824",
+    "affiliation": [
+     {
+      "name": "Division of Ecology and Evolution, Research School of Biology Australian National University  Canberra Australian Capital Territory Australia"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Chen",
+    "given": "Yiqing",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Southeast Asia Biodiversity Research Institute, Chinese Academy of Sciences &amp; Center for Integrative Conservation, Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences  Mengla Yunnan China"
+     }
+    ],
+    "family": "Li",
+    "given": "Li‐Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4657-4216",
+    "affiliation": [
+     {
+      "name": "Southeast Asia Biodiversity Research Institute, Chinese Academy of Sciences &amp; Center for Integrative Conservation, Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences  Mengla Yunnan China"
+     },
+     {
+      "name": "Yunnan International Joint Laboratory of Southeast Asia Biodiversity Conservation &amp; Yunnan Key Laboratory for Conservation of Tropical Rainforests and Asian Elephants  Mengla Yunnan China"
+     },
+     {
+      "name": "Yunnan International Joint Laboratory for the Conservation and Utilization of Tropical Timber Tree Species, Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences  Mengla Yunnan China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Campos‐Arceiz",
+    "given": "Ahimsa",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Biocontrol, School of Life Sciences Sun Yat‐Sen University  Guangzhou China"
+     }
+    ],
+    "family": "Wang",
+    "given": "Yi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology Chinese Academy of Sciences  Kunming China"
+     },
+     {
+      "name": "Department of Zoology National Museums of Kenya  Nairobi Kenya"
+     },
+     {
+      "name": "Sino−Africa Joint Research Centre Chinese Academy of Sciences  Nairobi Kenya"
+     }
+    ],
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Lab of Animal Behavior &amp; Conservation, School of Life Sciences Nanjing University  Nanjing China"
+     }
+    ],
+    "family": "Li",
+    "given": "Zhongqiu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Biodiversity and Ecological Engineering, School of Life Sciences, Ministry of Education Beijing Normal University  Beijing China"
+     }
+    ],
+    "family": "Feng",
+    "given": "Limin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4580-5518",
+    "affiliation": [
+     {
+      "name": "State Key Lab of Biocontrol and School of Ecology Sun Yat‐Sen University  Shenzhen China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Liu",
+    "given": "Yang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Lab of Biocontrol and School of Ecology Sun Yat‐Sen University  Shenzhen China"
+     }
+    ],
+    "family": "Lee",
+    "given": "Tien Ming",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Journal of Applied Ecology"
+  ],
+  "issue": "3",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     1,
+     26
+    ]
+   ]
+  },
+  "page": "527-544",
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     1,
+     26
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Journal of Applied Ecology"
+  ],
+  "title": [
+   "Human–wildlife coexistence needs more evidence‐based interventions to reduce the losses of crops, livestock and fishery catches"
+  ],
+  "type": "journal-article",
+  "volume": "62"
+ },
+ "10.1111/cobi.70214": {
+  "article-number": "e70214",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-4705-6082",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0006-2576-3890",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Hu",
+    "given": "Wenqiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Bai",
+    "given": "Ru",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Liu",
+    "given": "Yang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology Chinese Academy of Sciences Kunming China"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Conservation Biology"
+  ],
+  "issue": "3",
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     7
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     7
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Conservation Biology"
+  ],
+  "title": [
+   "Functional homogenization of terrestrial mammals outside protected areas in the Hengduan Mountains, China"
+  ],
+  "type": "journal-article",
+  "volume": "40"
+ },
+ "10.1111/gcb.70916": {
+  "article-number": "e70916",
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     },
+     {
+      "name": "Kunming College of Life Sciences, University of Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "family": "Liu",
+    "given": "Yang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "family": "Hu",
+    "given": "Wenqiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2052-2490",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution and Animal Models &amp; Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences  Kunming China"
+     }
+    ],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Global Change Biology"
+  ],
+  "issue": "5",
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     5
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     5
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Global Change Biology"
+  ],
+  "title": [
+   "Human Pressures Drive Compositional Homogenization and Functional Shifts in Southeast Asian Mammal Communities"
+  ],
+  "type": "journal-article",
+  "volume": "32"
+ },
+ "10.1186/s12862-021-01813-w": {
+  "article-number": "89",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Demos",
+    "given": "Terrence C.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kerbis Peterhans",
+    "given": "Julian",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Bryja",
+    "given": "Josef",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Lavrenchenko",
+    "given": "Leonid A.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Verheyen",
+    "given": "Erik",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Van de Perre",
+    "given": "Frederik",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Akaibe",
+    "given": "Benjamin Dudu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "de la Sancha",
+    "given": "Noé U.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "BMC Ecology and Evolution"
+  ],
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     5,
+     19
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2021,
+     5,
+     19
+    ]
+   ]
+  },
+  "short-container-title": [
+   "BMC Ecol Evo"
+  ],
+  "title": [
+   "Historical biogeography, systematics, and integrative taxonomy of the non-Ethiopian speckled pelage brush-furred rats (Lophuromys flavopunctatus group)"
+  ],
+  "type": "journal-article",
+  "volume": "21"
+ },
+ "10.1186/s12862-024-02328-w": {
+  "article-number": "139",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1342-5556",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "de la Sancha",
+    "given": "Noé U.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "BMC Ecology and Evolution"
+  ],
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     8
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     8
+    ]
+   ]
+  },
+  "short-container-title": [
+   "BMC Ecol Evo"
+  ],
+  "title": [
+   "Unravelling spatial scale effects on elevational diversity gradients: insights from montane small mammals in Kenya"
+  ],
+  "type": "journal-article",
+  "volume": "24"
+ },
+ "10.21203/rs.3.rs-10531544/v1": {
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Zhu",
+    "given": "Chenyang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Yang",
+    "given": "Mingwei",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Liu",
+    "given": "Yang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Kunming Institute of Zoology"
+     }
+    ],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     5
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     5
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Non-random defaunation across China’s protected area network revealed by multidimensional dark diversity"
+  ],
+  "type": "posted-content"
+ },
+ "10.2139/ssrn.7010506": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Zhechang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Yu",
+    "given": "Qiupeng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "Onditi",
+    "given": "Kenneth  Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhu",
+    "given": "Chenyang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Liu",
+    "given": "Yang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth  Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "The protection of Asian elephants in China caught in a conservation trap"
+  ],
+  "type": "posted-content"
+ },
+ "10.24272/j.issn.2095-8137.2019.004": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "陈中正",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "李权",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yego",
+    "given": "Richard",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "张斌",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Muthoni",
+    "given": "Immaculate",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "何水旺",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Omondi",
+    "given": "Samson",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Mathenge",
+    "given": "James",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "N. Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "蒋学龙",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yego",
+    "given": "Richard",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhang",
+    "given": "Bin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Muthoni",
+    "given": "Immaculate",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "He",
+    "given": "Shui-Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Omondi",
+    "given": "Samson",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Mathenge",
+    "given": "James",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "N. Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "动物学研究",
+   "Zoological Research"
+  ],
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "page": "53-60",
+  "published": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Zool. Res.",
+   "ZR"
+  ],
+  "title": [
+   "肯尼亚山非飞行小型兽类多样性及其垂直分布格局",
+   "Diversity and distribution patterns of non-volant small mammals along different elevation gradients on Mt. Kenya, Kenya"
+  ],
+  "type": "journal-article",
+  "volume": "40"
+ },
+ "10.24272/j.issn.2095-8137.2020.085": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wen-Yu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "中国科学院昆明动物研究所遗传资源与进化国家重点实验室，云南 昆明650223，中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, Yunnan 650223 China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xue-You",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Otieno Onditi",
+    "given": "Kenneth",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "He",
+    "given": "Shui-Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "中国科学院大学昆明生命科学院，云南 昆明650223，中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "安徽师范大学生态与环境学院皖江流域退化生态系统的恢复与重建省部共建协同创新中心，安徽 芜湖241000，中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Kunming College of Life Science, University of Chinese Academy of Sciences, Kunming, Yunnan 650223 China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, Anhui 241000 China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Zoological Research"
+  ],
+  "issue": "6",
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "page": "670-683",
+  "published": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Isolated alpine habitats reveal disparate ecological drivers of taxonomic and functional beta-diversity of small mammal assemblages"
+  ],
+  "type": "journal-article",
+  "volume": "41"
+ },
+ "10.24272/j.issn.2095-8137.2026.291": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "ZhongZheng",
+    "given": "Chen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "Vector Laboratory, Institute of Pathogens and Vectors, Dali University",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Yicheng",
+    "given": "Shen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Min",
+    "given": "Zhang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xiaoxin",
+    "given": "Pei",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yifan",
+    "given": "Xu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wenyu",
+    "given": "Song",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhongxu",
+    "given": "Zhu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kenneth",
+    "given": "Onditi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xuelong",
+    "given": "Jiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "中科院昆明动物研究所",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, Yunnan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University Wuhu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Zoological Research"
+  ],
+  "issue": "0",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "page": "0-0",
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Systematic revision and species diversification of the genus &lt;i&gt;Episoriculus&lt;/i&gt; (Mammalia: Eulipotyphla: Soricidae), with descriptions of two new species"
+  ],
+  "type": "journal-article",
+  "volume": "0"
+ },
+ "10.24272/j.issn.2097-3772.2023.005": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Quan",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "中国科学院昆明动物研究所遗传资源与进化国家重点实验室 & 云南省高黎贡山生物多样性与生态安全重点实验室, 云南 昆明 650223, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "State Key Laboratory of Genetic Resources and Evolution & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, Yunnan 650223, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Xue-You",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wen-Qiang",
+    "given": "Hu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wen-Yu",
+    "given": "Song",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Shui-Wang",
+    "given": "He",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hong-Jiao",
+    "given": "Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhe-Chang",
+    "given": "Hu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Meng-Cheng",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kenneth",
+    "given": "Otieno Onditi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhong-Zheng",
+    "given": "Chen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chang-Zhe",
+    "given": "Pu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yun",
+    "given": "Xiong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Cai-Hong",
+    "given": "Rao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Fu-You",
+    "given": "Zhang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chang-Sheng",
+    "given": "Zuo",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xue-Long",
+    "given": "Jiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "高黎贡山森林生态系统云南省野外科学观测研究站 & 独龙江森林生态系统野外科学观测研究站, 云南 昆明 650223, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "中国科学院大学, 北京 101408, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "大理大学病原与媒介生物研究所云南省自然疫源性疾病防控技术重点实验室, 云南 大理 671000, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "安徽师范大学生态与环境学院, 安徽 芜湖 241002, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "高黎贡山国家级自然保护区贡山管护局, 云南 怒江 673500, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "高黎贡山国家级自然保护区福贡管护局, 云南 怒江 673400, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "高黎贡山国家级自然保护区保山管护局, 云南 保山 678000, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "云南铜壁关省级自然保护区管护局, 云南 德宏 679300, 中国",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Gaoligong Mountain Forest Ecosystem Observation and Research Station of Yunnan Province & Dulongjiang Forest Ecosystem Research Station, Kunming, Yunnan 650223, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "University of Chinese Academy of Sciences, Beijing 101408, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Vector Laboratory, Institute of Pathogens and Vectors, Yunnan Provincial Key Laboratory for Zoonosis Control and Prevention, Dali University, Dali, Yunnan 671000, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "School of Ecology and Environment, Anhui Normal University, Wuhu, Anhui 241002, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Gongshan Administrative Sub-Bureau of Gaoligongshan National Nature Reserve, Nujiang, Yunnan 673500, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Fugong Administrative Sub-Bureau of Gaoligongshan National Nature Reserve, Nujiang, Yunnan 673400, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Baoshan Administrative Bureau of Gaoligongshan National Nature Reserve, Baoshan, Yunnan 678000, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Administrative Bureau of Tongbiguan Provincial Nature Reserve, Dehong, Yunnan 679300, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Zoological Research: Diversity and Conservation"
+  ],
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "page": "3-19",
+  "published": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "中国高黎贡山兽类多样性、分布和保护研究",
+   "Mammals of Gaoligong Mountain in China: Diversity, distribution, and conservation"
+  ],
+  "type": "journal-article",
+  "volume": "1"
+ },
+ "10.24272/j.issn.2097-3772.2024.011": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Si-Yuan",
+    "given": "Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "中国科学院昆明动物研究所遗传进化与动物模型国家重点实验室 & 云南省高黎贡山生物多样性与生态安全重点实验室, 中国云南昆明 650223",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "Key Laboratory of Genetic Evolution and Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Security of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, Yunnan 650223, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Yi-Xian",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Quan",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wen-Yu",
+    "given": "Song",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Hong-Jiao",
+    "given": "Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Shui-Wang",
+    "given": "He",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kenneth",
+    "given": "Otieno Onditi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Laxman",
+    "given": "Khanal",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xue-You",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhong-Zheng",
+    "given": "Chen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xue-Long",
+    "given": "Jiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "中国科学院昆明生命科学学院, 中国北京 100101",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "大理大学病原与媒介生物研究所 云南省自然疫源性疾病防控技术重点实验室, 中国云南大理671000",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Central Department of Zoology, Institute of Science and Technology, Tribhuvan University, Kathmandu 44618, Nepal",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "安徽师范大学生态与环境学院 皖江城市带退化生态系统的恢复与重建协同创新中心 中国安徽芜湖 241002",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Kunming College of Life Science, University of Chinese Academy of Sciences; Beijing 100101, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Vector Laboratory, Institute of Pathogens and Vectors, Yunnan Provincial Key Laboratory for Zoonosis Control and Prevention, Dali University, Dali, Yunnan 671000, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Central Department of Zoology, Institute of Science and Technology, Tribhuvan University, Kathmandu 44618, Nepal",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, Anhui 241002, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Zoological Research: Diversity and Conservation"
+  ],
+  "issue": "4",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "page": "282-289",
+  "published": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "西藏南部松田鼠属一新种 (Rodentia, Cricetidae, &lt;i&gt;Neodon&lt;/i&gt;)",
+   "A new species of mountain vole (Rodentia, Cricetidae, &lt;i&gt;Neodon&lt;/i&gt;) from south Xizang, China"
+  ],
+  "type": "journal-article",
+  "volume": "1"
+ },
+ "10.24272/j.issn.2097-3772.2025.030": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Brian",
+    "given": "Anoto Sambaya",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "name": "State Key Laboratory of Genetic Evolution and Animal Models, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, Yunnan 650201, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Samson",
+    "given": "Mabeya Ouru",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Shui-Wang",
+    "given": "He",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Simon",
+    "given": "Musila",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Quan",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhong-Zheng",
+    "given": "Chen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wen-Yu",
+    "given": "Song",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xue-You",
+    "given": "Li",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kenneth",
+    "given": "Otieno Onditi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xue-Long",
+    "given": "Jiang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Kunming College of Life Sciences, University of Chinese Academy of Sciences, Kunming, Yunnan 650201, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Mammal Section, Department of Zoology, National Museums of Kenya, Nairobi 40658-00100, Kenya",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Collaborative Innovation Centre of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, Anhui 241002, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Vector Laboratory, Institute of Pathogens and Vectors, Yunnan Provincial Key Laboratory for Zoonosis Control and Prevention, Dali University, Dali, Yunnan 671003, China",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "name": "Sino-Africa Joint Research Centre, Chinese Academy of Sciences, Nairobi 62000-00200, Kenya",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Zoological Research: Diversity and Conservation"
+  ],
+  "issue": "4",
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "page": "233-249",
+  "published": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "short-container-title": [],
+  "title": [
+   "Integrative phylogeography of African striped grass mice &lt;i&gt;(Lemniscomys)&lt;/i&gt;: Cryptic diversity and habitat resilience"
+  ],
+  "type": "journal-article",
+  "volume": "2"
+ },
+ "10.3389/fevo.2021.742524": {
+  "article-number": "742524",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wen-Yu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xue-You",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "He",
+    "given": "Shui-Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Frontiers in Ecology and Evolution"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     5
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     5
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Front. Ecol. Evol."
+  ],
+  "title": [
+   "Patterns and Predictors of Small Mammal Phylogenetic and Functional Diversity in Contrasting Elevational Gradients in Kenya"
+  ],
+  "type": "journal-article",
+  "volume": "9"
+ },
+ "10.3389/fevo.2022.999573": {
+  "article-number": "999573",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wen-Yu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xue-You",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhong-Zheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "He",
+    "given": "Shui-Wang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Jiang",
+    "given": "Xue-Long",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Frontiers in Ecology and Evolution"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     4
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     4
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Front. Ecol. Evol."
+  ],
+  "title": [
+   "Decomposing niche components reveals simultaneous effects of opposite deterministic processes structuring alpine small mammal assembly"
+  ],
+  "type": "journal-article",
+  "volume": "10"
+ },
+ "10.3389/fevo.2023.1231553": {
+  "article-number": "1231553",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Oyebanji",
+    "given": "Oyetola O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Azevedo",
+    "given": "Josué A. R.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Rahaingoson",
+    "given": "Fabien R.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Nneji",
+    "given": "Lotanna M.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Adeleye",
+    "given": "Matthew. A.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Stull",
+    "given": "Gregory W.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhang",
+    "given": "Rong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yi",
+    "given": "Ting-Shuang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Frontiers in Ecology and Evolution"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     9,
+     14
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     9,
+     14
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Front. Ecol. Evol."
+  ],
+  "title": [
+   "Biogeographic patterns and environmental drivers of species richness in the globally distributed Millettioid/Phaseoloid clade (Fabaceae, subfamily Papilionoideae)"
+  ],
+  "type": "journal-article",
+  "volume": "11"
+ },
+ "10.3390/ani12151915": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-7137-2600",
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Pei",
+    "given": "Xiaoxin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3137-0309",
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Ren",
+    "given": "Xueyang",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "family": "Hu",
+    "given": "Jiangxiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650201, China"
+     },
+     {
+      "name": "Kunming College of Life Science, University of Chinese Academy of Sciences, Kunming 650201, China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "family": "Xu",
+    "given": "Yifan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     },
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650201, China"
+     }
+    ],
+    "family": "Zhang",
+    "given": "Min",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "family": "Chang",
+    "given": "Wenqing",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Animals"
+  ],
+  "issue": "15",
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     27
+    ]
+   ]
+  },
+  "page": "1915",
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     27
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Animals"
+  ],
+  "title": [
+   "Human Disturbance and Geometric Constraints Drive Small Mammal Diversity and Community Structure along an Elevational Gradient in Eastern China"
+  ],
+  "type": "journal-article",
+  "volume": "12"
+ },
+ "10.3390/d14020087": {
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "Anhui Provincial Key Laboratory of the Conservation and Exploitation of Biological Resources, College of Life Sciences, Anhui Normal University, Wuhu 241000, China"
+     },
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     },
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650204, China"
+     }
+    ],
+    "family": "Hu",
+    "given": "Wenhao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650204, China"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Resources and Evolution, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650204, China"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "family": "Wu",
+    "given": "Hailong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Anhui Provincial Key Laboratory of the Conservation and Exploitation of Biological Resources, College of Life Sciences, Anhui Normal University, Wuhu 241000, China"
+     },
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-Founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu 241002, China"
+     }
+    ],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Diversity"
+  ],
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     27
+    ]
+   ]
+  },
+  "page": "87",
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     27
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Diversity"
+  ],
+  "title": [
+   "Modeling the Potential Distribution of Two Species of Shrews (Chodsigoa hypsibia and Anourosorex squamipes) under Climate Change in China"
+  ],
+  "type": "journal-article",
+  "volume": "14"
+ },
+ "10.3390/life14111469": {
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650201, China"
+     },
+     {
+      "name": "Zoology Section, National Museums of Kenya, Nairobi P.O. Box 40658-00100, Kenya"
+     }
+    ],
+    "family": "Mweu",
+    "given": "Alois Wambua",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650201, China"
+     },
+     {
+      "name": "Zoology Section, National Museums of Kenya, Nairobi P.O. Box 40658-00100, Kenya"
+     },
+     {
+      "name": "Sino-Africa Joint Research Centre, Chinese Academy of Sciences, Nairobi P.O. Box 62000-00200, Kenya"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2411-3627",
+    "affiliation": [
+     {
+      "name": "Central Department of Zoology, Institute of Science and Technology, Tribhuvan University, Kathmandu 44618, Nepal"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Khanal",
+    "given": "Laxman",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Zoology Section, National Museums of Kenya, Nairobi P.O. Box 40658-00100, Kenya"
+     }
+    ],
+    "family": "Musila",
+    "given": "Simon",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Zoology Section, National Museums of Kenya, Nairobi P.O. Box 40658-00100, Kenya"
+     }
+    ],
+    "family": "Kioko",
+    "given": "Esther",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2052-2490",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Genetic Evolution and Animal Models, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming 650201, China"
+     },
+     {
+      "name": "Sino-Africa Joint Research Centre, Chinese Academy of Sciences, Nairobi P.O. Box 62000-00200, Kenya"
+     }
+    ],
+    "authenticated-orcid": false,
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Life"
+  ],
+  "issue": "11",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     12
+    ]
+   ]
+  },
+  "page": "1469",
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     12
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Life"
+  ],
+  "title": [
+   "Comparative Phylogeography of Two Specialist Rodents in Forest Fragments in Kenya"
+  ],
+  "type": "journal-article",
+  "volume": "14"
+ },
+ "10.3897/vz.76.e188776": {
+  "author": [
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, China"
+     },
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Diao",
+    "given": "Haixin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, China"
+     }
+    ],
+    "family": "Xiong",
+    "given": "Yuxin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, China"
+     }
+    ],
+    "family": "Nie",
+    "given": "Wenli",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Pei",
+    "given": "Xiaoxin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Vector Laboratory, Institute of Pathogens and Vectors, Dali University, Dali, China"
+     }
+    ],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, China"
+     }
+    ],
+    "family": "Wang",
+    "given": "Xiaohan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "South China Biodiversity Research Center, School of Life Sciences, Guangzhou University, Guangzhou, China"
+     }
+    ],
+    "family": "He",
+    "given": "Kai",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "Collaborative Innovation Center of Recovery and Reconstruction of Degraded Ecosystem in Wanjiang Basin Co-founded by Anhui Province and Ministry of Education, School of Ecology and Environment, Anhui Normal University, Wuhu, China"
+     }
+    ],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Genetic Evolution & Animal Models & Yunnan Key Laboratory of Biodiversity and Ecological Conservation of Gaoligong Mountain, Kunming Institute of Zoology, Chinese Academy of Sciences, Kunming, China"
+     }
+    ],
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Vertebrate Zoology"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     19
+    ]
+   ]
+  },
+  "page": "611-624",
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     19
+    ]
+   ]
+  },
+  "short-container-title": [
+   "VZ"
+  ],
+  "title": [
+   "Geographic isolation and climatic heterogeneity shape the genetic diversity of Blarinellini (Eulipotyphla: Soricidae) in the Hengduan Mountains"
+  ],
+  "type": "journal-article",
+  "volume": "76"
+ },
+ "10.3897/zookeys.1083.78233": {
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Hu",
+    "given": "Tingli",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Pei",
+    "given": "Xiaoxin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yang",
+    "given": "Guangdao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yong",
+    "given": "Fan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Xu",
+    "given": "Zhen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Qu",
+    "given": "Weiying",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhang",
+    "given": "Baowei",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "ZooKeys"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     25
+    ]
+   ]
+  },
+  "page": "129-146",
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     25
+    ]
+   ]
+  },
+  "short-container-title": [
+   "ZK"
+  ],
+  "title": [
+   "﻿A new species of Asiatic shrew of the genus Chodsigoa (Soricidae, Eulipotyphla, Mammalia) from the Dabie Mountains, Anhui Province, eastern China"
+  ],
+  "type": "journal-article",
+  "volume": "1083"
+ },
+ "10.3897/zookeys.1185.111615": {
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0008-5165-6604",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "Shi",
+    "given": "Zifan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "affiliation": [],
+    "family": "Yao",
+    "given": "Hongfeng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6234-2589",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "He",
+    "given": "Kai",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Bai",
+    "given": "Weipeng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1038-1540",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "Zhou",
+    "given": "Jiajun",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Fan",
+    "given": "Jingyi",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Su",
+    "given": "Weiting",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Nie",
+    "given": "Wenhui",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Yang",
+    "given": "Shuzhen",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4034-6818",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "Onditi",
+    "given": "Kenneth O.",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2052-2490",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3821-0145",
+    "affiliation": [],
+    "authenticated-orcid": true,
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "ZooKeys"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     11,
+     28
+    ]
+   ]
+  },
+  "page": "143-161",
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     11,
+     28
+    ]
+   ]
+  },
+  "short-container-title": [
+   "ZK"
+  ],
+  "title": [
+   "﻿A new species of forest hedgehog (Mesechinus, Erinaceidae, Eulipotyphla, Mammalia) from eastern China"
+  ],
+  "type": "journal-article",
+  "volume": "1185"
+ }
+}

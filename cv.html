@@ -259,9 +259,14 @@
 }
 
 /* Print / Download button */
-.cv-download {
+.cv-actions {
   position: fixed;
   bottom: 28px; right: 76px;
+  display: flex;
+  gap: 10px;
+  z-index: 500;
+}
+.cv-download {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -276,12 +281,14 @@
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s;
-  z-index: 500;
+  white-space: nowrap;
 }
 .cv-download:hover { background: rgba(200,148,58,0.08); }
+.cv-download-primary { background: rgba(200,148,58,0.12); }
+.cv-download-primary:hover { background: rgba(200,148,58,0.22); }
 
 @media print {
-  nav, footer, .cv-download, #back-top { display: none !important; }
+  nav, footer, .cv-actions, #back-top { display: none !important; }
   body { background: white; color: black; }
   .cv-grid { grid-template-columns: 200px 1fr; gap: 40px; }
   .cv-entry { border-left-color: #ccc; }
@@ -291,7 +298,7 @@
 
 @media (max-width: 860px) {
   .cv-grid { grid-template-columns: 1fr; gap: 40px; }
-  .cv-download { right: 28px; bottom: 76px; }
+  .cv-actions { right: 28px; bottom: 76px; }
 }
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
@@ -628,10 +635,16 @@
 
 </div><!-- /page-body -->
 
-<!-- CV Download / Print button -->
-<a class="cv-download" onclick="window.print();return false;" href="#" title="Print CV">
-  🖨 Print / Save PDF
-</a>
+<!-- CV download / print buttons -->
+<div class="cv-actions">
+  <a class="cv-download cv-download-primary" href="cv/OKOnditi_CV_2026.pdf"
+     download="OKOnditi_CV_2026.pdf" title="Download the full CV as a PDF">
+    &#11015; Download CV
+  </a>
+  <a class="cv-download" onclick="window.print();return false;" href="#" title="Print this page">
+    &#128424; Print
+  </a>
+</div>
 
 <button id="back-top" style="position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--panel);border:1px solid var(--border);color:var(--gold);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;" title="Back to top">↑</button>
 
