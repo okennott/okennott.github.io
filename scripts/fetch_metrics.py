@@ -22,6 +22,7 @@ failed AND there was no previous file to fall back on.
 
 import json
 import os
+import re
 import sys
 import threading
 import time
@@ -96,7 +97,18 @@ def from_library():
                 or "preprint" in (item.get("note") or "").lower()
                 or "preprint" in (item.get("container-title") or "").lower())
 
+    def is_correction(item):
+        """An erratum is a fix to an existing paper, not an additional one.
+
+        The library keeps them because they are part of the published record,
+        but counting one as a separate article overstates the output by one
+        and disagrees with the CV.
+        """
+        return bool(re.match(r"\s*(correction|erratum|corrigendum)\b",
+                             item.get("title") or "", re.I))
+
     preprints = [i for i in items if is_preprint(i)]
+    corrections = [i for i in items if is_correction(i) and not is_preprint(i)]
     years = []
     for item in items:
         try:
@@ -105,8 +117,9 @@ def from_library():
             pass
     stats = {
         "library_records":       len(items),
-        "library_peer_reviewed": len(items) - len(preprints),
+        "library_peer_reviewed": len(items) - len(preprints) - len(corrections),
         "library_preprints":     len(preprints),
+        "library_corrections":   len(corrections),
     }
     if years:
         stats["year_span"] = len(set(years))

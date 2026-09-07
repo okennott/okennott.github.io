@@ -1,32 +1,33 @@
 {
-  "citation_as_of": "2026-07-13",
+  "citation_as_of": "2026-09-07",
   "citation_profiles": {
     "openalex": {
-      "as_of": "2026-08-31",
+      "as_of": "2026-09-07",
       "citations": 288,
       "h_index": 10,
       "i10_index": 10
     },
     "scholar": {
-      "as_of": "2026-07-13",
-      "citations": 358,
-      "citations_since_2021": 346,
-      "h_index": 11,
-      "h_index_since_2021": 11,
+      "as_of": "2026-09-07",
+      "citations": 388,
+      "citations_since_2021": 376,
+      "h_index": 12,
+      "h_index_since_2021": 12,
       "i10_index": 12,
       "i10_index_since_2021": 12
     }
   },
   "citation_source": "scholar",
-  "citations": 358,
+  "citations": 388,
   "first_year": 2019,
-  "h_index": 11,
+  "h_index": 12,
   "i10_index": 12,
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-07",
   "latest_year": 2026,
-  "library_peer_reviewed": 39,
-  "library_preprints": 1,
-  "library_records": 40,
+  "library_corrections": 1,
+  "library_peer_reviewed": 38,
+  "library_preprints": 2,
+  "library_records": 41,
   "openalex_id": "https://openalex.org/A5086398996",
   "openalex_works": 50,
   "orcid_id": "0000-0003-4034-6818",
@@ -146,7 +147,7 @@
   "peer_review_first_year": 2020,
   "peer_review_journals": 22,
   "peer_review_latest_year": 2026,
-  "peer_reviewed_works": 39,
+  "peer_reviewed_works": 38,
   "peer_reviews": 74,
   "preprints": 2,
   "scholar_id": "qnHYvIIAAAAJ",
@@ -155,9 +156,9 @@
     "openalex": "ok",
     "orcid": "ok",
     "orcid_peer_reviews": "ok",
-    "scholar": "unavailable"
+    "scholar": "ok"
   },
-  "works_pending_in_orcid": 3,
+  "works_pending_in_orcid": 2,
   "works_total": 42,
   "year_span": 8
 }

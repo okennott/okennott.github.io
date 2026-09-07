@@ -279,7 +279,7 @@ function inferTags(item, fallbackTags = '') {
   const text = `${item.title || ''} ${item['container-title'] || ''}`.toLowerCase();
   const tags = new Set((fallbackTags || '').split(/\s+/).filter(Boolean));
   const firstAuthor = item.author?.[0]?.family || '';
-  if (/onditi/i.test(firstAuthor)) tags.add('first');
+  if (/onditi/i.test(firstAuthor) && !isCorrection(item)) tags.add('first');
   if (/systematic|phylogeograph|phylogen|taxonomy|taxonomic|new species|diversification|genomic|introgression|mitochondrial|ultraconserved|shrew|mole|vole|dormice|rodent|hedgehog|micromys|graphiurus|lemniscomys|lophuromys|mesechinus|neodon|chodsigoa/.test(text)) {
     tags.add('systematics');
   }
@@ -534,14 +534,23 @@ function formatMetricDate(iso) {
 }
 
 /* Numbers the site derives itself, so a tracker can bind to them the same way. */
+/* An erratum is a fix to a paper already in the list, not an extra paper.
+   It stays in the bibliography because it is part of the published record,
+   but counting it as another article overstates the output by one. */
+function isCorrection(item) {
+  return /^\s*(correction|erratum|corrigendum)\b/i.test(item?.title || '');
+}
+
 function derivedMetrics(items) {
   if (!Array.isArray(items) || !items.length) return {};
-  const peerReviewed = items.filter(i => i.type !== 'preprint');
+  const preprints    = items.filter(i => i.type === 'preprint');
+  const corrections  = items.filter(i => i.type !== 'preprint' && isCorrection(i));
   const years = items.map(publicationYear).filter(Boolean);
   return {
     library_records:       items.length,
-    library_peer_reviewed: peerReviewed.length,
-    library_preprints:     items.length - peerReviewed.length,
+    library_peer_reviewed: items.length - preprints.length - corrections.length,
+    library_preprints:     preprints.length,
+    library_corrections:   corrections.length,
     year_span:             new Set(years).size,
     first_year:            years.length ? Math.min(...years) : null,
     latest_year:           years.length ? Math.max(...years) : null

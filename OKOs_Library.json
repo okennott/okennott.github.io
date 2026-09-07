@@ -1767,6 +1767,7 @@
 		"id": "http://zotero.org/users/17243485/items/UAEREKCB",
 		"type": "article-journal",
 		"container-title": "Acta Theriologica Sinica",
+		"DOI": "10.16829/j.slxb.150613",
 		"issue": "3",
 		"note": "type: Journal Article",
 		"page": "312–324",
@@ -2315,6 +2316,59 @@
 					"2026",
 					8,
 					5
+				]
+			]
+		}
+	},
+	{
+		"id": "https://doi.org/10.2139/ssrn.7010506",
+		"type": "preprint",
+		"abstract": "Strict wildlife conservation policies have driven a notable population recovery of wild Asian elephants (Elephas maximus) across China. However, the rigid protective measures have produced an unintended spatial paradox: protected areas under strict governance are gradually being abandoned by resident elephants, which are increasingly dispersing into human-dominated landscapes and aggravating human–elephant conflict. We conducted a multi-year (3.6 years), landscape-scale camera-trapping survey across Xishuangbanna (Yunnan, China), deploying 170 camera traps (143 yielding valid data) over 72,739 valid trap-nights, and analysed the data using Bayesian occupancy modelling. Forest age had a strong negative effect on elephant habitat utilization probability: elephants avoided mature, closed-canopy forest cores within formal nature reserves and preferred disturbance-shaped, early-successional habitat mosaics at reserve peripheries. This forage-driven habitat shift intensified human–elephant conflict and is consistent with a fundamental mismatch between protected-area-centric conservation policies and the dynamic habitat requirements of wild Asian elephants. Our findings highlight an urgent need to rethink how conservation effectiveness is evaluated: functional habitat heterogeneity should take priority over coarse metrics such as forest cover or protected-area size. To sustain viable forest-dependent megaherbivore populations over the long term, active habitat management that simulates natural disturbance and restores heterogeneous successional mosaics should be preferred over the prevailing hands-off protection regimes. This study strengthens the theoretical basis for endangered-species habitat management and offers actionable guidance for environmental practitioners and policymakers.",
+		"container-title": "SSRN",
+		"DOI": "10.2139/ssrn.7010506",
+		"note": "type: Preprint; not peer reviewed",
+		"title": "The protection of Asian elephants in China caught in a conservation trap",
+		"URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7010506",
+		"author": [
+			{
+				"family": "Hu",
+				"given": "Zhechang"
+			},
+			{
+				"family": "Yu",
+				"given": "Qiupeng"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth  Otieno"
+			},
+			{
+				"family": "Zhu",
+				"given": "Chenyang"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Liu",
+				"given": "Yang"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026",
+					6,
+					27
 				]
 			]
 		}
