@@ -2,7 +2,7 @@
   "citation_as_of": "2026-09-07",
   "citation_profiles": {
     "openalex": {
-      "as_of": "2026-09-21",
+      "as_of": "2026-09-28",
       "citations": 290,
       "h_index": 10,
       "i10_index": 10
@@ -22,7 +22,7 @@
   "first_year": 2019,
   "h_index": 12,
   "i10_index": 12,
-  "last_updated": "2026-09-21",
+  "last_updated": "2026-09-28",
   "latest_year": 2026,
   "library_corrections": 1,
   "library_peer_reviewed": 38,
@@ -104,8 +104,18 @@
       "reviews": 2
     },
     {
+      "issn": "0006-3207",
+      "name": "Biological Conservation",
+      "reviews": 1
+    },
+    {
       "issn": "2578-4854",
       "name": "Conservation Science and Practice",
+      "reviews": 1
+    },
+    {
+      "issn": "1470-160X",
+      "name": "Ecological Indicators",
       "reviews": 1
     },
     {
@@ -145,10 +155,10 @@
     }
   ],
   "peer_review_first_year": 2020,
-  "peer_review_journals": 22,
+  "peer_review_journals": 24,
   "peer_review_latest_year": 2026,
   "peer_reviewed_works": 38,
-  "peer_reviews": 74,
+  "peer_reviews": 76,
   "preprints": 2,
   "scholar_id": "qnHYvIIAAAAJ",
   "sources": {
