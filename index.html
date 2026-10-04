@@ -289,10 +289,6 @@
   gap: 2px;
   margin-bottom: 20px;
 }
-/* Review service gets a full-width row: the label is long and the number
-   deserves to sit beside publications and citations, not be cropped. */
-.hero-stat-wide { grid-column: 1 / -1; }
-.hero-stat-wide .stat-num { font-size: 30px; }
 .hero-stat {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -743,12 +739,6 @@ a.news-item:focus-visible::after { color: var(--gold); }
             <span class="stat-sublabel"><a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&amp;hl=en" target="_blank" rel="noopener" data-metric="citation_source_name" data-metric-href="citation_source_url">Google Scholar</a></span>
             <span class="stat-sublabel">h&thinsp;=&thinsp;<span class="author-hindex" data-metric="h_index" id="stat-hindex">12</span> · i10&thinsp;=&thinsp;<span data-metric="i10_index" id="stat-i10">12</span></span>
             <span class="stat-sublabel hero-stat-date" data-metric="citation_snapshot_label">Saved 7 Sept 2026</span>
-          </div>
-          <div class="hero-stat hero-stat-wide">
-            <span class="stat-num" data-metric="peer_reviews">76</span>
-            <span class="stat-label">Manuscripts peer reviewed</span>
-            <span class="stat-sublabel"><span data-metric="peer_review_journals">24</span> journals · via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID</a></span>
-            <span class="stat-sublabel hero-stat-date" data-metric="peer_review_snapshot_label">Saved 4 Oct 2026</span>
           </div>
         </div>
         <p class="hero-stats-src" role="status">
