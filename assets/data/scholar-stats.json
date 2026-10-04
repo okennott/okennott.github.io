@@ -1,5 +1,5 @@
 {
-  "citation_as_of": "2026-09-07",
+  "citation_as_of": "2026-10-04",
   "citation_profiles": {
     "openalex": {
       "as_of": "2026-10-04",
@@ -8,20 +8,21 @@
       "i10_index": 12
     },
     "scholar": {
-      "as_of": "2026-09-07",
-      "citations": 388,
-      "citations_since_2021": 376,
+      "as_of": "2026-10-04",
+      "citations": 403,
+      "citations_since_2021": 391,
       "h_index": 12,
       "h_index_since_2021": 12,
-      "i10_index": 12,
-      "i10_index_since_2021": 12
+      "i10_index": 13,
+      "i10_index_since_2021": 13,
+      "provenance": "User-provided Google Scholar screenshot, 4 October 2026"
     }
   },
   "citation_source": "scholar",
-  "citations": 388,
+  "citations": 403,
   "first_year": 2019,
   "h_index": 12,
-  "i10_index": 12,
+  "i10_index": 13,
   "last_checked": "2026-10-04",
   "last_updated": "2026-10-04",
   "latest_year": 2026,
