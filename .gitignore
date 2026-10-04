@@ -3,6 +3,9 @@
 .vscode/
 .idea/
 
+# Local AI documentation rules
+ai_documentation_rules.md
+
 # OS / sync noise
 .DS_Store
 Thumbs.db

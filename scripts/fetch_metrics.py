@@ -9,8 +9,8 @@ Sources, in order of trust per field:
 
 ORCID and OpenAlex use the standard library only, so the critical path needs no
 pip install and cannot be broken by a dependency. Google Scholar has no API and
-blocks datacentre IPs, so it is strictly best-effort: time-boxed, never fatal,
-and only allowed to *raise* a metric that OpenAlex already established.
+blocks datacentre IPs, so it is strictly best-effort: time-boxed and never fatal.
+Citation figures stay together in independent, dated snapshots for each source.
 
 The script never destroys good data. Every field falls back to the value already
 in scholar-stats.json, and implausible drops in cumulative metrics are rejected
@@ -368,8 +368,12 @@ def days_between(earlier, later):
 
 def main():
     previous = load_previous()
+    today = time.strftime("%Y-%m-%d")
     if previous:
         log(f"Previous file: {json.dumps(previous, sort_keys=True)}\n")
+    _JOURNAL_CACHE.update({j["issn"]: j["name"]
+                           for j in previous.get("peer_review_breakdown", [])
+                           if j.get("issn") and j.get("name")})
 
     profiles = dict(previous.get("citation_profiles") or {})
     if not profiles and sane_count(previous.get("citations")):
@@ -377,7 +381,9 @@ def main():
         profiles["scholar"] = {k: previous[k] for k in PROFILE_FIELDS if k in previous}
         profiles["scholar"]["as_of"] = previous.get("last_updated") or "1970-01-01"
         log(f"Migrated legacy flat stats into a scholar snapshot: {profiles['scholar']}\n")
-    works, provenance, healthy = {}, {}, []
+    # Keep every previous field until its source supplies an accepted replacement.
+    # A successful library read must not erase ORCID data when ORCID is down.
+    works, provenance, healthy = dict(previous), {}, []
 
     # The bibliography shipped with the site.
     log("Reading local library...")
@@ -396,10 +402,16 @@ def main():
     log("Fetching orcid...")
     try:
         values = from_orcid()
-        taken, rejected = accept_work_counts(values, previous)
+        previous_orcid = dict(previous)
+        if sane_count(previous.get("orcid_peer_reviewed")):
+            previous_orcid["peer_reviewed_works"] = previous["orcid_peer_reviewed"]
+        taken, rejected = accept_work_counts(values, previous_orcid)
         works.update(taken)
-        healthy.append("orcid")
-        provenance["orcid"] = "ok"
+        provenance["orcid"] = "rejected" if rejected else "ok"
+        if "peer_reviewed_works" in taken:
+            works["orcid_peer_reviewed"] = taken["peer_reviewed_works"]
+            works["orcid_as_of"] = today
+            healthy.append("orcid")
         log(f"  accepted: {taken}")
         if rejected:
             log(f"  REJECTED (kept previous): {rejected}")
@@ -417,8 +429,10 @@ def main():
             old_total = previous.get("peer_reviews")
             if sane_count(old_total) and reviews["peer_reviews"] < old_total * DROP_TOLERANCE:
                 log(f"  REJECTED: peer_reviews fell {old_total} -> {reviews['peer_reviews']}")
+                provenance["orcid_peer_reviews"] = "rejected"
             else:
                 works.update(reviews)
+                works["peer_review_as_of"] = today
                 healthy.append("orcid-reviews")
                 provenance["orcid_peer_reviews"] = "ok"
         else:
@@ -437,8 +451,6 @@ def main():
             provenance[name] = "unavailable"
             log(f"  unavailable: {exc}")
             continue
-        provenance[name] = "ok"
-        healthy.append(name)
         if name == "openalex" and sane_count(values.get("openalex_works")):
             works["openalex_works"] = values["openalex_works"]
         if values.get("openalex_id"):
@@ -447,8 +459,11 @@ def main():
         profile, why = accept_profile(name, values, profiles)
         if profile:
             profiles[name] = profile
+            provenance[name] = "ok"
+            healthy.append(name)
             log(f"  snapshot: {profile}")
         else:
+            provenance[name] = "rejected"
             log(f"  REJECTED snapshot ({why}) — keeping {profiles.get(name, 'nothing')}")
 
     if not healthy:
@@ -463,15 +478,14 @@ def main():
     # Reconcile the ORCID count with the bibliography. ORCID is the authority on
     # what counts as published; the library is simply ahead while a deposit is
     # pending, so the larger of the two is the honest current figure.
-    orcid_count = works.get("peer_reviewed_works")
+    orcid_count = works.get("orcid_peer_reviewed")
     lib_count = works.get("library_peer_reviewed")
-    if sane_count(orcid_count):
-        works["orcid_peer_reviewed"] = orcid_count
     if sane_count(orcid_count) and sane_count(lib_count):
         works["peer_reviewed_works"] = max(orcid_count, lib_count)
         works["works_pending_in_orcid"] = max(0, lib_count - orcid_count)
     elif sane_count(lib_count) and not sane_count(orcid_count):
         works["peer_reviewed_works"] = lib_count
+        works["works_pending_in_orcid"] = lib_count
 
     out = dict(works)
     out["citation_profiles"] = profiles
@@ -482,7 +496,8 @@ def main():
         out["citation_source"] = active_name
         out["citation_as_of"] = active.get("as_of")
     out["sources"] = provenance
-    out["last_updated"] = time.strftime("%Y-%m-%d")
+    out["last_updated"] = today
+    out["last_checked"] = today
     out["orcid_id"] = ORCID_ID
     out["scholar_id"] = SCHOLAR_ID
 

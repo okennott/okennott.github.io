@@ -75,7 +75,9 @@ Every live number is bound declaratively, and the text already in the HTML is th
 <a data-metric-href="citation_source_url" href="...">…</a>
 ```
 
-Values come from `assets/data/scholar-stats.json`, refreshed weekly by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `peer_reviews`, `peer_review_journals`, `peer_review_years_label`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
+Values come from `assets/data/scholar-stats.json`, refreshed daily by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `peer_reviews`, `peer_review_journals`, `peer_review_years_label`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
+
+The homepage names the source and shows the exact date of each snapshot. Publication totals reconcile ORCID with the curated bibliography, so a count that includes papers awaiting ORCID deposit is labelled **ORCID + library**. `orcid_as_of` and `peer_review_as_of` change only when those figures are accepted; `last_checked` records the refresh attempt. A blocked Scholar refresh retains the last complete Scholar snapshot and displays its saved date. After 60 days, the browser and updater select the complete OpenAlex snapshot instead, including its source link, citations, h-index, and i10-index together.
 
 Note the two distinct "peer review" metrics: `peer_reviewed_works` is **articles Kenneth has published**; `peer_reviews` is **manuscripts he has reviewed for journals**. They are unrelated numbers from two different ORCID endpoints.
 
@@ -106,7 +108,7 @@ The slug is the DOI lowercased with every run of non-alphanumeric characters rep
 Publication cards are rendered from the Zotero CSL JSON export at `OKOs_Library.json`. Abstracts come from that file when present, so the page remains fast and consistent with the bibliography source. Older static fallback cards still use the CrossRef abstract fetcher when the JSON cannot be loaded, for example when opening the page directly as `file://`.
 
 ### Updating the metrics
-Nothing to do by hand. `.github/workflows/update-metrics.yml` runs every Monday at 05:00 UTC and commits `assets/data/scholar-stats.json`. To refresh immediately, run the workflow from the Actions tab, or locally:
+Nothing to do by hand. `.github/workflows/update-metrics.yml` runs every day at 05:00 UTC and commits `assets/data/scholar-stats.json`. To refresh immediately, run the workflow from the Actions tab, or locally:
 
 ```bash
 python scripts/fetch_metrics.py          # all sources
@@ -116,7 +118,7 @@ SKIP_SCHOLAR=1 python scripts/fetch_metrics.py   # skip the Scholar scrape
 The script is designed never to destroy good data:
 
 - ORCID and OpenAlex are fetched with the **standard library only**, so the metrics that drive the site cannot be broken by a failed `pip install`.
-- Google Scholar has no API and blocks datacentre IPs, so it is **best-effort**: hard-timed-out, non-fatal, and never able to lower a figure another source established.
+- Google Scholar has no API and blocks datacentre IPs, so it is **best-effort**: hard-timed-out and non-fatal; its dated snapshot is kept separately from OpenAlex.
 - A metric that arrives as `0`, or that collapses by more than 15% against the same source's previous reading, is **rejected** as a failed fetch and the stored value is kept.
 - If every source fails, the existing file is left untouched and the run still succeeds.
 
@@ -235,7 +237,7 @@ Opening `index.html` directly as a `file://` URL will work for layout review but
 | Fonts | EB Garamond, DM Mono, Bitter (Google Fonts CDN) |
 | Live citations | [OpenAlex API](https://api.openalex.org/) (batched), Semantic Scholar fallback |
 | Live abstracts | Zotero CSL JSON, [CrossRef REST API](https://api.crossref.org/works/) fallback |
-| Works / metrics | [ORCID Public API](https://pub.orcid.org/) + OpenAlex, refreshed weekly by GitHub Actions |
+| Works / metrics | [ORCID Public API](https://pub.orcid.org/) + OpenAlex, refreshed daily by GitHub Actions |
 | Hosting | GitHub Pages (static, free tier) |
 
 ---

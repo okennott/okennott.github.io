@@ -2,7 +2,7 @@ name: Update publication metrics
 
 on:
   schedule:
-    - cron: '0 5 * * 1'   # Every Monday 05:00 UTC
+    - cron: '0 5 * * *'   # Every day 05:00 UTC
   workflow_dispatch:
     inputs:
       skip_scholar:
@@ -31,6 +31,9 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+
+      - name: Verify metrics fallback behavior
+        run: python -m unittest discover -s scripts -p 'test_*.py'
 
       # ORCID and OpenAlex are fetched with the standard library, so the metrics
       # that actually drive the site do not depend on this step succeeding.

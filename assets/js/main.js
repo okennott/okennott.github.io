@@ -486,7 +486,7 @@ async function initPublicationsData() {
 
   const fallback = collectFallbackPublicationMetadata();
   try {
-    const res = await fetch(PUBLICATIONS_DATA_URL, { cache: 'no-store' });
+    const res = await fetch(PUBLICATIONS_DATA_URL, { cache: 'no-store', signal: AbortSignal.timeout(8000) });
     if (!res.ok) throw new Error('Publication data unavailable');
     const items = (await res.json()).filter(item => item && item.title);
     renderPublicationsPage(items, fallback);
@@ -511,7 +511,7 @@ function hydrateAbstracts(root = document) {
 
    The text already in the element is the fallback, so the page is correct
    before any network call and stays correct if every call fails. Values come
-   from assets/data/scholar-stats.json, refreshed weekly by the metrics
+   from assets/data/scholar-stats.json, refreshed daily by the metrics
    workflow from ORCID (works), OpenAlex, and — when it is reachable —
    Google Scholar.
 
@@ -530,7 +530,7 @@ function formatMetricDate(iso) {
   if (!iso) return '';
   const d = new Date(iso + 'T00:00:00Z');
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 }
 
 /* Numbers the site derives itself, so a tracker can bind to them the same way. */
@@ -597,29 +597,62 @@ async function loadMetrics() {
     const res = await fetch(METRICS_URL, { cache: 'no-cache', signal: AbortSignal.timeout(8000) });
     if (!res.ok) throw new Error('metrics ' + res.status);
     metricsCache = await res.json();
+    if (!metricsCache || typeof metricsCache !== 'object' || Array.isArray(metricsCache)) {
+      throw new Error('Invalid metrics');
+    }
   } catch (e) {
     metricsCache = {};   // keep the values already rendered in the HTML
   }
   return metricsCache;
 }
 
-async function initMetrics(derived = {}) {
-  const d = await loadMetrics();
-  const source = SOURCE_LABELS[d.citation_source] || SOURCE_LABELS.scholar;
+function metricsValues(d, derived = {}, now = Date.now()) {
+  const profiles = d.citation_profiles || {};
+  const complete = profile => profile && ['citations', 'h_index', 'i10_index']
+    .every(key => Number.isInteger(profile[key]) && profile[key] >= 0);
+  const scholarAge = (now - Date.parse(profiles.scholar?.as_of + 'T00:00:00Z')) / 86400000;
+  // Also enforce freshness in the browser if the scheduled updater stops running.
+  const name = complete(profiles.scholar) && scholarAge >= 0 && scholarAge <= 60
+    ? 'scholar' : complete(profiles.openalex) ? 'openalex'
+    : complete(profiles.scholar) ? 'scholar' : d.citation_source;
+  const profile = complete(profiles[name]) ? profiles[name] : {};
+  const source = SOURCE_LABELS[name];
+  const citationDate = profile.as_of || d.citation_as_of;
+  const publicationDate = d.orcid_as_of || (d.sources?.orcid === 'ok' ? d.last_updated : null);
+  const reviewDate = d.peer_review_as_of || (d.sources?.orcid_peer_reviews === 'ok' ? d.last_updated : null);
+  const citationAge = (now - Date.parse(citationDate + 'T00:00:00Z')) / 86400000;
+  const savedCitation = d.sources?.[name] !== 'ok' || citationAge > 7;
 
   // `derived` is a fallback only: the metrics file already reconciles the ORCID
   // count against this same bibliography, so every page shows one figure whether
   // or not it happens to render a publication list.
-  applyMetrics({
+  return {
     ...derived,
     ...d,
-    citation_source_name: source.name,
-    citation_source_url:  source.url,
-    citation_as_of_label: formatMetricDate(d.citation_as_of || d.last_updated),
+    ...profile,
+    citation_source_name: source?.name,
+    citation_source_url:  source?.url,
+    citation_as_of_label: formatMetricDate(citationDate),
+    citation_snapshot_label: citationDate
+      ? `${savedCitation ? 'Saved' : 'Updated'} ${formatMetricDate(citationDate)}` : '',
+    publication_source_name: Number.isInteger(d.works_pending_in_orcid)
+      ? d.works_pending_in_orcid > 0 ? 'ORCID + library' : 'ORCID' : '',
+    publication_snapshot_label: publicationDate
+      ? `${d.sources?.orcid === 'ok' ? 'Updated' : 'Saved'} ${formatMetricDate(publicationDate)}` : '',
+    peer_review_snapshot_label: reviewDate
+      ? `${d.sources?.orcid_peer_reviews === 'ok' ? 'Updated' : 'Saved'} ${formatMetricDate(reviewDate)}` : '',
+    metrics_refresh_label: d.last_checked || d.last_updated
+      ? `Checked ${formatMetricDate(d.last_checked || d.last_updated)}`
+      : 'Saved figures · refresh unavailable',
     last_updated_label:   formatMetricDate(d.last_updated),
     peer_review_years_label: d.peer_review_first_year && d.peer_review_latest_year
       ? `${d.peer_review_first_year}\u2013${d.peer_review_latest_year}` : ''
-  });
+  };
+}
+
+async function initMetrics(derived = {}) {
+  const d = await loadMetrics();
+  applyMetrics(metricsValues(d, derived));
 
   renderPeerReviews(d.peer_review_breakdown);
 }
@@ -791,8 +824,9 @@ function focusHashTarget() {
 
 /* ─── BATCH LOAD ON DOMCONTENTLOADED ─── */
 window.addEventListener('DOMContentLoaded', async () => {
-  const items = await initPublicationsData();
-  await initMetrics(derivedMetrics(items));
+  // Stats can render immediately even if the bibliography request is slow.
+  const [items] = await Promise.all([initPublicationsData(), initMetrics()]);
+  if (items) await initMetrics(derivedMetrics(items));
   injectPublicationSchema(items);
   renderNewsTicker(items);
   hydrateCitationBadges();

@@ -62,8 +62,9 @@ top of `cvdata.py`; a paper whose DOI is not in Crossref goes in `MANUAL` there.
 
 ## Refreshing the citation figures
 
-Google Scholar blocks GitHub Actions runners, so the weekly workflow only refreshes
-OpenAlex. To update the Scholar numbers, run this from a home connection:
+Google Scholar often blocks GitHub Actions runners. The daily workflow attempts
+Scholar and OpenAlex, retaining the last verified snapshot when a source is blocked.
+To update the Scholar numbers, run this from a home connection:
 
 ```bash
 pip install scholarly
