@@ -326,11 +326,22 @@ function isPreprint(item) {
     /preprint/i.test(item?.note || '');
 }
 
+/* An accepted manuscript has finished peer review but has no DOI, volume or pages
+   yet. Its Zotero note carries "status: accepted; accepted: YYYY-MM-DD". Remove the
+   status (and add the DOI) once the paper is published. */
+const MONTH_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function acceptedInfo(item) {
+  const note = item?.note || '';
+  if (!/status:\s*accepted/i.test(note)) return null;
+  const m = note.match(/accepted:\s*(\d{4})-(\d{2})-(\d{2})/i);
+  return { label: m ? `Accepted ${Number(m[3])} ${MONTH_ABBR[Number(m[2]) - 1]} ${m[1]}` : 'Accepted' };
+}
+
 function isOpenAccess(item, fallbackMeta) {
   if (isPreprint(item)) return true;                 // preprint servers are always open
   if (typeof fallbackMeta.isOpenAccess === 'boolean') return fallbackMeta.isOpenAccess;
   const journal = String(item['container-title'] || '').toLowerCase();
-  return /bmc|frontiers|mdpi|scientific reports|zookeys|zoological research|ecosphere|global change biology|global ecology and conservation|ecology and evolution|life\b|diversity\b|animals\b/.test(journal);
+  return /bmc|frontiers|mdpi|scientific reports|zookeys|zoosystema|zoological research|ecosphere|global change biology|global ecology and conservation|ecology and evolution|life\b|diversity\b|animals\b/.test(journal);
 }
 
 /* A card's number is its position in a reverse-chronological list, so it shifts
@@ -367,6 +378,7 @@ function renderPublicationCard(pub, number) {
           <div class="pub-venue-row">
             <span class="pub-venue">${escapeHtml(venue)}${doiUrl ? ` · <a href="${doiUrl}" target="_blank" rel="noopener">doi:${escapeHtml(doi)}</a>` : ''}</span>
             ${pub.isPreprint ? '<span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>' : ''}
+            ${pub.accepted ? `<span class="badge badge-accepted">✔ ${escapeHtml(pub.accepted.label)} · in press</span>` : ''}
             <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : '🔒 Subscription'}</span>
             ${doi ? `<span class="badge badge-citations cite-badge" id="cit-${number}" data-doi="${escapeHtml(doi)}" style="display:none;"></span>` : ''}
           </div>
@@ -404,9 +416,12 @@ function renderPublicationsPage(items, fallback) {
         [inferTags(item, meta.tags), oa ? 'oa' : '', preprint ? 'preprint' : 'peer-reviewed']
           .join(' ').split(/\s+/).filter(Boolean)
       )].join(' ');
-      return { item, index, fallback: meta, isOpenAccess: oa, isPreprint: preprint, tags };
+      return { item, index, fallback: meta, isOpenAccess: oa, isPreprint: preprint,
+               accepted: acceptedInfo(item), tags };
     })
-    .sort((a, b) => dateSortKey(b.item, b.index) - dateSortKey(a.item, a.index));
+    // Accepted, not-yet-published papers lead the list; the rest are newest first.
+    .sort((a, b) => (Number(!!b.accepted) - Number(!!a.accepted)) ||
+                    (dateSortKey(b.item, b.index) - dateSortKey(a.item, a.index)));
 
   const groups = new Map();
   pubs.forEach((pub, index) => {
@@ -712,7 +727,9 @@ function newsItemsFromPublications(items) {
       const doi = cleanDoi(item.DOI);
       const year = publicationYear(item);
       const venue = VENUE_ABBREVIATIONS[item['container-title']] || item['container-title'] || '';
-      const tag = isPreprint(item) ? 'Preprint' : (year >= NEWEST_YEAR_TAG ? `New ${year}` : String(year || ''));
+      const tag = isPreprint(item) ? 'Preprint'
+        : acceptedInfo(item) ? 'Accepted'
+        : (year >= NEWEST_YEAR_TAG ? `New ${year}` : String(year || ''));
       return {
         href: doi ? `publications.html#${doiSlug(doi)}` : 'publications.html',
         tag,
@@ -794,6 +811,7 @@ function injectPublicationSchema(items) {
       }
       if (item.abstract) work.abstract = item.abstract;
       if (isPreprint(item)) work.creativeWorkStatus = 'Preprint';
+      if (acceptedInfo(item)) work.creativeWorkStatus = 'Accepted for publication';
       return { '@type': 'ListItem', position: i + 1, item: work };
     })
   };

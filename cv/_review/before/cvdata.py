@@ -60,28 +60,6 @@ TITLE_OVERRIDE = {
         "elevation gradients on Mt. Kenya, Kenya",
 }
 JOURNAL_OVERRIDE = {"10.24272/j.issn.2095-8137.2019.004": "Zoological Research"}
-# Titles deposited in Title Case, set in sentence case like the rest of the list.
-# Only capitalisation changes: publications() asserts that the lower-cased text is
-# identical to the Crossref title, so wording and spelling stay exactly as published.
-CASE_ONLY = {
-    "10.1093/sysbio/syaf052":
-        "Species diversification in the sky islands of southwestern China revealed by "
-        "genomic, introgression, and demographic analyses of Asian shrew moles",
-    "10.1111/gcb.70916":
-        "Human pressures drive compositional homogenization and functional shifts in "
-        "Southeast Asian mammal communities",
-    "10.3390/life14111469":
-        "Comparative phylogeography of two specialist rodents in forest fragments in Kenya",
-    "10.3389/fevo.2021.742524":
-        "Patterns and predictors of small mammal phylogenetic and functional diversity in "
-        "contrasting elevational gradients in Kenya",
-    "10.3390/ani12151915":
-        "Human disturbance and geometric constraints drive small mammal diversity and "
-        "community structure along an elevational gradient in eastern China",
-    "10.3390/d14020087":
-        "Modeling the potential distribution of two species of shrews (Chodsigoa hypsibia "
-        "and Anourosorex squamipes) under climate change in China",
-}
 # Errata and duplicate preprint postings of papers already listed.
 EXCLUDE = {
     "10.1007/s13364-019-00475-w",        # erratum to 10.1007/s13364-019-00470-1
@@ -98,8 +76,8 @@ MANUAL = [{
     "title": "Methodological advances in explaining community assembly with niche-based theory",
     "journal": "Acta Theriologica Sinica", "volume": "42", "issue": "3",
     "page": "312-324", "artno": None, "npos": 3, "nauth": 4,
-    "authors": [{"text": "Song, W. Y.", "me": False}, {"text": "Li, X. Y.", "me": False},
-                {"text": "Onditi, K. O.", "me": True}, {"text": "Jiang, X. L.", "me": False}],
+    "authors": [{"text": "Song, W.-Y.", "me": False}, {"text": "Li, X.-Y.", "me": False},
+                {"text": "Onditi, K. O.", "me": True}, {"text": "Jiang, X.-L.", "me": False}],
 }]
 
 NORM = {"‐": "-", "‑": "-", " ": " ", "­": "", "﻿": ""}
@@ -171,30 +149,8 @@ def refresh_cache():
     return cache
 
 
-def accepted_records():
-    """Library items accepted for publication but not yet published: no DOI, and a Zotero
-    note that says `status: accepted; accepted: YYYY-MM-DD`. Nothing is looked up for
-    them, so the entry shows only what the library holds (no volume, pages or DOI)."""
-    out = []
-    for item in _library():
-        note = item.get("note") or ""
-        if item.get("DOI") or not re.search(r"status:\s*accepted", note, re.I):
-            continue
-        when = re.search(r"accepted:\s*(\d{4}-\d{2}-\d{2})", note)
-        authors = format_authors(item.get("author", []))
-        pos = [i + 1 for i, a in enumerate(authors) if a["me"]]
-        out.append({
-            "doi": None, "year": None, "preprint": False, "accepted": when.group(1) if when else None,
-            "title": clean(item.get("title")), "journal": clean(item.get("container-title")),
-            "volume": None, "issue": None, "page": None, "artno": None,
-            "authors": authors, "npos": pos[0] if pos else None, "nauth": len(authors),
-        })
-    return out
-
-
 def publications():
-    """Every publication, newest first, with Kenneth's author position resolved.
-    Accepted, not yet published articles come first."""
+    """Every publication, newest first, with Kenneth's author position resolved."""
     with open(CACHE, encoding="utf-8") as fh:
         cache = json.load(fh)
     lib = {bare_doi(i.get("DOI")): i for i in _library() if i.get("DOI")}
@@ -208,15 +164,11 @@ def publications():
         authors = format_authors(raw)
         pos = [i + 1 for i, a in enumerate(authors) if a["me"]]
         parts = (msg.get("published") or msg.get("issued", {})).get("date-parts", [[None]])[0]
-        title = TITLE_OVERRIDE.get(doi) or clean((msg.get("title") or [""])[0])
-        if doi in CASE_ONLY:
-            assert CASE_ONLY[doi].lower() == title.lower(), f"CASE_ONLY changes wording: {doi}"
-            title = CASE_ONLY[doi]
         records.append({
             "doi": doi,
             "year": YEAR_OVERRIDE.get(doi, parts[0]),
             "preprint": msg.get("type") == "posted-content",
-            "title": title,
+            "title": TITLE_OVERRIDE.get(doi) or clean((msg.get("title") or [""])[0]),
             "journal": clean(JOURNAL_OVERRIDE.get(doi) or (msg.get("container-title") or [""])[0]),
             "volume": msg.get("volume"), "issue": msg.get("issue"),
             "page": msg.get("page"), "artno": msg.get("article-number"),
@@ -224,8 +176,6 @@ def publications():
         })
     records += [dict(r) for r in MANUAL]
     records.sort(key=lambda r: (-r["year"], r["authors"][0]["text"]))
-    # In press: ahead of the dated entries, most recent acceptance first.
-    records = sorted(accepted_records(), key=lambda r: r["accepted"] or "", reverse=True) + records
 
     unresolved = [r["doi"] for r in records if r["npos"] is None]
     if unresolved:
@@ -243,7 +193,6 @@ if __name__ == "__main__":
         refresh_cache()
     recs = publications()
     arts = [r for r in recs if not r["preprint"]]
-    print(f"{len(recs)} publications: {len(arts)} peer-reviewed "
-          f"({sum(1 for r in arts if r['year'] is None)} accepted, in press), "
+    print(f"{len(recs)} publications: {len(arts)} peer-reviewed, "
           f"{len(recs) - len(arts)} preprints, "
           f"{sum(1 for r in arts if r['npos'] == 1)} first-author")

@@ -27,9 +27,9 @@
   "last_updated": "2026-10-04",
   "latest_year": 2026,
   "library_corrections": 1,
-  "library_peer_reviewed": 38,
+  "library_peer_reviewed": 39,
   "library_preprints": 2,
-  "library_records": 41,
+  "library_records": 42,
   "openalex_id": "https://openalex.org/A5086398996",
   "openalex_works": 53,
   "orcid_as_of": "2026-10-04",
@@ -161,7 +161,7 @@
   "peer_review_first_year": 2020,
   "peer_review_journals": 24,
   "peer_review_latest_year": 2026,
-  "peer_reviewed_works": 38,
+  "peer_reviewed_works": 39,
   "peer_reviews": 76,
   "preprints": 2,
   "scholar_id": "qnHYvIIAAAAJ",
@@ -172,7 +172,7 @@
     "orcid_peer_reviews": "ok",
     "scholar": "unavailable"
   },
-  "works_pending_in_orcid": 2,
+  "works_pending_in_orcid": 3,
   "works_total": 42,
   "year_span": 8
 }

@@ -2372,5 +2372,53 @@
 				]
 			]
 		}
+	},
+	{
+		"id": "local-zoosystema-zoo20250031",
+		"type": "article-journal",
+		"container-title": "Zoosystema",
+		"note": "type: Journal Article; status: accepted; accepted: 2026-06-01; manuscript: zoo20250031",
+		"title": "Small terrestrial mammal inventory of Assoukoko forest (Togo), with new country records and potential new species for science",
+		"author": [
+			{
+				"family": "Hounmavo",
+				"given": "Amétépé"
+			},
+			{
+				"family": "Segniagbeto",
+				"given": "Gabriel H."
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Lutz",
+				"given": "Holly L."
+			},
+			{
+				"family": "Delapré",
+				"given": "Arnaud"
+			},
+			{
+				"family": "Demos",
+				"given": "Terrence C."
+			},
+			{
+				"family": "Kerbis Peterhans",
+				"given": "Julian C."
+			},
+			{
+				"family": "Nicolas",
+				"given": "Violaine"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
 	}
 ]

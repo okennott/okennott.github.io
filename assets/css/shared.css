@@ -355,6 +355,11 @@ footer {
   border: 1px solid rgba(140,150,180,0.38);
   color: #97a2bd;
 }
+.badge-accepted {
+  background: rgba(200,148,58,0.10);
+  border: 1px solid rgba(200,148,58,0.45);
+  color: var(--gold);
+}
 
 /* ─── ANIMATIONS ─── */
 .reveal {

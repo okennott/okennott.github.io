@@ -6,8 +6,7 @@
 
       ::: {.entry date="2018 – 2022"}
       PhD in Zoology                   -> CVEntry, with the date in the gutter
-      *UCAS · Beijing, China*          -> CVMeta   (a paragraph that is all italic;
-                                           CVMetaEnd when it is the last block)
+      *UCAS · Beijing, China*          -> CVMeta   (a paragraph that is all italic)
       Dissertation on ...              -> CVBody
       - supervised ...                 -> CVBullet
       :::
@@ -81,7 +80,7 @@ function Div(el)
   local out = pandoc.List({})
   local first = true
 
-  for idx, blk in ipairs(el.content) do
+  for _, blk in ipairs(el.content) do
     if blk.t == "Para" or blk.t == "Plain" then
       if first then
         local head = pandoc.List({})
@@ -90,14 +89,10 @@ function Div(el)
           head:insert(tab())
         end
         head:extend(blk.content)
-        -- A title-only entry must not keep-with-next into whatever follows.
-        local name = (lead == "CVEntry" and #el.content == 1) and "CVEntryEnd" or lead
-        out:insert(styled({pandoc.Para(head)}, name))
+        out:insert(styled({pandoc.Para(head)}, lead))
         first = false
       elseif all_emph(blk.content) then
-        -- A meta line that closes the entry must not keep-with-next into the following one.
-        local name = (idx == #el.content) and "CVMetaEnd" or "CVMeta"
-        out:insert(styled({pandoc.Para(unwrap_emph(blk.content))}, name))
+        out:insert(styled({pandoc.Para(unwrap_emph(blk.content))}, "CVMeta"))
       else
         out:insert(styled({pandoc.Para(blk.content)}, "CVBody"))
       end

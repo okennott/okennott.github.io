@@ -140,6 +140,16 @@ The live Publications page and the highlighted publications on the Home page are
 
 The static cards in `publications.html` are retained as a no-network/no-fetch fallback, but they are no longer the primary editing surface.
 
+### Accepted papers that have no DOI yet
+
+Add the record to Zotero without a DOI and put this in its Extra/Note field:
+
+```
+status: accepted; accepted: YYYY-MM-DD
+```
+
+The site then shows an "Accepted · in press" badge and lists the record first, the CV lists it as "(in press)" at the top of the article list, and the counts include it. Only what the library holds is shown, so do not invent a DOI, volume or pages. When the paper is published, add the DOI and volume/pages in Zotero, delete the `status:` line, export the library again, run `python cvdata.py --refresh` and `python build.py` in `cv/`. Note that the static fallback cards in `publications.html` are not updated by this route and are already out of date.
+
 ---
 
 ## PDF Inventory & Naming Convention

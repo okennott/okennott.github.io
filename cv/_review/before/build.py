@@ -7,10 +7,10 @@
 The PDF is produced from the Word file rather than through LaTeX, so the two can
 never disagree: there is one design (design.py -> reference.docx) and one render.
 
-Fonts: the CV asks for Cambria and Calibri. Linux has neither, but its Caladea and
-Carlito are metric-compatible substitutes, so a Linux LibreOffice paginates the PDF
-exactly as Word does (only the glyph shapes differ). This script still prefers the
-Windows LibreOffice, which has the real fonts, and says which one it used.
+Fonts: the CV asks for Georgia and Calibri. Linux has neither, so a Linux
+LibreOffice substitutes Noto Serif and Carlito and the PDF will not look like what
+Word shows. This script therefore prefers the Windows LibreOffice, which has the
+real fonts, and warns when it has to fall back.
 """
 import argparse
 import os
@@ -50,13 +50,13 @@ def to_pdf(docx_path):
                                "--outdir", win, win_doc], capture_output=True, text=True)
         produced = os.path.splitext(docx_path)[0] + ".pdf"
         if proc.returncode == 0 and os.path.exists(produced):
-            return produced, "Windows LibreOffice (Cambria / Calibri)"
+            return produced, "Windows LibreOffice (Georgia / Calibri)"
     soffice = shutil.which("soffice") or shutil.which("libreoffice")
     if not soffice:
         sys.exit("no LibreOffice found; run with --no-pdf or install it")
     run([soffice, "--headless", "--convert-to", "pdf", "--outdir", HERE, docx_path])
     return os.path.splitext(docx_path)[0] + ".pdf", \
-        "Linux LibreOffice (Cambria/Calibri substituted by Caladea/Carlito: same layout)"
+        "Linux LibreOffice — WARNING: Georgia/Calibri substituted, layout may shift"
 
 
 def main():

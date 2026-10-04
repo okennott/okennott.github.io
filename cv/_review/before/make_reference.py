@@ -12,13 +12,11 @@ import sys
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.text import WD_TAB_ALIGNMENT
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 import design as D
-
-BODY_SIZE = 10
 
 
 def rgb(hexstr):
@@ -76,71 +74,28 @@ def apply_para_props(style, spec):
         ppr.append(bdr)
 
 
-def _run(text=None, field=None, size=8.5, color=None):
-    """A footer run: literal text, a tab, or one stage of a Word field."""
-    r = OxmlElement("w:r")
-    rpr = OxmlElement("w:rPr")
-    rf = OxmlElement("w:rFonts")
-    for a in ("w:ascii", "w:hAnsi", "w:cs"):
-        rf.set(qn(a), D.SANS)
-    rpr.append(rf)
-    col = OxmlElement("w:color"); col.set(qn("w:val"), color or D.FAINT); rpr.append(col)
-    sz = OxmlElement("w:sz"); sz.set(qn("w:val"), str(int(size * 2))); rpr.append(sz)
-    r.append(rpr)
-    if field == "tab":
-        r.append(OxmlElement("w:tab"))
-    elif field in ("begin", "separate", "end"):
-        fc = OxmlElement("w:fldChar")
-        fc.set(qn("w:fldCharType"), field)
-        r.append(fc)
-    elif field:                                   # instruction text, e.g. PAGE
-        t = OxmlElement("w:instrText")
-        t.text = f" {field} "
-        t.set(qn("xml:space"), "preserve")
-        r.append(t)
-    else:
-        t = OxmlElement("w:t")
-        t.text = text
-        t.set(qn("xml:space"), "preserve")
-        r.append(t)
-    return r
-
-
-def _field(par, code):
-    """A complete field (begin / instruction / separate / cached result / end)."""
-    for stage in ("begin", code, "separate"):
-        par._element.append(_run(field=stage))
-    par._element.append(_run(text="1"))           # cached value until Word updates it
-    par._element.append(_run(field="end"))
-
-
-# Word is stricter than LibreOffice about the order of child elements. python-docx
-# appends some of them (borders, character spacing) wherever it likes, so put every
-# w:pPr / w:rPr back into the order the OOXML schema prescribes.
-PPR_ORDER = ["pStyle", "keepNext", "keepLines", "pageBreakBefore", "framePr", "widowControl",
-             "numPr", "suppressLineNumbers", "pBdr", "shd", "tabs", "suppressAutoHyphens",
-             "kinsoku", "wordWrap", "overflowPunct", "topLinePunct", "autoSpaceDE",
-             "autoSpaceDN", "bidi", "adjustRightInd", "snapToGrid", "spacing", "ind",
-             "contextualSpacing", "mirrorIndents", "suppressOverlap", "jc", "textDirection",
-             "textAlignment", "textboxTightWrap", "outlineLvl", "divId", "cnfStyle", "rPr",
-             "sectPr", "pPrChange"]
-RPR_ORDER = ["rStyle", "rFonts", "b", "bCs", "i", "iCs", "caps", "smallCaps", "strike",
-             "dstrike", "outline", "shadow", "emboss", "imprint", "noProof", "snapToGrid",
-             "vanish", "webHidden", "color", "spacing", "w", "kern", "position", "sz", "szCs",
-             "highlight", "u", "effect", "bdr", "shd", "fitText", "vertAlign", "rtl", "cs",
-             "em", "lang", "eastAsianLayout", "specVanish", "oMath"]
-
-
-def schema_order(root):
-    for tag, order in (("w:pPr", PPR_ORDER), ("w:rPr", RPR_ORDER)):
-        rank = {qn(f"w:{name}"): i for i, name in enumerate(order)}
-        for el in root.iter(qn(tag)):
-            kids = list(el)
-            kids.sort(key=lambda k: rank.get(k.tag, len(order)))      # stable
-            for k in kids:
-                el.remove(k)
-            for k in kids:
-                el.append(k)
+def page_field(paragraph, code):
+    """A Word field, e.g. PAGE or NUMPAGES."""
+    for kind in ("begin", "instr", "end"):
+        r = OxmlElement("w:r")
+        rpr = OxmlElement("w:rPr")
+        rf = OxmlElement("w:rFonts")
+        for a in ("w:ascii", "w:hAnsi"):
+            rf.set(qn(a), D.SANS)
+        rpr.append(rf)
+        sz = OxmlElement("w:sz"); sz.set(qn("w:val"), "16"); rpr.append(sz)
+        col = OxmlElement("w:color"); col.set(qn("w:val"), D.FAINT); rpr.append(col)
+        r.append(rpr)
+        if kind == "instr":
+            t = OxmlElement("w:instrText")
+            t.text = code
+            t.set(qn("xml:space"), "preserve")
+            r.append(t)
+        else:
+            fc = OxmlElement("w:fldChar")
+            fc.set(qn("w:fldCharType"), kind)
+            r.append(fc)
+        paragraph._element.append(r)
 
 
 def build(path="reference.docx"):
@@ -154,7 +109,7 @@ def build(path="reference.docx"):
 
     normal = doc.styles["Normal"]
     normal.font.name = D.SANS
-    normal.font.size = Pt(BODY_SIZE)
+    normal.font.size = Pt(9.5)
     set_fonts(normal.element, D.SANS)
     normal.paragraph_format.space_after = Pt(0)
     normal.paragraph_format.line_spacing = 1.0
@@ -167,7 +122,7 @@ def build(path="reference.docx"):
         except KeyError:
             st = doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
         st.font.name = D.SANS
-        st.font.size = Pt(BODY_SIZE)
+        st.font.size = Pt(9.5)
         set_fonts(st.element, D.SANS)
         st.paragraph_format.space_before = Pt(0)
         st.paragraph_format.space_after = Pt(0)
@@ -191,32 +146,22 @@ def build(path="reference.docx"):
     except KeyError:
         link = doc.styles.add_style("Hyperlink", WD_STYLE_TYPE.CHARACTER)
     link.font.color.rgb = rgb(D.BRONZE)
-    link.font.size = Pt(9.2)
+    link.font.size = Pt(8.6)
     link.font.underline = False
     set_fonts(link.element, D.SANS)
 
-    # Footer: a hairline, the name on the left, "Page n of N" on the right.
-    fp = sec.footer.paragraphs[0]
-    pf = fp.paragraph_format
-    pf.space_before = pf.space_after = Pt(0)
-    for stale in (3.25, 6.5):                      # the template's own centre / right stops
-        pf.tab_stops.add_tab_stop(Inches(stale), WD_TAB_ALIGNMENT.CLEAR)
-    pf.tab_stops.add_tab_stop(Inches(D.TEXT_WIDTH), WD_TAB_ALIGNMENT.RIGHT)
-    bdr = OxmlElement("w:pBdr")
-    top = OxmlElement("w:top")
-    for k, v in (("val", "single"), ("sz", "4"), ("space", "4"), ("color", D.RULE)):
-        top.set(qn(f"w:{k}"), v)
-    bdr.append(top)
-    fp._element.get_or_add_pPr().append(bdr)
-    fp._element.append(_run(text=D.FOOTER))
-    fp._element.append(_run(field="tab"))
-    fp._element.append(_run(text="Page "))
-    _field(fp, "PAGE")
-    fp._element.append(_run(text=" of "))
-    _field(fp, "NUMPAGES")
-
-    schema_order(doc.styles.element)
-    schema_order(sec.footer._element)
+    footer = sec.footer
+    fp = footer.paragraphs[0]
+    fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    fp.paragraph_format.space_before = fp.paragraph_format.space_after = Pt(0)
+    r = fp.add_run(D.FOOTER)
+    r.font.name = D.SANS; set_fonts(r._element, D.SANS)
+    r.font.size = Pt(8); r.font.color.rgb = rgb(D.FAINT)
+    page_field(fp, "PAGE")
+    r = fp.add_run(" of ")
+    r.font.name = D.SANS; set_fonts(r._element, D.SANS)
+    r.font.size = Pt(8); r.font.color.rgb = rgb(D.FAINT)
+    page_field(fp, "NUMPAGES")
 
     # Pandoc replaces the body, but an empty one confuses some readers.
     doc.add_paragraph("")
