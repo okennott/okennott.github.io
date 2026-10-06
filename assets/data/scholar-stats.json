@@ -2,7 +2,7 @@
   "citation_as_of": "2026-10-04",
   "citation_profiles": {
     "openalex": {
-      "as_of": "2026-10-05",
+      "as_of": "2026-10-06",
       "citations": 300,
       "h_index": 10,
       "i10_index": 12
@@ -23,8 +23,8 @@
   "first_year": 2019,
   "h_index": 12,
   "i10_index": 13,
-  "last_checked": "2026-10-05",
-  "last_updated": "2026-10-05",
+  "last_checked": "2026-10-06",
+  "last_updated": "2026-10-06",
   "latest_year": 2026,
   "library_corrections": 1,
   "library_peer_reviewed": 39,
@@ -32,10 +32,10 @@
   "library_records": 42,
   "openalex_id": "https://openalex.org/A5086398996",
   "openalex_works": 53,
-  "orcid_as_of": "2026-10-05",
+  "orcid_as_of": "2026-10-06",
   "orcid_id": "0000-0003-4034-6818",
   "orcid_peer_reviewed": 36,
-  "peer_review_as_of": "2026-10-05",
+  "peer_review_as_of": "2026-10-06",
   "peer_review_breakdown": [
     {
       "issn": "2071-1050",
