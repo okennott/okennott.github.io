@@ -2,10 +2,10 @@
   "citation_as_of": "2026-10-04",
   "citation_profiles": {
     "openalex": {
-      "as_of": "2026-10-09",
-      "citations": 300,
+      "as_of": "2026-10-10",
+      "citations": 289,
       "h_index": 10,
-      "i10_index": 12
+      "i10_index": 11
     },
     "scholar": {
       "as_of": "2026-10-04",
@@ -23,19 +23,19 @@
   "first_year": 2019,
   "h_index": 12,
   "i10_index": 13,
-  "last_checked": "2026-10-09",
-  "last_updated": "2026-10-09",
+  "last_checked": "2026-10-10",
+  "last_updated": "2026-10-10",
   "latest_year": 2026,
   "library_corrections": 1,
   "library_peer_reviewed": 39,
   "library_preprints": 2,
   "library_records": 42,
   "openalex_id": "https://openalex.org/A5086398996",
-  "openalex_works": 53,
-  "orcid_as_of": "2026-10-09",
+  "openalex_works": 49,
+  "orcid_as_of": "2026-10-10",
   "orcid_id": "0000-0003-4034-6818",
   "orcid_peer_reviewed": 36,
-  "peer_review_as_of": "2026-10-09",
+  "peer_review_as_of": "2026-10-10",
   "peer_review_breakdown": [
     {
       "issn": "2071-1050",
