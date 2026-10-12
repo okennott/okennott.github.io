@@ -152,7 +152,12 @@ def refresh_cache():
     dois = {bare_doi(i.get("DOI")) for i in _library() if i.get("DOI")}
     dois |= {"10.2139/ssrn.7010506"}          # in ORCID; kept even if not yet in the library
     dois -= set(MANUAL[0]["doi"] for _ in [0])
-    cache, failed = {}, []
+    # An outage must not silently remove publications from the next CV.
+    cache = {}
+    if os.path.exists(CACHE):
+        with open(CACHE, encoding="utf-8") as fh:
+            cache = json.load(fh)
+    failed = []
     for doi in sorted(d for d in dois if d):
         try:
             req = urllib.request.Request(
@@ -163,11 +168,14 @@ def refresh_cache():
         except Exception as exc:
             failed.append((doi, str(exc)))
         time.sleep(0.15)
-    with open(CACHE, "w", encoding="utf-8") as fh:
+    temporary = CACHE + ".tmp"
+    with open(temporary, "w", encoding="utf-8") as fh:
         json.dump(cache, fh, ensure_ascii=False, indent=1, sort_keys=True)
+    os.replace(temporary, CACHE)
     print(f"cached {len(cache)} Crossref records -> {os.path.relpath(CACHE, REPO)}")
     for doi, err in failed:
-        print(f"  not in Crossref: {doi} ({err})")
+        status = "retained cached record" if doi in cache else "no cached record available"
+        print(f"  fetch failed; {status}: {doi} ({err})")
     return cache
 
 

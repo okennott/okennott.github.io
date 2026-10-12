@@ -2064,6 +2064,186 @@
   "type": "journal-article",
   "volume": "223"
  },
+ "10.1016/j.ympev.2026.108749": {
+  "article-number": "108749",
+  "author": [
+   {
+    "affiliation": [],
+    "family": "Pei",
+    "given": "Xiaoxin",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "first"
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0001-3025-6993",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Li",
+    "given": "Yixian",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Onditi",
+    "given": "Kenneth Otieno",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Wang",
+    "given": "Hongjiao",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Qin",
+    "given": "Weihua",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhu",
+    "given": "Ren",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Quan",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Song",
+    "given": "Wenyu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Li",
+    "given": "Xueyou",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Zhu",
+    "given": "Zhongxu",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "affiliation": [],
+    "family": "Chen",
+    "given": "Zhongzheng",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2052-2490",
+    "affiliation": [],
+    "authenticated-orcid": false,
+    "family": "Jiang",
+    "given": "Xuelong",
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ],
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Molecular Phylogenetics and Evolution"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     10
+    ]
+   ]
+  },
+  "page": "108749",
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     10
+    ]
+   ]
+  },
+  "short-container-title": [
+   "Molecular Phylogenetics and Evolution"
+  ],
+  "title": [
+   "Phylogeny and evolutionary history of the genus Nectogale (Soricidae) inferred from whole–genome analyses, with description of a new species endemic to the Himalayas"
+  ],
+  "type": "journal-article"
+ },
  "10.1038/s41598-025-04609-w": {
   "article-number": "19478",
   "author": [

@@ -44,7 +44,7 @@ PREPRINT_SERVERS = {"10.2139": "SSRN", "10.21203": "Research Square"}
 # Genus-group names appearing in the titles, so they can be italicised. Families
 # and tribes are deliberately absent: only genus and below are italicised.
 GENERA = ["Anourosorex", "Chodsigoa", "Episoriculus", "Graphiurus", "Lemniscomys",
-          "Lophuromys", "Mesechinus", "Micromys", "Neodon", "Uropsilus"]
+          "Lophuromys", "Mesechinus", "Micromys", "Nectogale", "Neodon", "Uropsilus"]
 EPITHETS = ["flavopunctatus", "hypsibia", "squamipes", "aquilus"]
 TAXON = re.compile(r"\b(?:(?:%s)\s+(?:%s)|(?:%s))\b"
                    % ("|".join(GENERA), "|".join(EPITHETS), "|".join(GENERA)))
@@ -182,8 +182,7 @@ def _citation(rec, number):
         if pages:
             where += ", " + pages.replace("-", "–")
         line.append(where + ". ")
-        if not volume:
-            line.append("*Advance online publication*. ")
+        # Missing volume metadata alone does not establish online-first status.
     line.append(f"[doi:{rec['doi']}](https://doi.org/{rec['doi']})")
     _div("CVPub", "".join(line))
 

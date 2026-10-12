@@ -1,0 +1,2 @@
+# Optional maintenance tools; the deployed website has no build dependencies.
+beautifulsoup4>=4.12,<5

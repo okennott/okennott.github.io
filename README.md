@@ -1,4 +1,4 @@
-# kennott.github.io
+# okennott.github.io
 
 Personal academic website of **Kenneth Otieno Onditi** — mammal ecologist and evolutionary biologist specialising in the systematics, phylogeography, and conservation biology of small mammals.
 
@@ -8,7 +8,7 @@ Personal academic website of **Kenneth Otieno Onditi** — mammal ecologist and 
 
 ## Site Overview
 
-A fully static, multi-page academic website built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no dependencies beyond Google Fonts and two public APIs for live data.
+A fully static, multi-page academic website built with vanilla HTML, CSS, and JavaScript — no frameworks or runtime build step. Optional maintenance scripts refresh static fallbacks and build the downloadable CV. Google Fonts and public APIs supply live enhancements.
 
 | Page | File | Accent colour | Key features |
 |---|---|---|---|
@@ -24,7 +24,7 @@ A fully static, multi-page academic website built with vanilla HTML, CSS, and Ja
 ## Repository Structure
 
 ```
-kennott.github.io/
+okennott.github.io/
 │
 ├── index.html                  # Home page
 ├── research.html               # Research programme
@@ -62,7 +62,7 @@ kennott.github.io/
 ## Live Data Features
 
 ### Citation counts
-Per-paper citation badges are fetched in **one batched request** covering every DOI on the page, from the [OpenAlex API](https://docs.openalex.org/) (no key, no anonymous rate limit), with the [Semantic Scholar batch endpoint](https://api.semanticscholar.org/api-docs/) as a fallback. Counts display as gold badges next to each entry, on both the Publications and Home pages.
+Per-paper citation badges are fetched in **one batched request** covering every DOI on the page, from the [OpenAlex API](https://docs.openalex.org/) (best-effort; availability and quotas depend on the service), with the [Semantic Scholar batch endpoint](https://api.semanticscholar.org/api-docs/) as a fallback. Counts display as gold badges next to each entry, on both the Publications and Home pages.
 
 Batching matters: the earlier implementation issued one request per paper, which fired ~40 parallel calls on every page load and reliably tripped Semantic Scholar's anonymous rate limit (HTTP 429), leaving most badges blank.
 
@@ -91,7 +91,7 @@ The CV's "Peer Review Activity" list is generated from ORCID's `/peer-reviews` e
 | Peer-reviewed articles | [ORCID](https://orcid.org/0000-0003-4034-6818) | The authoritative record of what has actually been published, rather than whatever a citation index happens to have indexed. |
 | Peer review service | [ORCID](https://orcid.org/0000-0003-4034-6818) peer-review record | Manuscripts reviewed for journals. ORCID is the only place this is tracked at all, and it stays current because Web of Science and Springer Nature report into it automatically. |
 | Citations, h-index, i10 | Google Scholar, else OpenAlex | Broadest coverage first; OpenAlex takes over automatically once a Scholar snapshot goes stale. |
-| Per-paper citations | OpenAlex | One batched request, no rate limit, returns open-access status in the same payload. |
+| Per-paper citations | OpenAlex | Batched requests; returns open-access status in the same payload. |
 
 Scholar and OpenAlex index different corpora, so their numbers never agree. Each is therefore stored as a **complete, self-consistent snapshot** under `citation_profiles`, and the site displays one snapshot at a time with its source named next to the number — never a citation count from one index beside an h-index from another.
 
@@ -105,10 +105,10 @@ publications.html#p-10-1111-cobi-70214     ← doi:10.1111/cobi.70214
 The slug is the DOI lowercased with every run of non-alphanumeric characters replaced by `-`, prefixed with `p-`. Because cards render after an async fetch, `main.js` re-resolves the fragment once the list exists and opens the linked paper's abstract.
 
 ### Paper abstracts
-Publication cards are rendered from the Zotero CSL JSON export at `OKOs_Library.json`. Abstracts come from that file when present, so the page remains fast and consistent with the bibliography source. Older static fallback cards still use the CrossRef abstract fetcher when the JSON cannot be loaded, for example when opening the page directly as `file://`.
+Publication cards are rendered from the Zotero CSL JSON export at `OKOs_Library.json`. Abstracts come from that file when present and are included in the generated HTML fallbacks. Missing abstracts link readers to the journal; no abstract is inferred from a title.
 
 ### Updating the metrics
-Nothing to do by hand. `.github/workflows/update-metrics.yml` runs every day at 05:00 UTC and commits `assets/data/scholar-stats.json`. To refresh immediately, run the workflow from the Actions tab, or locally:
+Nothing to do by hand. `.github/workflows/update-metrics.yml` runs every day at 05:00 UTC and commits `assets/data/scholar-stats.json` and refreshed HTML fallbacks. To refresh immediately, run the workflow from the Actions tab, or locally:
 
 ```bash
 python scripts/fetch_metrics.py          # all sources
@@ -136,9 +136,9 @@ The live Publications page and the highlighted publications on the Home page are
 
 4. If an author-copy PDF is available, place it in `pdfs/`. The renderer preserves PDF links already present in the static fallback cards; new PDFs can be added to the fallback card or linked in a future data-enrichment field.
 
-5. Commit `OKOs_Library.json` with any changed PDFs. Counts, year groups, homepage highlights, DOI links, citation badges, and abstracts update from the JSON automatically.
+5. Run `python scripts/refresh_static.py` to synchronize static cards, homepage highlights and saved metric labels. Run the checks below, then commit the library, generated HTML, and any changed PDFs. Rebuild the CV as described in `cv/README.md`.
 
-The static cards in `publications.html` are retained as a no-network/no-fetch fallback, but they are no longer the primary editing surface.
+The static cards in `publications.html` are generated fallbacks. Their existing author-copy links and curated topic/access metadata are preserved during refresh; edit the library for bibliographic changes. The October 2026 DOI extraction is documented in [Pei_2026_Nectogale.md](publications/Pei_2026_Nectogale.md). Retain that record in the next Zotero export.
 
 ### Accepted papers that have no DOI yet
 
@@ -148,7 +148,7 @@ Add the record to Zotero without a DOI and put this in its Extra/Note field:
 status: accepted; accepted: YYYY-MM-DD
 ```
 
-The site then shows an "Accepted · in press" badge and lists the record first, the CV lists it as "(in press)" at the top of the article list, and the counts include it. Only what the library holds is shown, so do not invent a DOI, volume or pages. When the paper is published, add the DOI and volume/pages in Zotero, delete the `status:` line, export the library again, run `python cvdata.py --refresh` and `python build.py` in `cv/`. Note that the static fallback cards in `publications.html` are not updated by this route and are already out of date.
+The site then shows an "Accepted · in press" badge and lists the record first, the CV lists it as "(in press)" at the top of the article list, and the counts include it. Only what the library holds is shown, so do not invent a DOI, volume or pages. When the paper is published, add the DOI and volume/pages in Zotero, delete the `status:` line, export the library again, run `python cvdata.py --refresh` and `python build.py` in `cv/`. Run `python scripts/refresh_static.py` from the repository root to synchronize the HTML fallbacks too.
 
 ---
 
@@ -185,7 +185,7 @@ All 39 PDFs have been renamed from opaque numeric identifiers to human-readable 
 1. Export the paper PDF from your reference manager (or use the publisher's accepted-manuscript version).
 2. Rename it: `Lastname_YYYY_ShortTitle.pdf` (add a qualifier suffix if a second copy is warranted).
 3. Drop it into `pdfs/`.
-4. Commit and push — the download button on the publications page activates immediately.
+4. Add a `pub-link pdf` link to the matching fallback card in `publications.html`, then run `python scripts/refresh_static.py`. Merely adding a PDF file does not create a download link.
 
 Open-access papers (BMC, Frontiers, MDPI, Scientific Reports, ZooKeys, Zoological Research, Ecosphere) are freely available at the publisher DOI and do not strictly require an author copy, though including one keeps everything in one place.
 
@@ -208,15 +208,8 @@ Make sure GitHub Pages is configured to deploy from:
 
 ## GitHub Pages URL
 
-The current live path is `https://okennott.github.io/kennott.github.io/` because the GitHub username (`okennott`) does not match the repository name (`kennott.github.io`). See **[`GITHUB_PAGES_SETUP.md`](GITHUB_PAGES_SETUP.md)** for three options to resolve this:
-
-| Option | Result URL | Effort |
-|---|---|---|
-| Rename GitHub username to `kennott` | `https://kennott.github.io/` ✅ | Low — one settings change |
-| Rename repo to `okennott.github.io` | `https://okennott.github.io/` ✅ | Low — one settings change |
-| Custom domain (e.g. `kennetonditi.com`) | `https://kennetonditi.com/` ✅ | Medium — DNS + CNAME file |
-
-All relative links (`href="research.html"` etc.) work correctly regardless of which option is chosen, because no absolute base path is hardcoded.
+The repository is `okennott/okennott.github.io` and the canonical site URL is
+https://okennott.github.io/. Page links are relative so local previews also work.
 
 ---
 
@@ -279,3 +272,22 @@ kenotieno@hotmail.com · kenotieno08@gmail.com
 Nairobi, Kenya
 
 [Google Scholar](https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en) · [ResearchGate](https://www.researchgate.net/profile/Kenneth-Onditi) · [ORCID 0000-0003-4034-6818](https://orcid.org/0000-0003-4034-6818) · [GitHub @okennott](https://github.com/okennott)
+
+## Maintenance checks
+
+Requires Python and Node.js; the optional HTML maintenance dependency is isolated from the deployed site.
+
+```bash
+python -m pip install -r scripts/requirements.txt
+python scripts/refresh_static.py
+python -m unittest discover -s scripts -p 'test_*.py'
+node scripts/test_homepage_metrics.cjs
+node scripts/test_publications.cjs
+python scripts/check_site.py
+python scripts/refresh_static.py --check
+```
+
+`check-site.yml` runs these checks on pushes and pull requests. `refresh_static.py` uses
+the same JavaScript renderers as the browser, preserves author-copy links, reconciles local library totals without changing remote snapshot dates, and uses the
+saved metrics check date for reproducible fallback labels. The browser evaluates citation
+freshness at page load. See [TODO.md](TODO.md) for the October 2026 review and validation.

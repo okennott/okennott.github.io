@@ -2420,5 +2420,73 @@
 				]
 			]
 		}
+	},
+	{
+		"id": "https://doi.org/10.1016/j.ympev.2026.108749",
+		"type": "article-journal",
+		"container-title": "Molecular Phylogenetics and Evolution",
+		"DOI": "10.1016/j.ympev.2026.108749",
+		"ISSN": "1055-7903",
+		"page": "108749",
+		"title": "Phylogeny and evolutionary history of the genus Nectogale (Soricidae) inferred from whole–genome analyses, with description of a new species endemic to the Himalayas",
+		"URL": "https://doi.org/10.1016/j.ympev.2026.108749",
+		"author": [
+			{
+				"family": "Pei",
+				"given": "Xiaoxin"
+			},
+			{
+				"family": "Li",
+				"given": "Yixian"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Qin",
+				"given": "Weihua"
+			},
+			{
+				"family": "Zhu",
+				"given": "Ren"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Song",
+				"given": "Wenyu"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Zhu",
+				"given": "Zhongxu"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhongzheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					2026,
+					10
+				]
+			]
+		}
 	}
 ]

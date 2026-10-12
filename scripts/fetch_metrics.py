@@ -95,7 +95,8 @@ def from_library():
     def is_preprint(item):
         return (item.get("type") == "preprint"
                 or "preprint" in (item.get("note") or "").lower()
-                or "preprint" in (item.get("container-title") or "").lower())
+                or bool(re.search(r"preprint|research square|biorxiv|ecoevorxiv|ssrn",
+                                  item.get("container-title") or "", re.I)))
 
     def is_correction(item):
         """An erratum is a fix to an existing paper, not an additional one.
@@ -390,6 +391,7 @@ def main():
     try:
         library = from_library()
         works.update(library)
+        works["library_as_of"] = time.strftime("%Y-%m-%d", time.gmtime())
         healthy.append("library")
         provenance["library"] = "ok"
         log(f"  {library}")

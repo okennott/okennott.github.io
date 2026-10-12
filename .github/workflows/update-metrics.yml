@@ -35,6 +35,13 @@ jobs:
       - name: Verify metrics fallback behavior
         run: python -m unittest discover -s scripts -p 'test_*.py'
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install HTML maintenance dependency
+        run: pip install -r scripts/requirements.txt
+
       # ORCID and OpenAlex are fetched with the standard library, so the metrics
       # that actually drive the site do not depend on this step succeeding.
       - name: Install optional Google Scholar scraper
@@ -54,9 +61,16 @@ jobs:
       - name: Show resulting file
         run: cat assets/data/scholar-stats.json
 
+      - name: Refresh and check HTML fallbacks
+        run: |
+          python scripts/refresh_static.py
+          python scripts/check_site.py
+          node scripts/test_homepage_metrics.cjs
+          node scripts/test_publications.cjs
+
       - name: Commit updated metrics
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: auto-update publication metrics'
-          file_pattern: 'assets/data/scholar-stats.json'
+          file_pattern: 'assets/data/scholar-stats.json *.html'
           commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

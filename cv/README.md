@@ -12,7 +12,7 @@ python build.py            # both formats
 python build.py --no-pdf   # Word only
 ```
 
-Needs [Quarto](https://quarto.org), `python-docx`, and LibreOffice (or Word) for the
+Needs [Quarto](https://quarto.org), `python-docx`, a Python Jupyter kernel (`jupyter`), and LibreOffice (or Word) for the
 PDF step. Output goes next to the source.
 
 ## How it fits together
@@ -55,6 +55,11 @@ To change how something *looks*, edit `design.py`, not the .qmd.
 1. Add it to `../OKOs_Library.json` (export from Zotero).
 2. `python cvdata.py --refresh` to pull its Crossref record into the cache.
 3. `python build.py`.
+4. From the repository root, `python scripts/refresh_static.py` to refresh the website fallbacks.
+
+Cache refresh preserves previously verified metadata if Crossref is temporarily
+unavailable, and reports failures. Missing new records still need a successful lookup
+or a verified cache entry before they can appear in the downloadable CV.
 
 Numbering, counts, the first-author tally and the metrics strip all follow
 automatically. Errata and duplicate preprint postings are excluded by the lists at the

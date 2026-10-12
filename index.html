@@ -616,10 +616,10 @@ a.news-item:focus-visible::after { color: var(--gold); }
     <img src="assets/icons/logo-mark.svg" class="nav-logo-mark" alt="K.O. Onditi">
     <span class="nav-logo-text">K.O. Onditi</span>
   </a>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav-links">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
+  <ul class="nav-links" id="primary-nav-links">
     <li><a href="index.html"        id="nav-home">Home</a></li>
     <li><a href="research.html"     id="nav-research">Research</a></li>
     <li><a href="publications.html" id="nav-pubs">Publications</a></li>
@@ -728,10 +728,10 @@ a.news-item:focus-visible::after { color: var(--gold); }
              when a source is unavailable; label their source and date. -->
         <div class="hero-stats" aria-label="Research statistics">
           <div class="hero-stat">
-            <span class="stat-num" data-metric="peer_reviewed_works" id="counter-pubs">38</span>
+            <span class="stat-num" data-metric="peer_reviewed_works" id="counter-pubs">40</span>
             <span class="stat-label">Peer-reviewed papers</span>
             <span class="stat-sublabel"><a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener" data-metric="publication_source_name">ORCID + library</a></span>
-            <span class="stat-sublabel hero-stat-date" data-metric="publication_snapshot_label">Saved 4 Oct 2026</span>
+            <span class="stat-sublabel hero-stat-date" data-metric="publication_snapshot_label">Updated 4 Oct 2026</span>
           </div>
           <div class="hero-stat">
             <span class="stat-num author-total-cit" data-metric="citations" id="stat-citations">403</span>
@@ -742,7 +742,7 @@ a.news-item:focus-visible::after { color: var(--gold); }
           </div>
         </div>
         <p class="hero-stats-src" role="status">
-          <span data-metric="metrics_refresh_label">Saved figures · refresh unavailable</span>
+          <span data-metric="metrics_refresh_label">Checked 4 Oct 2026</span>
           <span>Automatic refresh daily</span>
         </p>
 
@@ -835,59 +835,53 @@ a.news-item:focus-visible::after { color: var(--gold); }
     <h2 class="section-title">Highlighted Publications</h2>
 
     <div class="pub-preview-list reveal" id="home-publications">
-
       <div class="pub-preview">
         <span class="pub-year-badge">2026</span>
         <div>
-          <div class="pub-preview-title">Human Pressures Drive Compositional Homogenization and Functional Shifts in Southeast Asian Mammal Communities</div>
-          <div class="pub-preview-journal">Global Change Biology, 32(5), e70916</div>
-          <a class="pub-preview-doi" href="https://doi.org/10.1111/gcb.70916" target="_blank" rel="noopener">doi: 10.1111/gcb.70916 ↗</a>
+          <div class="pub-preview-title">Phylogeny and evolutionary history of the genus <em>Nectogale</em> (Soricidae) inferred from whole–genome analyses, with description of a new species endemic to the Himalayas</div>
+          <div class="pub-preview-journal">Molecular Phylogenetics and Evolution, 108749</div>
+          <a class="pub-preview-doi" href="https://doi.org/10.1016/j.ympev.2026.108749" target="_blank" rel="noopener">doi: 10.1016/j.ympev.2026.108749 ↗</a>
         </div>
         <div class="pub-preview-cit">
-          <span class="badge badge-citations cite-badge" id="cit-home-33" data-doi="10.1111/gcb.70916" style="display:none;"></span>
+          <span class="badge badge-citations cite-badge" id="cit-home-1" data-doi="10.1016/j.ympev.2026.108749" style="display:none;"></span>
         </div>
       </div>
-
       <div class="pub-preview">
-        <span class="pub-year-badge">2025</span>
+        <span class="pub-year-badge">2026</span>
         <div>
-          <div class="pub-preview-title">Multiscale Spatial Dependency of Small Mammal Diversity Patterns and their Determinants</div>
-          <div class="pub-preview-journal">Ecosphere 16(2): e70179</div>
-          <a class="pub-preview-doi" href="https://doi.org/10.1002/ecs2.70179" target="_blank" rel="noopener">doi: 10.1002/ecs2.70179 ↗</a>
+          <div class="pub-preview-title">Geographic isolation and climatic heterogeneity shape the genetic diversity of <em>Blarinellini</em> (Eulipotyphla: Soricidae) in the Hengduan Mountains</div>
+          <div class="pub-preview-journal">Vertebrate Zoology, 76, 611–624</div>
+          <a class="pub-preview-doi" href="https://doi.org/10.3897/vz.76.e188776" target="_blank" rel="noopener">doi: 10.3897/vz.76.e188776 ↗</a>
         </div>
         <div class="pub-preview-cit">
-          <span class="badge badge-citations cite-badge" id="cit-home-26" data-doi="10.1002/ecs2.70179" style="display:none;"></span>
+          <span class="badge badge-citations cite-badge" id="cit-home-2" data-doi="10.3897/vz.76.e188776" style="display:none;"></span>
         </div>
       </div>
-
-      <div class="pub-preview">
-        <span class="pub-year-badge">2024</span>
+      <div class="pub-preview preprint">
+        <span class="pub-year-badge">2026</span>
         <div>
-          <div class="pub-preview-title">Unravelling spatial scale effects on elevational diversity gradients: insights from montane small mammals in Kenya</div>
-          <div class="pub-preview-journal">BMC Ecology and Evolution, 24(1), 139</div>
-          <a class="pub-preview-doi" href="https://doi.org/10.1186/s12862-024-02328-w" target="_blank" rel="noopener">doi: 10.1186/s12862-024-02328-w ↗</a>
+          <div class="pub-preview-title">Non-random defaunation across China’s protected area network revealed by multidimensional dark diversity</div>
+          <div class="pub-preview-journal">Research Square <span class="badge badge-preprint">Preprint</span></div>
+          <a class="pub-preview-doi" href="https://doi.org/10.21203/rs.3.rs-10531544/v1" target="_blank" rel="noopener">doi: 10.21203/rs.3.rs-10531544/v1 ↗</a>
         </div>
         <div class="pub-preview-cit">
-          <span class="badge badge-citations cite-badge" id="cit-home-23" data-doi="10.1186/s12862-024-02328-w" style="display:none;"></span>
+          <span class="badge badge-citations cite-badge" id="cit-home-3" data-doi="10.21203/rs.3.rs-10531544/v1" style="display:none;"></span>
         </div>
       </div>
-
-      <div class="pub-preview">
-        <span class="pub-year-badge">2021</span>
+      <div class="pub-preview preprint">
+        <span class="pub-year-badge">2026</span>
         <div>
-          <div class="pub-preview-title">Historical biogeography, systematics, and integrative taxonomy of the non-Ethiopian speckled pelage brush-furred rats (<em>Lophuromys flavopunctatus</em> group)</div>
-          <div class="pub-preview-journal">BMC Ecology and Evolution, 21(1), 89</div>
-          <a class="pub-preview-doi" href="https://doi.org/10.1186/s12862-021-01813-w" target="_blank" rel="noopener">doi: 10.1186/s12862-021-01813-w ↗</a>
+          <div class="pub-preview-title">The protection of Asian elephants in China caught in a conservation trap</div>
+          <div class="pub-preview-journal">SSRN <span class="badge badge-preprint">Preprint</span></div>
+          <a class="pub-preview-doi" href="https://doi.org/10.2139/ssrn.7010506" target="_blank" rel="noopener">doi: 10.2139/ssrn.7010506 ↗</a>
         </div>
         <div class="pub-preview-cit">
-          <span class="badge badge-citations cite-badge" id="cit-home-7" data-doi="10.1186/s12862-021-01813-w" style="display:none;"></span>
+          <span class="badge badge-citations cite-badge" id="cit-home-4" data-doi="10.2139/ssrn.7010506" style="display:none;"></span>
         </div>
       </div>
-
-    </div>
-
+  </div><!-- /home-publications -->
     <div style="margin-top: 32px; display:flex; gap:14px; flex-wrap:wrap;">
-      <a class="btn-ghost" href="publications.html" id="home-all-publications-link">View all 41 publications →</a>
+      <a class="btn-ghost" href="publications.html" id="home-all-publications-link">View all 43 publications →</a>
       <a class="btn-ghost" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
     </div>
   </div>

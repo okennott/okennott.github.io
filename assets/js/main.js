@@ -28,6 +28,7 @@ const navLinks = document.querySelector('.nav-links');
 if (toggle && navLinks) {
   toggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(navLinks.classList.contains('open')));
     const spans = toggle.querySelectorAll('span');
     if (navLinks.classList.contains('open')) {
       spans[0].style.transform = 'rotate(45deg) translateY(6px)';
@@ -41,6 +42,7 @@ if (toggle && navLinks) {
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       navLinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
       const spans = toggle.querySelectorAll('span');
       spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
     });
@@ -49,6 +51,7 @@ if (toggle && navLinks) {
 
 /* ─── REVEAL ON SCROLL ─── */
 function initReveal() {
+  if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -59,6 +62,7 @@ function initReveal() {
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+    el.classList.add('reveal-pending');
     io.observe(el);
   });
 }
@@ -72,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
    paper. The old per-paper approach fired ~40 parallel calls at Semantic
    Scholar on every page load, which reliably tripped its anonymous rate limit
    (HTTP 429) and left most badges blank. OpenAlex answers the whole set in a
-   single call, has no anonymous rate limit, and returns open-access status in
+   single call, subject to service quotas, and returns open-access status in
    the same payload. Semantic Scholar stays as a batched fallback.
    ------------------------------------------------------------------- */
 const OPENALEX_MAILTO = 'kenotieno08@gmail.com';   // polite pool: faster, higher limits
@@ -181,7 +185,7 @@ async function fetchAbstract(doi, elementId) {
       // Strip JATS XML tags
       const clean = abstract.replace(/<[^>]+>/g, '').trim();
       if (clean.length > 40) {
-        el.innerHTML = `<p>${clean}</p>`;
+        el.innerHTML = `<p>${escapeHtml(clean)}</p>`;
         el.removeAttribute('data-fetch');
       }
     }
@@ -254,7 +258,7 @@ function formatTitle(title) {
   const taxa = [
     'Anourosorex', 'Blarinella', 'Blarinellini', 'Chodsigoa', 'Episoriculus',
     'Graphiurus', 'Lemniscomys', 'Lophuromys', 'Mesechinus', 'Micromys',
-    'Neodon', 'Parablarinella', 'Soriculus', 'Uropsilinae', 'Uropsilus'
+    'Nectogale', 'Neodon', 'Parablarinella', 'Soriculus', 'Uropsilinae', 'Uropsilus'
   ];
   let out = escapeHtml(title || 'Untitled');
   taxa.forEach(name => {
@@ -304,7 +308,7 @@ function collectFallbackPublicationMetadata() {
       label: link.textContent.trim()
     })).filter(link => link.href);
     const meta = {
-      isOpenAccess: card.classList.contains('oa'),
+      isOpenAccess: card.classList.contains('access-unknown') ? null : card.classList.contains('oa'),
       pdfLinks,
       tags: card.dataset.tags || ''
     };
@@ -332,7 +336,7 @@ function isPreprint(item) {
 const MONTH_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function acceptedInfo(item) {
   const note = item?.note || '';
-  if (!/status:\s*accepted/i.test(note)) return null;
+  if (cleanDoi(item?.DOI) || !/status:\s*accepted/i.test(note)) return null;
   const m = note.match(/accepted:\s*(\d{4})-(\d{2})-(\d{2})/i);
   return { label: m ? `Accepted ${Number(m[3])} ${MONTH_ABBR[Number(m[2]) - 1]} ${m[1]}` : 'Accepted' };
 }
@@ -341,7 +345,7 @@ function isOpenAccess(item, fallbackMeta) {
   if (isPreprint(item)) return true;                 // preprint servers are always open
   if (typeof fallbackMeta.isOpenAccess === 'boolean') return fallbackMeta.isOpenAccess;
   const journal = String(item['container-title'] || '').toLowerCase();
-  return /bmc|frontiers|mdpi|scientific reports|zookeys|zoosystema|zoological research|ecosphere|global change biology|global ecology and conservation|ecology and evolution|life\b|diversity\b|animals\b/.test(journal);
+  return /bmc|frontiers|mdpi|scientific reports|zookeys|zoosystema|zoological research|ecosphere|global change biology|global ecology and conservation|ecology and evolution|life\b|diversity\b|animals\b/.test(journal) ? true : null;
 }
 
 /* A card's number is its position in a reverse-chronological list, so it shifts
@@ -368,7 +372,7 @@ function renderPublicationCard(pub, number) {
     .join('');
 
   return `
-    <div class="pub-card ${oa ? 'oa' : 'restricted'}${pub.isPreprint ? ' preprint' : ''}" id="pub-${number}" data-tags="${escapeHtml(tags)}" data-doi="${escapeHtml(doi)}">
+    <div class="pub-card ${oa ? 'oa' : oa === false ? 'restricted' : 'access-unknown'}${pub.isPreprint ? ' preprint' : ''}" id="pub-${number}" data-tags="${escapeHtml(tags)}" data-doi="${escapeHtml(doi)}">
       ${doi ? `<span class="pub-anchor" id="${doiSlug(doi)}" aria-hidden="true"></span>` : ''}
       <div class="pub-card-header" onclick="toggleAbstract(${number})">
         <span class="pub-num">${number}</span>
@@ -379,7 +383,7 @@ function renderPublicationCard(pub, number) {
             <span class="pub-venue">${escapeHtml(venue)}${doiUrl ? ` · <a href="${doiUrl}" target="_blank" rel="noopener">doi:${escapeHtml(doi)}</a>` : ''}</span>
             ${pub.isPreprint ? '<span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>' : ''}
             ${pub.accepted ? `<span class="badge badge-accepted">✔ ${escapeHtml(pub.accepted.label)} · in press</span>` : ''}
-            <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : '🔒 Subscription'}</span>
+            <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : oa === false ? '🔒 Subscription' : 'Access unverified'}</span>
             ${doi ? `<span class="badge badge-citations cite-badge" id="cit-${number}" data-doi="${escapeHtml(doi)}" style="display:none;"></span>` : ''}
           </div>
         </div>
@@ -413,7 +417,7 @@ function renderPublicationsPage(items, fallback) {
       const preprint = isPreprint(item);
       // Deduplicate: inferTags may already carry 'oa' through from a legacy card.
       const tags = [...new Set(
-        [inferTags(item, meta.tags), oa ? 'oa' : '', preprint ? 'preprint' : 'peer-reviewed']
+        [inferTags(item, meta.tags), oa ? 'oa' : '', preprint ? 'preprint' : isCorrection(item) ? 'correction' : 'peer-reviewed']
           .join(' ').split(/\s+/).filter(Boolean)
       )].join(' ');
       return { item, index, fallback: meta, isOpenAccess: oa, isPreprint: preprint,
@@ -558,8 +562,8 @@ function isCorrection(item) {
 
 function derivedMetrics(items) {
   if (!Array.isArray(items) || !items.length) return {};
-  const preprints    = items.filter(i => i.type === 'preprint');
-  const corrections  = items.filter(i => i.type !== 'preprint' && isCorrection(i));
+  const preprints    = items.filter(isPreprint);
+  const corrections  = items.filter(i => !isPreprint(i) && isCorrection(i));
   const years = items.map(publicationYear).filter(Boolean);
   return {
     library_records:       items.length,
@@ -829,7 +833,12 @@ function injectPublicationSchema(items) {
    Re-resolve it here, and open the abstract of whatever was linked to.
    ------------------------------------------------------------------- */
 function focusHashTarget() {
-  const hash = decodeURIComponent(window.location.hash || '').replace(/^#/, '');
+  let hash;
+  try {
+    hash = decodeURIComponent(window.location.hash || '').replace(/^#/, '');
+  } catch (e) {
+    return; // A malformed URL fragment must not interrupt page initialization.
+  }
   if (!hash) return;
   const target = document.getElementById(hash);
   if (!target) return;
