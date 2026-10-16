@@ -21,7 +21,11 @@ assert.equal(items.filter(p => context.cleanDoi(p.DOI) === doi).length, 1);
 assert.equal(paper.volume, '226');
 assert.deepEqual(paper.issued['date-parts'][0], [2027, 1]);
 assert.deepEqual(paper['available-date']['date-parts'][0], [2026, 10, 10]);
-assert.equal(context.isOpenAccess(paper, {}), null);
+assert.equal(context.isOpenAccess(paper, {}), false);
+assert.equal(context.isOpenAccess(paper, { isOpenAccess: true }), false);
+const openPaper = items.find(p => context.cleanDoi(p.DOI) === '10.3897/vz.76.e188776');
+assert.equal(context.isOpenAccess(openPaper, {}), true);
+assert.equal(context.isOpenAccess(openPaper, { isOpenAccess: false }), true);
 assert.match(context.formatTitle(paper.title), /<em>Nectogale<\/em>/);
 assert.equal(context.acceptedInfo({ DOI: doi, note: 'status: accepted' }), null);
 assert.doesNotThrow(() => context.focusHashTarget());
@@ -36,6 +40,14 @@ assert.match(list.innerHTML, /Access unverified/);
 assert.match(list.innerHTML, /https:\/\/pubmed\.ncbi\.nlm\.nih\.gov\/42858910\//);
 assert.match(list.innerHTML, /Read the abstract on/);
 assert.match(list.innerHTML, /Online 10 Oct 2026/);
+assert.match(list.innerHTML, /Subscription · author copy available/);
+assert.match(list.innerHTML, /href="contact.html" class="pub-link author-copy-request"/);
+// Library access decisions also override stale static card metadata and filter tags.
+context.renderPublicationsPage([paper, openPaper], {
+  byDoi: new Map([[doi, { isOpenAccess: true, tags: 'oa' }]]), byTitle: new Map()
+});
+assert.match(list.innerHTML, /class="pub-card restricted"[^>]+data-tags="systematics peer-reviewed"[^>]+data-doi="10\.1016\/j\.ympev\.2026\.108749"/);
+assert.match(list.innerHTML, /class="pub-card oa"[^>]+data-tags="[^"]*oa[^"]*"[^>]+data-doi="10\.3897\/vz\.76\.e188776"/);
 assert.ok(context.newsItemsFromPublications(items).some(p => p.href.endsWith(context.doiSlug(doi))));
 context.renderPublicationsPage([paper,
   { type: 'article-journal', title: 'Accepted work', note: 'status: accepted; accepted: 2026-06-01', issued: { 'date-parts': [[2026]] } },

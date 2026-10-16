@@ -18,6 +18,8 @@ The original 11 October extraction had only an October 2026 date and no volume. 
 
 The verified record is stored in `OKOs_Library.json` and `cv/crossref-cache.json`. Import these details into the reference manager before the next full Zotero export so the new record is retained.
 
+Access updated on 16 October 2026 at the author's instruction: **Subscription · author copy available**. The library explicitly records `open-access: false` and `author-copy-available: true`, taking precedence over inferred access status. No author-copy file is currently stored in this repository, so the card provides a Contact link to request one.
+
 ## Tracker verification — 16 October 2026
 
 - The library contains this DOI once: 43 records, comprising 40 articles (including one accepted/in press), two preprints and one correction. ORCID currently reports 36 articles; the displayed total reconciles both sources.

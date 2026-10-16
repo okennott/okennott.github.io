@@ -350,6 +350,7 @@ function acceptedInfo(item) {
 }
 
 function isOpenAccess(item, fallbackMeta) {
+  if (typeof item['open-access'] === 'boolean') return item['open-access'];
   if (isPreprint(item)) return true;                 // preprint servers are always open
   if (typeof fallbackMeta.isOpenAccess === 'boolean') return fallbackMeta.isOpenAccess;
   const journal = String(item['container-title'] || '').toLowerCase();
@@ -380,6 +381,7 @@ function renderPublicationCard(pub, number) {
   const venue = formatVenue(item);
   const oa = pub.isOpenAccess;
   const tags = pub.tags;
+  const authorCopyAvailable = item['author-copy-available'] === true;
   const pdfLinks = (pub.fallback.pdfLinks || [])
     .map(link => `<a href="${escapeHtml(link.href)}" class="pub-link pdf">${escapeHtml(link.label)}</a>`)
     .join('');
@@ -397,7 +399,7 @@ function renderPublicationCard(pub, number) {
             ${pub.isPreprint ? '<span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>' : ''}
             ${pub.accepted ? `<span class="badge badge-accepted">✔ ${escapeHtml(pub.accepted.label)} · in press</span>` : ''}
             ${onlineLabel ? `<span class="badge">Online ${escapeHtml(onlineLabel)}</span>` : ''}
-            <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : oa === false ? '🔒 Subscription' : 'Access unverified'}</span>
+            <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : oa === false ? '🔒 Subscription' + (authorCopyAvailable ? ' · author copy available' : '') : 'Access unverified'}</span>
             ${doi ? `<span class="badge badge-citations cite-badge" id="cit-${number}" data-doi="${escapeHtml(doi)}" style="display:none;"></span>` : ''}
           </div>
         </div>
@@ -417,7 +419,7 @@ function renderPublicationCard(pub, number) {
           ${doiUrl ? `<a href="${doiUrl}" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>` : ''}
           ${pubmedUrl ? `<a href="${pubmedUrl}" target="_blank" rel="noopener" class="pub-link">PubMed ↗</a>` : ''}
           <a href="${scholarUrl(item.title)}" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
-          ${pdfLinks}
+          ${pdfLinks}${authorCopyAvailable && !pdfLinks ? '\n          <a href="contact.html" class="pub-link author-copy-request">Request author copy ↗</a>' : ''}
         </div>
       </div>
     </div>`;
@@ -435,7 +437,7 @@ function renderPublicationsPage(items, fallback) {
       // Deduplicate: inferTags may already carry 'oa' through from a legacy card.
       const tags = [...new Set(
         [inferTags(item, meta.tags), oa ? 'oa' : '', preprint ? 'preprint' : isCorrection(item) ? 'correction' : 'peer-reviewed']
-          .join(' ').split(/\s+/).filter(Boolean)
+          .join(' ').split(/\s+/).filter(tag => tag && (tag !== 'oa' || oa === true))
       )].join(' ');
       return { item, index, fallback: meta, isOpenAccess: oa, isPreprint: preprint,
                accepted: acceptedInfo(item), tags };

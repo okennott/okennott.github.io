@@ -2209,7 +2209,8 @@
 					19
 				]
 			]
-		}
+		},
+		"open-access": true
 	},
 	{
 		"id": "https://doi.org/10.24272/j.issn.2095-8137.2026.291",
@@ -2498,6 +2499,8 @@
 				]
 			]
 		},
-		"PMID": "42858910"
+		"PMID": "42858910",
+		"open-access": false,
+		"author-copy-available": true
 	}
 ]
