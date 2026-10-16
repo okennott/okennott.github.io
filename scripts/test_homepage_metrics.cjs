@@ -45,4 +45,24 @@ result = values({}, '2026-10-04');
 assert.equal(result.citation_source_name, undefined);
 assert.equal(result.citation_snapshot_label, '');
 assert.equal(result.metrics_refresh_label, 'Saved figures · refresh unavailable');
+
+// A bibliography update must be reflected before the next scheduled snapshot.
+const newerLibrary = { library_records: 44, library_peer_reviewed: 41, year_span: 9, latest_year: 2027 };
+result = context.metricsValues({ ...data, library_records: 43, library_peer_reviewed: 40,
+  peer_reviewed_works: 40, year_span: 8, latest_year: 2026 }, newerLibrary,
+  Date.parse('2026-10-16T00:00:00Z'));
+assert.equal(result.library_records, 44);
+assert.equal(result.peer_reviewed_works, 41);
+assert.equal(result.works_pending_in_orcid, 5);
+assert.equal(result.publication_source_name, 'ORCID + library');
+assert.equal(result.year_span, 9);
+assert.equal(result.latest_year, 2027);
+assert.equal(result.citations, 388);
+result = context.metricsValues({ ...data, orcid_peer_reviewed: 45 }, newerLibrary);
+assert.equal(result.peer_reviewed_works, 45);
+assert.equal(result.works_pending_in_orcid, 0);
+assert.equal(result.publication_source_name, 'ORCID');
+result = context.metricsValues({}, newerLibrary);
+assert.equal(result.peer_reviewed_works, 41);
+assert.equal(result.publication_source_name, 'Library');
 console.log('Homepage metrics checks passed: coherent sources, dates, freshness, and offline fallback.');

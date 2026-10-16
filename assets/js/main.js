@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
    single call, subject to service quotas, and returns open-access status in
    the same payload. Semantic Scholar stays as a batched fallback.
    ------------------------------------------------------------------- */
-const OPENALEX_MAILTO = 'kenotieno08@gmail.com';   // polite pool: faster, higher limits
+const OPENALEX_MAILTO = 'kenotieno08@gmail.com';   // contact; anonymous requests share an IP quota
 const OPENALEX_BATCH  = 45;                        // OpenAlex caps an OR filter at 50
 
 function chunk(list, size) {
@@ -139,7 +139,7 @@ function applyCitationCounts(found) {
   let shown = 0;
   document.querySelectorAll('.cite-badge[data-doi]').forEach(el => {
     const hit = found.get(cleanDoi(el.dataset.doi).toLowerCase());
-    if (!hit || typeof hit.citations !== 'number') return;
+    if (!hit || !Number.isInteger(hit.citations) || hit.citations < 0) return;
     // A brand-new paper legitimately has 0 citations; showing "0 cit." is noise.
     if (hit.citations < 1) return;
     el.textContent = `${hit.citations} cit.`;
@@ -153,14 +153,22 @@ function applyCitationCounts(found) {
 async function hydrateCitationBadges(root = document) {
   const badges = [...root.querySelectorAll('.cite-badge[data-doi]')];
   const dois = [...new Set(
-    badges.map(el => cleanDoi(el.dataset.doi)).filter(Boolean)
+    badges.map(el => cleanDoi(el.dataset.doi).toLowerCase()).filter(Boolean)
   )];
   if (!dois.length) return;
 
+  let pending = dois;
   for (const source of [fetchCitationsFromOpenAlex, fetchCitationsFromSemanticScholar]) {
     try {
-      const found = await source(dois);
-      if (applyCitationCounts(found) > 0) return;
+      const found = await source(pending);
+      applyCitationCounts(found);
+      // Zero is a valid indexed count. Only look up missing or invalid results
+      // with the fallback, keeping each paper's preferred-source count intact.
+      pending = pending.filter(doi => {
+        const count = found.get(doi)?.citations;
+        return !Number.isInteger(count) || count < 0;
+      });
+      if (!pending.length) return;
     } catch (e) { /* try the next source */ }
   }
   // Both sources unavailable: badges stay hidden rather than showing a stale 0.
@@ -364,6 +372,11 @@ function renderPublicationCard(pub, number) {
   const item = pub.item;
   const doi = cleanDoi(item.DOI);
   const doiUrl = doi ? `https://doi.org/${doi}` : '';
+  const pubmedUrl = /^\d+$/.test(String(item.PMID || ''))
+    ? `https://pubmed.ncbi.nlm.nih.gov/${item.PMID}/` : '';
+  const onlineParts = item['available-date']?.['date-parts']?.[0];
+  const onlineLabel = onlineParts?.length === 3
+    ? formatMetricDate(onlineParts.map((part, i) => String(part).padStart(i ? 2 : 4, '0')).join('-')) : '';
   const venue = formatVenue(item);
   const oa = pub.isOpenAccess;
   const tags = pub.tags;
@@ -383,6 +396,7 @@ function renderPublicationCard(pub, number) {
             <span class="pub-venue">${escapeHtml(venue)}${doiUrl ? ` · <a href="${doiUrl}" target="_blank" rel="noopener">doi:${escapeHtml(doi)}</a>` : ''}</span>
             ${pub.isPreprint ? '<span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>' : ''}
             ${pub.accepted ? `<span class="badge badge-accepted">✔ ${escapeHtml(pub.accepted.label)} · in press</span>` : ''}
+            ${onlineLabel ? `<span class="badge">Online ${escapeHtml(onlineLabel)}</span>` : ''}
             <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : oa === false ? '🔒 Subscription' : 'Access unverified'}</span>
             ${doi ? `<span class="badge badge-citations cite-badge" id="cit-${number}" data-doi="${escapeHtml(doi)}" style="display:none;"></span>` : ''}
           </div>
@@ -395,10 +409,13 @@ function renderPublicationCard(pub, number) {
       </div>
       <div class="pub-abstract-body" id="abs-${number}">
         <div class="pub-abstract-text" id="abs-text-${number}">
-          ${item.abstract ? `<p>${escapeHtml(item.abstract)}</p>` : '<p style="color:var(--faint);font-style:italic;">Abstract not available. Please visit the journal page.</p>'}
+          ${item.abstract ? `<p>${escapeHtml(item.abstract)}</p>` : pubmedUrl
+            ? `<p>Read the abstract on <a href="${pubmedUrl}" target="_blank" rel="noopener">PubMed ↗</a>.</p>`
+            : '<p style="color:var(--faint);font-style:italic;">Abstract not available. Please visit the journal page.</p>'}
         </div>
         <div class="pub-links-row">
           ${doiUrl ? `<a href="${doiUrl}" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>` : ''}
+          ${pubmedUrl ? `<a href="${pubmedUrl}" target="_blank" rel="noopener" class="pub-link">PubMed ↗</a>` : ''}
           <a href="${scholarUrl(item.title)}" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           ${pdfLinks}
         </div>
@@ -430,13 +447,15 @@ function renderPublicationsPage(items, fallback) {
   const groups = new Map();
   pubs.forEach((pub, index) => {
     pub.number = pubs.length - index;
-    const year = publicationYear(pub.item) || 'Undated';
+    // Keep accepted work separate so it cannot pull an older year ahead of
+    // a paper already assigned to a newer journal issue.
+    const year = pub.accepted ? 'In press' : publicationYear(pub.item) || 'Undated';
     if (!groups.has(year)) groups.set(year, []);
     groups.get(year).push(pub);
   });
 
   list.innerHTML = [...groups.entries()].map(([year, group]) => `
-    <div class="pub-year-group" id="year-${year}">
+    <div class="pub-year-group" id="year-${String(year).toLowerCase().replace(/\s+/g, '-')}">
       <div class="pub-year-heading">${year}</div>
       ${group.map(pub => renderPublicationCard(pub, pub.number)).join('')}
     </div>
@@ -642,20 +661,29 @@ function metricsValues(d, derived = {}, now = Date.now()) {
   const citationAge = (now - Date.parse(citationDate + 'T00:00:00Z')) / 86400000;
   const savedCitation = d.sources?.[name] !== 'ok' || citationAge > 7;
 
-  // `derived` is a fallback only: the metrics file already reconciles the ORCID
-  // count against this same bibliography, so every page shows one figure whether
-  // or not it happens to render a publication list.
+  // A new bibliography can reach the browser before the daily metrics refresh.
+  // Its counts take precedence; reconcile the article total with saved ORCID data.
+  const libraryCount = derived.library_peer_reviewed ?? d.library_peer_reviewed;
+  const hasLibrary = Number.isInteger(libraryCount) && libraryCount >= 0;
+  const hasOrcid = Number.isInteger(d.orcid_peer_reviewed) && d.orcid_peer_reviewed >= 0;
+  const publicationCount = hasLibrary
+    ? Math.max(libraryCount, hasOrcid ? d.orcid_peer_reviewed : d.peer_reviewed_works || 0)
+    : d.peer_reviewed_works;
+  const pendingCount = hasLibrary && hasOrcid
+    ? Math.max(0, libraryCount - d.orcid_peer_reviewed) : d.works_pending_in_orcid;
   return {
-    ...derived,
     ...d,
+    ...derived,
     ...profile,
+    peer_reviewed_works: publicationCount,
+    works_pending_in_orcid: pendingCount,
     citation_source_name: source?.name,
     citation_source_url:  source?.url,
     citation_as_of_label: formatMetricDate(citationDate),
     citation_snapshot_label: citationDate
       ? `${savedCitation ? 'Saved' : 'Updated'} ${formatMetricDate(citationDate)}` : '',
-    publication_source_name: Number.isInteger(d.works_pending_in_orcid)
-      ? d.works_pending_in_orcid > 0 ? 'ORCID + library' : 'ORCID' : '',
+    publication_source_name: Number.isInteger(pendingCount)
+      ? pendingCount > 0 ? 'ORCID + library' : 'ORCID' : hasLibrary ? 'Library' : '',
     publication_snapshot_label: publicationDate
       ? `${d.sources?.orcid === 'ok' ? 'Updated' : 'Saved'} ${formatMetricDate(publicationDate)}` : '',
     peer_review_snapshot_label: reviewDate

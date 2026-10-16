@@ -17,5 +17,6 @@ jobs:
       - run: python -m unittest discover -s scripts -p 'test_*.py'
       - run: node scripts/test_homepage_metrics.cjs
       - run: node scripts/test_publications.cjs
+      - run: node scripts/test_citations.cjs
       - run: python scripts/check_site.py
       - run: python scripts/refresh_static.py --check

@@ -2483,10 +2483,21 @@
 		"issued": {
 			"date-parts": [
 				[
+					2027,
+					1
+				]
+			]
+		},
+		"volume": "226",
+		"available-date": {
+			"date-parts": [
+				[
 					2026,
+					10,
 					10
 				]
 			]
-		}
+		},
+		"PMID": "42858910"
 	}
 ]

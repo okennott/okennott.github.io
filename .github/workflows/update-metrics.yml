@@ -67,6 +67,7 @@ jobs:
           python scripts/check_site.py
           node scripts/test_homepage_metrics.cjs
           node scripts/test_publications.cjs
+          node scripts/test_citations.cjs
 
       - name: Commit updated metrics
         uses: stefanzweifel/git-auto-commit-action@v5

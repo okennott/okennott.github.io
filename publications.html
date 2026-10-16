@@ -318,13 +318,6 @@
   border-left: 2px solid rgba(184,92,56,0.3);
 }
 
-/* Total citations live badge */
-#total-citations-badge {
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  color: var(--gold);
-}
-
 @media (max-width: 700px) {
   .pub-card-header { grid-template-columns: 36px 1fr; }
   .pub-card-actions { display: none; }
@@ -366,7 +359,7 @@
     <div class="accent-rule" style="background:var(--green);"></div>
     <p style="color:var(--muted);font-size:16px;max-width:600px;line-height:1.7;">
       <span data-metric="library_records">43</span> publication records across mammal systematics,
-      macroecology, and conservation biology. Works tracked via ORCID; citations tracked live via
+      macroecology, and conservation biology. Works tracked via ORCID and the publication library; citation snapshots checked daily. Profiles:
       <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener"
          style="color:var(--green);text-decoration:none;">Google Scholar ↗</a> ·
       <a href="https://www.researchgate.net/profile/Kenneth-Onditi" target="_blank" rel="noopener"
@@ -384,16 +377,16 @@
     <div class="pub-stat-box">
       <span class="num" data-metric="peer_reviewed_works">40</span>
       <span class="lbl">Peer-reviewed articles</span>
-      <span class="lbl lbl-src">via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID ↗</a></span>
+      <span class="lbl lbl-src">via <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener"><span data-metric="publication_source_name">ORCID + library</span> ↗</a></span>
     </div>
     <div class="pub-stat-box">
-      <span class="num author-total-cit" data-metric="citations" id="total-citations-badge">403</span>
+      <span class="num author-total-cit" data-metric="citations" id="total-citations-badge">414</span>
       <span class="lbl">Citations · h-index <span class="author-hindex" data-metric="h_index">12</span> · i10 <span data-metric="i10_index">13</span></span>
-      <span class="lbl lbl-src">via <a data-metric-href="citation_source_url" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span data-metric="citation_source_name">Google Scholar</span> ↗</a> · <span data-metric="citation_as_of_label">4 Oct 2026</span></span>
+      <span class="lbl lbl-src">via <a data-metric-href="citation_source_url" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span data-metric="citation_source_name">Google Scholar</span> ↗</a> · <span data-metric="citation_as_of_label">16 Oct 2026</span></span>
     </div>
     <div class="pub-stat-box">
-      <span class="num" data-metric="year_span">8</span>
-      <span class="lbl" data-metric="year_range_label">Years 2019–2026</span>
+      <span class="num" data-metric="year_span">9</span>
+      <span class="lbl" data-metric="year_range_label">Years 2019–2027</span>
     </div>
     <div class="pub-stat-box">
       <span class="num" data-metric="open_access_count">29</span>
@@ -401,10 +394,10 @@
     </div>
   </div>
   <p class="pub-stats-note">
-    Works from <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener">ORCID</a>;
+    Works from <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener"><span data-metric="publication_source_name">ORCID + library</span></a>;
     citations from <a data-metric-href="citation_source_url" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span data-metric="citation_source_name">Google Scholar</span></a>,
     per-paper counts from <a href="https://openalex.org/" target="_blank" rel="noopener">OpenAlex</a>.
-    Refreshed daily · last checked <span data-metric="last_updated_label">15 Oct 2026</span>.
+    Refreshed daily · last checked <span data-metric="last_updated_label">16 Oct 2026</span>.
   </p>
 
   <!-- Legend -->
@@ -429,8 +422,8 @@
   </div>
 
   <div id="pubs-list">
-    <div class="pub-year-group" id="year-2026">
-      <div class="pub-year-heading">2026</div>
+    <div class="pub-year-group" id="year-in-press">
+      <div class="pub-year-heading">In press</div>
 
     <div class="pub-card oa" id="pub-43" data-tags="systematics oa peer-reviewed" data-doi="">
 
@@ -443,6 +436,7 @@
             <span class="pub-venue">Zoosystema</span>
 
             <span class="badge badge-accepted">✔ Accepted 1 Jun 2026 · in press</span>
+
             <span class="badge badge-oa">🔓 OA</span>
 
           </div>
@@ -459,11 +453,17 @@
         </div>
         <div class="pub-links-row">
 
+
           <a href="https://scholar.google.com/scholar?q=Small%20terrestrial%20mammal%20inventory%20of%20Assoukoko%20forest%20(Togo)%2C%20with%20new%20country%20records%20and%20potential%20new%20species%20for%20science" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
       </div>
     </div>
+    </div>
+
+    <div class="pub-year-group" id="year-2027">
+      <div class="pub-year-heading">2027</div>
+
     <div class="pub-card access-unknown" id="pub-42" data-tags="systematics peer-reviewed" data-doi="10.1016/j.ympev.2026.108749">
       <span class="pub-anchor" id="p-10-1016-j-ympev-2026-108749" aria-hidden="true"></span>
       <div class="pub-card-header" onclick="toggleAbstract(42)">
@@ -472,9 +472,10 @@
           <div class="pub-authors">Pei, X., Li, Y., <strong>Onditi, K. O.</strong>, Wang, H., Qin, W., Zhu, R., Li, Q., Song, W., Li, X., Zhu, Z., Chen, Z., Jiang, X.</div>
           <div class="pub-title">Phylogeny and evolutionary history of the genus <em>Nectogale</em> (Soricidae) inferred from whole–genome analyses, with description of a new species endemic to the Himalayas</div>
           <div class="pub-venue-row">
-            <span class="pub-venue">Molecular Phylogenetics and Evolution, 108749 · <a href="https://doi.org/10.1016/j.ympev.2026.108749" target="_blank" rel="noopener">doi:10.1016/j.ympev.2026.108749</a></span>
+            <span class="pub-venue">Molecular Phylogenetics and Evolution, 226, 108749 · <a href="https://doi.org/10.1016/j.ympev.2026.108749" target="_blank" rel="noopener">doi:10.1016/j.ympev.2026.108749</a></span>
 
 
+            <span class="badge">Online 10 Oct 2026</span>
             <span class="badge badge-restricted">Access unverified</span>
             <span class="badge badge-citations cite-badge" id="cit-42" data-doi="10.1016/j.ympev.2026.108749" style="display:none;"></span>
           </div>
@@ -487,15 +488,21 @@
       </div>
       <div class="pub-abstract-body" id="abs-42">
         <div class="pub-abstract-text" id="abs-text-42">
-          <p style="color:var(--faint);font-style:italic;">Abstract not available. Please visit the journal page.</p>
+          <p>Read the abstract on <a href="https://pubmed.ncbi.nlm.nih.gov/42858910/" target="_blank" rel="noopener">PubMed ↗</a>.</p>
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.ympev.2026.108749" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42858910/" target="_blank" rel="noopener" class="pub-link">PubMed ↗</a>
           <a href="https://scholar.google.com/scholar?q=Phylogeny%20and%20evolutionary%20history%20of%20the%20genus%20Nectogale%20(Soricidae)%20inferred%20from%20whole%E2%80%93genome%20analyses%2C%20with%20description%20of%20a%20new%20species%20endemic%20to%20the%20Himalayas" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
       </div>
     </div>
+    </div>
+
+    <div class="pub-year-group" id="year-2026">
+      <div class="pub-year-heading">2026</div>
+
     <div class="pub-card access-unknown" id="pub-41" data-tags="macroecology peer-reviewed" data-doi="10.3897/vz.76.e188776">
       <span class="pub-anchor" id="p-10-3897-vz-76-e188776" aria-hidden="true"></span>
       <div class="pub-card-header" onclick="toggleAbstract(41)">
@@ -505,6 +512,7 @@
           <div class="pub-title">Geographic isolation and climatic heterogeneity shape the genetic diversity of <em>Blarinellini</em> (Eulipotyphla: Soricidae) in the Hengduan Mountains</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Vertebrate Zoology, 76, 611–624 · <a href="https://doi.org/10.3897/vz.76.e188776" target="_blank" rel="noopener">doi:10.3897/vz.76.e188776</a></span>
+
 
 
             <span class="badge badge-restricted">Access unverified</span>
@@ -523,6 +531,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3897/vz.76.e188776" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Geographic%20isolation%20and%20climatic%20heterogeneity%20shape%20the%20genetic%20diversity%20of%20Blarinellini%20(Eulipotyphla%3A%20Soricidae)%20in%20the%20Hengduan%20Mountains" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -538,6 +547,7 @@
           <div class="pub-venue-row">
             <span class="pub-venue">Research Square · <a href="https://doi.org/10.21203/rs.3.rs-10531544/v1" target="_blank" rel="noopener">doi:10.21203/rs.3.rs-10531544/v1</a></span>
             <span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>
+
 
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-40" data-doi="10.21203/rs.3.rs-10531544/v1" style="display:none;"></span>
@@ -555,6 +565,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.21203/rs.3.rs-10531544/v1" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Non-random%20defaunation%20across%20China%E2%80%99s%20protected%20area%20network%20revealed%20by%20multidimensional%20dark%20diversity" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -570,6 +581,7 @@
           <div class="pub-venue-row">
             <span class="pub-venue">SSRN · <a href="https://doi.org/10.2139/ssrn.7010506" target="_blank" rel="noopener">doi:10.2139/ssrn.7010506</a></span>
             <span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>
+
 
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-39" data-doi="10.2139/ssrn.7010506" style="display:none;"></span>
@@ -587,6 +599,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.2139/ssrn.7010506" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=The%20protection%20of%20Asian%20elephants%20in%20China%20caught%20in%20a%20conservation%20trap" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -601,6 +614,7 @@
           <div class="pub-title">Beyond species richness: Habitat fragmentation reduces community occupancy and functional richness of mountain forest mammals</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Biological Conservation, 318, 111828 · <a href="https://doi.org/10.1016/j.biocon.2026.111828" target="_blank" rel="noopener">doi:10.1016/j.biocon.2026.111828</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -619,6 +633,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.biocon.2026.111828" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Beyond%20species%20richness%3A%20Habitat%20fragmentation%20reduces%20community%20occupancy%20and%20functional%20richness%20of%20mountain%20forest%20mammals" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -633,6 +648,7 @@
           <div class="pub-title">Functional homogenization of terrestrial mammals outside protected areas in the Hengduan Mountains, China</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Conservation Biology, e70214 · <a href="https://doi.org/10.1111/cobi.70214" target="_blank" rel="noopener">doi:10.1111/cobi.70214</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -651,6 +667,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1111/cobi.70214" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Functional%20homogenization%20of%20terrestrial%20mammals%20outside%20protected%20areas%20in%20the%20Hengduan%20Mountains%2C%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Li_2026_FunctionalHomogenization_Hengduan.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -665,6 +682,7 @@
           <div class="pub-title">Species Diversification in the Sky Islands of Southwestern China Revealed by Genomic, Introgression, and Demographic Analyses of Asian Shrew Moles</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Systematic Biology, 75(2), 221–235 · <a href="https://doi.org/10.1093/sysbio/syaf052" target="_blank" rel="noopener">doi:10.1093/sysbio/syaf052</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -683,6 +701,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1093/sysbio/syaf052" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Species%20Diversification%20in%20the%20Sky%20Islands%20of%20Southwestern%20China%20Revealed%20by%20Genomic%2C%20Introgression%2C%20and%20Demographic%20Analyses%20of%20Asian%20Shrew%20Moles" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Li_2025_ShrewMoles_SkyIslands.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -697,6 +716,7 @@
           <div class="pub-title">Human Pressures Drive Compositional Homogenization and Functional Shifts in Southeast Asian Mammal Communities</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Global Change Biology, 32(5), e70916 · <a href="https://doi.org/10.1111/gcb.70916" target="_blank" rel="noopener">doi:10.1111/gcb.70916</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -715,6 +735,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1111/gcb.70916" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Human%20Pressures%20Drive%20Compositional%20Homogenization%20and%20Functional%20Shifts%20in%20Southeast%20Asian%20Mammal%20Communities" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -729,6 +750,7 @@
           <div class="pub-title">Diversification and biogeographic history of African dormice (genus <em>Graphiurus</em>) revealed by ultraconserved elements and mitochondrial data</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Mol Phylogenet Evol, 217, 108549 · <a href="https://doi.org/10.1016/j.ympev.2026.108549" target="_blank" rel="noopener">doi:10.1016/j.ympev.2026.108549</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -747,6 +769,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.ympev.2026.108549" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Diversification%20and%20biogeographic%20history%20of%20African%20dormice%20(genus%20Graphiurus)%20revealed%20by%20ultraconserved%20elements%20and%20mitochondrial%20data" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2026_Graphiurus_UCE.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -761,6 +784,7 @@
           <div class="pub-title">Integrative taxonomic revision of <em>Uropsilus</em> (<em>Uropsilinae</em>, Talpidae) combining genomic, morphological and geographic evidence</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Molecular Phylogenetics and Evolution, 223, 108652 · <a href="https://doi.org/10.1016/j.ympev.2026.108652" target="_blank" rel="noopener">doi:10.1016/j.ympev.2026.108652</a></span>
+
 
 
             <span class="badge badge-restricted">Access unverified</span>
@@ -779,6 +803,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.ympev.2026.108652" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Integrative%20taxonomic%20revision%20of%20Uropsilus%20(Uropsilinae%2C%20Talpidae)%20combining%20genomic%2C%20morphological%20and%20geographic%20evidence" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -793,6 +818,7 @@
           <div class="pub-title">Rain-shadow effects drive contrasting elevational patterns and assembly processes of small mammal diversity on windward and leeward slopes</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Biodiversity and Conservation, 35(8), 189 · <a href="https://doi.org/10.1007/s10531-026-03383-z" target="_blank" rel="noopener">doi:10.1007/s10531-026-03383-z</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -811,6 +837,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1007/s10531-026-03383-z" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Rain-shadow%20effects%20drive%20contrasting%20elevational%20patterns%20and%20assembly%20processes%20of%20small%20mammal%20diversity%20on%20windward%20and%20leeward%20slopes" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -825,6 +852,7 @@
           <div class="pub-title">Systematic revision and species diversification of the genus <em>Episoriculus</em> (Mammalia: Eulipotyphla: Soricidae), with descriptions of two new species</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Zoological Research · <a href="https://doi.org/10.24272/j.issn.2095-8137.2026.291" target="_blank" rel="noopener">doi:10.24272/j.issn.2095-8137.2026.291</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -843,6 +871,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.24272/j.issn.2095-8137.2026.291" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Systematic%20revision%20and%20species%20diversification%20of%20the%20genus%20Episoriculus%20(Mammalia%3A%20Eulipotyphla%3A%20Soricidae)%2C%20with%20descriptions%20of%20two%20new%20species" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -864,6 +893,7 @@
             <span class="pub-venue">Global Ecology and Conservation, 62, e03854 · <a href="https://doi.org/10.1016/j.gecco.2025.e03854" target="_blank" rel="noopener">doi:10.1016/j.gecco.2025.e03854</a></span>
 
 
+
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-30" data-doi="10.1016/j.gecco.2025.e03854" style="display:none;"></span>
           </div>
@@ -880,6 +910,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.gecco.2025.e03854" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Seasonal%20differences%20and%20downstream%20transport%20of%20terrestrial%20vertebrate%20eDNA%3A%20Insights%20from%20integrated%20camera-trap%20survey%20and%20water%20eDNA%20metabarcoding" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Bai_2025_eDNA_seasonal.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -894,6 +925,7 @@
           <div class="pub-title">Spatiotemporal distribution patterns of large and medium-sized mammals in a biodiversity hotspot: Implications for conservation</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Biological Conservation, 301, 110863 · <a href="https://doi.org/10.1016/j.biocon.2024.110863" target="_blank" rel="noopener">doi:10.1016/j.biocon.2024.110863</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -912,6 +944,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.biocon.2024.110863" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Spatiotemporal%20distribution%20patterns%20of%20large%20and%20medium-sized%20mammals%20in%20a%20biodiversity%20hotspot%3A%20Implications%20for%20conservation" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Hu_2025_Spatiotemporal_mammals_Hengduan.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -926,6 +959,7 @@
           <div class="pub-title">Human-wildlife coexistence needs more evidence-based interventions to reduce the losses of crops, livestock and fishery catches</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Journal of Applied Ecology, 62(3), 527–544 · <a href="https://doi.org/10.1111/1365-2664.14857" target="_blank" rel="noopener">doi:10.1111/1365-2664.14857</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -944,6 +978,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1111/1365-2664.14857" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Human-wildlife%20coexistence%20needs%20more%20evidence-based%20interventions%20to%20reduce%20the%20losses%20of%20crops%2C%20livestock%20and%20fishery%20catches" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Huang_2025_Human_Wildlife_Coexistence.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -958,6 +993,7 @@
           <div class="pub-title">Spatiotemporal patterns and environmental determinants of wildlife-vehicle collisions in Banke National Park, Nepal</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Scientific Reports, 15(1), 19478 · <a href="https://doi.org/10.1038/s41598-025-04609-w" target="_blank" rel="noopener">doi:10.1038/s41598-025-04609-w</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -976,6 +1012,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1038/s41598-025-04609-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Spatiotemporal%20patterns%20and%20environmental%20determinants%20of%20wildlife-vehicle%20collisions%20in%20Banke%20National%20Park%2C%20Nepal" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Koju_2025_Wildlife_vehicle_Nepal.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -990,6 +1027,7 @@
           <div class="pub-title">Multiscale spatial dependency of small mammal diversity patterns and their determinants</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Ecosphere, 16(2), e70179 · <a href="https://doi.org/10.1002/ecs2.70179" target="_blank" rel="noopener">doi:10.1002/ecs2.70179</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1008,6 +1046,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1002/ecs2.70179" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Multiscale%20spatial%20dependency%20of%20small%20mammal%20diversity%20patterns%20and%20their%20determinants" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2025_Multiscale_Diversity.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1022,6 +1061,7 @@
           <div class="pub-title">Integrative phylogeography of African striped grass mice (<em>Lemniscomys</em>): Cryptic diversity and habitat resilience</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Zoological Research: Diversity and Conservation, 2(4), 233–249 · <a href="https://doi.org/10.24272/j.issn.2097-3772.2025.030" target="_blank" rel="noopener">doi:10.24272/j.issn.2097-3772.2025.030</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1040,6 +1080,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.24272/j.issn.2097-3772.2025.030" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Integrative%20phylogeography%20of%20African%20striped%20grass%20mice%20(Lemniscomys)%3A%20Cryptic%20diversity%20and%20habitat%20resilience" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Sambaya_2025_Lemniscomys.pdf" class="pub-link pdf">⬇ Published Version</a>
         </div>
@@ -1061,6 +1102,7 @@
             <span class="pub-venue">Zoological Research Diversity and Conservation, 1–17 · <a href="https://doi.org/10.24272/j.issn.2097-3772.2023.005" target="_blank" rel="noopener">doi:10.24272/j.issn.2097-3772.2023.005</a></span>
 
 
+
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-24" data-doi="10.24272/j.issn.2097-3772.2023.005" style="display:none;"></span>
           </div>
@@ -1077,6 +1119,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.24272/j.issn.2097-3772.2023.005" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=The%20mammals%20of%20Gaoligong%20Mountain%20in%20China%3A%20diversity%2C%20distribution%2C%20and%20conservation" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Li_2024_Gaoligong_mammals.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1091,6 +1134,7 @@
           <div class="pub-title">Comparative Phylogeography of Two Specialist Rodents in Forest Fragments in Kenya</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Life (Basel), 14(11) · <a href="https://doi.org/10.3390/life14111469" target="_blank" rel="noopener">doi:10.3390/life14111469</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1109,6 +1153,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3390/life14111469" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Comparative%20Phylogeography%20of%20Two%20Specialist%20Rodents%20in%20Forest%20Fragments%20in%20Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Mweu_2024_Phylogeography_Kenya_rodents.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1123,6 +1168,7 @@
           <div class="pub-title">Unravelling spatial scale effects on elevational diversity gradients: insights from montane small mammals in Kenya</div>
           <div class="pub-venue-row">
             <span class="pub-venue">BMC Ecology and Evolution, 24(1), 139 · <a href="https://doi.org/10.1186/s12862-024-02328-w" target="_blank" rel="noopener">doi:10.1186/s12862-024-02328-w</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1141,6 +1187,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1186/s12862-024-02328-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Unravelling%20spatial%20scale%20effects%20on%20elevational%20diversity%20gradients%3A%20insights%20from%20montane%20small%20mammals%20in%20Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2024_ElevationalDiversity_Kenya.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1155,6 +1202,7 @@
           <div class="pub-title">A new species of mountain vole (Rodentia, Cricetidae, <em>Neodon</em>) from south Xizang, China</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Zoological Research: Diversity and Conservation, 1(4), 282–289 · <a href="https://doi.org/10.24272/j.issn.2097-3772.2024.011" target="_blank" rel="noopener">doi:10.24272/j.issn.2097-3772.2024.011</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1173,6 +1221,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.24272/j.issn.2097-3772.2024.011" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=A%20new%20species%20of%20mountain%20vole%20(Rodentia%2C%20Cricetidae%2C%20Neodon)%20from%20south%20Xizang%2C%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Wang_2024_Neodon_new_species.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1194,6 +1243,7 @@
             <span class="pub-venue">Journal of Mammalogy, 104(6), 1455–1467 · <a href="https://doi.org/10.1093/jmammal/gyad087" target="_blank" rel="noopener">doi:10.1093/jmammal/gyad087</a></span>
 
 
+
             <span class="badge badge-restricted">🔒 Subscription</span>
             <span class="badge badge-citations cite-badge" id="cit-20" data-doi="10.1093/jmammal/gyad087" style="display:none;"></span>
           </div>
@@ -1210,6 +1260,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1093/jmammal/gyad087" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Molecular%20and%20morphological%20evidence%20support%20a%20new%20species%20of%20Asiatic%20short-tailed%20shrew%20(Eulipotyphla%3A%20Soricidae)" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Chen_2023_new_shrew_species.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1224,6 +1275,7 @@
           <div class="pub-title">Systematics and evolutionary history of the genus <em>Micromys</em> (Mammalia: Rodentia: Muridae)</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Mammalian Biology, 103(4), 389–403 · <a href="https://doi.org/10.1007/s42991-023-00360-9" target="_blank" rel="noopener">doi:10.1007/s42991-023-00360-9</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -1242,6 +1294,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1007/s42991-023-00360-9" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Systematics%20and%20evolutionary%20history%20of%20the%20genus%20Micromys%20(Mammalia%3A%20Rodentia%3A%20Muridae)" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Chen_2023_Micromys_systematics.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1256,6 +1309,7 @@
           <div class="pub-title">Untangling key abiotic predictors of terrestrial mammal diversity patterns across ecoregions and species groups in Kenya</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Ecological Indicators, 154(-), 110595 · <a href="https://doi.org/10.1016/j.ecolind.2023.110595" target="_blank" rel="noopener">doi:10.1016/j.ecolind.2023.110595</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -1274,6 +1328,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1016/j.ecolind.2023.110595" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Untangling%20key%20abiotic%20predictors%20of%20terrestrial%20mammal%20diversity%20patterns%20across%20ecoregions%20and%20species%20groups%20in%20Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2023_Mammal_Diversity_Kenya.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1288,6 +1343,7 @@
           <div class="pub-title">Biogeographic patterns and environmental drivers of species richness in the globally distributed Millettioid/Phaseoloid clade (Fabaceae, subfamily Papilionoideae)</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Frontiers in Ecology and Evolution, 11 · <a href="https://doi.org/10.3389/fevo.2023.1231553" target="_blank" rel="noopener">doi:10.3389/fevo.2023.1231553</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1306,6 +1362,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3389/fevo.2023.1231553" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Biogeographic%20patterns%20and%20environmental%20drivers%20of%20species%20richness%20in%20the%20globally%20distributed%20Millettioid%2FPhaseoloid%20clade%20(Fabaceae%2C%20subfamily%20Papilionoideae)" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Oyebanji_2023_Fabaceae_biogeography.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1320,6 +1377,7 @@
           <div class="pub-title">A new species of forest hedgehog (<em>Mesechinus</em>, Erinaceidae, Eulipotyphla, Mammalia) from eastern China</div>
           <div class="pub-venue-row">
             <span class="pub-venue">ZooKeys, 1185, 143–161 · <a href="https://doi.org/10.3897/zookeys.1185.111615" target="_blank" rel="noopener">doi:10.3897/zookeys.1185.111615</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1338,6 +1396,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3897/zookeys.1185.111615" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=A%20new%20species%20of%20forest%20hedgehog%20(Mesechinus%2C%20Erinaceidae%2C%20Eulipotyphla%2C%20Mammalia)%20from%20eastern%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Shi_2023_Mesechinus_new_species.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1352,6 +1411,7 @@
           <div class="pub-title">Decomposing niche components reveals simultaneous effects of opposite deterministic processes structuring alpine small mammal assembly</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Frontiers in Ecology and Evolution, 10 · <a href="https://doi.org/10.3389/fevo.2022.999573" target="_blank" rel="noopener">doi:10.3389/fevo.2022.999573</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1370,6 +1430,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3389/fevo.2022.999573" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Decomposing%20niche%20components%20reveals%20simultaneous%20effects%20of%20opposite%20deterministic%20processes%20structuring%20alpine%20small%20mammal%20assembly" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Song_2023_Niche_alpine_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1384,6 +1445,7 @@
           <div class="pub-title">Suitable habitats shifting toward human-dominated landscapes of Asian elephants in China</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Biodiversity and Conservation, 33(2), 685–704 · <a href="https://doi.org/10.1007/s10531-023-02766-w" target="_blank" rel="noopener">doi:10.1007/s10531-023-02766-w</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -1402,6 +1464,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1007/s10531-023-02766-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Suitable%20habitats%20shifting%20toward%20human-dominated%20landscapes%20of%20Asian%20elephants%20in%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Yu_2023_Asian_elephants_habitat.pdf" class="pub-link pdf">⬇ Published Version</a><a href="pdfs/Yu_2023_Asian_elephants_habitat_accepted.pdf" class="pub-link pdf">⬇ Accepted Manuscript</a><a href="pdfs/Yu_2023_Asian_elephants_habitat_preprint.pdf" class="pub-link pdf">⬇ Preprint (Research Square)</a>
         </div>
@@ -1423,6 +1486,7 @@
             <span class="pub-venue">ZooKeys, 1083, 129–146 · <a href="https://doi.org/10.3897/zookeys.1083.78233" target="_blank" rel="noopener">doi:10.3897/zookeys.1083.78233</a></span>
 
 
+
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-13" data-doi="10.3897/zookeys.1083.78233" style="display:none;"></span>
           </div>
@@ -1439,6 +1503,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3897/zookeys.1083.78233" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=A%20new%20species%20of%20Asiatic%20shrew%20of%20the%20genus%20Chodsigoa%20(Soricidae%2C%20Eulipotyphla%2C%20Mammalia)%20from%20the%20Dabie%20Mountains%2C%20Anhui%20Province%2C%20eastern%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Chen_2022_Chodsigoa_new_species.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1453,6 +1518,7 @@
           <div class="pub-title">Modeling the Potential Distribution of Two Species of Shrews (<em>Chodsigoa</em> hypsibia and <em>Anourosorex</em> squamipes) under Climate Change in China</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Diversity, 14(2), 87 · <a href="https://doi.org/10.3390/d14020087" target="_blank" rel="noopener">doi:10.3390/d14020087</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1471,6 +1537,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3390/d14020087" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Modeling%20the%20Potential%20Distribution%20of%20Two%20Species%20of%20Shrews%20(Chodsigoa%20hypsibia%20and%20Anourosorex%20squamipes)%20under%20Climate%20Change%20in%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Hu_2022_Chodsigoa_distribution.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1485,6 +1552,7 @@
           <div class="pub-title">Patterns and Predictors of Small Mammal Phylogenetic and Functional Diversity in Contrasting Elevational Gradients in Kenya</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Frontiers in Ecology and Evolution, 9(964), 742524 · <a href="https://doi.org/10.3389/fevo.2021.742524" target="_blank" rel="noopener">doi:10.3389/fevo.2021.742524</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1503,6 +1571,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3389/fevo.2021.742524" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Patterns%20and%20Predictors%20of%20Small%20Mammal%20Phylogenetic%20and%20Functional%20Diversity%20in%20Contrasting%20Elevational%20Gradients%20in%20Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2022_Phylogenetic_Functional_Diversity_Kenya.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1517,6 +1586,7 @@
           <div class="pub-title">Human Disturbance and Geometric Constraints Drive Small Mammal Diversity and Community Structure along an Elevational Gradient in Eastern China</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Animals (Basel), 12(15) · <a href="https://doi.org/10.3390/ani12151915" target="_blank" rel="noopener">doi:10.3390/ani12151915</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1535,6 +1605,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.3390/ani12151915" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Human%20Disturbance%20and%20Geometric%20Constraints%20Drive%20Small%20Mammal%20Diversity%20and%20Community%20Structure%20along%20an%20Elevational%20Gradient%20in%20Eastern%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Pei_2022_Human_disturbance_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1549,6 +1620,7 @@
           <div class="pub-title">Methodological advances in explaining community assembly with niche-based theory</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Acta Theriologica Sinica, 42(3), 312–324 · <a href="https://doi.org/10.16829/j.slxb.150613" target="_blank" rel="noopener">doi:10.16829/j.slxb.150613</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1567,6 +1639,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.16829/j.slxb.150613" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Methodological%20advances%20in%20explaining%20community%20assembly%20with%20niche-based%20theory" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
 
         </div>
@@ -1588,6 +1661,7 @@
             <span class="pub-venue">Zoological Journal of the Linnean Society, 193(2), 432–444 · <a href="https://doi.org/10.1093/zoolinnean/zlaa172" target="_blank" rel="noopener">doi:10.1093/zoolinnean/zlaa172</a></span>
 
 
+
             <span class="badge badge-restricted">🔒 Subscription</span>
             <span class="badge badge-citations cite-badge" id="cit-8" data-doi="10.1093/zoolinnean/zlaa172" style="display:none;"></span>
           </div>
@@ -1604,6 +1678,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1093/zoolinnean/zlaa172" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Morphology%20and%20phylogeny%20of%20scalopine%20moles%20(Eulipotyphla%3A%20Talpidae%3A%20Scalopini)%20from%20the%20eastern%20Himalayas%2C%20with%20descriptions%20of%20a%20new%20genus%20and%20species" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Chen_2021_Scalopine_moles_Himalayas.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1618,6 +1693,7 @@
           <div class="pub-title">Historical biogeography, systematics, and integrative taxonomy of the non-Ethiopian speckled pelage brush-furred rats (<em>Lophuromys</em> flavopunctatus group)</div>
           <div class="pub-venue-row">
             <span class="pub-venue">BMC Ecol Evol, 21(1), 89 · <a href="https://doi.org/10.1186/s12862-021-01813-w" target="_blank" rel="noopener">doi:10.1186/s12862-021-01813-w</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1636,6 +1712,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1186/s12862-021-01813-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Historical%20biogeography%2C%20systematics%2C%20and%20integrative%20taxonomy%20of%20the%20non-Ethiopian%20speckled%20pelage%20brush-furred%20rats%20(Lophuromys%20flavopunctatus%20group)" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2021_Lophuromys_biogeography.pdf" class="pub-link pdf">⬇ Published Version</a><a href="pdfs/Onditi_2021_Lophuromys_biogeography_v2.pdf" class="pub-link pdf">⬇ Published Version (alt)</a><a href="pdfs/Onditi_2021_Lophuromys_biogeography_preprint.pdf" class="pub-link pdf">⬇ Preprint (Research Square)</a>
         </div>
@@ -1650,6 +1727,7 @@
           <div class="pub-title">The management effectiveness of protected areas in Kenya</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Biodiversity and Conservation, 30(13), 3813–3836 · <a href="https://doi.org/10.1007/s10531-021-02276-7" target="_blank" rel="noopener">doi:10.1007/s10531-021-02276-7</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -1668,6 +1746,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1007/s10531-021-02276-7" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=The%20management%20effectiveness%20of%20protected%20areas%20in%20Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2021_Protected_areas_Kenya.pdf" class="pub-link pdf">⬇ Author Copy (PDF)</a>
         </div>
@@ -1689,6 +1768,7 @@
             <span class="pub-venue">Ecol Evol, 10(5), 2545–2558 · <a href="https://doi.org/10.1002/ece3.6083" target="_blank" rel="noopener">doi:10.1002/ece3.6083</a></span>
 
 
+
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-5" data-doi="10.1002/ece3.6083" style="display:none;"></span>
           </div>
@@ -1705,6 +1785,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1002/ece3.6083" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Small%20mammal%20species%20richness%20and%20turnover%20along%20elevational%20gradient%20in%20Yulong%20Mountain%2C%20Yunnan%2C%20Southwest%20China" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Chen_2020_Yulong_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1719,6 +1800,7 @@
           <div class="pub-title">Morphological and genetic characterization of Mount Kenya brush-furred rats (Peters 1874); relevance to taxonomy and ecology</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Mammal Research, 65(2), 387–400 · <a href="https://doi.org/10.1007/s13364-019-00470-1" target="_blank" rel="noopener">doi:10.1007/s13364-019-00470-1</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -1737,6 +1819,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1007/s13364-019-00470-1" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Morphological%20and%20genetic%20characterization%20of%20Mount%20Kenya%20brush-furred%20rats%20(Peters%201874)%3B%20relevance%20to%20taxonomy%20and%20ecology" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2020_MountKenya_Lophuromys.pdf" class="pub-link pdf">⬇ Published Paper</a>
         </div>
@@ -1751,6 +1834,7 @@
           <div class="pub-title">Correction to: Morphological and genetic characterization of Mount Kenya brush-furred rats (<em>Lophuromys</em> Peters 1874); relevance to taxonomy and ecology</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Mammal Research, 65(2), 401–402 · <a href="https://doi.org/10.1007/s13364-019-00475-w" target="_blank" rel="noopener">doi:10.1007/s13364-019-00475-w</a></span>
+
 
 
             <span class="badge badge-restricted">🔒 Subscription</span>
@@ -1769,6 +1853,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.1007/s13364-019-00475-w" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Correction%20to%3A%20Morphological%20and%20genetic%20characterization%20of%20Mount%20Kenya%20brush-furred%20rats%20(Lophuromys%20Peters%201874)%3B%20relevance%20to%20taxonomy%20and%20ecology" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Onditi_2020_MountKenya_Lophuromys_correction.pdf" class="pub-link pdf">⬇ Published Correction</a>
         </div>
@@ -1783,6 +1868,7 @@
           <div class="pub-title">Isolated alpine habitats reveal disparate ecological drivers of taxonomic and functional beta-diversity of small mammal assemblages</div>
           <div class="pub-venue-row">
             <span class="pub-venue">Zool Res, 41(6), 670–683 · <a href="https://doi.org/10.24272/j.issn.2095-8137.2020.085" target="_blank" rel="noopener">doi:10.24272/j.issn.2095-8137.2020.085</a></span>
+
 
 
             <span class="badge badge-oa">🔓 OA</span>
@@ -1801,6 +1887,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.24272/j.issn.2095-8137.2020.085" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Isolated%20alpine%20habitats%20reveal%20disparate%20ecological%20drivers%20of%20taxonomic%20and%20functional%20beta-diversity%20of%20small%20mammal%20assemblages" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Song_2020_Alpine_beta_diversity.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>
@@ -1822,6 +1909,7 @@
             <span class="pub-venue">Zool Res, 40(1), 53–60 · <a href="https://doi.org/10.24272/j.issn.2095-8137.2019.004" target="_blank" rel="noopener">doi:10.24272/j.issn.2095-8137.2019.004</a></span>
 
 
+
             <span class="badge badge-oa">🔓 OA</span>
             <span class="badge badge-citations cite-badge" id="cit-1" data-doi="10.24272/j.issn.2095-8137.2019.004" style="display:none;"></span>
           </div>
@@ -1838,6 +1926,7 @@
         </div>
         <div class="pub-links-row">
           <a href="https://doi.org/10.24272/j.issn.2095-8137.2019.004" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>
+
           <a href="https://scholar.google.com/scholar?q=Diversity%20and%20distribution%20patterns%20of%20non-volant%20small%20mammals%20along%20different%20elevation%20gradients%20on%20Mt.%20Kenya%2C%20Kenya" target="_blank" rel="noopener" class="pub-link scholar">🎓 Google Scholar ↗</a>
           <a href="pdfs/Musila_2019_Mt_Kenya_small_mammals.pdf" class="pub-link pdf">⬇ Download PDF (OA)</a>
         </div>

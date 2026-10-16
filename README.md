@@ -66,6 +66,8 @@ Per-paper citation badges are fetched in **one batched request** covering every 
 
 Batching matters: the earlier implementation issued one request per paper, which fired ~40 parallel calls on every page load and reliably tripped Semantic Scholar's anonymous rate limit (HTTP 429), leaving most badges blank.
 
+If OpenAlex returns only part of the batch, Semantic Scholar is queried only for unresolved DOIs. An indexed zero is a valid result and stays hidden; it does not trigger another lookup or replace a positive count from the preferred source.
+
 ### Site-wide metric trackers
 Every live number is bound declaratively, and the text already in the HTML is the offline fallback:
 
@@ -78,6 +80,8 @@ Every live number is bound declaratively, and the text already in the HTML is th
 Values come from `assets/data/scholar-stats.json`, refreshed daily by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `peer_reviews`, `peer_review_journals`, `peer_review_years_label`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
 
 The homepage names the source and shows the exact date of each snapshot. Publication totals reconcile ORCID with the curated bibliography, so a count that includes papers awaiting ORCID deposit is labelled **ORCID + library**. `orcid_as_of` and `peer_review_as_of` change only when those figures are accepted; `last_checked` records the refresh attempt. A blocked Scholar refresh retains the last complete Scholar snapshot and displays its saved date. After 60 days, the browser and updater select the complete OpenAlex snapshot instead, including its source link, citations, h-index, and i10-index together.
+
+On pages that load the bibliography, its current counts take precedence over a saved metrics file until the next scheduled refresh. Article totals are still reconciled with ORCID, without changing the dates of the external snapshots.
 
 Note the two distinct "peer review" metrics: `peer_reviewed_works` is **articles Kenneth has published**; `peer_reviews` is **manuscripts he has reviewed for journals**. They are unrelated numbers from two different ORCID endpoints.
 
@@ -118,7 +122,7 @@ SKIP_SCHOLAR=1 python scripts/fetch_metrics.py   # skip the Scholar scrape
 The script is designed never to destroy good data:
 
 - ORCID and OpenAlex are fetched with the **standard library only**, so the metrics that drive the site cannot be broken by a failed `pip install`.
-- Google Scholar has no API and blocks datacentre IPs, so it is **best-effort**: hard-timed-out and non-fatal; its dated snapshot is kept separately from OpenAlex.
+- Google Scholar's labelled public profile table is read with the standard library, with `scholarly` as an optional fallback. CAPTCHA pages and incomplete tables are rejected. This remains **best-effort** and time-limited; a blocked refresh preserves the dated snapshot separately from OpenAlex.
 - A metric that arrives as `0`, or that collapses by more than 15% against the same source's previous reading, is **rejected** as a failed fetch and the stored value is kept.
 - If every source fails, the existing file is left untouched and the run still succeeds.
 
@@ -193,16 +197,16 @@ Open-access papers (BMC, Frontiers, MDPI, Scientific Reports, ZooKeys, Zoologica
 
 ## Deployment
 
-The site is fully static — push to `main` and GitHub Pages deploys automatically (typically within 1–2 minutes).
+The site is fully static — push to `oko` and GitHub Pages deploys automatically (typically within 1–2 minutes).
 
 ```bash
 git add .
 git commit -m "Update Zotero publication data"
-git push origin main
+git push origin oko
 ```
 
 Make sure GitHub Pages is configured to deploy from:
-**Settings → Pages → Source → Deploy from a branch → `main` / root**
+**Settings → Pages → Source → Deploy from a branch → `oko` / root**
 
 ---
 
@@ -283,6 +287,7 @@ python scripts/refresh_static.py
 python -m unittest discover -s scripts -p 'test_*.py'
 node scripts/test_homepage_metrics.cjs
 node scripts/test_publications.cjs
+node scripts/test_citations.cjs
 python scripts/check_site.py
 python scripts/refresh_static.py --check
 ```

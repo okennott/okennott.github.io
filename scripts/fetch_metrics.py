@@ -5,7 +5,7 @@ Sources, in order of trust per field:
 
   ORCID     pub.orcid.org        peer-reviewed works, preprints, first year
   OpenAlex  api.openalex.org     citations, h-index, i10-index, works count
-  Scholar   scholarly (scraped)  citations, h-index, i10-index, 5-year splits
+  Scholar   public profile      citations, h-index, i10-index, recent-period splits
 
 ORCID and OpenAlex use the standard library only, so the critical path needs no
 pip install and cannot be broken by a dependency. Google Scholar has no API and
@@ -21,6 +21,7 @@ failed AND there was no previous file to fall back on.
 """
 
 import json
+from html.parser import HTMLParser
 import os
 import re
 import sys
@@ -221,7 +222,7 @@ def resolve_journal(issn):
 
 
 def from_openalex():
-    """Citations and indices — reliable, CORS-open, and never rate-limits us."""
+    """Citations and indices; anonymous requests share OpenAlex's IP quota."""
     data = get_json(
         f"https://api.openalex.org/authors/orcid:{ORCID_ID}?mailto={CONTACT}"
     )
@@ -238,10 +239,79 @@ def from_openalex():
     return stats
 
 
+class _ScholarTable(HTMLParser):
+    """Read only the public profile's labelled citation table."""
+    def __init__(self):
+        super().__init__()
+        self.in_table = False
+        self.rows = []
+        self.row = None
+        self.cell = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "table" and dict(attrs).get("id") == "gsc_rsb_st":
+            self.in_table = True
+        if self.in_table:
+            if tag == "tr":
+                self.row = []
+            elif tag in ("td", "th"):
+                self.cell = []
+
+    def handle_data(self, data):
+        if self.cell is not None:
+            self.cell.append(data)
+
+    def handle_endtag(self, tag):
+        if not self.in_table:
+            return
+        if tag in ("td", "th") and self.cell is not None:
+            self.row.append("".join(self.cell).strip())
+            self.cell = None
+        elif tag == "tr" and self.row is not None:
+            self.rows.append(self.row)
+            self.row = None
+        elif tag == "table":
+            self.in_table = False
+
+
+def parse_scholar_html(text):
+    table = _ScholarTable()
+    table.feed(text)
+    headers = next((row for row in table.rows if "All" in row), None)
+    if not headers:
+        raise RuntimeError("Scholar returned no labelled citation table (possibly blocked)")
+    columns = {"": headers.index("All")}
+    if "Since 2021" in headers:
+        columns["_since_2021"] = headers.index("Since 2021")
+    rows = {row[0].casefold(): row for row in table.rows if row}
+    result = {}
+    for label, key in (("citations", "citations"), ("h-index", "h_index"), ("i10-index", "i10_index")):
+        row = rows.get(label, [])
+        for suffix, column in columns.items():
+            value = row[column].replace(",", "") if column < len(row) else ""
+            if not re.fullmatch(r"[0-9]+", value):
+                raise RuntimeError(f"Scholar returned an incomplete {label} row")
+            result[key + suffix] = int(value)
+    return result
+
+
+def from_scholar_html():
+    url = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en"
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
+    with urllib.request.urlopen(request, timeout=HTTP_TIMEOUT) as response:
+        charset = response.headers.get_content_charset() or "utf-8"
+        return parse_scholar_html(response.read().decode(charset, errors="replace"))
+
+
 def from_scholar():
-    """Best-effort scrape. Google Scholar blocks CI runners most of the time."""
+    """Read the public profile; fall back to the optional scraper if blocked."""
     if os.environ.get("SKIP_SCHOLAR") == "1":
         raise RuntimeError("skipped via SKIP_SCHOLAR=1")
+
+    try:
+        return from_scholar_html()
+    except (OSError, ValueError, RuntimeError) as exc:
+        log(f"  Public Scholar profile unavailable: {exc}; trying optional scraper")
 
     result = {}
     error = {}

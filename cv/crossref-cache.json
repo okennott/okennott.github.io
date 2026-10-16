@@ -2222,8 +2222,8 @@
   "issued": {
    "date-parts": [
     [
-     2026,
-     10
+     2027,
+     1
     ]
    ]
   },
@@ -2231,8 +2231,8 @@
   "published": {
    "date-parts": [
     [
-     2026,
-     10
+     2027,
+     1
     ]
    ]
   },
@@ -2242,7 +2242,8 @@
   "title": [
    "Phylogeny and evolutionary history of the genus Nectogale (Soricidae) inferred from whole–genome analyses, with description of a new species endemic to the Himalayas"
   ],
-  "type": "journal-article"
+  "type": "journal-article",
+  "volume": "226"
  },
  "10.1038/s41598-025-04609-w": {
   "article-number": "19478",

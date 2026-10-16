@@ -8,9 +8,39 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import os
 from unittest.mock import patch
 
 import fetch_metrics as metrics
+
+
+class ScholarTableTests(unittest.TestCase):
+    html = '''<table id="gsc_rsb_st"><tr><th></th><th>All</th><th>Since 2021</th></tr>
+      <tr><td><a>Citations</a></td><td>1,414</td><td>1,402</td></tr>
+      <tr><td>h-index</td><td>12</td><td>12</td></tr>
+      <tr><td>i10-index</td><td>13</td><td>13</td></tr></table>'''
+
+    def test_extracts_complete_labelled_snapshot_without_scraper_dependency(self):
+        values = metrics.parse_scholar_html(self.html)
+        self.assertEqual(values, {"citations": 1414, "citations_since_2021": 1402,
+            "h_index": 12, "h_index_since_2021": 12, "i10_index": 13, "i10_index_since_2021": 13})
+        with patch.dict(os.environ, {"SKIP_SCHOLAR": "0"}), patch.object(metrics, "from_scholar_html", return_value=values):
+            self.assertEqual(metrics.from_scholar(), values)
+
+    def test_blocks_and_partial_tables_are_rejected(self):
+        for text in ("<html>Unusual traffic</html>", self.html.replace("<td>13</td>", "<td></td>", 1)):
+            with self.subTest(text=text), self.assertRaises(RuntimeError):
+                metrics.parse_scholar_html(text)
+
+    def test_different_recent_period_does_not_get_labelled_since_2021(self):
+        values = metrics.parse_scholar_html(self.html.replace("Since 2021", "Since 2022"))
+        self.assertEqual(values, {"citations": 1414, "h_index": 12, "i10_index": 13})
+
+    def test_skip_flag_does_not_request_profile(self):
+        with patch.dict(os.environ, {"SKIP_SCHOLAR": "1"}), patch.object(metrics, "from_scholar_html") as fetch:
+            with self.assertRaises(RuntimeError):
+                metrics.from_scholar()
+            fetch.assert_not_called()
 
 
 class RefreshTests(unittest.TestCase):

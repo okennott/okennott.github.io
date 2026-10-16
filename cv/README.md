@@ -79,10 +79,10 @@ takes its place in the dated list.
 
 Google Scholar often blocks GitHub Actions runners. The daily workflow attempts
 Scholar and OpenAlex, retaining the last verified snapshot when a source is blocked.
+Scholar's public table is read without extra dependencies; `scholarly` is an optional fallback.
 To update the Scholar numbers, run this from a home connection:
 
 ```bash
-pip install scholarly
 python ../scripts/fetch_metrics.py
 ```
 
