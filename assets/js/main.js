@@ -381,7 +381,7 @@ function renderPublicationCard(pub, number) {
   const venue = formatVenue(item);
   const oa = pub.isOpenAccess;
   const tags = pub.tags;
-  const authorCopyAvailable = item['author-copy-available'] === true;
+  const authorCopyAvailable = oa === false || item['author-copy-available'] === true;
   const pdfLinks = (pub.fallback.pdfLinks || [])
     .map(link => `<a href="${escapeHtml(link.href)}" class="pub-link pdf">${escapeHtml(link.label)}</a>`)
     .join('');

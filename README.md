@@ -144,7 +144,7 @@ The live Publications page and the highlighted publications on the Home page are
 
 The static cards in `publications.html` are generated fallbacks. Their existing author-copy links and curated topic/access metadata are preserved during refresh; edit the library for bibliographic changes. The October 2026 DOI extraction is documented in [Pei_2026_Nectogale.md](publications/Pei_2026_Nectogale.md). Retain that record in the next Zotero export.
 
-The library's optional `open-access` boolean overrides inferred or saved access status. `author-copy-available: true` adds the author-copy availability label; when there is no linked PDF, the card links to Contact to request a copy. Preserve these site-specific fields in future library exports.
+The library's optional `open-access` boolean overrides inferred or saved access status. All subscription publications show **Subscription · author copy available**. Existing PDF downloads are retained; when there is no linked PDF, the card links to Contact to request a copy. The library also records `author-copy-available: true` for these papers. Preserve these site-specific fields in future library exports.
 
 ### Accepted papers that have no DOI yet
 
