@@ -124,6 +124,8 @@ async function fetchCitationsFromSemanticScholar(dois) {
         signal: AbortSignal.timeout(12000)
       }
     );
+    // A 400 means none of these DOIs are indexed (e.g. an SSRN preprint), not an outage.
+    if (res.status === 400) return;
     if (!res.ok) throw new Error('Semantic Scholar ' + res.status);
     const data = await res.json();
     (data || []).forEach((paper, index) => {
@@ -369,15 +371,19 @@ function scholarUrl(title) {
   return `https://scholar.google.com/scholar?q=${encodeURIComponent(title || '')}`;
 }
 
+function onlineDateLabel(item) {
+  const parts = item?.['available-date']?.['date-parts']?.[0];
+  return parts?.length === 3
+    ? formatMetricDate(parts.map((part, i) => String(part).padStart(i ? 2 : 4, '0')).join('-')) : '';
+}
+
 function renderPublicationCard(pub, number) {
   const item = pub.item;
   const doi = cleanDoi(item.DOI);
   const doiUrl = doi ? `https://doi.org/${doi}` : '';
   const pubmedUrl = /^\d+$/.test(String(item.PMID || ''))
     ? `https://pubmed.ncbi.nlm.nih.gov/${item.PMID}/` : '';
-  const onlineParts = item['available-date']?.['date-parts']?.[0];
-  const onlineLabel = onlineParts?.length === 3
-    ? formatMetricDate(onlineParts.map((part, i) => String(part).padStart(i ? 2 : 4, '0')).join('-')) : '';
+  const onlineLabel = onlineDateLabel(item);
   const venue = formatVenue(item);
   const oa = pub.isOpenAccess;
   const tags = pub.tags;
@@ -385,6 +391,13 @@ function renderPublicationCard(pub, number) {
   const pdfLinks = (pub.fallback.pdfLinks || [])
     .map(link => `<a href="${escapeHtml(link.href)}" class="pub-link pdf">${escapeHtml(link.label)}</a>`)
     .join('');
+  // The first PDF, or a copy request, is also offered beside the abstract toggle.
+  const firstPdf = pub.fallback.pdfLinks?.[0]?.href;
+  const copyAction = firstPdf
+    ? `<a href="${escapeHtml(firstPdf)}" class="pub-action" onclick="event.stopPropagation()">PDF ↓</a>`
+    : authorCopyAvailable
+      ? '<a href="contact.html" class="pub-action" onclick="event.stopPropagation()">Request copy</a>'
+      : '';
 
   return `
     <div class="pub-card ${oa ? 'oa' : oa === false ? 'restricted' : 'access-unknown'}${pub.isPreprint ? ' preprint' : ''}" id="pub-${number}" data-tags="${escapeHtml(tags)}" data-doi="${escapeHtml(doi)}">
@@ -404,6 +417,7 @@ function renderPublicationCard(pub, number) {
           </div>
         </div>
         <div class="pub-card-actions">
+          ${copyAction}
           <button class="abstract-toggle" aria-expanded="false" onclick="event.stopPropagation();toggleAbstract(${number})">
             <span class="toggle-label">Abstract</span> <span class="toggle-icon">▾</span>
           </button>
@@ -413,7 +427,7 @@ function renderPublicationCard(pub, number) {
         <div class="pub-abstract-text" id="abs-text-${number}">
           ${item.abstract ? `<p>${escapeHtml(item.abstract)}</p>` : pubmedUrl
             ? `<p>Read the abstract on <a href="${pubmedUrl}" target="_blank" rel="noopener">PubMed ↗</a>.</p>`
-            : '<p style="color:var(--faint);font-style:italic;">Abstract not available. Please visit the journal page.</p>'}
+            : '<p style="color:var(--muted);font-style:italic;">Abstract not available. Please visit the journal page.</p>'}
         </div>
         <div class="pub-links-row">
           ${doiUrl ? `<a href="${doiUrl}" target="_blank" rel="noopener" class="pub-link">📄 View at Journal ↗</a>` : ''}
@@ -486,25 +500,39 @@ function renderPublicationsPage(items, fallback) {
   });
 }
 
+const HOME_HIGHLIGHT_COUNT = 4;
+
+/* Records flagged "highlight": true in the library are shown first; the newest
+   peer-reviewed articles fill any remaining places. */
+function homeHighlights(items) {
+  const newest = (a, b) => dateSortKey(b.item, b.index) - dateSortKey(a.item, a.index);
+  const eligible = items
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => !isPreprint(item) && !isCorrection(item));
+  const picked = eligible.filter(({ item }) => item.highlight === true).sort(newest);
+  const rest = eligible.filter(({ item }) => item.highlight !== true).sort(newest);
+  return picked.concat(rest).slice(0, HOME_HIGHLIGHT_COUNT);
+}
+
 function renderHomePublications(items) {
   const list = document.getElementById('home-publications') || document.querySelector('.pub-preview-list');
   if (!list) return;
 
-  const pubs = items
-    .map((item, index) => ({ item, index }))
-    .sort((a, b) => dateSortKey(b.item, b.index) - dateSortKey(a.item, a.index))
-    .slice(0, 4);
+  const pubs = homeHighlights(items);
 
   list.innerHTML = pubs.map((pub, index) => {
     const item = pub.item;
     const doi = cleanDoi(item.DOI);
     const doiUrl = doi ? `https://doi.org/${doi}` : '';
+    // An issue dated ahead of its online release otherwise reads as a typo.
+    const online = onlineDateLabel(item);
+    const showOnline = online && !online.endsWith(String(publicationYear(item)));
     return `
       <div class="pub-preview${isPreprint(item) ? ' preprint' : ''}">
         <span class="pub-year-badge">${publicationYear(item) || ''}</span>
         <div>
           <div class="pub-preview-title">${formatTitle(item.title)}</div>
-          <div class="pub-preview-journal">${escapeHtml(formatVenue(item))}${isPreprint(item) ? ' <span class="badge badge-preprint">Preprint</span>' : ''}</div>
+          <div class="pub-preview-journal">${escapeHtml(formatVenue(item))}${showOnline ? ` · online ${escapeHtml(online)}` : ''}${isPreprint(item) ? ' <span class="badge badge-preprint">Preprint</span>' : ''}</div>
           ${doiUrl ? `<a class="pub-preview-doi" href="${doiUrl}" target="_blank" rel="noopener">doi: ${escapeHtml(doi)} ↗</a>` : ''}
         </div>
         <div class="pub-preview-cit">

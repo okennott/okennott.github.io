@@ -85,7 +85,7 @@
 }
 .field-stat-label {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -112,9 +112,9 @@
   position: absolute;
   top: 16px; left: 20px;
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 4px;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 /* Expedition location markers */
@@ -169,19 +169,18 @@
 }
 
 .expedition-header {
+  /* Date above the title, so header and body share one left edge. */
   display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 4px;
 }
 
 .expedition-date {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--terra);
   letter-spacing: 1px;
   line-height: 1.7;
-  padding-top: 5px;
 }
 
 .expedition-location {
@@ -204,7 +203,7 @@
 .expedition-count {
   display: inline-block;
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 2px;
   color: var(--green);
   text-transform: uppercase;
@@ -221,7 +220,7 @@
 }
 .exp-taxon {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: var(--muted);
   border: 1px solid var(--faint);
@@ -242,9 +241,9 @@
   padding: 28px 24px;
 }
 .method-icon {
-  font-size: 24px;
-  margin-bottom: 14px;
   display: block;
+  margin-bottom: 14px;
+  color: var(--terra);
 }
 .method-title {
   font-family: 'Bitter', serif;
@@ -266,8 +265,6 @@
 }
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
-  .expedition-header { grid-template-columns: 1fr; gap: 4px; }
-  .expedition-desc, .expedition-taxa { grid-column: 1; }
 }
 </style>
 </head>
@@ -327,8 +324,8 @@
       <span class="field-stat-label">Ecosystems sampled</span>
     </div>
     <div class="field-stat">
-      <span class="field-stat-num">10+</span>
-      <span class="field-stat-label">Years of fieldwork</span>
+      <span class="field-stat-num">2015–19</span>
+      <span class="field-stat-label">Campaign years</span>
     </div>
   </div>
 
@@ -357,7 +354,7 @@
 
     <!-- SVG Kenya Map -->
     <div class="kenya-map-wrap">
-      <svg id="kenya-svg" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+      <svg id="kenya-svg" viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
         <defs>
           <style>
             .country-bg { fill: #1a1610; stroke: #3a3020; stroke-width: 1.2; }
@@ -382,89 +379,93 @@
 
         <!-- Lake Victoria (simplified) -->
         <ellipse cx="68" cy="190" rx="28" ry="22" fill="#0d1820" stroke="#2e2618" stroke-width="0.8"/>
-        <text x="55" y="196" font-family="monospace" font-size="7" fill="#3a5060" letter-spacing="0.5">L. Victoria</text>
+        <text x="68" y="203" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6878" letter-spacing="0.5">L. Victoria</text>
 
         <!-- Rift Valley marker line -->
         <line x1="148" y1="40" x2="128" y2="270" stroke="#2e2618" stroke-width="0.5" stroke-dasharray="4,3"/>
-        <text x="132" y="155" font-family="monospace" font-size="7" fill="#3a3020" transform="rotate(-8,132,155)" letter-spacing="0.5">Rift Valley</text>
+        <text x="152" y="52" font-family="monospace" font-size="8" fill="#5c5038" letter-spacing="0.5">Rift Valley</text>
 
-        <!-- ── Expedition site markers ── -->
-        <!-- 1. Mount Kenya (~centre-right) -->
-        <g class="map-marker" data-site="mt-kenya">
-          <circle cx="185" cy="148" r="5" fill="var(--terra)" opacity="0.85"/>
-          <circle class="site-ring" cx="185" cy="148" r="10"/>
-          <text x="192" y="152" font-family="monospace" font-size="8" fill="var(--cream)" opacity="0.8">Mt. Kenya</text>
-        </g>
+        <!-- ── Expedition site markers ──
+             Labels sit on whichever side keeps them clear of neighbouring sites. -->
+        <g font-family="monospace" font-size="10" fill="var(--cream)">
+          <!-- 1. Mount Kenya -->
+          <g class="map-marker" data-site="mt-kenya">
+            <circle cx="185" cy="148" r="5" fill="var(--terra)" opacity="0.85"/>
+            <circle class="site-ring" cx="185" cy="148" r="10"/>
+            <text x="194" y="152" font-size="11" opacity="0.9">Mt. Kenya</text>
+          </g>
 
-        <!-- 2. Mt Elgon (upper-left) -->
-        <g class="map-marker" data-site="mt-elgon">
-          <circle cx="92" cy="105" r="5" fill="var(--gold)" opacity="0.85"/>
-          <text x="98" y="109" font-family="monospace" font-size="8" fill="var(--cream)" opacity="0.8">Mt. Elgon</text>
-        </g>
+          <!-- 2. Mt Elgon -->
+          <g class="map-marker" data-site="mt-elgon">
+            <circle cx="92" cy="105" r="5" fill="var(--gold)" opacity="0.85"/>
+            <text x="85" y="102" text-anchor="end" opacity="0.8">Mt. Elgon</text>
+          </g>
 
-        <!-- 3. Cherang'any Hills -->
-        <g class="map-marker" data-site="cheranganys">
-          <circle cx="118" cy="115" r="4" fill="var(--gold)" opacity="0.8"/>
-          <text x="124" y="119" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Cherang'any</text>
-        </g>
+          <!-- 3. Cherang'any Hills -->
+          <g class="map-marker" data-site="cheranganys">
+            <circle cx="118" cy="115" r="4" fill="var(--gold)" opacity="0.8"/>
+            <text x="125" y="119" opacity="0.8">Cherang'any</text>
+          </g>
 
-        <!-- 4. Mathews Range (north) -->
-        <g class="map-marker" data-site="mathews">
-          <circle cx="200" cy="80" r="4" fill="var(--gold)" opacity="0.8"/>
-          <text x="206" y="84" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Mathews Rng</text>
-        </g>
+          <!-- 4. Mathews Range -->
+          <g class="map-marker" data-site="mathews">
+            <circle cx="200" cy="80" r="4" fill="var(--gold)" opacity="0.8"/>
+            <text x="207" y="84" opacity="0.8">Mathews Rng</text>
+          </g>
 
-        <!-- 5. Kakamega (west) -->
-        <g class="map-marker" data-site="kakamega">
-          <circle cx="82" cy="145" r="4" fill="var(--green)" opacity="0.85"/>
-          <text x="48" y="141" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Kakamega</text>
-        </g>
+          <!-- 5. Kakamega -->
+          <g class="map-marker" data-site="kakamega">
+            <circle cx="82" cy="145" r="4" fill="var(--green)" opacity="0.85"/>
+            <text x="75" y="142" text-anchor="end" opacity="0.8">Kakamega</text>
+          </g>
 
-        <!-- 6. Mau Forest -->
-        <g class="map-marker" data-site="mau">
-          <circle cx="115" cy="165" r="4" fill="var(--green)" opacity="0.8"/>
-          <text x="88" y="161" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Mau</text>
-        </g>
+          <!-- 6. Mau Forest -->
+          <g class="map-marker" data-site="mau">
+            <circle cx="115" cy="165" r="4" fill="var(--green)" opacity="0.8"/>
+            <text x="122" y="169" opacity="0.8">Mau</text>
+          </g>
 
-        <!-- 7. Yala Swamp -->
-        <g class="map-marker" data-site="yala">
-          <circle cx="82" cy="168" r="3.5" fill="var(--blue)" opacity="0.8"/>
-        </g>
+          <!-- 7. Yala Swamp -->
+          <g class="map-marker" data-site="yala">
+            <circle cx="82" cy="168" r="3.5" fill="var(--blue)" opacity="0.8"/>
+            <text x="75" y="166" text-anchor="end" opacity="0.8">Yala</text>
+          </g>
 
-        <!-- 8. Loita Hills (south) -->
-        <g class="map-marker" data-site="loita">
-          <circle cx="142" cy="215" r="4" fill="var(--terra)" opacity="0.8"/>
-          <text x="148" y="219" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Loita Hills</text>
-        </g>
+          <!-- 8. Loita Hills -->
+          <g class="map-marker" data-site="loita">
+            <circle cx="142" cy="215" r="4" fill="var(--terra)" opacity="0.8"/>
+            <text x="149" y="213" opacity="0.8">Loita Hills</text>
+          </g>
 
-        <!-- 9. Chyulu Hills -->
-        <g class="map-marker" data-site="chyulu">
-          <circle cx="195" cy="228" r="4" fill="var(--terra)" opacity="0.8"/>
-          <text x="201" y="232" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Chyulu</text>
-        </g>
+          <!-- 9. Chyulu Hills -->
+          <g class="map-marker" data-site="chyulu">
+            <circle cx="195" cy="228" r="4" fill="var(--terra)" opacity="0.8"/>
+            <text x="202" y="233" opacity="0.8">Chyulu</text>
+          </g>
 
-        <!-- 10. Tsavo (south-east) -->
-        <g class="map-marker" data-site="tsavo">
-          <circle cx="218" cy="248" r="4.5" fill="var(--terra)" opacity="0.8"/>
-          <text x="224" y="252" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Tsavo NPs</text>
-        </g>
+          <!-- 10. Tsavo -->
+          <g class="map-marker" data-site="tsavo">
+            <circle cx="218" cy="248" r="4.5" fill="var(--terra)" opacity="0.8"/>
+            <text x="211" y="262" text-anchor="end" opacity="0.8">Tsavo NPs</text>
+          </g>
 
-        <!-- 11. Shimba Hills / Gongoni (coast) -->
-        <g class="map-marker" data-site="shimba">
-          <circle cx="248" cy="255" r="3.5" fill="var(--green)" opacity="0.75"/>
-          <text x="254" y="252" font-family="monospace" font-size="7" fill="var(--cream)" opacity="0.7">Shimba</text>
+          <!-- 11. Shimba Hills / Gongoni (coast) -->
+          <g class="map-marker" data-site="shimba">
+            <circle cx="248" cy="255" r="3.5" fill="var(--green)" opacity="0.75"/>
+            <text x="255" y="259" opacity="0.8">Shimba</text>
+          </g>
         </g>
 
         <!-- Legend -->
-        <g transform="translate(22, 290)">
+        <g transform="translate(22, 296)" font-family="monospace" font-size="9" fill="var(--muted)">
           <circle cx="6" cy="6" r="4" fill="var(--terra)"/>
-          <text x="14" y="10" font-family="monospace" font-size="7" fill="var(--muted)">Highland/dryland</text>
-          <circle cx="6" cy="20" r="4" fill="var(--green)"/>
-          <text x="14" y="24" font-family="monospace" font-size="7" fill="var(--muted)">Forest</text>
-          <circle cx="6" cy="34" r="4" fill="var(--gold)"/>
-          <text x="14" y="38" font-family="monospace" font-size="7" fill="var(--muted)">Multi-site 2019</text>
-          <circle cx="80" cy="6" r="4" fill="var(--blue)"/>
-          <text x="88" y="10" font-family="monospace" font-size="7" fill="var(--muted)">Wetland</text>
+          <text x="15" y="9">Highland/dryland</text>
+          <circle cx="6" cy="22" r="4" fill="var(--gold)"/>
+          <text x="15" y="25">Multi-site 2019</text>
+          <circle cx="146" cy="6" r="4" fill="var(--green)"/>
+          <text x="155" y="9">Forest</text>
+          <circle cx="146" cy="22" r="4" fill="var(--blue)"/>
+          <text x="155" y="25">Wetland</text>
         </g>
       </svg>
     </div>
@@ -477,7 +478,7 @@
 
     <div class="expedition reveal">
       <div class="expedition-header">
-        <div class="expedition-date">Sept 28 –<br>Nov 14<br>2019</div>
+        <div class="expedition-date">Sept 28 – Nov 14, 2019</div>
         <div>
           <h3 class="expedition-location">Cherang'any Hills, Mt. Elgon &amp; Mathews Range</h3>
         </div>
@@ -494,7 +495,7 @@
 
     <div class="expedition reveal">
       <div class="expedition-header">
-        <div class="expedition-date">Aug 12 –<br>Sept 14<br>2018</div>
+        <div class="expedition-date">Aug 12 – Sept 14, 2018</div>
         <div>
           <h3 class="expedition-location">Mau Forests, Kakamega Forest &amp; Yala Swamp</h3>
         </div>
@@ -512,7 +513,7 @@
 
     <div class="expedition reveal">
       <div class="expedition-header">
-        <div class="expedition-date">Jan 9 –<br>Feb 5<br>2018</div>
+        <div class="expedition-date">Jan 9 – Feb 5, 2018</div>
         <div>
           <h3 class="expedition-location">Loita Hills Forest Ecosystem</h3>
         </div>
@@ -528,7 +529,7 @@
 
     <div class="expedition reveal">
       <div class="expedition-header">
-        <div class="expedition-date">Aug 19 –<br>Sept 22<br>2016</div>
+        <div class="expedition-date">Aug 19 – Sept 22, 2016</div>
         <div>
           <h3 class="expedition-location">Chyulu Hills, Tsavo NPs, Shimba Hills &amp; Gongoni Forest</h3>
         </div>
@@ -545,7 +546,7 @@
 
     <div class="expedition reveal">
       <div class="expedition-header">
-        <div class="expedition-date">Sept 6 –<br>Oct 13<br>2015</div>
+        <div class="expedition-date">Sept 6 – Oct 13, 2015</div>
         <div>
           <h3 class="expedition-location">Mount Kenya — Chogoria &amp; Sirimon Transects</h3>
         </div>
@@ -563,7 +564,7 @@
 
     <div class="expedition reveal">
       <div class="expedition-header">
-        <div class="expedition-date">Jul – Aug<br>2015</div>
+        <div class="expedition-date">Jul – Aug 2015</div>
         <div>
           <h3 class="expedition-location">Loita Forest &amp; Kakamega Forest National Reserve</h3>
         </div>
@@ -584,17 +585,17 @@
     <h2 class="section-title">Sampling Protocols</h2>
     <div class="methods-grid reveal-stagger">
       <div class="method-card">
-        <span class="method-icon">🪤</span>
+        <span class="method-icon"><svg class="icon icon-xl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="9" width="14" height="9" rx="1"/><path d="m16.5 9 5-4"/><path d="M6 13.5h7"/><path d="M5 18v2M14 18v2"/></svg></span>
         <div class="method-title">Live Trapping</div>
         <p class="method-desc">Sherman live-traps and pitfall-with-drift-fence arrays deployed along elevational transects at standardised spacing. Traps set at dusk and checked at dawn over 3–5 consecutive nights per site.</p>
       </div>
       <div class="method-card">
-        <span class="method-icon">📐</span>
+        <span class="method-icon"><svg class="icon icon-xl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v18"/><path d="M6 5h13l-2.5 3H6"/><path d="M6 12h7l-2 3H6"/><path d="M9 5v1.5M12 5v1.5M15 5v1.5"/></svg></span>
         <div class="method-title">Morphometrics</div>
         <p class="method-desc">Standardised external measurements (head-body, tail, ear, hindfoot) and cranial measurements taken in situ. Photographs and tissue samples (ear biopsy in 95% ethanol) taken from all individuals.</p>
       </div>
       <div class="method-card">
-        <span class="method-icon">🧬</span>
+        <span class="method-icon"><svg class="icon icon-xl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3c0 5 8 5 8 9s-8 4-8 9"/><path d="M16 3c0 5-8 5-8 9s8 4 8 9"/><path d="M9 6h6M9 18h6M10.5 9.5h3M10.5 14.5h3"/></svg></span>
         <div class="method-title">Tissue &amp; Voucher Preparation</div>
         <p class="method-desc">Voucher specimens prepared as dry skins with skulls and accessioned into the National Museums of Kenya mammal collection (NMK). Tissue samples archived at NMK and KIZ, CAS for subsequent genomic analyses.</p>
       </div>

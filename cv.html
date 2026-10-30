@@ -125,7 +125,7 @@
 .cv-sidebar-section { margin-bottom: 44px; }
 .cv-sidebar-title {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
@@ -152,7 +152,7 @@
 .cv-sidebar a:hover { color: var(--gold2); }
 .review-summary {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.8px;
   line-height: 1.9;
   color: var(--muted);
@@ -192,7 +192,7 @@
 }
 .review-tag {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.5px;
   padding: 3px 8px;
   border: 1px solid var(--faint);
@@ -250,7 +250,7 @@
 .award-tag {
   display: inline-block;
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
   padding: 3px 10px;
   border: 1px solid rgba(200,148,58,0.25);
@@ -258,13 +258,12 @@
   margin-top: 6px;
 }
 
-/* Print / Download button */
+/* Print / Download buttons, in the banner so they never cover the CV text */
 .cv-actions {
-  position: fixed;
-  bottom: 28px; right: 76px;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  z-index: 500;
+  margin-top: 28px;
 }
 .cv-download {
   display: flex;
@@ -275,7 +274,7 @@
   border: 1px solid var(--gold);
   color: var(--gold);
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
@@ -298,7 +297,6 @@
 
 @media (max-width: 860px) {
   .cv-grid { grid-template-columns: 1fr; gap: 40px; }
-  .cv-actions { right: 28px; bottom: 76px; }
 }
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
@@ -338,6 +336,15 @@
     <p style="color:var(--muted);font-size:16px;font-style:italic;">
       Mammal Ecologist &amp; Evolutionary Biologist · Kunming Institute of Zoology, CAS &amp; National Museums of Kenya
     </p>
+    <div class="cv-actions">
+      <a class="cv-download cv-download-primary" href="cv/OKOnditi_CV_2026.pdf"
+         download="OKOnditi_CV_2026.pdf" title="Download the full CV as a PDF">
+        ↓ Download CV (PDF)
+      </a>
+      <a class="cv-download" onclick="window.print();return false;" href="#" title="Print this page">
+        Print
+      </a>
+    </div>
   </div>
 </div>
 
@@ -588,7 +595,7 @@
         </div>
       </div>
 
-      <div class="cv-section">
+      <div class="cv-section-block reveal">
         <h2 id="presentations">Conference Presentations</h2>
 
         <div class="cv-entry">
@@ -634,17 +641,6 @@
 </footer>
 
 </div><!-- /page-body -->
-
-<!-- CV download / print buttons -->
-<div class="cv-actions">
-  <a class="cv-download cv-download-primary" href="cv/OKOnditi_CV_2026.pdf"
-     download="OKOnditi_CV_2026.pdf" title="Download the full CV as a PDF">
-    &#11015; Download CV
-  </a>
-  <a class="cv-download" onclick="window.print();return false;" href="#" title="Print this page">
-    &#128424; Print
-  </a>
-</div>
 
 <button id="back-top" style="position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--panel);border:1px solid var(--border);color:var(--gold);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;" title="Back to top">↑</button>
 

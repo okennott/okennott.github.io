@@ -42,6 +42,21 @@ assert.match(list.innerHTML, /Read the abstract on/);
 assert.match(list.innerHTML, /Online 10 Oct 2026/);
 assert.match(list.innerHTML, /Subscription · author copy available/);
 assert.match(list.innerHTML, /href="contact.html" class="pub-link author-copy-request"/);
+// The copy request is also visible on the card, beside the abstract toggle.
+assert.match(list.innerHTML, /<a href="contact.html" class="pub-action"[^>]*>Request copy<\/a>/);
+context.renderPublicationsPage([paper], {
+  byDoi: new Map([[doi, { isOpenAccess: false, pdfLinks: [{ href: 'pdfs/Pei_2026.pdf', label: 'PDF' }] }]]), byTitle: new Map()
+});
+assert.match(list.innerHTML, /<a href="pdfs\/Pei_2026.pdf" class="pub-action"[^>]*>PDF ↓<\/a>/);
+assert.doesNotMatch(list.innerHTML, /Request copy/);
+// Homepage highlights: flagged records first, never preprints or corrections.
+const pick = (title, y, extra = {}) => ({ type: 'article-journal', title, issued: { 'date-parts': [[y]] }, ...extra });
+const titles = context.homeHighlights([
+  pick('Old favourite', 2019, { highlight: true }), pick('Newest preprint', 2026, { type: 'preprint' }),
+  pick('Correction: Something', 2026), pick('Recent A', 2025), pick('Recent B', 2024), pick('Recent C', 2023),
+  pick('Older', 2020),
+]).map(p => p.item.title);
+assert.deepEqual(titles, ['Old favourite', 'Recent A', 'Recent B', 'Recent C']);
 // Library access decisions also override stale static card metadata and filter tags.
 context.renderPublicationsPage([paper, openPaper], {
   byDoi: new Map([[doi, { isOpenAccess: true, tags: 'oa' }]]), byTitle: new Map()

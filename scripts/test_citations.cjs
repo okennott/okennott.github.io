@@ -74,6 +74,12 @@ async function main() {
   assert.equal(found.has('10.test/a'), false);
   assert.equal(found.get('10.test/b').citations, 8);
   assert.deepEqual(JSON.parse(calls[2].options.body), { ids: ['DOI:10.test/a', 'DOI:10.test/b'] });
+  // Semantic Scholar answers 400 when no DOI in the batch is indexed; that is an empty result.
+  api.fetch = async () => ({ ok: false, status: 400 });
+  found = await api.fetchCitationsFromSemanticScholar(['10.2139/ssrn.0']);
+  assert.equal(found.size, 0);
+  api.fetch = async () => ({ ok: false, status: 429 });
+  await assert.rejects(api.fetchCitationsFromSemanticScholar(['10.test/a']));
   console.log('Citation checks passed: batching, partial fallback, zero counts, invalid data and provider outages.');
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

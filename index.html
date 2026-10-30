@@ -273,7 +273,7 @@
   left: 20px;
   z-index: 3;
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--cream);
@@ -292,20 +292,20 @@
 .hero-stat {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 16px 14px;
+  padding: 16px 10px;
   text-align: center;
 }
 .hero-stat .stat-sublabel {
   color: #b8ac94;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.4px;
   line-height: 1.6;
 }
 .hero-stat .stat-sublabel a { color: #8bb89a; }
-.hero-stat-date { text-transform: none; }
+.hero-stat-date { text-transform: none; letter-spacing: 0.3px; }
 .hero-stats-src {
   color: #b8ac94;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.3px;
   text-transform: none;
 }
@@ -320,7 +320,7 @@
 }
 .stat-label {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--muted);
@@ -342,7 +342,7 @@
   text-decoration: none;
   color: var(--text);
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
@@ -351,7 +351,7 @@
   color: var(--gold);
   background: rgba(200,148,58,0.04);
 }
-.hero-card-link-icon { font-size: 14px; }
+.hero-card-link-icon { display: inline-flex; color: var(--gold); }
 
 /* Ornament */
 .hero-ornament {
@@ -393,7 +393,7 @@
 }
 .scroll-cue span {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -457,7 +457,7 @@
 }
 .area-link {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--area-color, var(--gold));
@@ -503,7 +503,7 @@
 }
 .pub-preview-doi {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--green);
   text-decoration: none;
   letter-spacing: 0.5px;
@@ -541,7 +541,7 @@
 
 .news-item {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: var(--muted);
@@ -568,8 +568,8 @@ a.news-item:focus-visible {
 }
 a.news-item::after {
   content: '↗';
-  font-size: 9px;
-  color: var(--faint);
+  font-size: 11px;
+  color: var(--muted);
   transition: color .2s;
 }
 a.news-item:hover::after,
@@ -605,6 +605,14 @@ a.news-item:focus-visible::after { color: var(--gold); }
   .pub-preview { grid-template-columns: auto 1fr; }
   .pub-preview-cit { display: none; }
 }
+
+/* Affiliations strip */
+.affiliations {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 48px 0;
+}
+.affiliations-eyebrow { text-align: center; margin-bottom: 28px; }
 </style>
 </head>
 <body>
@@ -702,9 +710,6 @@ a.news-item:focus-visible::after { color: var(--gold); }
         <a class="btn-ghost" href="research.html">
           Explore Research →
         </a>
-        <a class="btn-ghost" href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener">
-          Google Scholar ↗
-        </a>
       </div>
     </div>
 
@@ -748,16 +753,16 @@ a.news-item:focus-visible::after { color: var(--gold); }
 
         <div class="hero-card-links">
           <a href="https://scholar.google.com/citations?user=qnHYvIIAAAAJ&hl=en" target="_blank" rel="noopener" class="hero-card-link">
-            <span class="hero-card-link-icon">📚</span> Google Scholar
+            <span class="hero-card-link-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5 12 4.5l10 5-10 5z"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg></span> Google Scholar
           </a>
           <a href="https://www.researchgate.net/profile/Kenneth-Otieno-Onditi" target="_blank" rel="noopener" class="hero-card-link">
-            <span class="hero-card-link-icon">🔬</span> ResearchGate
+            <span class="hero-card-link-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 16V8H10a2 2 0 0 1 0 4H7.5m2.5 0 1.5 4"/><path d="M17.5 9.5a2 2 0 0 0-4 0v4.5a2 2 0 0 0 4 0V12.5h-1.5"/></svg></span> ResearchGate
           </a>
           <a href="https://orcid.org/0000-0003-4034-6818" target="_blank" rel="noopener" class="hero-card-link">
-            <span class="hero-card-link-icon">🆔</span> ORCID 0000-0003-4034-6818
+            <span class="hero-card-link-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 11v6"/><path d="M9 7.6h.01"/><path d="M12.5 11v6h1.5a3 3 0 0 0 0-6z"/></svg></span> ORCID 0000-0003-4034-6818
           </a>
           <a href="mailto:kenotieno@hotmail.com" class="hero-card-link">
-            <span class="hero-card-link-icon">✉</span> kenotieno@hotmail.com
+            <span class="hero-card-link-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg></span> kenotieno@hotmail.com
           </a>
         </div>
       </div>
@@ -839,7 +844,7 @@ a.news-item:focus-visible::after { color: var(--gold); }
         <span class="pub-year-badge">2027</span>
         <div>
           <div class="pub-preview-title">Phylogeny and evolutionary history of the genus <em>Nectogale</em> (Soricidae) inferred from whole–genome analyses, with description of a new species endemic to the Himalayas</div>
-          <div class="pub-preview-journal">Molecular Phylogenetics and Evolution, 226, 108749</div>
+          <div class="pub-preview-journal">Molecular Phylogenetics and Evolution, 226, 108749 · online 10 Oct 2026</div>
           <a class="pub-preview-doi" href="https://doi.org/10.1016/j.ympev.2026.108749" target="_blank" rel="noopener">doi: 10.1016/j.ympev.2026.108749 ↗</a>
         </div>
         <div class="pub-preview-cit">
@@ -857,26 +862,26 @@ a.news-item:focus-visible::after { color: var(--gold); }
           <span class="badge badge-citations cite-badge" id="cit-home-2" data-doi="10.3897/vz.76.e188776" style="display:none;"></span>
         </div>
       </div>
-      <div class="pub-preview preprint">
+      <div class="pub-preview">
         <span class="pub-year-badge">2026</span>
         <div>
-          <div class="pub-preview-title">Non-random defaunation across China’s protected area network revealed by multidimensional dark diversity</div>
-          <div class="pub-preview-journal">Research Square <span class="badge badge-preprint">Preprint</span></div>
-          <a class="pub-preview-doi" href="https://doi.org/10.21203/rs.3.rs-10531544/v1" target="_blank" rel="noopener">doi: 10.21203/rs.3.rs-10531544/v1 ↗</a>
+          <div class="pub-preview-title">Beyond species richness: Habitat fragmentation reduces community occupancy and functional richness of mountain forest mammals</div>
+          <div class="pub-preview-journal">Biological Conservation, 318, 111828</div>
+          <a class="pub-preview-doi" href="https://doi.org/10.1016/j.biocon.2026.111828" target="_blank" rel="noopener">doi: 10.1016/j.biocon.2026.111828 ↗</a>
         </div>
         <div class="pub-preview-cit">
-          <span class="badge badge-citations cite-badge" id="cit-home-3" data-doi="10.21203/rs.3.rs-10531544/v1" style="display:none;"></span>
+          <span class="badge badge-citations cite-badge" id="cit-home-3" data-doi="10.1016/j.biocon.2026.111828" style="display:none;"></span>
         </div>
       </div>
-      <div class="pub-preview preprint">
+      <div class="pub-preview">
         <span class="pub-year-badge">2026</span>
         <div>
-          <div class="pub-preview-title">The protection of Asian elephants in China caught in a conservation trap</div>
-          <div class="pub-preview-journal">SSRN <span class="badge badge-preprint">Preprint</span></div>
-          <a class="pub-preview-doi" href="https://doi.org/10.2139/ssrn.7010506" target="_blank" rel="noopener">doi: 10.2139/ssrn.7010506 ↗</a>
+          <div class="pub-preview-title">Functional homogenization of terrestrial mammals outside protected areas in the Hengduan Mountains, China</div>
+          <div class="pub-preview-journal">Conservation Biology, e70214</div>
+          <a class="pub-preview-doi" href="https://doi.org/10.1111/cobi.70214" target="_blank" rel="noopener">doi: 10.1111/cobi.70214 ↗</a>
         </div>
         <div class="pub-preview-cit">
-          <span class="badge badge-citations cite-badge" id="cit-home-4" data-doi="10.2139/ssrn.7010506" style="display:none;"></span>
+          <span class="badge badge-citations cite-badge" id="cit-home-4" data-doi="10.1111/cobi.70214" style="display:none;"></span>
         </div>
       </div>
   </div><!-- /home-publications -->
@@ -888,30 +893,24 @@ a.news-item:focus-visible::after { color: var(--gold); }
 </section>
 
 <!-- ═══ AFFILIATIONS STRIP ═══ -->
-<section style="background:var(--surface); border-top:1px solid var(--border); padding:48px 0;">
+<section class="affiliations">
   <div class="container">
-    <span class="eyebrow" style="text-align:center;display:block;margin-bottom:28px;">Affiliated Institutions</span>
-    <div style="display:flex;gap:2px;flex-wrap:wrap;">
-      <a href="https://english.kiz.cas.cn/" target="_blank" rel="noopener"
-         style="flex:1;min-width:220px;background:var(--panel);border:1px solid var(--border);padding:24px;text-decoration:none;transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">CAS · China</div>
-        <div style="font-size:15px;color:var(--cream);">Kunming Institute of Zoology</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;">Chinese Academy of Sciences</div>
+    <span class="eyebrow affiliations-eyebrow">Affiliated Institutions</span>
+    <div class="institution-grid">
+      <a href="https://english.kiz.cas.cn/" target="_blank" rel="noopener" class="institution-card">
+        <div class="institution-eyebrow">CAS · China</div>
+        <div class="institution-name">Kunming Institute of Zoology</div>
+        <div class="institution-sub">Chinese Academy of Sciences</div>
       </a>
-      <a href="https://www.museums.or.ke/" target="_blank" rel="noopener"
-         style="flex:1;min-width:220px;background:var(--panel);border:1px solid var(--border);padding:24px;text-decoration:none;transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">NMK · Kenya</div>
-        <div style="font-size:15px;color:var(--cream);">National Museums of Kenya</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;">Nairobi, Kenya</div>
+      <a href="https://www.museums.or.ke/" target="_blank" rel="noopener" class="institution-card">
+        <div class="institution-eyebrow">NMK · Kenya</div>
+        <div class="institution-name">National Museums of Kenya</div>
+        <div class="institution-sub">Nairobi, Kenya</div>
       </a>
-      <a href="https://fieldmuseum.org/" target="_blank" rel="noopener"
-         style="flex:1;min-width:220px;background:var(--panel);border:1px solid var(--border);padding:24px;text-decoration:none;transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Collaborator · USA</div>
-        <div style="font-size:15px;color:var(--cream);">Field Museum of Natural History</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;">Chicago, Illinois</div>
+      <a href="https://fieldmuseum.org/" target="_blank" rel="noopener" class="institution-card">
+        <div class="institution-eyebrow">Collaborator · USA</div>
+        <div class="institution-name">Field Museum of Natural History</div>
+        <div class="institution-sub">Chicago, Illinois</div>
       </a>
     </div>
   </div>
