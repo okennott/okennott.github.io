@@ -91,16 +91,33 @@ EXCLUDE = {
     "10.6084/m9.figshare.25975360",      # dataset, not a publication
     "10.2139/ssrn.4876387",              # superseded by 10.1016/j.biocon.2024.110863
 }
-# Not in Crossref or OpenAlex: the DOI is on the Chinese registry (chndoi.org).
-# Verified to resolve, and deposited in ORCID by Scopus.
+# Records Crossref does not (yet) hold. A cached Crossref record for the same DOI
+# takes precedence, so an entry here retires itself once the DOI is registered.
 MANUAL = [{
+    # The DOI is on the Chinese registry (chndoi.org), not Crossref or OpenAlex.
+    # Verified to resolve, and deposited in ORCID by Scopus.
     "doi": "10.16829/j.slxb.150613", "year": 2022, "preprint": False,
     "title": "Methodological advances in explaining community assembly with niche-based theory",
     "journal": "Acta Theriologica Sinica", "volume": "42", "issue": "3",
     "page": "312-324", "artno": None, "npos": 3, "nauth": 4,
     "authors": [{"text": "Song, W. Y.", "me": False}, {"text": "Li, X. Y.", "me": False},
                 {"text": "Onditi, K. O.", "me": True}, {"text": "Jiang, X. L.", "me": False}],
+}, {
+    # Published 30 October 2026; details from the publisher's PDF
+    # (pdfs/Hounmavo_2026_Assoukoko_small_mammals.pdf, p. 741). The DOI was not yet
+    # registered with Crossref on that date.
+    "doi": "10.5252/zoosystema2026v48a25", "year": 2026, "preprint": False,
+    "title": "Small terrestrial mammal inventory of Assoukoko forest (Togo), with new country "
+             "records and potential new species for science",
+    "journal": "Zoosystema", "volume": "48", "issue": "25",
+    "page": "741-789", "artno": None, "npos": 3, "nauth": 8,
+    "authors": [{"text": "Hounmavo, A.", "me": False}, {"text": "Segniagbeto, G. H.", "me": False},
+                {"text": "Onditi, K. O.", "me": True}, {"text": "Lutz, H. L.", "me": False},
+                {"text": "Delapré, A.", "me": False}, {"text": "Demos, T. C.", "me": False},
+                {"text": "Kerbis Peterhans, J. C.", "me": False}, {"text": "Nicolas, V.", "me": False}],
 }]
+# Never looked up: these DOIs are on registries other than Crossref.
+NOT_IN_CROSSREF = {"10.16829/j.slxb.150613"}
 
 NORM = {"‐": "-", "‑": "-", " ": " ", "­": "", "﻿": ""}
 
@@ -151,7 +168,7 @@ def refresh_cache():
     """Re-fetch Crossref for every DOI in the bibliography and store a trimmed copy."""
     dois = {bare_doi(i.get("DOI")) for i in _library() if i.get("DOI")}
     dois |= {"10.2139/ssrn.7010506"}          # in ORCID; kept even if not yet in the library
-    dois -= set(MANUAL[0]["doi"] for _ in [0])
+    dois -= NOT_IN_CROSSREF
     # An outage must not silently remove publications from the next CV.
     cache = {}
     if os.path.exists(CACHE):
@@ -230,7 +247,7 @@ def publications():
             "page": msg.get("page"), "artno": msg.get("article-number"),
             "authors": authors, "npos": pos[0] if pos else None, "nauth": len(authors),
         })
-    records += [dict(r) for r in MANUAL]
+    records += [dict(r) for r in MANUAL if r["doi"] not in cache]
     records.sort(key=lambda r: (-r["year"], r["authors"][0]["text"]))
     # In press: ahead of the dated entries, most recent acceptance first.
     records = sorted(accepted_records(), key=lambda r: r["accepted"] or "", reverse=True) + records

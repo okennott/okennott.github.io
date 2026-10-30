@@ -1207,7 +1207,8 @@
 					"2026"
 				]
 			]
-		}
+		},
+		"highlight": true
 	},
 	{
 		"id": "http://zotero.org/users/17243485/items/92I9C33W",
@@ -2400,7 +2401,7 @@
 		"id": "local-zoosystema-zoo20250031",
 		"type": "article-journal",
 		"container-title": "Zoosystema",
-		"note": "type: Journal Article; status: accepted; accepted: 2026-06-01; manuscript: zoo20250031",
+		"note": "type: Journal Article; manuscript: zoo20250031",
 		"title": "Small terrestrial mammal inventory of Assoukoko forest (Togo), with new country records and potential new species for science",
 		"author": [
 			{
@@ -2439,10 +2440,20 @@
 		"issued": {
 			"date-parts": [
 				[
-					"2026"
+					2026,
+					10,
+					30
 				]
 			]
-		}
+		},
+		"DOI": "10.5252/zoosystema2026v48a25",
+		"URL": "https://doi.org/10.5252/zoosystema2026v48a25",
+		"ISSN": "1280-9551 (Print) 1638-9387 (Electronic)",
+		"volume": "48",
+		"issue": "25",
+		"page": "741-789",
+		"abstract": "Current knowledge of small terrestrial mammal diversity in the semi-deciduous forest of Togo remains incomplete and insufficiently verified taxonomically. Recent records have relied primarily on historical specimens preserved in museum collections, which pose a high risk of taxonomic confusion due to a lack of associated molecular data. Within this context, field surveys were conducted from February 2022 to November 2023 during dry seasons in the Assoukoko Forest, a forest block located at the Ghanaian border near Bismarckburg, the type locality of the endemic Togolese rodent Leimacomys buettneri Smith, 1834 collected in 1890. This survey represents a major contribution to the knowledge of mammalian biodiversity in this poorly explored region. A total of 452 specimens were collected, including 414 Rodentia Bowdich, 1821 representing 21 species and 38 Soricidae Fischer, 1814 from four Crocidura Wagler, 1832 species. Five taxa are reported for the first time in Togo, including a potentially new species of Graphiurus (sensu lato). Our study also provides the first molecular confirmation of several previously reported species, including Mus baoulei (Vermeiren & Verheyen, 1980), Crocidura cf. jouvenetae, Crocidura olivieri (Lesson, 1827) clade II, Crocidura foxi Dollman, 1915, Mus minutoides Smith, 1834, Cricetomys sp. 1, Stochomys longicaudatus (Tullberg, 1893), and Uranomys ruddi Dollman, 1909. Habitat-specific analyses revealed higher abundance in gallery and dense semi-deciduous forests, while some generalist species dominated highly disturbed cultivated areas. Local communities contributed additional specimens, including four species not captured by standard trapping. Despite increasing anthropogenic pressure, Assoukoko Forest still hosts a remarkably diverse small mammal community. No Leimacomys buettneri individuals were recorded despite intensive targeted trapping, suggesting either local extinction or persistence in less surveyed savanna habitats.",
+		"open-access": true
 	},
 	{
 		"id": "https://doi.org/10.1016/j.ympev.2026.108749",
@@ -2523,6 +2534,7 @@
 		},
 		"PMID": "42858910",
 		"open-access": false,
-		"author-copy-available": true
+		"author-copy-available": true,
+		"highlight": true
 	}
 ]

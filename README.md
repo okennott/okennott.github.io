@@ -142,7 +142,7 @@ The live Publications page and the highlighted publications on the Home page are
 
 5. Run `python scripts/refresh_static.py` to synchronize static cards, homepage highlights and saved metric labels. Run the checks below, then commit the library, generated HTML, and any changed PDFs. Rebuild the CV as described in `cv/README.md`.
 
-The static cards in `publications.html` are generated fallbacks. Their existing author-copy links and curated topic/access metadata are preserved during refresh; edit the library for bibliographic changes. The October 2026 DOI extraction is documented in [Pei_2026_Nectogale.md](publications/Pei_2026_Nectogale.md). Retain that record in the next Zotero export.
+The static cards in `publications.html` are generated fallbacks. Their existing author-copy links and curated topic/access metadata are preserved during refresh; edit the library for bibliographic changes. October 2026 extractions are documented in [Pei_2026_Nectogale.md](publications/Pei_2026_Nectogale.md) and [Hounmavo_2026_Assoukoko.md](publications/Hounmavo_2026_Assoukoko.md). Retain those records in the next Zotero export.
 
 The homepage shows four highlighted papers. Add `"highlight": true` to a library record to feature it; the newest peer-reviewed articles fill any remaining places, and preprints and corrections are never highlighted.
 

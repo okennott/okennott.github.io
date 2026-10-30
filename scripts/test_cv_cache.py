@@ -33,5 +33,22 @@ class CacheRefreshTests(unittest.TestCase):
             self.assertEqual(json.loads(cache.read_text()), {'10.test/old': old, '10.test/new': new})
 
 
+    def test_manual_record_yields_to_registered_crossref_record(self):
+        manual = next(r for r in cvdata.MANUAL if r['doi'] == '10.5252/zoosystema2026v48a25')
+        registered = {'title': [manual['title']], 'type': 'journal-article', 'volume': '48',
+                      'issue': '25', 'page': '741-789', 'issued': {'date-parts': [[2026, 10, 30]]},
+                      'author': [{'family': 'Hounmavo', 'given': 'Amétépé'},
+                                 {'family': 'Onditi', 'given': 'Kenneth Otieno'}]}
+        for cached, expected in [({}, 1), ({manual['doi']: registered}, 1)]:
+            with tempfile.TemporaryDirectory() as tmp:
+                cache = Path(tmp) / 'cache.json'
+                cache.write_text(json.dumps(cached))
+                with patch.object(cvdata, 'CACHE', str(cache)), \
+                        patch.object(cvdata, '_library', return_value=[]):
+                    records = cvdata.publications()
+            self.assertEqual(sum(r['doi'] == manual['doi'] for r in records), expected)
+        self.assertNotIn(manual['doi'], cvdata.NOT_IN_CROSSREF)
+
+
 if __name__ == '__main__':
     unittest.main()

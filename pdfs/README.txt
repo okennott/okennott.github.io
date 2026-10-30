@@ -5,6 +5,7 @@ Place PDF files for author copies in this folder.
 The publications page links to the following filenames:
 
 2026
+  Hounmavo_2026_Assoukoko_small_mammals.pdf
   Onditi_2026_Graphiurus_UCE.pdf
   Li_2026_FunctionalHomogenization_Hengduan.pdf
 
