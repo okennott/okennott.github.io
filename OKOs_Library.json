@@ -1033,7 +1033,8 @@
 					"2024"
 				]
 			]
-		}
+		},
+		"corresponding-author": true
 	},
 	{
 		"id": "http://zotero.org/users/17243485/items/W8JVRMTC",
@@ -1712,7 +1713,8 @@
 					"2025"
 				]
 			]
-		}
+		},
+		"corresponding-author": true
 	},
 	{
 		"id": "http://zotero.org/users/17243485/items/3NIBRNVZ",
@@ -2103,7 +2105,8 @@
 			]
 		},
 		"open-access": false,
-		"author-copy-available": true
+		"author-copy-available": true,
+		"corresponding-author": true
 	},
 	{
 		"id": "http://zotero.org/users/17243485/items/RAINSHADW2026",

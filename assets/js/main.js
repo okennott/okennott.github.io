@@ -293,7 +293,8 @@ function inferTags(item, fallbackTags = '') {
   const text = `${item.title || ''} ${item['container-title'] || ''}`.toLowerCase();
   const tags = new Set((fallbackTags || '').split(/\s+/).filter(Boolean));
   const firstAuthor = item.author?.[0]?.family || '';
-  if (/onditi/i.test(firstAuthor) && !isCorrection(item)) tags.add('first');
+  // First-author papers, plus papers where Kenneth is a (co-)corresponding author.
+  if ((/onditi/i.test(firstAuthor) || item['corresponding-author'] === true) && !isCorrection(item)) tags.add('first');
   if (/systematic|phylogeograph|phylogen|taxonomy|taxonomic|new species|diversification|genomic|introgression|mitochondrial|ultraconserved|shrew|mole|vole|dormice|rodent|hedgehog|micromys|graphiurus|lemniscomys|lophuromys|mesechinus|neodon|chodsigoa/.test(text)) {
     tags.add('systematics');
   }

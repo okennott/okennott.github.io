@@ -27,6 +27,12 @@ const openPaper = items.find(p => context.cleanDoi(p.DOI) === '10.3897/vz.76.e18
 assert.equal(context.isOpenAccess(openPaper, {}), true);
 assert.equal(context.isOpenAccess(openPaper, { isOpenAccess: false }), true);
 assert.match(context.formatTitle(paper.title), /<em>Nectogale<\/em>/);
+// A (co-)corresponding-author paper joins the first-author filter even when
+// Kenneth is not the first author.
+assert.match(context.inferTags({ type: 'article-journal', title: 'Shared work',
+  'corresponding-author': true, author: [{ family: 'Smith', given: 'J.' }] }, ''), /\bfirst\b/);
+assert.doesNotMatch(context.inferTags({ type: 'article-journal', title: 'Other work',
+  author: [{ family: 'Smith', given: 'J.' }] }, ''), /\bfirst\b/);
 assert.equal(context.acceptedInfo({ DOI: doi, note: 'status: accepted' }), null);
 assert.doesNotThrow(() => context.focusHashTarget());
 const examples = [paper, { type: 'article-journal', title: 'Working paper', 'container-title': 'SSRN' },
