@@ -25,11 +25,11 @@
   "last_checked": "2026-10-30",
   "last_updated": "2026-10-30",
   "latest_year": 2026,
-  "library_as_of": "2026-10-30",
+  "library_as_of": "2026-10-31",
   "library_corrections": 1,
-  "library_peer_reviewed": 40,
+  "library_peer_reviewed": 41,
   "library_preprints": 2,
-  "library_records": 43,
+  "library_records": 44,
   "openalex_id": "https://openalex.org/A5086398996",
   "openalex_works": 47,
   "orcid_as_of": "2026-10-30",
@@ -161,7 +161,7 @@
   "peer_review_first_year": 2020,
   "peer_review_journals": 24,
   "peer_review_latest_year": 2026,
-  "peer_reviewed_works": 40,
+  "peer_reviewed_works": 41,
   "peer_reviews": 76,
   "preprints": 2,
   "scholar_id": "qnHYvIIAAAAJ",
@@ -172,7 +172,7 @@
     "orcid_peer_reviews": "ok",
     "scholar": "unavailable"
   },
-  "works_pending_in_orcid": 4,
-  "works_total": 43,
+  "works_pending_in_orcid": 5,
+  "works_total": 44,
   "year_span": 9
 }

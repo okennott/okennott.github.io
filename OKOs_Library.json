@@ -2536,5 +2536,82 @@
 		"open-access": false,
 		"author-copy-available": true,
 		"highlight": true
+	},
+	{
+		"id": "https://doi.org/10.1002/ece3.74538",
+		"type": "article-journal",
+		"abstract": "Exploring multifaceted beta diversity, including its turnover and nestedness components, is crucial for elucidating the drivers of community assembly. Arid mountain ecosystems, with their strong environmental filtering and fragmented habitats, serve as a useful model system for testing how these drivers interact across multiple dimensions of diversity. Here, we compared taxonomic, functional, and phylogenetic beta diversity in non-volant small mammal communities across environmental gradients in arid areas of the western Tianshan Mountains, China, and inferred the associated community-assembly processes. Species turnover predominantly structured beta diversity across all three dimensions. Decomposition of multifaceted beta diversity revealed a consistent pattern: functional dissimilarity was highest, followed by taxonomic and phylogenetic dissimilarity. Hierarchical partitioning identified elevational distance as the most significant factor influencing beta diversity and its turnover component, and nestedness was driven by multiple factors. We also confirmed a significant distance-decay relationship for overall community dissimilarity and its turnover component. Moreover, analyses of community-assembly mechanisms suggested a synergistic interaction between deterministic and neutral processes, whereby the influence of environmental filtering weakened while that of limiting similarity strengthened as elevational distance increased. Collectively, these findings clarify the patterns and drivers of beta diversity in arid montane regions and provide a practical basis for biodiversity conservation in Central Asian mountain ecosystems.",
+		"container-title": "Ecology and Evolution",
+		"DOI": "10.1002/ece3.74538",
+		"ISSN": "2045-7758",
+		"issue": "11",
+		"page": "e74538",
+		"title": "The Synergy Between Deterministic and Neutral Processes Drives Turnover-Dominated Beta Diversity of Non-Volant Small Mammals in the Western Tianshan Mountains, China",
+		"URL": "https://doi.org/10.1002/ece3.74538",
+		"volume": "16",
+		"author": [
+			{
+				"family": "Wang",
+				"given": "Xiaohan"
+			},
+			{
+				"family": "Song",
+				"given": "Wenyu"
+			},
+			{
+				"family": "Xing",
+				"given": "Yawen"
+			},
+			{
+				"family": "Wang",
+				"given": "Yalan"
+			},
+			{
+				"family": "Pei",
+				"given": "Xiaoxin"
+			},
+			{
+				"family": "Onditi",
+				"given": "Kenneth Otieno"
+			},
+			{
+				"family": "Wang",
+				"given": "Hongjiao"
+			},
+			{
+				"family": "Li",
+				"given": "Quan"
+			},
+			{
+				"family": "Li",
+				"given": "Xueyou"
+			},
+			{
+				"family": "Chen",
+				"given": "Zhongzheng"
+			},
+			{
+				"family": "Jiang",
+				"given": "Xuelong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					2026,
+					11
+				]
+			]
+		},
+		"available-date": {
+			"date-parts": [
+				[
+					2026,
+					10,
+					30
+				]
+			]
+		},
+		"open-access": true
 	}
 ]
