@@ -131,7 +131,7 @@ def metrics(M, P):
     inpress = sum(1 for p in arts if p["year"] is None)
     figures = [
         ("Peer-reviewed articles", len(arts)),
-        ("First-author articles", sum(1 for p in arts if p["npos"] == 1)),
+        ("First/Corresponding-author articles", sum(1 for p in arts if p["npos"] == 1 or p.get("corresponding"))),
         ("Citations", M["citations"]),
         ("h-index", M["h_index"]),
         ("i10-index", M["i10_index"]),

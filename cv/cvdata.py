@@ -246,6 +246,7 @@ def publications():
             "volume": msg.get("volume"), "issue": msg.get("issue"),
             "page": msg.get("page"), "artno": msg.get("article-number"),
             "authors": authors, "npos": pos[0] if pos else None, "nauth": len(authors),
+            "corresponding": bool((item or {}).get("corresponding-author")),
         })
     records += [dict(r) for r in MANUAL if r["doi"] not in cache]
     records.sort(key=lambda r: (-r["year"], r["authors"][0]["text"]))
@@ -271,4 +272,4 @@ if __name__ == "__main__":
     print(f"{len(recs)} publications: {len(arts)} peer-reviewed "
           f"({sum(1 for r in arts if r['year'] is None)} accepted, in press), "
           f"{len(recs) - len(arts)} preprints, "
-          f"{sum(1 for r in arts if r['npos'] == 1)} first-author")
+          f"{sum(1 for r in arts if r['npos'] == 1 or r.get('corresponding'))} first/corresponding-author")
