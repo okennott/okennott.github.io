@@ -1,0 +1,4 @@
+# Treat binaries as binary: PDFs and the EndNote SQLite library must never be
+# line-ending converted or whitespace-checked.
+*.pdf binary
+*.enl binary

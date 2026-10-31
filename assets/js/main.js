@@ -318,7 +318,7 @@ function collectFallbackPublicationMetadata() {
       label: link.textContent.trim()
     })).filter(link => link.href);
     const meta = {
-      isOpenAccess: card.classList.contains('access-unknown') ? null : card.classList.contains('oa'),
+      isOpenAccess: card.classList.contains('oa'),
       pdfLinks,
       tags: card.dataset.tags || ''
     };
@@ -356,7 +356,7 @@ function isOpenAccess(item, fallbackMeta) {
   if (isPreprint(item)) return true;                 // preprint servers are always open
   if (typeof fallbackMeta.isOpenAccess === 'boolean') return fallbackMeta.isOpenAccess;
   const journal = String(item['container-title'] || '').toLowerCase();
-  return /bmc|frontiers|mdpi|scientific reports|zookeys|zoosystema|zoological research|ecosphere|global change biology|global ecology and conservation|ecology and evolution|life\b|diversity\b|animals\b/.test(journal) ? true : null;
+  return /bmc|frontiers|mdpi|scientific reports|zookeys|zoosystema|zoological research|ecosphere|global change biology|global ecology and conservation|ecology and evolution|life\b|diversity\b|animals\b/.test(journal);
 }
 
 /* A card's number is its position in a reverse-chronological list, so it shifts
@@ -400,7 +400,7 @@ function renderPublicationCard(pub, number) {
       : '';
 
   return `
-    <div class="pub-card ${oa ? 'oa' : oa === false ? 'restricted' : 'access-unknown'}${pub.isPreprint ? ' preprint' : ''}" id="pub-${number}" data-tags="${escapeHtml(tags)}" data-doi="${escapeHtml(doi)}">
+    <div class="pub-card ${oa ? 'oa' : 'restricted'}${pub.isPreprint ? ' preprint' : ''}" id="pub-${number}" data-tags="${escapeHtml(tags)}" data-doi="${escapeHtml(doi)}">
       ${doi ? `<span class="pub-anchor" id="${doiSlug(doi)}" aria-hidden="true"></span>` : ''}
       <div class="pub-card-header" onclick="toggleAbstract(${number})">
         <span class="pub-num">${number}</span>
@@ -412,7 +412,7 @@ function renderPublicationCard(pub, number) {
             ${pub.isPreprint ? '<span class="badge badge-preprint">📄 Preprint · not peer reviewed</span>' : ''}
             ${pub.accepted ? `<span class="badge badge-accepted">✔ ${escapeHtml(pub.accepted.label)} · in press</span>` : ''}
             ${onlineLabel ? `<span class="badge">Online ${escapeHtml(onlineLabel)}</span>` : ''}
-            <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : oa === false ? '🔒 Subscription' + (authorCopyAvailable ? ' · author copy available' : '') : 'Access unverified'}</span>
+            <span class="badge ${oa ? 'badge-oa' : 'badge-restricted'}">${oa ? '🔓 OA' : '🔒 Subscription' + (authorCopyAvailable ? ' · author copy available' : '')}</span>
             ${doi ? `<span class="badge badge-citations cite-badge" id="cit-${number}" data-doi="${escapeHtml(doi)}" style="display:none;"></span>` : ''}
           </div>
         </div>

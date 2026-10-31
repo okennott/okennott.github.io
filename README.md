@@ -184,7 +184,7 @@ All 39 PDFs have been renamed from opaque numeric identifiers to human-readable 
 | Onditi et al. 2020 (Mount Kenya *Lophuromys*) | `Onditi_2020_MountKenya_Lophuromys.pdf` + `_correction.pdf` |
 | Chen et al. 2020 (Yulong Mountain) | `Chen_2020_Yulong_mammals.pdf` + `_duplicate.pdf` (identical files) |
 
-**Note:** `Song_2022_Niche_theory_review.pdf` (pub #22 — Acta Theriologica Sinica Chinese-language review) has no PDF available. The download button is hidden for that entry.
+**Note:** `Song_2022_Niche_theory_review.pdf` (Acta Theriologica Sinica Chinese-language review) is the Chinese-language published PDF; the author copy was imported from the EndNote library.
 
 **Note:** `Onditi_2018_MSc_thesis_Lophuromys_aquilus.pdf` is Kenneth's MSc thesis (154 pp., University of Chinese Academy of Sciences) on the *Lophuromys aquilus* species complex. It is not linked from the publications page as it is not a peer-reviewed journal article.
 

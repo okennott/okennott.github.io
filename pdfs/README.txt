@@ -8,6 +8,14 @@ The publications page links to the following filenames:
   Hounmavo_2026_Assoukoko_small_mammals.pdf
   Onditi_2026_Graphiurus_UCE.pdf
   Li_2026_FunctionalHomogenization_Hengduan.pdf
+  Pei_2026_Nectogale_phylogeny.pdf
+  Wang_2026_Tianshan_beta_diversity.pdf
+  Diao_2026_Blarinellini_genetic_diversity.pdf
+  Li_2026_Habitat_fragmentation_mammals.pdf
+  Liu_2026_Human_pressures_mammals.pdf
+  Li_2026_Uropsilus_revision.pdf
+  Li_2026_Rainshadow_small_mammals.pdf
+  Chen_2026_Episoriculus_revision.pdf
 
 2025
   Sambaya_2025_Lemniscomys.pdf

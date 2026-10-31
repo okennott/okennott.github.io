@@ -36,7 +36,7 @@ assert.equal(context.derivedMetrics(examples).library_preprints, 1);
 context.renderPublicationsPage(examples, { byDoi: new Map(), byTitle: new Map() });
 assert.match(list.innerHTML, /id="p-10-1016-j-ympev-2026-108749"/);
 assert.match(list.innerHTML, /data-tags="correction"/);
-assert.match(list.innerHTML, /Access unverified/);
+assert.doesNotMatch(list.innerHTML, /Access unverified/);
 assert.match(list.innerHTML, /https:\/\/pubmed\.ncbi\.nlm\.nih\.gov\/42858910\//);
 assert.match(list.innerHTML, /Read the abstract on/);
 assert.match(list.innerHTML, /Online 10 Oct 2026/);

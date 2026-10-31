@@ -58,7 +58,7 @@ def main():
         title = card.select_one('.pub-title').get_text()
         title = re.sub(r'[^a-z0-9]+', ' ', title.lower()).strip()
         meta = {
-            'isOpenAccess': None if 'access-unknown' in card.get('class', []) else 'oa' in card.get('class', []),
+            'isOpenAccess': 'oa' in card.get('class', []),
             'tags': card.get('data-tags', ''),
             'pdfLinks': [{'href': a['href'], 'label': a.get_text().strip()}
                          for a in card.select('.pub-link.pdf[href]')],

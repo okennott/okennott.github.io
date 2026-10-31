@@ -24,3 +24,6 @@ cv/cv.docx
 cv/cv.pdf
 cv/cv_files/
 cv/*.png
+
+# EndNote reference-manager attachments (large; author copies live in pdfs/)
+publications/EndNoteLibrary.Data/PDF/
