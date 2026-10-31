@@ -293,6 +293,9 @@ function inferTags(item, fallbackTags = '') {
   const text = `${item.title || ''} ${item['container-title'] || ''}`.toLowerCase();
   const tags = new Set((fallbackTags || '').split(/\s+/).filter(Boolean));
   const firstAuthor = item.author?.[0]?.family || '';
+  // 'first' is derived from the library, not curated, so re-derive it instead of
+  // inheriting a stale value from the fallback card.
+  tags.delete('first');
   // First-author papers, plus papers where Kenneth is a (co-)corresponding author.
   if ((/onditi/i.test(firstAuthor) || item['corresponding-author'] === true) && !isCorrection(item)) tags.add('first');
   if (/systematic|phylogeograph|phylogen|taxonomy|taxonomic|new species|diversification|genomic|introgression|mitochondrial|ultraconserved|shrew|mole|vole|dormice|rodent|hedgehog|micromys|graphiurus|lemniscomys|lophuromys|mesechinus|neodon|chodsigoa/.test(text)) {
