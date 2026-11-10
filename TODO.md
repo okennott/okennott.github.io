@@ -30,3 +30,7 @@ Implement locally without committing or pushing. Preserve the dated citation and
 ## Source limitations and later maintenance
 
 Crossref has no abstract, volume or issue for the new DOI. Elsevier's API was rate-limited and its web page did not expose the article content to this session. Access is labelled unverified and no new PDF was attached. Recheck these fields when the publisher metadata becomes available, and retain this new record in the reference manager before a future Zotero export. Browser tests blocked external APIs deliberately to verify deterministic fallbacks; they do not establish current live API availability.
+
+## Next to-do — 10 November 2026
+
+- [ ] Verify the GitHub Pages deployment of the Zoosystema update after the Pages build completes. Immediately after pushing commit `414c5dc`, the public homepage and publications page still served the previous version ("Three pillars of inquiry" and Zoosystema pages 741–789), while the Pages deployment was in progress. Check that the live heading reads "Research Focus", the Zoosystema citation reads 741–781, its abstract reflects the publisher's corrections, and the linked PDF is the revised version. Investigate the deployment if it does not complete successfully.
