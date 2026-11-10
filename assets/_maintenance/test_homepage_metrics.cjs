@@ -1,4 +1,4 @@
-// Run: node scripts/test_homepage_metrics.cjs
+// Run: node assets/_maintenance/test_homepage_metrics.cjs
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -8,7 +8,7 @@ const context = vm.createContext({
   window: { location: { pathname: '/' }, addEventListener() {} },
   document: { getElementById() { return null; }, querySelector() { return null; } },
 });
-vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/main.js'), 'utf8'), context);
+vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/main.js'), 'utf8'), context);
 const values = (data, date) => context.metricsValues(data, {}, Date.parse(date + 'T00:00:00Z'));
 const data = {
   peer_reviewed_works: 38, orcid_peer_reviewed: 36, works_pending_in_orcid: 2,

@@ -12,7 +12,7 @@ function setup(dois) {
       querySelectorAll() { return badges; } },
     AbortSignal,
   });
-  vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/main.js'), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/main.js'), 'utf8'), context);
   return { context, badges };
 }
 

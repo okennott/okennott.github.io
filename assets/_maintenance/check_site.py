@@ -6,7 +6,7 @@ from urllib.parse import unquote, urlsplit
 from bs4 import BeautifulSoup
 from fetch_metrics import from_library
 
-root = Path(__file__).absolute().parent.parent
+root = Path(__file__).absolute().parent.parent.parent
 errors = []
 for path in root.glob('*.html'):
     soup = BeautifulSoup(path.read_text(), 'html.parser')

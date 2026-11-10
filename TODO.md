@@ -1,8 +1,11 @@
 # Repository review and publication update — 11 October 2026
 
+Historical review: maintenance scripts described below were moved into
+`assets/_maintenance/` in November 2026; the scheduled workflows remain tracked.
+
 ## Findings and implementation plan
 
-- [x] Review repository status, local links, publication data flow and existing checks. Baseline: eight Python tests and the JavaScript metrics checks pass; local HTML asset links resolve. The existing untracked `Claude outputs/` folder is outside this change.
+- [x] Review repository status, local links, publication data flow and existing checks. Baseline: eight Python tests and the JavaScript metrics checks pass; local HTML asset links resolve.
 - [x] Retrieve DOI `10.1016/j.ympev.2026.108749` from Crossref. Verified title, all 12 authors, journal, October 2026 date and article number 108749; volume, issue and abstract are absent from the deposit.
 - [x] Add the verified publication to the CSL library and CV metadata cache; save a source-backed extraction note.
 - [x] Synchronize publication totals, static publication cards and homepage highlights with the library, retaining author-copy links. At review start the fallback had 35 cards versus 42 library records; both now include all 43 records.
@@ -25,7 +28,7 @@ Implement locally without committing or pushing. Preserve the dated citation and
 - Headless Chrome verified desktop rendering, the new DOI deep link, abstract toggling, preprint filtering and homepage totals. All six main pages fit a 390px mobile viewport. Navigation ARIA state follows opening/closing. No JavaScript errors occurred.
 - With the bibliography request blocked, all 43 cards remain available. With JavaScript disabled, homepage highlights stay visible and publication PDF links remain accessible.
 - Word and six-page PDF CV rebuilt using Quarto and Windows LibreOffice. PDF text includes the new paper and the corrected total. Missing volume metadata no longer automatically claims advance-online status.
-- `git diff --check` passed. No commit or push performed; the pre-existing `Claude outputs/` folder was preserved.
+- `git diff --check` passed. No commit or push was performed during this review.
 
 ## Source limitations and later maintenance
 

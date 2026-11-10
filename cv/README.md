@@ -1,8 +1,8 @@
 # Curriculum vitae
 
 A Quarto document that renders to `OKOnditi_CV_2026.docx` and `OKOnditi_CV_2026.pdf`.
-The publication list and every figure are read from the website's own data, so the CV
-and okennott.github.io cannot drift apart.
+The publication list and figures are read from the website's library and saved metrics;
+rebuild the CV and update the website's static fallbacks together to keep them in sync.
 
 ## Build
 
@@ -55,13 +55,13 @@ To change how something *looks*, edit `design.py`, not the .qmd.
 1. Add it to `../OKOs_Library.json` (export from Zotero).
 2. `python cvdata.py --refresh` to pull its Crossref record into the cache.
 3. `python build.py`.
-4. From the repository root, `python scripts/refresh_static.py` to refresh the website fallbacks.
+4. From the repository root, run `python assets/_maintenance/refresh_static.py` to update the website fallbacks.
 
 Cache refresh preserves previously verified metadata if Crossref is temporarily
 unavailable, and reports failures. Missing new records still need a successful lookup
 or a verified cache entry before they can appear in the downloadable CV.
 
-Numbering, counts, the first-author tally and the metrics strip all follow
+Numbering, counts, the first/corresponding-author tally and the metrics strip all follow
 automatically. Errata and duplicate preprint postings are excluded by the lists at the
 top of `cvdata.py`; a paper whose DOI is not in Crossref goes in `MANUAL` there.
 
@@ -77,18 +77,17 @@ takes its place in the dated list.
 
 ## Refreshing the citation figures
 
-Google Scholar often blocks GitHub Actions runners. The daily workflow attempts
-Scholar and OpenAlex, retaining the last verified snapshot when a source is blocked.
-Scholar's public table is read without extra dependencies; `scholarly` is an optional fallback.
-To update the Scholar numbers, run this from a home connection:
+The daily workflow attempts Scholar and OpenAlex, retaining the last verified snapshot
+when a source is blocked. To refresh locally, run from `cv/`:
 
 ```bash
-python ../scripts/fetch_metrics.py
+python ../assets/_maintenance/fetch_metrics.py
+python ../assets/_maintenance/refresh_static.py
 ```
 
-Commit `assets/data/scholar-stats.json`, then rebuild. If the Scholar snapshot goes
-more than 60 days stale the site — and this CV — fall back to OpenAlex's lower figures
-and say so in the provenance line.
+Commit `../assets/data/scholar-stats.json` and refreshed HTML fallbacks, then rebuild
+the CV. When Scholar data goes over 60 days stale, the browser and metrics updater
+select OpenAlex's complete snapshot; the CV uses the saved top-level figures until rebuilt.
 
 ## Fonts
 

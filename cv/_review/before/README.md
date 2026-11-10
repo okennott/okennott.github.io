@@ -62,18 +62,11 @@ top of `cvdata.py`; a paper whose DOI is not in Crossref goes in `MANUAL` there.
 
 ## Refreshing the citation figures
 
-Google Scholar often blocks GitHub Actions runners. The daily workflow attempts
-Scholar and OpenAlex, retaining the last verified snapshot when a source is blocked.
-To update the Scholar numbers, run this from a home connection:
-
-```bash
-pip install scholarly
-python ../scripts/fetch_metrics.py
-```
-
-Commit `assets/data/scholar-stats.json`, then rebuild. If the Scholar snapshot goes
-more than 60 days stale the site — and this CV — fall back to OpenAlex's lower figures
-and say so in the provenance line.
+This pre-revision guide describes an older workflow. The current scheduled updater and
+tests are in `../../../assets/_maintenance/`, rather than the legacy root scripts directory.
+To refresh locally from this folder, run `python ../../../assets/_maintenance/fetch_metrics.py`,
+commit `../../../assets/data/scholar-stats.json` and rebuild. After 60 days, the browser
+selects the saved OpenAlex profile; the CV uses saved top-level figures until rebuilt.
 
 ## Fonts
 

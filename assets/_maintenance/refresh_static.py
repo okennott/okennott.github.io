@@ -15,7 +15,7 @@ import subprocess
 from bs4 import BeautifulSoup
 from fetch_metrics import from_library
 
-ROOT = Path(__file__).absolute().parent.parent
+ROOT = Path(__file__).absolute().parent.parent.parent
 BRIDGE = r"""
 const fs = require('node:fs'), vm = require('node:vm');
 const data = JSON.parse(fs.readFileSync(0, 'utf8'));

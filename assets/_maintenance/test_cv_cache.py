@@ -7,14 +7,14 @@ import unittest
 from unittest.mock import patch
 from io import BytesIO
 
-spec = importlib.util.spec_from_file_location('cvdata', Path(__file__).parent.parent / 'cv/cvdata.py')
+spec = importlib.util.spec_from_file_location('cvdata', Path(__file__).parent.parent.parent / 'cv/cvdata.py')
 cvdata = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cvdata)
 
 
 class CacheRefreshTests(unittest.TestCase):
     def test_zoosystema_matches_publisher_publication_details(self):
-        library = json.loads((Path(__file__).parent.parent / 'OKOs_Library.json').read_text())
+        library = json.loads((Path(__file__).parent.parent.parent / 'OKOs_Library.json').read_text())
         article = next(r for r in library if r.get('DOI') == '10.5252/zoosystema2026v48a25')
         self.assertEqual(article['issued']['date-parts'], [[2026, 11, 6]])
         self.assertEqual(article['page'], '741-781')

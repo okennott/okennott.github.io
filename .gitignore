@@ -6,13 +6,17 @@
 # Local AI documentation rules
 ai_documentation_rules.md
 
+# Local notes and legacy maintenance/test tooling
+/Claude outputs/
+/scripts/
+
 # OS / sync noise
 .DS_Store
 Thumbs.db
 desktop.ini
 *~
 
-# Python (scripts/)
+# Python caches and environments
 __pycache__/
 *.py[cod]
 .venv/

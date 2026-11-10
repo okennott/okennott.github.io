@@ -36,8 +36,8 @@ CONTACT    = "kenotieno08@gmail.com"          # OpenAlex polite pool
 USER_AGENT = f"okennott.github.io metrics bot (mailto:{CONTACT})"
 
 HERE     = os.path.dirname(os.path.abspath(__file__))
-OUT_PATH = os.path.join(HERE, "..", "assets", "data", "scholar-stats.json")
-LIB_PATH = os.path.join(HERE, "..", "OKOs_Library.json")
+OUT_PATH = os.path.join(HERE, "..", "data", "scholar-stats.json")
+LIB_PATH = os.path.join(HERE, "..", "..", "OKOs_Library.json")
 
 HTTP_TIMEOUT    = 30      # seconds per request
 HTTP_RETRIES    = 3

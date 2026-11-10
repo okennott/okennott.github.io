@@ -3,8 +3,8 @@
 
 Publications come from the website's own bibliography (`../OKOs_Library.json`),
 with every field cross-checked against Crossref; the citation and peer-review
-figures come from `../assets/data/scholar-stats.json`, which is what the website
-displays. So the CV cannot disagree with the site.
+figures come from `../assets/data/scholar-stats.json`. Rebuild the CV after
+updating the website's saved metrics to keep both in sync.
 
 Crossref responses are cached in `crossref-cache.json` so a render works offline
 and is reproducible. Refresh after adding a paper:

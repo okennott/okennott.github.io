@@ -8,7 +8,7 @@ Personal academic website of **Kenneth Otieno Onditi** — mammal ecologist and 
 
 ## Site Overview
 
-A fully static, multi-page academic website built with vanilla HTML, CSS, and JavaScript — no frameworks or runtime build step. Optional maintenance scripts refresh static fallbacks and build the downloadable CV. Google Fonts and public APIs supply live enhancements.
+A fully static, multi-page academic website built with vanilla HTML, CSS, and JavaScript — no frameworks or runtime build step. Browser JavaScript lives in `assets/js/`; maintenance and test tools used by GitHub Actions live in `assets/_maintenance/`. The downloadable CV has its own build tools in `cv/`. Google Fonts and public APIs supply live enhancements.
 
 | Page | File | Accent colour | Key features |
 |---|---|---|---|
@@ -79,9 +79,9 @@ Every live number is bound declaratively, and the text already in the HTML is th
 
 Values come from `assets/data/scholar-stats.json`, refreshed daily by `.github/workflows/update-metrics.yml`. Available keys include `peer_reviewed_works`, `preprints`, `works_total`, `citations`, `h_index`, `i10_index`, `peer_reviews`, `peer_review_journals`, `peer_review_years_label`, `citation_source_name`, `citation_source_url`, `citation_as_of_label`, `last_updated_label`, plus counts the page derives from the bibliography itself (`library_records`, `open_access_count`, `year_span`, `year_range_label`).
 
-The homepage names the source and shows the exact date of each snapshot. Publication totals reconcile ORCID with the curated bibliography, so a count that includes papers awaiting ORCID deposit is labelled **ORCID + library**. `orcid_as_of` and `peer_review_as_of` change only when those figures are accepted; `last_checked` records the refresh attempt. A blocked Scholar refresh retains the last complete Scholar snapshot and displays its saved date. After 60 days, the browser and updater select the complete OpenAlex snapshot instead, including its source link, citations, h-index, and i10-index together.
+The homepage names the source and shows the exact date of each snapshot. Publication totals reconcile ORCID with the curated bibliography, so a count that includes papers awaiting ORCID deposit is labelled **ORCID + library**. `orcid_as_of` and `peer_review_as_of` change only when those figures are accepted; `last_checked` records the refresh attempt. A blocked Scholar refresh retains the last complete Scholar snapshot and displays its saved date. After 60 days, the browser and metrics updater select the complete OpenAlex snapshot instead, including its source link, citations, h-index, and i10-index together. Rebuild the downloadable CV when its saved figures change.
 
-On pages that load the bibliography, its current counts take precedence over a saved metrics file until the next scheduled refresh. Article totals are still reconciled with ORCID, without changing the dates of the external snapshots.
+On pages that load the bibliography, its current counts take precedence over the saved metrics file until the next scheduled refresh. Article totals are still reconciled with ORCID, without changing the dates of the external snapshots.
 
 Note the two distinct "peer review" metrics: `peer_reviewed_works` is **articles Kenneth has published**; `peer_reviews` is **manuscripts he has reviewed for journals**. They are unrelated numbers from two different ORCID endpoints.
 
@@ -112,19 +112,15 @@ The slug is the DOI lowercased with every run of non-alphanumeric characters rep
 Publication cards are rendered from the Zotero CSL JSON export at `OKOs_Library.json`. Abstracts come from that file when present and are included in the generated HTML fallbacks. Missing abstracts link readers to the journal; no abstract is inferred from a title.
 
 ### Updating the metrics
-Nothing to do by hand. `.github/workflows/update-metrics.yml` runs every day at 05:00 UTC and commits `assets/data/scholar-stats.json` and refreshed HTML fallbacks. To refresh immediately, run the workflow from the Actions tab, or locally:
+The tracked `.github/workflows/update-metrics.yml` runs at 05:00 UTC daily and commits refreshed `assets/data/scholar-stats.json` and HTML fallbacks. You can run it from the Actions tab, or refresh locally:
 
 ```bash
-python scripts/fetch_metrics.py          # all sources
-SKIP_SCHOLAR=1 python scripts/fetch_metrics.py   # skip the Scholar scrape
+python assets/_maintenance/fetch_metrics.py
+SKIP_SCHOLAR=1 python assets/_maintenance/fetch_metrics.py  # skip Scholar
+python assets/_maintenance/refresh_static.py
 ```
 
-The script is designed never to destroy good data:
-
-- ORCID and OpenAlex are fetched with the **standard library only**, so the metrics that drive the site cannot be broken by a failed `pip install`.
-- Google Scholar's labelled public profile table is read with the standard library, with `scholarly` as an optional fallback. CAPTCHA pages and incomplete tables are rejected. This remains **best-effort** and time-limited; a blocked refresh preserves the dated snapshot separately from OpenAlex.
-- A metric that arrives as `0`, or that collapses by more than 15% against the same source's previous reading, is **rejected** as a failed fetch and the stored value is kept.
-- If every source fails, the existing file is left untouched and the run still succeeds.
+The updater retains the last verified figures when sources fail or return incomplete data. Google Scholar is best-effort; after 60 days the updater selects a complete OpenAlex snapshot instead. Per-paper citation badges are also fetched by visitors' browsers.
 
 ---
 
@@ -140,7 +136,7 @@ The live Publications page and the highlighted publications on the Home page are
 
 4. If an author-copy PDF is available, place it in `pdfs/`. The renderer preserves PDF links already present in the static fallback cards; new PDFs can be added to the fallback card or linked in a future data-enrichment field.
 
-5. Run `python scripts/refresh_static.py` to synchronize static cards, homepage highlights and saved metric labels. Run the checks below, then commit the library, generated HTML, and any changed PDFs. Rebuild the CV as described in `cv/README.md`.
+5. Run `python assets/_maintenance/refresh_static.py` to synchronize static cards, homepage highlights and saved metric labels. Run the checks below, then commit the library, generated HTML and any changed PDFs. Rebuild the CV as described in `cv/README.md`.
 
 The static cards in `publications.html` are generated fallbacks. Their existing author-copy links and curated topic/access metadata are preserved during refresh; edit the library for bibliographic changes. October 2026 extractions are documented in [Pei_2026_Nectogale.md](publications/Pei_2026_Nectogale.md) and [Hounmavo_2026_Assoukoko.md](publications/Hounmavo_2026_Assoukoko.md). Retain those records in the next Zotero export.
 
@@ -156,7 +152,7 @@ Add the record to Zotero without a DOI and put this in its Extra/Note field:
 status: accepted; accepted: YYYY-MM-DD
 ```
 
-The site then shows an "Accepted · in press" badge and lists the record first, the CV lists it as "(in press)" at the top of the article list, and the counts include it. Only what the library holds is shown, so do not invent a DOI, volume or pages. When the paper is published, add the DOI and volume/pages in Zotero, delete the `status:` line, export the library again, run `python cvdata.py --refresh` and `python build.py` in `cv/`. Run `python scripts/refresh_static.py` from the repository root to synchronize the HTML fallbacks too.
+The site then shows an "Accepted · in press" badge and lists the record first, the CV lists it as "(in press)" at the top of the article list, and the counts include it. Only what the library holds is shown, so do not invent a DOI, volume or pages. When the paper is published, add the DOI and volume/pages in Zotero, delete the `status:` line, export the library again, run `python cvdata.py --refresh` and `python build.py` in `cv/`. Run `python assets/_maintenance/refresh_static.py` from the repository root to synchronize the HTML fallbacks too.
 
 ---
 
@@ -193,7 +189,7 @@ All 39 PDFs have been renamed from opaque numeric identifiers to human-readable 
 1. Export the paper PDF from your reference manager (or use the publisher's accepted-manuscript version).
 2. Rename it: `Lastname_YYYY_ShortTitle.pdf` (add a qualifier suffix if a second copy is warranted).
 3. Drop it into `pdfs/`.
-4. Add a `pub-link pdf` link to the matching fallback card in `publications.html`, then run `python scripts/refresh_static.py`. Merely adding a PDF file does not create a download link.
+4. Add a `pub-link pdf` link to the matching fallback card in `publications.html`, then run `python assets/_maintenance/refresh_static.py`. Merely adding a PDF file does not create a download link.
 
 Open-access papers (BMC, Frontiers, MDPI, Scientific Reports, ZooKeys, Zoological Research, Ecosphere) are freely available at the publisher DOI and do not strictly require an author copy, though including one keeps everything in one place.
 
@@ -248,7 +244,7 @@ Opening `index.html` directly as a `file://` URL will work for layout review but
 | Fonts | EB Garamond, DM Mono, Bitter (Google Fonts CDN) |
 | Live citations | [OpenAlex API](https://api.openalex.org/) (batched), Semantic Scholar fallback |
 | Live abstracts | Zotero CSL JSON, [CrossRef REST API](https://api.crossref.org/works/) fallback |
-| Works / metrics | [ORCID Public API](https://pub.orcid.org/) + OpenAlex, refreshed daily by GitHub Actions |
+| Works / metrics | [ORCID Public API](https://pub.orcid.org/), Google Scholar and OpenAlex, refreshed daily by GitHub Actions |
 | Hosting | GitHub Pages (static, free tier) |
 
 ---
@@ -285,20 +281,17 @@ Nairobi, Kenya
 
 ## Maintenance checks
 
-Requires Python and Node.js; the optional HTML maintenance dependency is isolated from the deployed site.
+The workflows remain in `.github/workflows/`, while their implementation and tests live in `assets/_maintenance/`. Jekyll excludes the underscore-prefixed maintenance directory from the published site. The legacy root `scripts/` directory is ignored and is not needed by a fresh clone:
 
 ```bash
-python -m pip install -r scripts/requirements.txt
-python scripts/refresh_static.py
-python -m unittest discover -s scripts -p 'test_*.py'
-node scripts/test_homepage_metrics.cjs
-node scripts/test_publications.cjs
-node scripts/test_citations.cjs
-python scripts/check_site.py
-python scripts/refresh_static.py --check
+python -m pip install -r assets/_maintenance/requirements.txt
+python assets/_maintenance/refresh_static.py
+python -m unittest discover -s assets/_maintenance -p 'test_*.py'
+node assets/_maintenance/test_homepage_metrics.cjs
+node assets/_maintenance/test_publications.cjs
+node assets/_maintenance/test_citations.cjs
+python assets/_maintenance/check_site.py
+python assets/_maintenance/refresh_static.py --check
 ```
 
-`check-site.yml` runs these checks on pushes and pull requests. `refresh_static.py` uses
-the same JavaScript renderers as the browser, preserves author-copy links, reconciles local library totals without changing remote snapshot dates, and uses the
-saved metrics check date for reproducible fallback labels. The browser evaluates citation
-freshness at page load. See [TODO.md](TODO.md) for the October 2026 review and validation.
+`check-site.yml` runs these checks on pushes and pull requests. The browser evaluates citation freshness at page load. See [TODO.md](TODO.md) for the historical October 2026 review and validation.

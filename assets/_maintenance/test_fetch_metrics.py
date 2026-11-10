@@ -1,6 +1,6 @@
 """Offline regression checks for source failures and snapshot reconciliation.
 
-Run: python3 -m unittest discover -s scripts -p 'test_*.py'
+Run: python3 -m unittest discover -s assets/_maintenance -p 'test_*.py'
 """
 import contextlib
 import copy

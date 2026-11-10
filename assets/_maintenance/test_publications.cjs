@@ -10,8 +10,8 @@ const context = vm.createContext({
     querySelector() { return null; }, querySelectorAll() { return []; }
   }
 });
-vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/main.js'), 'utf8'), context);
-const items = JSON.parse(fs.readFileSync(path.join(__dirname, '../OKOs_Library.json')));
+vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/main.js'), 'utf8'), context);
+const items = JSON.parse(fs.readFileSync(path.join(__dirname, '../../OKOs_Library.json')));
 const doi = '10.1016/j.ympev.2026.108749';
 const paper = items.find(p => context.cleanDoi(p.DOI) === doi);
 assert.ok(paper);
