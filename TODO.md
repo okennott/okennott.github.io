@@ -33,4 +33,4 @@ Crossref has no abstract, volume or issue for the new DOI. Elsevier's API was ra
 
 ## Next to-do — 10 November 2026
 
-- [ ] Verify the GitHub Pages deployment of the Zoosystema update after the Pages build completes. Immediately after pushing commit `414c5dc`, the public homepage and publications page still served the previous version ("Three pillars of inquiry" and Zoosystema pages 741–789), while the Pages deployment was in progress. Check that the live heading reads "Research Focus", the Zoosystema citation reads 741–781, its abstract reflects the publisher's corrections, and the linked PDF is the revised version. Investigate the deployment if it does not complete successfully.
+- [x] Verify the GitHub Pages deployment of the Zoosystema update. Immediately after pushing commit `414c5dc`, the public homepage and publications page still served the previous version while Pages was deploying. The deployment succeeded; the live homepage now reads "Research Focus", both citations read 741–781, the abstract reflects the publisher's corrections, and the linked PDF matches the revised version. No follow-up issue remains.
