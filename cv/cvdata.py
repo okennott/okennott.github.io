@@ -103,14 +103,13 @@ MANUAL = [{
     "authors": [{"text": "Song, W. Y.", "me": False}, {"text": "Li, X. Y.", "me": False},
                 {"text": "Onditi, K. O.", "me": True}, {"text": "Jiang, X. L.", "me": False}],
 }, {
-    # Published 30 October 2026; details from the publisher's PDF
-    # (pdfs/Hounmavo_2026_Assoukoko_small_mammals.pdf, p. 741). The DOI was not yet
-    # registered with Crossref on that date.
+    # Published 6 November 2026; details from the publisher's article page and
+    # PDF (pdfs/Hounmavo_2026_Assoukoko_small_mammals.pdf, p. 741).
     "doi": "10.5252/zoosystema2026v48a25", "year": 2026, "preprint": False,
     "title": "Small terrestrial mammal inventory of Assoukoko forest (Togo), with new country "
              "records and potential new species for science",
     "journal": "Zoosystema", "volume": "48", "issue": "25",
-    "page": "741-789", "artno": None, "npos": 3, "nauth": 8,
+    "page": "741-781", "artno": None, "npos": 3, "nauth": 8,
     "authors": [{"text": "Hounmavo, A.", "me": False}, {"text": "Segniagbeto, G. H.", "me": False},
                 {"text": "Onditi, K. O.", "me": True}, {"text": "Lutz, H. L.", "me": False},
                 {"text": "Delapré, A.", "me": False}, {"text": "Demos, T. C.", "me": False},

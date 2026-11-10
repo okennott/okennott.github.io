@@ -13,6 +13,15 @@ spec.loader.exec_module(cvdata)
 
 
 class CacheRefreshTests(unittest.TestCase):
+    def test_zoosystema_matches_publisher_publication_details(self):
+        library = json.loads((Path(__file__).parent.parent / 'OKOs_Library.json').read_text())
+        article = next(r for r in library if r.get('DOI') == '10.5252/zoosystema2026v48a25')
+        self.assertEqual(article['issued']['date-parts'], [[2026, 11, 6]])
+        self.assertEqual(article['page'], '741-781')
+        self.assertIn('Matschie, 1893', article['abstract'])
+        self.assertIn('(23 species)', article['abstract'])
+        self.assertIn('five species of Crocidura', article['abstract'])
+
     def test_partial_outage_retains_old_record_and_adds_new_record(self):
         old = {'title': ['Previously verified paper'], 'type': 'journal-article'}
         new = {'title': ['New paper'], 'type': 'journal-article'}
@@ -35,8 +44,9 @@ class CacheRefreshTests(unittest.TestCase):
 
     def test_manual_record_yields_to_registered_crossref_record(self):
         manual = next(r for r in cvdata.MANUAL if r['doi'] == '10.5252/zoosystema2026v48a25')
+        self.assertEqual(manual['page'], '741-781')
         registered = {'title': [manual['title']], 'type': 'journal-article', 'volume': '48',
-                      'issue': '25', 'page': '741-789', 'issued': {'date-parts': [[2026, 10, 30]]},
+                      'issue': '25', 'page': '741-781', 'issued': {'date-parts': [[2026, 11, 6]]},
                       'author': [{'family': 'Hounmavo', 'given': 'Amétépé'},
                                  {'family': 'Onditi', 'given': 'Kenneth Otieno'}]}
         for cached, expected in [({}, 1), ({manual['doi']: registered}, 1)]:
