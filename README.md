@@ -289,6 +289,7 @@ python assets/_maintenance/refresh_static.py
 python -m unittest discover -s assets/_maintenance -p 'test_*.py'
 node assets/_maintenance/test_homepage_metrics.cjs
 node assets/_maintenance/test_publications.cjs
+node assets/_maintenance/test_navigation.cjs
 node assets/_maintenance/test_citations.cjs
 python assets/_maintenance/check_site.py
 python assets/_maintenance/refresh_static.py --check

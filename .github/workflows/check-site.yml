@@ -17,6 +17,7 @@ jobs:
       - run: python -m unittest discover -s assets/_maintenance -p 'test_*.py'
       - run: node assets/_maintenance/test_homepage_metrics.cjs
       - run: node assets/_maintenance/test_publications.cjs
+      - run: node assets/_maintenance/test_navigation.cjs
       - run: node assets/_maintenance/test_citations.cjs
       - run: python assets/_maintenance/check_site.py
       - run: python assets/_maintenance/refresh_static.py --check

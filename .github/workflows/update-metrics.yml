@@ -67,6 +67,7 @@ jobs:
           python assets/_maintenance/check_site.py
           node assets/_maintenance/test_homepage_metrics.cjs
           node assets/_maintenance/test_publications.cjs
+          node assets/_maintenance/test_navigation.cjs
           node assets/_maintenance/test_citations.cjs
 
       - name: Commit updated metrics
