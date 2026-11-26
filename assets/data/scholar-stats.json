@@ -2,8 +2,8 @@
   "citation_as_of": "2026-11-25",
   "citation_profiles": {
     "openalex": {
-      "as_of": "2026-11-25",
-      "citations": 342,
+      "as_of": "2026-11-26",
+      "citations": 341,
       "h_index": 11,
       "i10_index": 13
     },
@@ -22,20 +22,20 @@
   "first_year": 2019,
   "h_index": 12,
   "i10_index": 14,
-  "last_checked": "2026-11-25",
-  "last_updated": "2026-11-25",
+  "last_checked": "2026-11-26",
+  "last_updated": "2026-11-26",
   "latest_year": 2026,
-  "library_as_of": "2026-11-25",
+  "library_as_of": "2026-11-26",
   "library_corrections": 1,
   "library_peer_reviewed": 41,
   "library_preprints": 2,
   "library_records": 44,
   "openalex_id": "https://openalex.org/A5086398996",
   "openalex_works": 72,
-  "orcid_as_of": "2026-11-25",
+  "orcid_as_of": "2026-11-26",
   "orcid_id": "0000-0003-4034-6818",
   "orcid_peer_reviewed": 37,
-  "peer_review_as_of": "2026-11-25",
+  "peer_review_as_of": "2026-11-26",
   "peer_review_breakdown": [
     {
       "issn": "2071-1050",
@@ -170,7 +170,7 @@
     "openalex": "ok",
     "orcid": "ok",
     "orcid_peer_reviews": "ok",
-    "scholar": "ok"
+    "scholar": "unavailable"
   },
   "works_pending_in_orcid": 4,
   "works_total": 44,
